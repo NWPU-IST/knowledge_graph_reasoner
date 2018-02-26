@@ -1,0 +1,32 @@
+id,sentence,label
+1,"Bill Clinton is married to Hillary Clinton.",T
+2,"George W Bush is married to Laura Bush.",T
+3,"Donald Trump is married to Melania Trump.",T
+4,"Ronald Reagan is married to Nancy Reagan.",T
+5,"Jimmy Carter is married to Rosalynn Carter.",T
+6,"Richard Nixon is married to Pat Nixon.",T
+7,"Franklin D Roosevelt is married to Eleanor Roosevelt.",T
+8,"John F Kennedy is married to Jacqueline Kennedy.",T
+9,"Barack Obama is married to Michelle Obama.",T
+10,"Woodrow Wilson is married to Edith Bolling Wilson.",T
+11,"Warren Harding is married to Florence Harding.",T
+12,"Calvin Coolidge is married to Grace Coolidge.",T
+13,"Herbert Hoover is married to Lou Henry Hoover.",T
+14,"Harry Truman is married to Bess Truman.",T
+15,"Dwight Eisenhower is married to Mamie Eisenhower.",T
+16,"Lyndon Johnson is married to Lady Bird Johnson.",T
+17,"Gerald Ford is married to Betty Ford.",T
+18,"George H W Bush is married to Barbara Bush.",T
+19,"Abraham Lincoln was married to Mary Todd.",T
+25,"Harry Truman was married to Bess Truman.",T
+26,"William Taft was married to Helen Taft.",T
+27,"Bill Gates is married to Melinda Gates.",T
+20,"Bill Clinton is married to Laura Bush.",F
+21,"George W Bush is married to Hillary Clinton.",F
+22,"Donald Trump is married to Nancy Reagan.",F
+23,"Ronald Reagan is married to Melania Trump.",F
+24,"Jimmy Carter is married to Nancy Reagan.",F
+28,"Gerald Ford is married to Barbara Bush.",F
+29,"George H W Bush is married to Betty Ford.",F
+30,"Harry Truman was married to Mary Todd.",F
+31,"Abraham Lincoln is married to Bess Truman.",F

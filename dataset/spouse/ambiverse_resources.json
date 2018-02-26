@@ -1,0 +1,418 @@
+{
+  "24": {
+    "Nancy Reagan": {
+      "confidence": 1.0,
+      "wikidata_id": "Q193426",
+      "dbpedia_id": "Nancy_Reagan"
+    },
+    "Jimmy Carter": {
+      "confidence": 0.9862333557441012,
+      "wikidata_id": "Q23685",
+      "dbpedia_id": "Jimmy_Carter"
+    }
+  },
+  "25": {
+    "Bess Truman": {
+      "confidence": 1.0,
+      "dbpedia_id": "Bess_Truman",
+      "wikidata_id": "Q233652"
+    },
+    "Harry Truman": {
+      "confidence": 0.9739869426067468,
+      "dbpedia_id": "Harry_S._Truman",
+      "wikidata_id": "Q11613"
+    }
+  },
+  "26": {
+    "William Taft": {
+      "confidence": 1.0,
+      "wikidata_id": "Q35648",
+      "dbpedia_id": "William_Howard_Taft"
+    },
+    "Helen Taft": {
+      "confidence": 1.0,
+      "wikidata_id": "Q255115",
+      "dbpedia_id": "Helen_Herron_Taft"
+    }
+  },
+  "27": {
+    "Bill Gates": {
+      "confidence": 0.28462473205121047,
+      "wikidata_id": "Q5284",
+      "dbpedia_id": "Bill_Gates"
+    },
+    "Melinda Gates": {
+      "confidence": 1.0,
+      "wikidata_id": "Q463877",
+      "dbpedia_id": "Melinda_Gates"
+    }
+  },
+  "20": {
+    "Bill Clinton": {
+      "confidence": 1.0,
+      "dbpedia_id": "Bill_Clinton",
+      "wikidata_id": "Q1124"
+    },
+    "Laura Bush": {
+      "confidence": 1.0,
+      "dbpedia_id": "Laura_Bush",
+      "wikidata_id": "Q152019"
+    }
+  },
+  "21": {
+    "Hillary Clinton": {
+      "confidence": 0.9722430938593244,
+      "dbpedia_id": "Hillary_Clinton",
+      "wikidata_id": "Q6294"
+    },
+    "George W Bush": {
+      "confidence": 1.0,
+      "dbpedia_id": "George_W._Bush",
+      "wikidata_id": "Q207"
+    }
+  },
+  "22": {
+    "Donald Trump": {
+      "confidence": 0.9615709974111342,
+      "wikidata_id": "Q22686",
+      "dbpedia_id": "Donald_Trump"
+    },
+    "Nancy Reagan": {
+      "confidence": 1.0,
+      "wikidata_id": "Q193426",
+      "dbpedia_id": "Nancy_Reagan"
+    }
+  },
+  "23": {
+    "Melania Trump": {
+      "confidence": 1.0,
+      "wikidata_id": "Q432473",
+      "dbpedia_id": "Melania_Trump"
+    },
+    "Ronald Reagan": {
+      "confidence": 0.9997922841659382,
+      "wikidata_id": "Q9960",
+      "dbpedia_id": "Ronald_Reagan"
+    }
+  },
+  "28": {
+    "Gerald Ford": {
+      "confidence": 0.33939454311777717,
+      "dbpedia_id": "Gerald_Ford",
+      "wikidata_id": "Q9582"
+    },
+    "Barbara Bush": {
+      "confidence": 0.9798887527961595,
+      "dbpedia_id": "Barbara_Bush",
+      "wikidata_id": "Q190628"
+    }
+  },
+  "29": {
+    "Betty Ford": {
+      "confidence": 0.9960674162076403,
+      "dbpedia_id": "Betty_Ford",
+      "wikidata_id": "Q213122"
+    },
+    "George H W Bush": {
+      "confidence": 1.0,
+      "dbpedia_id": "George_H._W._Bush",
+      "wikidata_id": "Q23505"
+    }
+  },
+  "1": {
+    "Bill Clinton": {
+      "confidence": 1.0,
+      "wikidata_id": "Q1124",
+      "dbpedia_id": "Bill_Clinton"
+    },
+    "Hillary Clinton": {
+      "confidence": 0.941563682522518,
+      "wikidata_id": "Q6294",
+      "dbpedia_id": "Hillary_Clinton"
+    }
+  },
+  "3": {
+    "Donald Trump": {
+      "confidence": 0.9243880232267394,
+      "dbpedia_id": "Donald_Trump",
+      "wikidata_id": "Q22686"
+    },
+    "Melania Trump": {
+      "confidence": 1.0,
+      "dbpedia_id": "Melania_Trump",
+      "wikidata_id": "Q432473"
+    }
+  },
+  "2": {
+    "Laura Bush": {
+      "confidence": 1.0,
+      "dbpedia_id": "Laura_Bush",
+      "wikidata_id": "Q152019"
+    },
+    "George W Bush": {
+      "confidence": 1.0,
+      "dbpedia_id": "George_W._Bush",
+      "wikidata_id": "Q207"
+    }
+  },
+  "5": {
+    "Rosalynn Carter": {
+      "confidence": 1.0,
+      "dbpedia_id": "Rosalynn_Carter",
+      "wikidata_id": "Q219353"
+    },
+    "Jimmy Carter": {
+      "confidence": 0.9854228171956009,
+      "dbpedia_id": "Jimmy_Carter",
+      "wikidata_id": "Q23685"
+    }
+  },
+  "4": {
+    "Nancy Reagan": {
+      "confidence": 1.0,
+      "dbpedia_id": "Nancy_Reagan",
+      "wikidata_id": "Q193426"
+    },
+    "Ronald Reagan": {
+      "confidence": 0.9997965996262291,
+      "dbpedia_id": "Ronald_Reagan",
+      "wikidata_id": "Q9960"
+    }
+  },
+  "7": {
+    "Eleanor Roosevelt": {
+      "confidence": 0.9765010543142498,
+      "dbpedia_id": "Eleanor_Roosevelt",
+      "wikidata_id": "Q83396"
+    },
+    "Franklin D Roosevelt": {
+      "confidence": 1.0,
+      "dbpedia_id": "Franklin_D._Roosevelt",
+      "wikidata_id": "Q8007"
+    }
+  },
+  "6": {
+    "Pat Nixon": {
+      "confidence": 1.0,
+      "dbpedia_id": "Pat_Nixon",
+      "wikidata_id": "Q158707"
+    },
+    "Richard Nixon": {
+      "confidence": 0.9798948061348378,
+      "dbpedia_id": "Richard_Nixon",
+      "wikidata_id": "Q9588"
+    }
+  },
+  "9": {
+    "Barack Obama": {
+      "confidence": 0.9788219685710103,
+      "dbpedia_id": "Barack_Obama",
+      "wikidata_id": "Q76"
+    },
+    "Michelle Obama": {
+      "confidence": 1.0,
+      "dbpedia_id": "Michelle_Obama",
+      "wikidata_id": "Q13133"
+    }
+  },
+  "8": {
+    "Jacqueline Kennedy": {
+      "confidence": 1.0,
+      "dbpedia_id": "Jacqueline_Kennedy_Onassis",
+      "wikidata_id": "Q165421"
+    },
+    "John F Kennedy": {
+      "confidence": 1.0,
+      "dbpedia_id": "John_F._Kennedy",
+      "wikidata_id": "Q9696"
+    }
+  },
+  "a": "b",
+  "11": {
+    "Florence Harding": {
+      "confidence": 1.0,
+      "dbpedia_id": "Florence_Harding",
+      "wikidata_id": "Q233634"
+    },
+    "Warren Harding": {
+      "confidence": 0.4425442252739222,
+      "dbpedia_id": "Warren_G._Harding",
+      "wikidata_id": "Q35286"
+    }
+  },
+  "10": {
+    "Woodrow Wilson": {
+      "confidence": 0.987709423977624,
+      "dbpedia_id": "Woodrow_Wilson",
+      "wikidata_id": "Q34296"
+    },
+    "Edith Bolling Wilson": {
+      "confidence": 1.0,
+      "dbpedia_id": "Edith_Wilson",
+      "wikidata_id": "Q255169"
+    }
+  },
+  "13": {
+    "Herbert Hoover": {
+      "confidence": 1.0,
+      "dbpedia_id": "Herbert_Hoover",
+      "wikidata_id": "Q35236"
+    },
+    "Lou Henry Hoover": {
+      "confidence": 1.0,
+      "dbpedia_id": "Lou_Henry_Hoover",
+      "wikidata_id": "Q233669"
+    }
+  },
+  "12": {
+    "Grace Coolidge": {
+      "confidence": 1.0,
+      "dbpedia_id": "Grace_Coolidge",
+      "wikidata_id": "Q234287"
+    },
+    "Calvin Coolidge": {
+      "confidence": 1.0,
+      "dbpedia_id": "Calvin_Coolidge",
+      "wikidata_id": "Q36023"
+    }
+  },
+  "15": {
+    "Mamie Eisenhower": {
+      "confidence": 1.0,
+      "dbpedia_id": "Mamie_Eisenhower",
+      "wikidata_id": "Q233686"
+    },
+    "Dwight Eisenhower": {
+      "confidence": 1.0,
+      "dbpedia_id": "Dwight_D._Eisenhower",
+      "wikidata_id": "Q9916"
+    }
+  },
+  "14": {
+    "Bess Truman": {
+      "confidence": 1.0,
+      "dbpedia_id": "Bess_Truman",
+      "wikidata_id": "Q233652"
+    },
+    "Harry Truman": {
+      "confidence": 0.9740815313656418,
+      "dbpedia_id": "Harry_S._Truman",
+      "wikidata_id": "Q11613"
+    }
+  },
+  "17": {
+    "Betty Ford": {
+      "confidence": 0.9626080277635541,
+      "dbpedia_id": "Betty_Ford",
+      "wikidata_id": "Q213122"
+    },
+    "Gerald Ford": {
+      "confidence": 0.2518975294477037,
+      "dbpedia_id": "Gerald_Ford",
+      "wikidata_id": "Q9582"
+    }
+  },
+  "16": {
+    "Lady Bird Johnson": {
+      "confidence": 1.0,
+      "dbpedia_id": "Lady_Bird_Johnson",
+      "wikidata_id": "Q233648"
+    },
+    "Lyndon Johnson": {
+      "confidence": 1.0,
+      "dbpedia_id": "Lyndon_B._Johnson",
+      "wikidata_id": "Q9640"
+    }
+  },
+  "19": {
+    "Mary Todd": {
+      "confidence": 1.0,
+      "wikidata_id": "Q215062",
+      "dbpedia_id": "Mary_Todd_Lincoln"
+    },
+    "Abraham Lincoln": {
+      "confidence": 0.7147075322929616,
+      "wikidata_id": "Q91",
+      "dbpedia_id": "Abraham_Lincoln"
+    }
+  },
+  "18": {
+    "George H W Bush": {
+      "confidence": 1.0,
+      "dbpedia_id": "George_H._W._Bush",
+      "wikidata_id": "Q23505"
+    },
+    "Barbara Bush": {
+      "confidence": 0.9923649308760922,
+      "dbpedia_id": "Barbara_Bush",
+      "wikidata_id": "Q190628"
+    }
+  },
+  "31": {
+    "Bess Truman": {
+      "confidence": 1.0,
+      "dbpedia_id": "Bess_Truman",
+      "wikidata_id": "Q233652"
+    },
+    "Abraham Lincoln": {
+      "confidence": 0.7046657373462483,
+      "dbpedia_id": "Abraham_Lincoln",
+      "wikidata_id": "Q91"
+    }
+  },
+  "30": {
+    "Mary Todd": {
+      "confidence": 1.0,
+      "dbpedia_id": "Mary_Todd_Lincoln",
+      "wikidata_id": "Q215062"
+    },
+    "Harry Truman": {
+      "confidence": 0.9563783713577689,
+      "dbpedia_id": "Harry_S._Truman",
+      "wikidata_id": "Q11613"
+    }
+  },
+  "35": {
+    "Richard Nixon": {
+      "confidence": 0.987880432600369,
+      "dbpedia_id": "Richard_Nixon",
+      "wikidata_id": "Q9588"
+    },
+    "John F Kennedy": {
+      "confidence": 0.7269190091431403,
+      "dbpedia_id": "John_F._Kennedy",
+      "wikidata_id": "Q9696"
+    }
+  },
+  "34": {
+    "Eleanor Roosevelt": {
+      "confidence": 0.9790916337148522,
+      "dbpedia_id": "Eleanor_Roosevelt",
+      "wikidata_id": "Q83396"
+    },
+    "John F Kennedy": {
+      "confidence": 0.7287064928778422,
+      "dbpedia_id": "John_F._Kennedy",
+      "wikidata_id": "Q9696"
+    }
+  },
+  "33": {
+    "Jacqueline Kennedy": {
+      "confidence": 1.0,
+      "dbpedia_id": "Jacqueline_Kennedy_Onassis",
+      "wikidata_id": "Q165421"
+    },
+    "Franklin D Roosevelt": {
+      "confidence": 1.0,
+      "dbpedia_id": "Franklin_D._Roosevelt",
+      "wikidata_id": "Q8007"
+    }
+  },
+  "32": {
+    "Richard Nixon": {
+      "confidence": 1.0,
+      "wikidata_id": "Q9588",
+      "dbpedia_id": "Richard_Nixon"
+    }
+  }
+}
