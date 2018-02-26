@@ -9,3 +9,7 @@ unwanted_predicates = [u'thumbnail', u'person function', u'c',u'b',u's',u'n',u'v
                        u'image size', u'logo', u'logo size',u'22-rdf-syntax-ns#type','soundRecording','rdf-schema#seeAlso',u'point',\
                        'endowment','rdf-schema#label','owl#differentFrom','description','filename','name','givenName', u'viafId',\
                        u'utcOffset','title','termPeriod',u'homepage','nick','rdf-schema#subClassOf','owl#unionOf']
+
+top_k = 5
+rule_mining = "amie"
+rule_type = "soft"
