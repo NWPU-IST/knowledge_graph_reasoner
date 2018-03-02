@@ -1,0 +1,69 @@
+birthPlace("Bill_Gates","Seattle").
+parent("Bill_Gates","Mary_Maxwell_Gates").
+parent("Bill_Gates","William_H._Gates,_Sr.").
+residence("Bill_Gates","Medina,_Washington").
+birthPlace("David_Boies","United_States").
+birthPlace("David_Boies","Illinois").
+birthPlace("David_Boies","Marengo,_Illinois").
+birthPlace("David_Boies","Sycamore,_Illinois").
+birthPlace("Melinda_Gates","Dallas").
+birthPlace("Melinda_Gates","Dallas,_Texas").
+birthPlace("Steve_Ballmer","United_States").
+birthPlace("Steve_Ballmer","Detroit").
+birthPlace("Steve_Ballmer","Michigan").
+birthPlace("Steven_Pinker","Montreal").
+birthPlace("Steven_Pinker","Quebec").
+birthPlace("Carlos_Slim","Mexico_City").
+birthPlace("Craig_Mundie","Cleveland").
+birthPlace("Craig_Mundie","Cleveland,_Ohio").
+birthPlace("Anthony_Michael_Hall","Massachusetts").
+birthPlace("Anthony_Michael_Hall","West_Roxbury").
+birthPlace("Jerry_Seinfeld","Brooklyn").
+birthPlace("Jerry_Seinfeld","New_York_City").
+birthPlace("Jerry_Seinfeld","New_York_(state)").
+country("Penguin_Books","United_Kingdom").
+location("Seattle_Computer_Products","Seattle").
+location("Seattle_Computer_Products","Washington_(state)").
+residence("Melinda_Gates","Medina,_Washington").
+residence("Steve_Ballmer","Hunts_Point,_Washington").
+residence("Carlos_Slim","Mexico_City").
+country("Seinfeld","United States").
+country("The_Dating_Game","United States").
+country("The_Social_Network","United States").
+deathPlace("Andrew_Carnegie","Lenox,_Massachusetts").
+birthPlace("Christos_Papadimitriou","Athens").
+birthPlace("Andrew_Carnegie","Fife").
+birthPlace("Andrew_Carnegie","Dunfermline").
+country("New_York","United_States").
+largestCity("New_York","New_York_City").
+country("New_York","New York New York").
+deathPlace("Henry_Hudson","Hudson_Bay").
+deathPlace("Lyndon_B._Johnson","Stonewall,_Texas").
+deathPlace("Lyndon_B._Johnson","Texas").
+deathPlace("Theodore_Roosevelt","Oyster_Bay_(town),_New_York").
+deathPlace("Theodore_Roosevelt","Oyster_Bay,_New_York").
+birthPlace("Henry_Hudson","England").
+birthPlace("Henry_Hudson","Great_Britain").
+birthPlace("Lyndon_B._Johnson","Stonewall,_Texas").
+birthPlace("Michael_Bloomberg","Brighton,_Boston").
+birthPlace("Michael_Bloomberg","Boston").
+birthPlace("Theodore_Roosevelt","New_York").
+birthPlace("Theodore_Roosevelt","New_York_City").
+birthPlace("Theodore_Roosevelt","New_York_(state)").
+country("Adirondack_Mountains","United_States").
+country("Georgia_(U.S._state)","United_States").
+location("Long_Island_Rail_Road","Long_Island").
+location("Long_Island_Rail_Road","New_York_(state)").
+predecessor("Lyndon_B._Johnson","W._Lee_O'Daniel").
+predecessor("Lyndon_B._Johnson","Styles_Bridges").
+predecessor("Lyndon_B._Johnson","Richard_Nixon").
+predecessor("Lyndon_B._Johnson","James_P._Buchanan").
+predecessor("Lyndon_B._Johnson","John_F._Kennedy").
+predecessor("Lyndon_B._Johnson","Francis_J._Myers").
+predecessor("Lyndon_B._Johnson","William_F._Knowland").
+country("Georgia_(U.S._state)","Georgia").
+country("New_Netherland","United States").
+location("Grand_Canyon","Arizona, United States").
+predecessor("Michael_Bloomberg","Rudy_Giuliani").
+predecessor("Michael_Bloomberg","Daniel_L._Doctoroff").
+predecessor("Michael_Bloomberg","Position established").

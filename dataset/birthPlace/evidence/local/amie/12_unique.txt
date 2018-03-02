@@ -1,0 +1,15 @@
+parent("George_Clooney","Nick_Clooney").
+birthPlace("Talia_Balsam","New_York_City").
+birthPlace("Talia_Balsam","New_York_City,_New_York").
+birthPlace("Nick_Clooney","Maysville,_Kentucky").
+birthPlace("Amal_Clooney","Beirut").
+birthPlace("Amal_Clooney","Lebanon").
+country("Lexington,_Kentucky","United_States").
+parent("Talia_Balsam","Joyce_Van_Patten").
+parent("Talia_Balsam","Martin_Balsam").
+country("Kentucky","Kentucky").
+country("Kentucky","United_States").
+country("Fayette_County,_Kentucky","United_States").
+largestCity("Kentucky","Louisville,_Kentucky").
+largestCity("United_States","New_York_City").
+largestCity("Fayette_County,_Kentucky","Lexington,_Kentucky").

@@ -1,0 +1,5 @@
+0.6 capital(C,B) :- district(A,C), municipality(A,B).
+0.4 capital(A,B) :- largestCity(A,B).
+0.3 capital(C,B) :- premierePlace(A,C), premierePlace(A,B).
+0.2 capital(C,B) :- federalState(A,C), administrativeDistrict(A,B).
+0.2 capital(C,B) :- placeOfBurial(A,C), placeOfBurial(A,B).

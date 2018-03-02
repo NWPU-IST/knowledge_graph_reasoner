@@ -1,0 +1,79 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_check_kb/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=spouse dataset/spouse/evidence/amie/1_unique.txt 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_check_kb/out.txt ...
+Solving...
+
+
+
+
+spouse('Teresa_Heinz', 'John_Kerry') 1.0
+spouse('George_W._Bush', 'Laura_Bush') 1.0
+spouse('Virginia_Clinton_Kelley', 'Virginia_Clinton_Kelley') 1.0
+spouse('Barack_Obama', 'Michelle_Obama') 1.0
+spouse('Barbara_Bush', 'Bush_family') 1.0
+spouse('Daniel_Patrick_Moynihan', 'Liz Brennan') 1.0
+spouse('Patricia Moriarty Lazio', 'Rick_Lazio') 1.0
+spouse('Rick_Lazio', 'Patricia Moriarty Lazio') 1.0
+spouse('Hillary_Clinton', 'Hillary_Clinton') 1.0
+spouse('John_Kerry', 'John_Kerry') 1.0
+spouse('Marc_Mezvinsky', 'Chelsea_Clinton') 1.0
+spouse('Frank_D._White', 'Gay Daniels White') 1.0
+spouse('Michelle_Obama', 'Barack_Obama') 1.0
+spouse('Susan Hughes Bryant', 'Winston_Bryant') 1.0
+spouse('Clinton_family', 'Hillary_Clinton') 1.0
+spouse('George_H._W._Bush', 'Barbara_Bush') 1.0
+spouse('Bill_Clinton', 'Bill_Clinton') 1.0
+spouse('Julia_Thorne', 'John_Kerry') 1.0
+spouse('David_Pryor', 'Barbara Jean Lunsford') 1.0
+spouse('Liz Brennan', 'Daniel_Patrick_Moynihan') 1.0
+spouse('Hillary_Clinton', 'Clinton_family') 1.0
+spouse('Laura_Bush', 'George_W._Bush') 1.0
+spouse('Eileen Looney, 1971&ndash;divorce', 'John_Spencer_(politician)') 1.0
+spouse('Al_Gore', 'Tipper_Gore') 1.0
+spouse('Laura_Bush', 'Laura_Bush') 1.0
+spouse('Frank_D._White', 'Mary Blue Hollenberg White') 1.0
+spouse('Sherburne Abbott', 'James_Steinberg') 1.0
+spouse('John_Kerry', 'Julia_Thorne') 1.0
+spouse('Bush_family', 'Barbara_Bush') 1.0
+spouse('Chelsea_Clinton', 'Marc_Mezvinsky') 1.0
+spouse('Bill_Clinton', 'Hillary_Clinton') 1.0
+spouse('David_Pryor', 'David_Pryor') 1.0
+spouse('Hillary_Clinton', 'Bill_Clinton') 1.0
+spouse('George_H._W._Bush', 'Bush_family') 1.0
+spouse('George_H._W._Bush', 'George_H._W._Bush') 1.0
+spouse('John_Spencer_(politician)', 'Kathy Spring-Spencer, 2003&ndash;present') 1.0
+spouse('Joe_Purcell', 'Helen Hale Purcell') 1.0
+spouse('Kirsten_Gillibrand', 'Jonathan Gillibrand') 1.0
+spouse('William_Joseph_Burns', 'Lisa Carty') 1.0
+spouse('Bush_family', 'George_H._W._Bush') 1.0
+spouse('Helen Hale Purcell', 'Joe_Purcell') 1.0
+spouse('James_Steinberg', 'Sherburne Abbott') 1.0
+spouse('Frank_D._White', 'div.') 1.0
+spouse('Jim_Guy_Tucker', 'Betty Tucker') 1.0
+spouse('Mary Blue Hollenberg White', 'Frank_D._White') 1.0
+spouse('Gay Daniels White', 'Frank_D._White') 1.0
+spouse('John_Spencer_(politician)', 'Eileen Looney, 1971&ndash;divorce') 1.0
+spouse('Winston_Bryant', 'Susan Hughes Bryant') 1.0
+spouse('Bill_Clinton', 'Clinton_family') 1.0
+spouse('Lisa Carty', 'William_Joseph_Burns') 1.0
+spouse('Clinton_family', 'Bill_Clinton') 1.0
+spouse('Kathy Spring-Spencer, 2003&ndash;present', 'John_Spencer_(politician)') 1.0
+spouse('Barbara_Bush', 'George_H._W._Bush') 1.0
+spouse('Barbara Jean Lunsford', 'David_Pryor') 1.0
+spouse('Tipper_Gore', 'Al_Gore') 1.0
+spouse('div.', 'Frank_D._White') 1.0
+spouse('Barbara_Bush', 'Barbara_Bush') 1.0
+spouse('George_W._Bush', 'George_W._Bush') 1.0
+spouse('John_Kerry', 'Teresa_Heinz') 1.0
+spouse('Jonathan Gillibrand', 'Kirsten_Gillibrand') 1.0
+spouse('Betty Tucker', 'Jim_Guy_Tucker') 1.0
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.157s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.150s

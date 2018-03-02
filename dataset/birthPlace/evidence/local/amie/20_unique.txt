@@ -1,0 +1,37 @@
+birthPlace("Neil_deGrasse_Tyson","New_York_City").
+birthPlace("Albert_Einstein","Ulm").
+birthPlace("Albert_Einstein","German_Empire").
+birthPlace("Isaac_Newton","Lincolnshire").
+birthPlace("Isaac_Newton","Woolsthorpe-by-Colsterworth").
+birthPlace("Isaac_Newton","Woolsthorpe_Manor").
+birthPlace("Isaac_Newton","Kingdom_of_England").
+birthPlace("Carl_Sagan","Brooklyn").
+birthPlace("Richard_Feynman","Queens").
+deathPlace("Albert_Einstein","Princeton,_New_Jersey").
+deathPlace("Isaac_Newton","Kensington").
+deathPlace("Isaac_Newton","Middlesex").
+deathPlace("Isaac_Newton","Kingdom_of_England").
+deathPlace("Carl_Sagan","Seattle").
+deathPlace("Richard_Feynman","Los_Angeles").
+country("NASA_Distinguished_Public_Service_Medal","United States").
+country("Columbia_University","U.S.").
+country("University_of_Texas_at_Austin","U.S.").
+country("New_York_City","United_States").
+country("Harvard_College","United_States").
+residence("Albert_Einstein","Switzerland").
+country("New_York","New York New York").
+location("Brooklyn","JFK Airport, New York").
+country("Bergen_County,_New_Jersey","United_States").
+country("Brooklyn","United_States_of_America").
+country("New_York","United_States").
+country("Queens","United_States_of_America").
+country("The_Bronx","United_States_of_America").
+largestCity("Bergen_County,_New_Jersey","Mahwah,_New_Jersey").
+largestCity("New_York","New_York_City").
+country("Hudson_County,_New_Jersey","United_States").
+largestCity("Hudson_County,_New_Jersey","Jersey_City,_New_Jersey").
+predecessor("Gale_Brewer","Ronnie_Eldridge").
+predecessor("Gale_Brewer","Scott_Stringer").
+residence("Gale_Brewer","Manhattan").
+residence("Gale_Brewer","United_States").
+residence("Gale_Brewer","New_York_(state)").

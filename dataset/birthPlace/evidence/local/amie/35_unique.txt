@@ -1,0 +1,22 @@
+birthPlace("Al_Pacino","New_York_City").
+birthPlace("Al_Pacino","Manhattan").
+birthPlace("Beverly_D'Angelo","Columbus,_Ohio").
+birthPlace("Beverly_D'Angelo","Upper_Arlington,_Ohio").
+birthPlace("Harvey_Keitel","Brooklyn").
+birthPlace("Harvey_Keitel","New_York_City").
+birthPlace("Ellen_Burstyn","Detroit").
+birthPlace("Ellen_Burstyn","Michigan").
+country("New_York_City","United_States").
+location("HB_Studio","Greenwich_Village").
+location("HB_Studio","Bank_Street_(Manhattan)").
+country("California","United_States").
+country("California","California").
+location("Oakland,_California","Oakland Museum").
+location("Orinda,_California","Orinda Bowman, California").
+location("Emeryville,_California","Emeryville, California").
+country("Albany,_California","United_States").
+country("Piedmont,_California","United_States").
+country("Alameda_County,_California","United_States_of_America").
+country("Kensington,_California","United_States").
+largestCity("California","Los_Angeles").
+predecessor("Tom_Bates","Shirley_Dean").

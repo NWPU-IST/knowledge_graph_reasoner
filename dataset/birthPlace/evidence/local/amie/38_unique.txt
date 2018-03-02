@@ -1,0 +1,52 @@
+birthPlace("Noam_Chomsky","Pennsylvania").
+birthPlace("Noam_Chomsky","Philadelphia").
+birthPlace("Noam_Chomsky","East_Oak_Lane,_Philadelphia").
+birthPlace("Carol_Chomsky","Philadelphia").
+birthPlace("Carol_Chomsky","Philadelphia,_Pennsylvania").
+deathPlace("Carol_Chomsky","Lexington,_Massachusetts").
+country("Pennsylvania","Pennsylvania").
+country("University_of_Pennsylvania","United States").
+country("Institute_for_Advanced_Study","U.S.").
+country("Pennsylvania","United_States").
+country("Philadelphia","United_States").
+country("East_Oak_Lane,_Philadelphia","United_States").
+largestCity("Pennsylvania","Philadelphia").
+country("New_York_City","United_States").
+country("New_Jersey","New Jersey").
+country("New_York","New York New York").
+location("Brooklyn","JFK Airport, New York").
+country("Bergen_County,_New_Jersey","United_States").
+country("Brooklyn","United_States_of_America").
+country("Jersey_City,_New_Jersey","United_States").
+country("New_Jersey","United_States").
+largestCity("Bergen_County,_New_Jersey","Mahwah,_New_Jersey").
+largestCity("New_Jersey","Newark,_New_Jersey").
+birthPlace("Bill_de_Blasio","Manhattan").
+country("Province_of_New_York","United States").
+country("New_Netherland","United States").
+country("Westchester_County,_New_York","United States").
+largestCity("Westchester_County,_New_York","Yonkers,_New_York").
+predecessor("Bill_de_Blasio","Stephen DiBrienza").
+country("New_York","United_States").
+country("Queens","United_States_of_America").
+country("The_Bronx","United_States_of_America").
+country("Yonkers,_New_York","United_States").
+country("Middlesex_County,_New_Jersey","United_States").
+country("Nassau_County,_New_York","United_States").
+country("Monmouth_County,_New_Jersey","United_States").
+country("Hudson_County,_New_Jersey","United_States").
+largestCity("New_York","New_York_City").
+largestCity("United_States","New_York_City").
+largestCity("Middlesex_County,_New_Jersey","Edison,_New_Jersey").
+largestCity("Middlesex_County,_New_Jersey","Monroe_Township,_Middlesex_County,_New_Jersey").
+largestCity("Nassau_County,_New_York","Hempstead_(town),_New_York").
+largestCity("Monmouth_County,_New_Jersey","Middletown_Township,_New_Jersey").
+largestCity("Monmouth_County,_New_Jersey","Howell_Township,_New_Jersey").
+largestCity("Hudson_County,_New_Jersey","Jersey_City,_New_Jersey").
+location("New_York_City_Council","Manhattan").
+location("New_York_City_Council","New_York_City_Hall").
+predecessor("Bill_de_Blasio","Michael_Bloomberg").
+predecessor("Bill_de_Blasio","Betsy_Gotbaum").
+residence("Bill_de_Blasio","Brooklyn").
+residence("Bill_de_Blasio","Gracie_Mansion").
+residence("Bill_de_Blasio","Park_Slope").

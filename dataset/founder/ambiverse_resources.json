@@ -1,0 +1,369 @@
+{
+  "24": {
+    "Diane Greene": {
+      "confidence": 1.0,
+      "dbpedia_id": "Diane_Greene",
+      "wikidata_id": "Q11614"
+    },
+    "VMWare": {
+      "confidence": 1.0,
+      "dbpedia_id": "VMware",
+      "wikidata_id": "Q11407"
+    }
+  },
+  "25": {
+    "Travis Kalanick": {
+      "confidence": 1.0,
+      "wikidata_id": "Q7836291",
+      "dbpedia_id": "Travis_Kalanick"
+    },
+    "Uber":{
+      "dbpedia_id":"Uber_(company)"
+    }
+  },
+  "26": {
+    "Tesla": {
+      "confidence": 0.15249419134990433,
+      "dbpedia_id": "Tesla_Motors",
+      "wikidata_id": "Q478214"
+    },
+    "Jeff Bezos": {
+      "confidence": 1.0,
+      "dbpedia_id": "Jeff_Bezos",
+      "wikidata_id": "Q312556"
+    }
+  },
+  "27": {
+    "Jack Dorsey": {
+      "confidence": 1.0,
+      "dbpedia_id": "Jack_Dorsey",
+      "wikidata_id": "Q335552"
+    },
+    "Intel": {
+      "confidence": 0.9997161951223389,
+      "dbpedia_id": "Intel",
+      "wikidata_id": "Q248"
+    }
+  },
+  "20": {
+    "Elon Musk": {
+      "confidence": 1.0,
+      "dbpedia_id": "Elon_Musk",
+      "wikidata_id": "Q317521"
+    },
+    "Google": {
+      "confidence": 0.8762090339128689,
+      "dbpedia_id": "Google",
+      "wikidata_id": "Q95"
+    }
+  },
+  "21": {
+    "Amazon": {
+      "confidence": 0.2558891577948319,
+      "wikidata_id": "Q3884",
+      "dbpedia_id": "Amazon.com"
+    },
+    "Jeff Bezos": {
+      "confidence": 1.0,
+      "wikidata_id": "Q312556",
+      "dbpedia_id": "Jeff_Bezos"
+    }
+  },
+  "22": {
+    "Intel": {
+      "confidence": 0.9997197711074147,
+      "wikidata_id": "Q248",
+      "dbpedia_id": "Intel"
+    },
+    "Gordon Moore": {
+      "confidence": 0.9704489937829341,
+      "wikidata_id": "Q243969",
+      "dbpedia_id": "Gordon_Moore"
+    }
+  },
+  "23": {
+    "Jack Dorsey": {
+      "confidence": 1.0,
+      "dbpedia_id": "Jack_Dorsey",
+      "wikidata_id": "Q335552"
+    },
+    "Twitter": {
+      "dbpedia_id": "Twitter",
+      "wikidata_id": "Q918"
+    }
+  },
+  "28": {
+    "Twitter": {
+      "dbpedia_id": "Twitter",
+      "wikidata_id": "Q918"
+    },
+    "founder": {
+      "dbpedia_id": "founder",
+      "wikidata_id": "P112"
+    },
+    "Gordon Moore": {
+      "confidence": 1.0,
+      "dbpedia_id": "Gordon_Moore",
+      "wikidata_id": "Q243969"
+    }
+  },
+  "29": {
+    "Diane Greene": {
+      "confidence": 1.0,
+      "dbpedia_id": "Diane_Greene",
+      "wikidata_id": "Q11614"
+    },
+
+    "Uber":{
+      "dbpedia_id":"Uber_(company)"
+    }
+  },
+  "1": {
+    "Bill Gates": {
+      "confidence": 0.3319375656964844,
+      "wikidata_id": "Q5284",
+      "dbpedia_id": "Bill_Gates"
+    },
+    "Microsoft": {
+      "confidence": 0.8160341285328487,
+      "wikidata_id": "Q2283",
+      "dbpedia_id": "Microsoft"
+    }
+  },
+  "3": {
+    "Google": {
+      "confidence": 0.7896050713317465,
+      "wikidata_id": "Q95",
+      "dbpedia_id": "Google"
+    },
+    "Larry Page": {
+      "confidence": 0.9699935840926375,
+      "wikidata_id": "Q4934",
+      "dbpedia_id": "Larry_Page"
+    }
+  },
+  "2": {
+    "Steve Jobs": {
+      "confidence": 0.8767210095434038,
+      "dbpedia_id": "Steve_Jobs",
+      "wikidata_id": "Q19837"
+    },
+    "Apple": {
+      "confidence": 0.6635940297622411,
+      "dbpedia_id": "Apple_Inc.",
+      "wikidata_id": "Q312"
+    }
+  },
+  "5": {
+    "Apple": {
+      "confidence": 0.6820565562019404,
+      "dbpedia_id": "Apple_Inc.",
+      "wikidata_id": "Q312"
+    },
+    "Steve Wozniak": {
+      "confidence": 1.0,
+      "dbpedia_id": "Steve_Wozniak",
+      "wikidata_id": "Q483382"
+    }
+  },
+  "4": {
+    "Google": {
+      "confidence": 0.774578080126017,
+      "dbpedia_id": "Google",
+      "wikidata_id": "Q95"
+    },
+    "Sergey Brin": {
+      "confidence": 1.0,
+      "dbpedia_id": "Sergey_Brin",
+      "wikidata_id": "Q92764"
+    }
+  },
+  "7": {
+    "Mark ZuckerBerg": {
+      "confidence": 1.0,
+      "dbpedia_id": "Mark_Zuckerberg",
+      "wikidata_id": "Q36215"
+    },
+    "Facebook": {
+      "confidence": 0.9394228048863277,
+      "dbpedia_id": "Facebook",
+      "wikidata_id": "Q355"
+    }
+  },
+  "6": {
+    "Paul Allen": {
+      "confidence": 0.8846901904176653,
+      "dbpedia_id": "Paul_Allen",
+      "wikidata_id": "Q162005"
+    },
+    "Microsoft": {
+      "confidence": 0.8191397611453476,
+      "dbpedia_id": "Microsoft",
+      "wikidata_id": "Q2283"
+    }
+  },
+  "9": {
+    "SpaceX": {
+      "confidence": 1.0,
+      "dbpedia_id": "SpaceX",
+      "wikidata_id": "Q193701"
+    },
+    "Elon Musk": {
+      "confidence": 1.0,
+      "dbpedia_id": "Elon_Musk",
+      "wikidata_id": "Q317521"
+    }
+  },
+  "8": {
+    "Tesla": {
+      "confidence": 0.17462719234327923,
+      "dbpedia_id": "Tesla_Motors",
+      "wikidata_id": "Q478214"
+    },
+    "Elon Musk": {
+      "confidence": 1.0,
+      "dbpedia_id": "Elon_Musk",
+      "wikidata_id": "Q317521"
+    }
+  },
+  "a": "b",
+  "11": {
+    "Bill Gates": {
+      "confidence": 0.31875757624740997,
+      "dbpedia_id": "Bill_Gates",
+      "wikidata_id": "Q5284"
+    },
+    "Apple": {
+      "confidence": 0.6981834764677166,
+      "dbpedia_id": "Apple_Inc.",
+      "wikidata_id": "Q312"
+    }
+  },
+  "10": {
+    "Elon Musk": {
+      "confidence": 1.0,
+      "dbpedia_id": "Elon_Musk",
+      "wikidata_id": "Q317521"
+    },
+    "Paypal": {
+      "confidence": 0.974198253425484,
+      "dbpedia_id": "PayPal",
+      "wikidata_id": "Q483959"
+    }
+  },
+  "13": {
+    "Larry Page": {
+      "confidence": 0.9694799366217648,
+      "dbpedia_id": "Larry_Page",
+      "wikidata_id": "Q4934"
+    },
+    "Apple": {
+      "confidence": 0.6936995462185417,
+      "dbpedia_id": "Apple_Inc.",
+      "wikidata_id": "Q312"
+    }
+  },
+  "12": {
+    "Steve Jobs": {
+      "confidence": 0.8947576356575941,
+      "dbpedia_id": "Steve_Jobs",
+      "wikidata_id": "Q19837"
+    },
+    "Microsoft": {
+      "confidence": 0.8535680188853134,
+      "dbpedia_id": "Microsoft",
+      "wikidata_id": "Q2283"
+    }
+  },
+  "15": {
+    "Google": {
+      "confidence": 0.8274611280053232,
+      "dbpedia_id": "Google",
+      "wikidata_id": "Q95"
+    },
+    "Steve Wozniak": {
+      "confidence": 1.0,
+      "dbpedia_id": "Steve_Wozniak",
+      "wikidata_id": "Q483382"
+    }
+  },
+  "14": {
+    "Microsoft": {
+      "confidence": 0.8607207369470928,
+      "dbpedia_id": "Microsoft",
+      "wikidata_id": "Q2283"
+    },
+    "Sergey Brin": {
+      "confidence": 1.0,
+      "dbpedia_id": "Sergey_Brin",
+      "wikidata_id": "Q92764"
+    }
+  },
+  "17": {
+    "Tesla": {
+      "confidence": 0.15450784036530824,
+      "dbpedia_id": "Tesla_Motors",
+      "wikidata_id": "Q478214"
+    },
+    "Mark ZuckerBerg": {
+      "confidence": 1.0,
+      "dbpedia_id": "Mark_Zuckerberg",
+      "wikidata_id": "Q36215"
+    }
+  },
+  "16": {
+    "Google": {
+      "confidence": 0.8160128427661568,
+      "dbpedia_id": "Google",
+      "wikidata_id": "Q95"
+    },
+    "Paul Allen": {
+      "confidence": 0.8811621451235342,
+      "dbpedia_id": "Paul_Allen",
+      "wikidata_id": "Q162005"
+    }
+  },
+  "19": {
+    "Elon Musk": {
+      "confidence": 1.0,
+      "wikidata_id": "Q317521",
+      "dbpedia_id": "Elon_Musk"
+    },
+    "Apple": {
+      "confidence": 0.6857773372392139,
+      "wikidata_id": "Q312",
+      "dbpedia_id": "Apple_Inc."
+    }
+  },
+  "18": {
+    "Elon Musk": {
+      "confidence": 1.0,
+      "dbpedia_id": "Elon_Musk",
+      "wikidata_id": "Q317521"
+    },
+    "Facebook": {
+      "confidence": 0.960640351508302,
+      "dbpedia_id": "Facebook",
+      "wikidata_id": "Q355"
+    }
+  },
+  "31": {
+    "SpaceX": {
+      "confidence": 1.0,
+      "wikidata_id": "Q193701",
+      "dbpedia_id": "SpaceX"
+    }
+  },
+  "30": {
+    "Travis Kalanick": {
+      "confidence": 1.0,
+      "wikidata_id": "Q7836291",
+      "dbpedia_id": "Travis_Kalanick"
+    },
+    "Facebook": {
+      "confidence": 0.9572379242834479,
+      "wikidata_id": "Q355",
+      "dbpedia_id": "Facebook"
+    }
+  }
+}

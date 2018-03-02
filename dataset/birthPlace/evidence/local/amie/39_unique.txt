@@ -1,0 +1,67 @@
+birthPlace("Donald_Trump","New_York_City").
+birthPlace("Donald_Trump","Queens").
+parent("Donald_Trump","Fred_Trump").
+residence("Donald_Trump","Manhattan").
+residence("Donald_Trump","New_York_City").
+birthPlace("Ivana_Trump","Moravia").
+birthPlace("Ivana_Trump","Czechoslovak_Socialist_Republic").
+birthPlace("Tiffany_Trump","New_York_City").
+birthPlace("Tiffany_Trump","West_Palm_Beach,_Florida").
+birthPlace("Ivanka_Trump","Manhattan").
+birthPlace("Ivanka_Trump","New_York_City").
+birthPlace("Marla_Maples","Georgia_(U.S._state)").
+birthPlace("Marla_Maples","Dalton,_Georgia").
+birthPlace("Donald_Trump_Jr.","Manhattan").
+birthPlace("Donald_Trump_Jr.","New_York_City").
+birthPlace("Eric_Trump","Manhattan").
+birthPlace("Eric_Trump","New_York_City").
+birthPlace("Fred_Trump","Woodhaven,_Queens").
+birthPlace("Fred_Trump","Queens,_New_York").
+birthPlace("Melania_Trump","Socialist_Federal_Republic_of_Yugoslavia").
+birthPlace("Melania_Trump","Socialist_Republic_of_Slovenia").
+birthPlace("Melania_Trump","Novo_Mesto").
+deathPlace("Fred_Trump","New_Hyde_Park,_New_York").
+country("University_of_Pennsylvania","United States").
+country("Fordham_University","U.S.").
+country("Republican_Party_(United_States)","United States").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+country("New_York_City","United_States").
+country("Queens","United_States_of_America").
+location("The_Trump_Organization","Trump_Tower_(New_York_City)").
+parent("Fred_Trump","Elizabeth_Christ_Trump").
+parent("Fred_Trump","Frederick_Trump").
+residence("Ivanka_Trump","Manhattan").
+residence("Ivanka_Trump","New_York_City").
+residence("Eric_Trump","Manhattan").
+residence("Eric_Trump","Westchester_County,_New_York").
+residence("Eric_Trump","New_York_(state)").
+country("Philadelphia","United_States").
+birthPlace("William_Penn","London").
+birthPlace("William_Penn","Kingdom_of_England").
+birthPlace("Jim_Kenney","Philadelphia").
+birthPlace("Jim_Kenney","Philadelphia,_Pennsylvania").
+deathPlace("William_Penn","Berkshire").
+deathPlace("William_Penn","Ruscombe").
+deathPlace("William_Penn","Kingdom_of_England").
+country("Pennsylvania","Pennsylvania").
+country("Kingdom_of_Great_Britain","United Kingdom").
+country("Kingdom_of_England","England").
+country("Province_of_Pennsylvania","United States Of America").
+location("Camden,_New_Jersey","Camden, New Jersey").
+location("Cherry_Hill,_New_Jersey","Cherry Hill").
+country("Camden,_New_Jersey","United_States").
+country("Pennsylvania","United_States").
+country("Upper_Darby_Township,_Delaware_County,_Pennsylvania","United_States").
+country("Cherry_Hill,_New_Jersey","United_States").
+country("Philadelphia_County,_Pennsylvania","United_States").
+country("Bensalem_Township,_Pennsylvania","United_States").
+country("Tinicum_Township,_Delaware_County,_Pennsylvania","United_States").
+largestCity("Pennsylvania","Philadelphia").
+largestCity("United_States","New_York_City").
+largestCity("Philadelphia_County,_Pennsylvania","Philadelphia").
+location("Philadelphia_City_Council","Philadelphia_City_Hall").
+parent("William_Penn","Admiral_Sir_William_Penn").
+predecessor("Jim_Kenney","George Burrell").
+country("West_Deptford_Township,_New_Jersey","United_States").
+predecessor("Jim_Kenney","Michael_Nutter").

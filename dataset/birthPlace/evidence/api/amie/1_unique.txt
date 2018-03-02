@@ -1,0 +1,52 @@
+birthPlace("Elon_Musk","Pretoria").
+birthPlace("Elon_Musk","Transvaal_Province").
+parent("Elon_Musk","Maye_Musk").
+residence("Elon_Musk","California").
+residence("Elon_Musk","Los_Angeles").
+residence("Elon_Musk","Bel_Air,_Los_Angeles").
+deathPlace("Wernher_von_Braun","Alexandria,_Virginia").
+birthPlace("John_Glenn","Cambridge,_Ohio").
+birthPlace("Wernher_von_Braun","German_Empire").
+birthPlace("Wernher_von_Braun","Kingdom_of_Prussia").
+birthPlace("Wernher_von_Braun","Wyrzysk").
+birthPlace("Wernher_von_Braun","Posen_Province").
+birthPlace("Ashlee_Vance","South_Africa").
+birthPlace("Marco_Rubio","Miami").
+birthPlace("Burt_Rutan","Estacada,_Oregon").
+location("Daimler_AG","Germany").
+location("Daimler_AG","Stuttgart").
+location("Toyota","Japan").
+location("Toyota","Toyota,_Aichi").
+parent("Wernher_von_Braun","Magnus_von_Braun_(senior)").
+predecessor("Daimler_AG","Daimler-Benz").
+predecessor("Marco_Rubio","George_LeMieux").
+predecessor("Marco_Rubio","Allan_Bense").
+predecessor("Commodore_VIC-20","Commodore_PET").
+residence("John_Glenn","Columbus,_Ohio").
+residence("Marco_Rubio","West_Miami,_Florida").
+country("The_Simpsons","United States").
+country("Time_(magazine)","United States").
+country("The_Spy_Who_Loved_Me_(film)","United Kingdom").
+country("Fortune_(magazine)","United States").
+country("Iron_Man_2","United States").
+predecessor("John_Glenn","William_V._Roth_Jr.").
+predecessor("John_Glenn","Howard_Metzenbaum").
+predecessor("Marco_Rubio","Carlos Valdes").
+largestCity("South_Africa","Johannesburg").
+deathPlace("Bartolomeu_Dias","Cape_of_Good_Hope").
+deathPlace("Olive_Schreiner","Wynberg,_Cape_Town").
+deathPlace("Olive_Schreiner","Union_of_South_Africa").
+birthPlace("Bartolomeu_Dias","Algarve").
+birthPlace("Bartolomeu_Dias","Kingdom_of_Portugal").
+birthPlace("Sepp_Blatter","Visp").
+birthPlace("Thabo_Mbeki","Union_of_South_Africa").
+birthPlace("Thabo_Mbeki","Mbewuleni").
+birthPlace("Olive_Schreiner","Cape_Colony").
+birthPlace("Olive_Schreiner","Lesotho").
+birthPlace("Joost_van_der_Westhuizen","Pretoria").
+birthPlace("Joost_van_der_Westhuizen","Pretoria,_South_Africa").
+predecessor("Thabo_Mbeki","Nelson_Mandela").
+country("Cape_Colony","South Africa").
+parent("United_Nations_High_Commissioner_for_Refugees","United Nations").
+predecessor("Thabo_Mbeki","Office established").
+predecessor("Thabo_Mbeki","Position established").

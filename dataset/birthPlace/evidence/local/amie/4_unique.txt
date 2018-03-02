@@ -1,0 +1,3 @@
+birthPlace("Mark_Zuckerberg","White_Plains,_New_York").
+hometown("Mark_Zuckerberg","Dobbs_Ferry,_New_York").
+residence("Mark_Zuckerberg","Palo_Alto,_California").

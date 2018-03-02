@@ -1,0 +1,31 @@
+birthPlace("Stephen_Cook","Buffalo,_New_York").
+birthPlace("Stephen_Cook","New_York_(state)").
+birthPlace("Hao_Wang_(academic)","Shandong").
+birthPlace("Hao_Wang_(academic)","Jinan").
+birthPlace("Hao_Wang_(academic)","Qihe").
+deathPlace("Hao_Wang_(academic)","New_York_City").
+deathPlace("Hao_Wang_(academic)","New_York_(state)").
+country("Gerhard_Herzberg_Canada_Gold_Medal_for_Science_and_Engineering","Canada").
+country("Harvard_University","U.S.").
+country("University_of_California,_Berkeley","U.S.").
+country("University_of_Michigan","United States").
+residence("Toniann_Pitassi","Toronto, Canada").
+country("University_of_Toronto","Canada").
+country("Turing_Award","United_States").
+country("New_York","New York New York").
+location("Brooklyn","JFK Airport, New York").
+country("Bergen_County,_New_Jersey","United_States").
+country("Brooklyn","United_States_of_America").
+country("New_York","United_States").
+country("New_York_City","United_States").
+country("Queens","United_States_of_America").
+country("The_Bronx","United_States_of_America").
+largestCity("Bergen_County,_New_Jersey","Mahwah,_New_Jersey").
+largestCity("New_York","New_York_City").
+country("Hudson_County,_New_Jersey","United_States").
+largestCity("Hudson_County,_New_Jersey","Jersey_City,_New_Jersey").
+predecessor("Gale_Brewer","Ronnie_Eldridge").
+predecessor("Gale_Brewer","Scott_Stringer").
+residence("Gale_Brewer","Manhattan").
+residence("Gale_Brewer","United_States").
+residence("Gale_Brewer","New_York_(state)").

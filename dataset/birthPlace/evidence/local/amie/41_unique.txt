@@ -1,0 +1,46 @@
+birthPlace("Neil_deGrasse_Tyson","Manhattan").
+birthPlace("Neil_deGrasse_Tyson","New_York_City").
+birthPlace("Albert_Einstein","Ulm").
+birthPlace("Albert_Einstein","German_Empire").
+birthPlace("Isaac_Newton","Lincolnshire").
+birthPlace("Isaac_Newton","Woolsthorpe-by-Colsterworth").
+birthPlace("Isaac_Newton","Woolsthorpe_Manor").
+birthPlace("Isaac_Newton","Kingdom_of_England").
+birthPlace("Carl_Sagan","Brooklyn").
+birthPlace("Richard_Feynman","Queens").
+deathPlace("Albert_Einstein","Princeton,_New_Jersey").
+deathPlace("Isaac_Newton","Kensington").
+deathPlace("Isaac_Newton","Middlesex").
+deathPlace("Isaac_Newton","Kingdom_of_England").
+deathPlace("Carl_Sagan","Seattle").
+deathPlace("Richard_Feynman","Los_Angeles").
+country("NASA_Distinguished_Public_Service_Medal","United States").
+country("Columbia_University","U.S.").
+country("University_of_Texas_at_Austin","U.S.").
+country("New_York_City","United_States").
+country("Harvard_College","United_States").
+residence("Albert_Einstein","Switzerland").
+birthPlace("Byron_Brown","Queens").
+birthPlace("Byron_Brown","Queens,_New_York").
+country("New_York","New York New York").
+location("Fort_Erie,_Ontario","Fort Erie").
+predecessor("Byron_Brown","Mary_Lou_Rath").
+predecessor("Byron_Brown","Anthony_Masiello").
+predecessor("Byron_Brown","Al_Coppola").
+predecessor("Byron_Brown","New position").
+predecessor("Byron_Brown","David Collins").
+country("New_York","United_States").
+country("Grand_Island,_New_York","United_States").
+country("Lackawanna,_New_York","United_States").
+country("Kenmore,_New_York","United_States").
+country("Erie_County,_New_York","United_States").
+country("West_Seneca,_New_York","United_States").
+country("Fort_Erie,_Ontario","Canada").
+country("Amherst,_New_York","United_States").
+country("Tonawanda_(town),_New_York","United_States").
+country("Sloan,_New_York","United_States").
+country("Lake_Erie","Canada").
+country("Lake_Erie","United_States").
+largestCity("New_York","New_York_City").
+largestCity("Erie_County,_New_York","Buffalo,_New_York").
+location("Lake_Erie","North_America").

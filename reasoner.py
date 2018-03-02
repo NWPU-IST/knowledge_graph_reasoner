@@ -1,9 +1,10 @@
-from config import rule_mining, rule_type, top_k
+from config import rule_mining, rule_type, top_k , dbpedia
 import sys
 import re
 from ordered_set import OrderedSet
 from more_itertools import unique_everseen
 import os
+import subprocess
 
 
 def get_rule_predicates(data_source):
@@ -27,7 +28,7 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
                     item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
                 except:
                     pass
-    with open('dataset/' + data_source + '/evidence/'+ rule_mining + '/' + str(sentence_id)+'_.txt', 'wb') as csvfile:
+    with open('dataset/' + data_source + '/evidence/'+dbpedia + '/' + rule_mining + '/' + str(sentence_id)+'_.txt', 'wb') as csvfile:
         for i in item_set:
             if '*' not in i:
                 try:
@@ -36,31 +37,65 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
                 except:
                     pass
 
-    with open('dataset/' + data_source + '/evidence/'+ rule_mining + '/' + str(sentence_id)+'_.txt', 'r') as f, \
-            open('dataset/' + data_source + '/evidence/'+ rule_mining + '/' + str(sentence_id) + '_unique.txt', 'wb') as out_file:
+    with open('dataset/' + data_source + '/evidence/'+dbpedia + '/'+ rule_mining + '/' + str(sentence_id)+'_.txt', 'r') as f, \
+            open('dataset/' + data_source + '/evidence/'+ dbpedia + '/' + rule_mining + '/' + str(sentence_id) + '_unique.txt', 'wb') as out_file:
         out_file.writelines(unique_everseen(f))
-    remove_file = 'dataset/' + data_source + '/evidence/'+ rule_mining + '/' + str(sentence_id)+'_.txt'
+    remove_file = 'dataset/' + data_source + '/evidence/'+ dbpedia + '/' + rule_mining + '/' + str(sentence_id)+'_.txt'
     os.remove(remove_file)
     return item_set
 
 
-def clingo_map(sentence_id, data_source, resource_v, top_k, predicate, set_up):
+def clingo_map(sentence_id, data_source, resource_v):
     print "Clingo Inference"
-    evidence_source = 'LPmln/' + data_source + '/' + set_up + '/evidence_'+top_k+'/' + sentence_id + predicate
-    cmd = "clingo {0}{4}/rudik_rules_{1}/{3}_all {2}_unique.txt > {0}clingo_result.txt ".format('LPmln/' + data_source +\
-                                                                                            '/', top_k, evidence_source,\
-                                                                                            predicate, set_up)
+    cmd = "clingo {0}rules/{2}/hard/top{1} {0}evidence/{5}/{2}/{4}_unique.txt > {0}clingo_result.txt ".format('dataset/' +\
+                                                                                                         data_source +\
+                                                                                                         '/', top_k,\
+                                                                                                         rule_mining, \
+                                                                                                          data_source, sentence_id, dbpedia)
     print cmd
     subprocess.call(cmd, shell=True)
-    text = open('LPmln/' +data_source + '/' + 'clingo_result.txt', 'r')
+    text = open('dataset/' +data_source + '/' + 'clingo_result.txt', 'r')
     f = text.read()
     text.close()
     probs = re.findall("(\w+\([\s\S]+\"\))",f)
     if probs:
         probs = probs[0].split(' ')
         probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-        probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
+        probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and data_source in p]
     else:
         probs = []
         probs_test = []
+    return probs, probs_test
+
+
+def inference_map(sentence_id, data_source, resource_v):
+    print "LPMLN MAP Inference"
+    cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -q {3} -e {0}evidence/{5}/{2}/{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+                                                                                                         data_source +\
+                                                                                                         '/', top_k,\
+                                                                                                         rule_mining, \
+                                                                                                        data_source, sentence_id, dbpedia)
+    print cmd
+    subprocess.call(cmd, shell=True)
+    text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
+    f = text.read()
+    text.close()
+    probs = re.findall("(\w+\(\'[\s\S].+)", f)
+    probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
+    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and data_source in p]
+    return probs, probs_test
+
+
+def inference_prob(sentence_id, data_source, resource_v):
+    print "LPMLN Probability Inference"
+    cmd = "lpmln2asp -i {0}rules/{2}/soft/top{1} -q {3} -e {0}evidence/{5}/{2}/{4}_unique.txt -r {0}prob_result.txt".format(
+        'dataset/' + data_source + '/', top_k, rule_mining, data_source, sentence_id, dbpedia)
+    print cmd
+    subprocess.call(cmd, shell=True)
+    text = open('dataset/' + data_source + '/' + 'prob_result.txt', 'r')
+    f = text.read()
+    text.close()
+    probs = re.findall("(\w+\(\'[\s\S].+)", f)
+    probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
+    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
     return probs, probs_test

@@ -1,0 +1,13 @@
+spouse(A,B) :- spouse(B,A).
+spouse(A,C) :- child(A,B) , parent(B,C) .
+spouse(A,C) :- child(A,B) , child(C,B).
+spouse(C,A) :- placeOfBurial(A,B) , restingPlace(C,B) .
+spouse(A,C) :- child(A,B), relation(B,C) .
+spouse(C,A) :- child(A,B) ,parent(B,C).
+spouse(C,A) :- child(A,B) , relation(B,C).
+spouse(A,C) :- child(A,B), relative(B,C).
+spouse(C,A) :- child(A,B) ,child(C,B).
+spouse(C,A) :- child(A,B), relative(B,C).
+spouse(C,A) :- placeOfBurial(A,B) ,deathPlace(C,B).
+spouse(B,A) :- partner(A,B).
+spouse(C,A) :- placeOfBurial(A,B), birthPlace(C,B).

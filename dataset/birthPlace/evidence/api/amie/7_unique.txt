@@ -1,0 +1,12 @@
+birthPlace("Jack_Ma","Zhejiang").
+birthPlace("Jack_Ma","China").
+birthPlace("Jet_Li","Beijing").
+birthPlace("Jet_Li","China").
+country("Jet_Li","People's_Republic_of_China").
+country("Barron's_(newspaper)","United_States").
+largestCity("China","Shanghai").
+country("Time_(magazine)","United States").
+country("Cheung_Kong_Graduate_School_of_Business","China").
+country("Massachusetts_Institute_of_Technology","United States").
+country("New_York_Stock_Exchange","United States").
+location("Hangzhou","Hangzhou").

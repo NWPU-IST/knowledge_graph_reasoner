@@ -1,0 +1,21 @@
+birthPlace("Ben_Affleck","California").
+birthPlace("Casey_Affleck","United_States").
+birthPlace("Casey_Affleck","Falmouth,_Massachusetts").
+birthPlace("Jennifer_Garner","Houston").
+birthPlace("Jennifer_Garner","Texas").
+country("California","United_States").
+country("California","California").
+country("University_of_Vermont","U.S.").
+location("Berkeley,_California","Berkeley, California").
+predecessor("Democratic_Party_(United_States)","Democratic-Republican_Party").
+country("Democratic_Party_(United_States)","United_States").
+country("Occidental_College","Higher_education_in_the_United_States").
+largestCity("California","Los_Angeles").
+location("Oakland,_California","Oakland Museum").
+location("Orinda,_California","Orinda Bowman, California").
+location("Emeryville,_California","Emeryville, California").
+country("Albany,_California","United_States").
+country("Piedmont,_California","United_States").
+country("Alameda_County,_California","United_States_of_America").
+country("Kensington,_California","United_States").
+predecessor("Tom_Bates","Shirley_Dean").

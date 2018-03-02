@@ -1,0 +1,52 @@
+birthPlace("Johnny_Depp","Owensboro,_Kentucky").
+residence("Johnny_Depp","Los_Angeles").
+residence("Johnny_Depp","California").
+birthPlace("Amber_Heard","Austin,_Texas").
+birthPlace("Lily-Rose_Depp","France").
+birthPlace("Lily-Rose_Depp","Paris").
+birthPlace("Vanessa_Paradis","France").
+birthPlace("Vanessa_Paradis","Val-de-Marne").
+country("California","United_States").
+country("California","California").
+location("Los_Angeles","Los Angeles").
+location("Owensboro,_Kentucky","Owensboro, Kentucky").
+country("Owensboro,_Kentucky","United_States").
+largestCity("California","Los_Angeles").
+parent("Lily-Rose_Depp","Vanessa_Paradis").
+parent("Lily-Rose_Depp","Johnny_Depp").
+country("London","United_Kingdom").
+birthPlace("Sadiq_Khan","London").
+birthPlace("Sadiq_Khan","United_Kingdom").
+birthPlace("Sadiq_Khan","St_George's_Hospital").
+largestCity("England","capital").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+location("City_of_London","-1.200258E7").
+country("Greater_London","United_Kingdom").
+country("City_of_London","City_status_in_the_United_Kingdom").
+country("City_of_London","Counties_of_England").
+country("City_of_London","Sui_generis").
+largestCity("United_Kingdom","Capital_city").
+location("Greater_London","England").
+location("London_Assembly","Greater_London").
+location("London_Assembly","United_Kingdom").
+location("London_Assembly","Southwark").
+location("London_Assembly","City_Hall_(London)").
+location("Gatwick_Airport","Crawley").
+location("Gatwick_Airport","West_Sussex").
+location("Greater_London_Authority","London").
+location("Greater_London_Authority","City_Hall,_London").
+location("London_City_Airport","London").
+location("London_City_Airport","Silvertown").
+location("London_Southend_Airport","Rochford").
+predecessor("Sadiq_Khan","Parmjit_Dhanda").
+predecessor("Sadiq_Khan","Tom_Cox_(politician)").
+predecessor("Sadiq_Khan","Andrew_Adonis,_Baron_Adonis").
+predecessor("Sadiq_Khan","Tessa_Jowell").
+predecessor("Sadiq_Khan","Jack_Straw").
+predecessor("Sadiq_Khan","Boris_Johnson").
+location("London_Stansted_Airport","Essex").
+location("London_Stansted_Airport","Stansted_Mountfitchet").
+location("Luton_Airport","Bedfordshire").
+location("Luton_Airport","Luton").
+location("Luton_Airport","United_Kingdom").

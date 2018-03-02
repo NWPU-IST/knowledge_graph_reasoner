@@ -1,0 +1,74 @@
+birthPlace("Donald_Trump","Queens").
+parent("Donald_Trump","Fred_Trump").
+residence("Donald_Trump","Manhattan").
+residence("Donald_Trump","New_York_City").
+birthPlace("Ivana_Trump","Moravia").
+birthPlace("Ivana_Trump","Czechoslovak_Socialist_Republic").
+birthPlace("Tiffany_Trump","New_York_City").
+birthPlace("Tiffany_Trump","West_Palm_Beach,_Florida").
+birthPlace("Ivanka_Trump","Manhattan").
+birthPlace("Ivanka_Trump","New_York_City").
+birthPlace("Marla_Maples","Georgia_(U.S._state)").
+birthPlace("Marla_Maples","Dalton,_Georgia").
+birthPlace("Donald_Trump_Jr.","Manhattan").
+birthPlace("Donald_Trump_Jr.","New_York_City").
+birthPlace("Eric_Trump","Manhattan").
+birthPlace("Eric_Trump","New_York_City").
+birthPlace("Fred_Trump","Woodhaven,_Queens").
+birthPlace("Fred_Trump","Queens,_New_York").
+birthPlace("Melania_Trump","Socialist_Federal_Republic_of_Yugoslavia").
+birthPlace("Melania_Trump","Socialist_Republic_of_Slovenia").
+birthPlace("Melania_Trump","Novo_Mesto").
+deathPlace("Fred_Trump","New_Hyde_Park,_New_York").
+country("University_of_Pennsylvania","United States").
+country("Fordham_University","U.S.").
+country("Republican_Party_(United_States)","United States").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+country("New_York_City","United_States").
+country("Queens","United_States_of_America").
+location("The_Trump_Organization","Trump_Tower_(New_York_City)").
+parent("Fred_Trump","Elizabeth_Christ_Trump").
+parent("Fred_Trump","Frederick_Trump").
+residence("Ivanka_Trump","Manhattan").
+residence("Ivanka_Trump","New_York_City").
+residence("Eric_Trump","Manhattan").
+residence("Eric_Trump","Westchester_County,_New_York").
+residence("Eric_Trump","New_York_(state)").
+country("New_Jersey","New Jersey").
+country("New_York","New York New York").
+location("Brooklyn","JFK Airport, New York").
+country("Bergen_County,_New_Jersey","United_States").
+country("Brooklyn","United_States_of_America").
+country("Jersey_City,_New_Jersey","United_States").
+country("New_Jersey","United_States").
+largestCity("Bergen_County,_New_Jersey","Mahwah,_New_Jersey").
+largestCity("New_Jersey","Newark,_New_Jersey").
+birthPlace("Bill_de_Blasio","Manhattan").
+country("Province_of_New_York","United States").
+country("New_Netherland","United States").
+country("Westchester_County,_New_York","United States").
+largestCity("Westchester_County,_New_York","Yonkers,_New_York").
+predecessor("Bill_de_Blasio","Stephen DiBrienza").
+country("New_York","United_States").
+country("The_Bronx","United_States_of_America").
+country("Yonkers,_New_York","United_States").
+country("Middlesex_County,_New_Jersey","United_States").
+country("Nassau_County,_New_York","United_States").
+country("Monmouth_County,_New_Jersey","United_States").
+country("Hudson_County,_New_Jersey","United_States").
+largestCity("New_York","New_York_City").
+largestCity("United_States","New_York_City").
+largestCity("Middlesex_County,_New_Jersey","Edison,_New_Jersey").
+largestCity("Middlesex_County,_New_Jersey","Monroe_Township,_Middlesex_County,_New_Jersey").
+largestCity("Nassau_County,_New_York","Hempstead_(town),_New_York").
+largestCity("Monmouth_County,_New_Jersey","Middletown_Township,_New_Jersey").
+largestCity("Monmouth_County,_New_Jersey","Howell_Township,_New_Jersey").
+largestCity("Hudson_County,_New_Jersey","Jersey_City,_New_Jersey").
+location("New_York_City_Council","Manhattan").
+location("New_York_City_Council","New_York_City_Hall").
+predecessor("Bill_de_Blasio","Michael_Bloomberg").
+predecessor("Bill_de_Blasio","Betsy_Gotbaum").
+residence("Bill_de_Blasio","Brooklyn").
+residence("Bill_de_Blasio","Gracie_Mansion").
+residence("Bill_de_Blasio","Park_Slope").

@@ -1,0 +1,21 @@
+birthPlace("Ben_Affleck","California").
+deathPlace("Paul_Newman","Westport,_Connecticut").
+deathPlace("Robin_Williams","Paradise_Cay,_California").
+birthPlace("Dustin_Hoffman","California").
+birthPlace("Dustin_Hoffman","Los_Angeles").
+birthPlace("Gwyneth_Paltrow","Los_Angeles").
+birthPlace("Gwyneth_Paltrow","Los_Angeles,_California").
+birthPlace("Harrison_Ford","Chicago").
+birthPlace("Harrison_Ford","Illinois").
+birthPlace("Jennifer_Aniston","Sherman_Oaks,_Los_Angeles").
+birthPlace("John_McCain","Coco_Solo").
+birthPlace("John_McCain","Panama_Canal_Zone").
+birthPlace("Paul_Newman","Shaker_Heights,_Ohio").
+birthPlace("Robin_Williams","Chicago").
+birthPlace("Robin_Williams","Illinois").
+birthPlace("Sandra_Bullock","Arlington_County,_Virginia").
+birthPlace("Sandra_Bullock","Arlington,_Virginia").
+birthPlace("William_Goldman","Highland_Park,_Illinois").
+birthPlace("William_Goldman","Chicago,_Illinois").
+birthPlace("Patrick_Duffy","Townsend,_Montana").
+location("Berkeley,_California","Berkeley, California").

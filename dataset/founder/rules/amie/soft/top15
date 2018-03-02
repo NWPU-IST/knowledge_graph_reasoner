@@ -1,0 +1,16 @@
+1 founders(A,B) :- owning_company(A,B) , key_person(A,B).
+1 founders(A,B) :- founders(A,F), name(B,F).
+1 founders(A,B) :- founders(A,F), birth_name(B,F).
+1 founders(A,B) :- founders(A,F),  relative(B,F).
+1 founders(A,B) :- founders(A,F),  display(B,F).
+1 founders(A,B) :- founders(A,F),  commons(B,F).
+1 founders(A,B) :- founders(A,F),  relative(F,B).
+1 founders(A,B) :- founders(A,F),  display(F,B).
+1 founders(A,B) :- founders(A,F),  commons(F,B).
+1 founders(A,B) :- founders(A,F), name(F,B).
+1 founders(A,B) :- founders(A,F), birth_name(F,B).
+1 founders(A,B) :- founders(A,F),  relative(F,B).
+1 founders(A,B) :- founders(F,B), long_name(A,F).
+1 founders(A,B) :- founders(F,B), short_name(A,F).
+1 founders(A,B) :- founders(F,B), trading_name(A,F).
+1 founders(A,B) :- founders(F,B), trading_name(F,A).

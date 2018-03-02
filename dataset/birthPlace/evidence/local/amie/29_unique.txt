@@ -1,0 +1,17 @@
+birthPlace("Jack_Ma","China").
+birthPlace("Jack_Ma","Hangzhou").
+birthPlace("Jack_Ma","Zhejiang").
+country("Cheung_Kong_Graduate_School_of_Business","China").
+location("Hangzhou","Hangzhou").
+country("Hangzhou_Normal_University","People's_Republic_of_China").
+largestCity("China","Shanghai").
+birthPlace("Mark_Schlissel","Brooklyn").
+birthPlace("Mark_Schlissel","New_York_City").
+birthPlace("Mark_Schlissel","New_York_(state)").
+location("Ann_Arbor,_Michigan","Ann Arbor, Michigan").
+country("Michigan","United_States").
+largestCity("Michigan","Detroit").
+location("Big_Ten_Academic_Alliance","United_States").
+location("Association_of_American_Universities","Canada").
+location("Association_of_American_Universities","United_States").
+predecessor("Mark_Schlissel","Mary_Sue_Coleman").

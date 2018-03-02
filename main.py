@@ -4,9 +4,10 @@ from nltk import word_tokenize
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 import sys
 from resources_loader import load_files
+from resource_writer import update_resources
 import pprint
 from kb_query import distance_one_query, distance_two_query
-from reasoner import evidence_writer, get_rule_predicates
+from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob
 
 
 def fact_checker(sentence_lis, id_list,true_label, data_source):
@@ -14,6 +15,9 @@ def fact_checker(sentence_lis, id_list,true_label, data_source):
     file_triples, ambiverse_resources = load_files(data_source)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
+    lpmln_evaluation = []
+    triple_flag = False
+    ambiverse_flag = False
     for n, ne in enumerate(named_tags):
         sentence_id = id_list[n]
         true_label = true_labels[n]
@@ -51,11 +55,17 @@ def fact_checker(sentence_lis, id_list,true_label, data_source):
             print rule_predicates
             print "Evidence Set:"
             evidence_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-        # answer_set, answer_test = clingo_map(sentence_id, data_source, resource_v, top_k, predicate)
-        # hard_prob, hard_prob_test = inference_hard(sentence_id, data_source, resource_v, top_k, predicate)
-        # hard_prob_not, hard_prob_test_not = inference_hard_not(sentence_id, data_source, resource_v, top_k, predicate)
-        # lpmln_evaluation.append([sentence_id, sentence_check, str(hard_prob_test), str(hard_prob_test_not), \
-        #                          str(answer_test), str(answer_set), str(hard_prob), str(hard_prob_not)])
+        answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
+        print answer_set, answer_all
+        map_all, map  = inference_map(sentence_id, data_source, resource_v)
+        print map, map_all
+        # prob_all, prob  = inference_prob(sentence_id, data_source, resource_v)
+        prob, prob_all = [], []
+        print prob, prob_all
+        lpmln_evaluation.append([sentence_id, sentence_check, str(prob), str(map), str(answer_set), str(prob_all),\
+                                 str(answer_all), str(map_all)])
+    update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source)
+
 
 
 if __name__ == "__main__":
@@ -65,7 +75,7 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--sentence", default='')
     parser.add_argument("-t", "--test_predicate", default='sample_case')
     args = parser.parse_args()
-    with open('dataset/' + args.test_predicate + '/' + args.input) as f:
+    with open('dataset/' + args.test_predicate + '/input/' + args.input) as f:
         reader = csv.DictReader(f)
         sentences_list = []
         id_list = []

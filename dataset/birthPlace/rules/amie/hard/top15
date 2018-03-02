@@ -1,0 +1,15 @@
+birthPlace(A,F)  :-  location(F,B)   , placeOfBurial(A,B).
+birthPlace(A,F)  :-  country(F,B)    ,sportCountry(A,B).
+birthPlace(A,B)  :-  deathPlace(A,B) ,   billed(A,B).
+birthPlace(A,B)  :-  deathPlace(A,B) ,   placeOfBurial(A,B).
+birthPlace(A,F)  :-  largestCity(B,F),    sportCountry(A,B).
+birthPlace(A,B)  :-    hometown(A,B).
+birthPlace(A,B)  :-  residence(A,B)  , billed(A,B).
+birthPlace(A,B)  :-    billed(A,B).
+birthPlace(A,B)  :-    sportCountry(A,B).
+birthPlace(A,B)  :-    deathPlace(A,B).
+birthPlace(B,F)  :-  ceremonialCounty(F,A),    memberOfParliament(A,B).
+birthPlace(A,B)  :-    residence(A,B).
+birthPlace(E,B)  :-  parent(E,A)   , placeOfBurial(A,B).
+birthPlace(A,B)  :-    placeOfBurial(A,B).
+birthPlace(E,B)  :-  predecessor(E,A),    placeOfBurial(A,B).

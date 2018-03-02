@@ -1,0 +1,56 @@
+birthPlace("Elon_Musk","Pretoria").
+birthPlace("Elon_Musk","South_Africa").
+birthPlace("Elon_Musk","Transvaal_Province").
+parent("Elon_Musk","Maye_Musk").
+residence("Elon_Musk","California").
+residence("Elon_Musk","Los_Angeles").
+residence("Elon_Musk","Bel_Air,_Los_Angeles").
+deathPlace("Wernher_von_Braun","Alexandria,_Virginia").
+birthPlace("John_Glenn","Cambridge,_Ohio").
+birthPlace("Wernher_von_Braun","German_Empire").
+birthPlace("Wernher_von_Braun","Kingdom_of_Prussia").
+birthPlace("Wernher_von_Braun","Wyrzysk").
+birthPlace("Wernher_von_Braun","Posen_Province").
+birthPlace("Ashlee_Vance","South_Africa").
+birthPlace("Marco_Rubio","Miami").
+birthPlace("Burt_Rutan","Estacada,_Oregon").
+location("Daimler_AG","Germany").
+location("Daimler_AG","Stuttgart").
+location("Toyota","Japan").
+location("Toyota","Toyota,_Aichi").
+parent("Wernher_von_Braun","Magnus_von_Braun_(senior)").
+predecessor("Daimler_AG","Daimler-Benz").
+predecessor("Marco_Rubio","George_LeMieux").
+predecessor("Marco_Rubio","Allan_Bense").
+predecessor("Commodore_VIC-20","Commodore_PET").
+residence("John_Glenn","Columbus,_Ohio").
+residence("Marco_Rubio","West_Miami,_Florida").
+country("The_Simpsons","United States").
+country("Time_(magazine)","United States").
+country("The_Spy_Who_Loved_Me_(film)","United Kingdom").
+country("Fortune_(magazine)","United States").
+country("Iron_Man_2","United States").
+predecessor("John_Glenn","William_V._Roth_Jr.").
+predecessor("John_Glenn","Howard_Metzenbaum").
+predecessor("Marco_Rubio","Carlos Valdes").
+birthPlace("Sir_Mix-a-Lot","Seattle").
+birthPlace("Sir_Mix-a-Lot","Washington_(state)").
+country("Memorial_Day","United_States").
+hometown("Alice_in_Chains","Seattle").
+hometown("Alice_in_Chains","Washington_(state)").
+hometown("Soundgarden","Seattle").
+hometown("Soundgarden","Washington_(state)").
+location("Seattle_SuperSonics","Seattle").
+location("RealNetworks","United_States").
+location("RealNetworks","Seattle").
+location("RealNetworks","Washington_(state)").
+location("Seafair","United_States").
+location("Seafair","Seattle").
+location("Seafair","Washington_(state)").
+country("60_Minutes","United States").
+country("Women's_National_Basketball_Association","United States").
+location("Cebu_City","Cebu City").
+parent("Wave_Broadband","WaveDivision Holdings, LLC").
+predecessor("T-Mobile_US","MetroPCS Communications Inc.").
+predecessor("T-Mobile_US","T-Mobile USA Inc.").
+predecessor("T-Mobile_US","VoiceStream Wireless Inc.").

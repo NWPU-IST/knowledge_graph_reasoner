@@ -1,0 +1,65 @@
+birthPlace("Mark_Zuckerberg","White_Plains,_New_York").
+hometown("Mark_Zuckerberg","Dobbs_Ferry,_New_York").
+residence("Mark_Zuckerberg","Palo_Alto,_California").
+deathPlace("Virgil","Roman_Empire").
+deathPlace("Virgil","Brindisi").
+deathPlace("Virgil","Italy_(Roman_Empire)").
+deathPlace("Virgil","Brundisium").
+birthPlace("Virgil","Virgilio,_Lombardy").
+birthPlace("Virgil","Cisalpine_Gaul").
+birthPlace("Virgil","Roman_Republic").
+birthPlace("Virgil","Borgo_Virgilio").
+birthPlace("Eduardo_Saverin","Brazil").
+birthPlace("Jose_Antonio_Vargas","Philippines").
+birthPlace("Jose_Antonio_Vargas","Antipolo").
+birthPlace("Cameron_Winklevoss","Southampton,_New_York").
+birthPlace("Cameron_Winklevoss","New_York_state").
+birthPlace("Cameron_Winklevoss","Southampton_(town),_New_York").
+birthPlace("Tyler_Winklevoss","Southampton_(village),_New_York").
+birthPlace("Tyler_Winklevoss","Southampton_(town),_New_York").
+birthPlace("Tyler_Winklevoss","New_York_(state)").
+birthPlace("Divya_Narendra","United_States").
+birthPlace("Divya_Narendra","The_Bronx").
+birthPlace("Divya_Narendra","New_York_(state)").
+birthPlace("Andrew_McCollum","California").
+birthPlace("Andrew_McCollum","California,_United_States").
+birthPlace("Dustin_Moskovitz","Gainesville,_Florida").
+country("Quincy_High_School_(Massachusetts)","United_States").
+location("Facebook","Menlo_Park,_California").
+residence("Eduardo_Saverin","Singapore").
+country("The_Simpsons","United States").
+country("Time_(magazine)","United States").
+country("The_Social_Network","United States").
+country("The_Accidental_Billionaires","United States").
+country("Fortune_(magazine)","United States").
+location("2015_San_Bernardino_attack","Inland Regional Center, San Bernardino, California, U.S.").
+parent("United_Nations_General_Assembly","United_Nations").
+birthPlace("Jeff_Bezos","Albuquerque,_New_Mexico").
+birthPlace("Sundar_Pichai","India").
+birthPlace("Sundar_Pichai","Chennai").
+birthPlace("Sundar_Pichai","Tamil_Nadu").
+birthPlace("Sundar_Pichai","Madurai").
+birthPlace("Chris_Hughes","United_States").
+birthPlace("Chris_Hughes","Hickory,_North_Carolina").
+birthPlace("Bill_Gates","Seattle").
+birthPlace("Sir_Mix-a-Lot","Seattle").
+birthPlace("Sir_Mix-a-Lot","Washington_(state)").
+country("Memorial_Day","United_States").
+hometown("Alice_in_Chains","Seattle").
+hometown("Alice_in_Chains","Washington_(state)").
+hometown("Soundgarden","Seattle").
+hometown("Soundgarden","Washington_(state)").
+location("Seattle_SuperSonics","Seattle").
+location("RealNetworks","United_States").
+location("RealNetworks","Seattle").
+location("RealNetworks","Washington_(state)").
+location("Seafair","United_States").
+location("Seafair","Seattle").
+location("Seafair","Washington_(state)").
+country("60_Minutes","United States").
+country("Women's_National_Basketball_Association","United States").
+location("Cebu_City","Cebu City").
+parent("Wave_Broadband","WaveDivision Holdings, LLC").
+predecessor("T-Mobile_US","MetroPCS Communications Inc.").
+predecessor("T-Mobile_US","T-Mobile USA Inc.").
+predecessor("T-Mobile_US","VoiceStream Wireless Inc.").

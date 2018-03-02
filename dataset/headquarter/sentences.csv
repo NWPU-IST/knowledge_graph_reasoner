@@ -1,0 +1,41 @@
+id,sentence,label
+1,"Google is located in Mountain View.",T
+2,"Microsoft is located in Redmond.",T
+3,"Facebook is located in Menlo Park.",T
+4,"Nvidia is located in Santa Clara.",T
+5,"Chevron is located in San Ramon.",T
+6,"Coursera is located in Mountain View.",T
+7,"Nike is located in Beaverton.",T
+8,"Synopsys is located in Mountain View.",T
+9,"Atari is located in Sunnyvale.",T
+10,"Netscape is located in Mountain View.",T
+11,"Quora is located in Mountain View.",T
+12,"Apple is located in Cupertino.",T
+13,"Samsung is located in South Korea.",T
+14,"Amazon is located in Seattle.",T
+15,"IBM is located in Armonk.",T
+16,"Dell is located in Austin.",T
+17,"Sony is located in Tokyo.",T
+18,"Intel is located in Santa Clara.",T
+19,"Toshiba is located in Tokyo.",T
+20,"Panasonic is located in Osaka.",T
+21,"Google is located in Redmond.",F
+22,"Microsoft is located in Mountain View.",F
+23,"Facebook is located in Santa Clara.",F
+24,"Nvidia is located in Menlo Park.",F
+25,"Chevron is located in Mountain View.",F
+26,"Coursera is located in San Ramon.",F
+27,"Nike is located in Mountain View.",F
+28,"Synopsys is located in Beaverton.",F
+29,"Atari is located in Mountain View.",F
+30,"Netscape is located in Sunnyvale.",F
+31,"Samsung is located in Mountain View.",F
+32,"Amazon is located in Cupertino.",F
+33,"Quora is located in South Korea.",F
+34,"Apple is located in Seattle.",F
+35,"Intel is located in Armonk.",F
+36,"Sony is located in Austin.",F
+37,"Dell is located in Tokyo.",F
+38,"IBM is located in Santa Clara.",F
+39,"Panasonic is located in Tokyo.",F
+40,"Toshiba is located in Osaka.",F

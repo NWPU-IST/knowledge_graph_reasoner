@@ -1,0 +1,73 @@
+birthPlace("Jack_Ma","Zhejiang").
+birthPlace("Jack_Ma","China").
+birthPlace("Jack_Ma","Hangzhou").
+birthPlace("Jet_Li","Beijing").
+birthPlace("Jet_Li","China").
+country("Jet_Li","People's_Republic_of_China").
+country("Barron's_(newspaper)","United_States").
+largestCity("China","Shanghai").
+country("Time_(magazine)","United States").
+country("Cheung_Kong_Graduate_School_of_Business","China").
+country("Massachusetts_Institute_of_Technology","United States").
+country("New_York_Stock_Exchange","United States").
+country("University_of_Michigan","United States").
+deathPlace("Eero_Saarinen","Ann_Arbor,_Michigan").
+deathPlace("John_Philip_Sousa","Reading,_Pennsylvania").
+deathPlace("Lyndon_B._Johnson","Stonewall,_Texas").
+deathPlace("Lyndon_B._Johnson","Texas").
+deathPlace("John_Philip_Sousa","Pennsylvania").
+deathPlace("John_Philip_Sousa",",").
+deathPlace("John_Philip_Sousa",", U.S.").
+birthPlace("Eero_Saarinen","Grand_Duchy_of_Finland").
+birthPlace("Eero_Saarinen","Kirkkonummi").
+birthPlace("John_Philip_Sousa","Washington,_D.C.").
+birthPlace("Lyndon_B._Johnson","Stonewall,_Texas").
+birthPlace("Stephen_Cook","Buffalo,_New_York").
+birthPlace("Stephen_Cook","New_York_(state)").
+birthPlace("Darren_Criss","San_Francisco,_California").
+birthPlace("Darren_Criss","San_Francisco").
+birthPlace("Michael_Stonebraker","Milton,_New_Hampshire").
+birthPlace("Andrew_Keenan-Bolger","Detroit").
+birthPlace("Andrew_Keenan-Bolger","Detroit,_Michigan").
+birthPlace("Barry_Larkin","Cincinnati").
+birthPlace("Randy_Napoleon","Brooklyn").
+birthPlace("John_Philip_Sousa",", U.S.").
+country("Turing_Award","United_States").
+location("Lockheed_Corporation","Burbank,_California").
+location("Merit_Network","Ann_Arbor,_Michigan").
+predecessor("Lyndon_B._Johnson","W._Lee_O'Daniel").
+predecessor("Lyndon_B._Johnson","Styles_Bridges").
+predecessor("Lyndon_B._Johnson","Richard_Nixon").
+predecessor("Lyndon_B._Johnson","James_P._Buchanan").
+predecessor("Lyndon_B._Johnson","John_F._Kennedy").
+predecessor("Lyndon_B._Johnson","Francis_J._Myers").
+predecessor("Lyndon_B._Johnson","William_F._Knowland").
+hometown("Michigan_Wolverines_men's_ice_hockey","Ann_Arbor,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","San_Diego").
+hometown("Michigan_Wolverines_men's_ice_hockey","St._Louis").
+hometown("Michigan_Wolverines_men's_ice_hockey","Stockholm").
+hometown("Michigan_Wolverines_men's_ice_hockey","Bloomfield_Hills,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Bradenton,_Florida").
+hometown("Michigan_Wolverines_men's_ice_hockey","Brighton,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Carleton,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Cold_Spring_Harbor,_New_York").
+hometown("Michigan_Wolverines_men's_ice_hockey","Coral_Springs,_Florida").
+hometown("Michigan_Wolverines_men's_ice_hockey","Darien,_Illinois").
+hometown("Michigan_Wolverines_men's_ice_hockey","Kentwood,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Northbrook,_Illinois").
+hometown("Michigan_Wolverines_men's_ice_hockey","Plymouth,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Sterling_Heights,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Trenton,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Troy,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Victoria,_British_Columbia").
+hometown("Michigan_Wolverines_men's_ice_hockey","Williamston,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Williamsville,_New_York").
+hometown("Michigan_Wolverines_men's_ice_hockey","Youngstown,_New_York").
+hometown("Michigan_Wolverines_men's_ice_hockey","Brampton").
+hometown("Michigan_Wolverines_men's_ice_hockey","East_Lansing,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Mississauga").
+hometown("Michigan_Wolverines_men's_ice_hockey","Northville,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","Arlington_County,_Virginia").
+hometown("Michigan_Wolverines_men's_ice_hockey","Holland,_Michigan").
+hometown("Michigan_Wolverines_men's_ice_hockey","North_Vancouver_(city)").
+location("Michigan_Wolverines_men's_ice_hockey","Ann Arbor, Michigan").

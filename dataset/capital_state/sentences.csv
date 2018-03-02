@@ -1,0 +1,32 @@
+id,sentence,label
+1,"Montgomery is the capital of Alabama.",T
+2,"Austin is the capital of Texas.",T
+3,"Salt Lake City is the capital of Utah.",T
+4,"Richmond is the capital of Virginia.",T
+5,"Santa Fe is the capital of New Mexico.",T
+6,"Madison is the capital of Wisconsin.",T
+7,"Albany is the capital of New York.",T
+8,"Juneau is the capital of Alaska.",T
+9,"Springfield is the capital of Illinois.",T
+10,"Helena is the capital of Montana.",T
+11,"Phoenix is the capital of Arizona.",T
+12,"Sacramento is the capital of California.",T
+13,"Little Rock is the capital of Arkansas.",T
+14,"Hartford is the capital of Connecticut.",T
+15,"Tucson is the capital of Arizona.",F
+16,"Denver is the capital of Arizona.",F
+17,"Montgomery is the capital of Texas.",F
+18,"Austin is the capital of Alabama.",F
+19,"Salt Lake City is the capital of Virginia.",F
+20,"Richmond is the capital of Utah.",F
+21,"Santa Fe is the capital of Wisconsin.",F
+22,"Madison is the capital of New Mexico.",F
+23,"Albany is the capital of Alaska.",F
+24,"Juneau is the capital of New York.",F
+25,"Springfield is the capital of Montana.",F
+26,"Helena is the capital of Illinois.",F
+27,"Phoenix is the capital of Alaska.",F
+28,"Sacramento is the capital of Arizona.",F
+29,"Little Rock is the capital of Connecticut.",F
+30,"Hartford is the capital of Arkansas.",F
+

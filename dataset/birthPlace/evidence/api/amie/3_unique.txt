@@ -1,0 +1,56 @@
+parent("Bill_Gates","Mary_Maxwell_Gates").
+parent("Bill_Gates","William_H._Gates,_Sr.").
+residence("Bill_Gates","Medina,_Washington").
+birthPlace("David_Boies","United_States").
+birthPlace("David_Boies","Illinois").
+birthPlace("David_Boies","Marengo,_Illinois").
+birthPlace("David_Boies","Sycamore,_Illinois").
+birthPlace("Melinda_Gates","Dallas").
+birthPlace("Melinda_Gates","Dallas,_Texas").
+birthPlace("Steve_Ballmer","United_States").
+birthPlace("Steve_Ballmer","Detroit").
+birthPlace("Steve_Ballmer","Michigan").
+birthPlace("Steven_Pinker","Montreal").
+birthPlace("Steven_Pinker","Quebec").
+birthPlace("Carlos_Slim","Mexico_City").
+birthPlace("Craig_Mundie","Cleveland").
+birthPlace("Craig_Mundie","Cleveland,_Ohio").
+birthPlace("Anthony_Michael_Hall","Massachusetts").
+birthPlace("Anthony_Michael_Hall","West_Roxbury").
+birthPlace("Jerry_Seinfeld","Brooklyn").
+birthPlace("Jerry_Seinfeld","New_York_City").
+birthPlace("Jerry_Seinfeld","New_York_(state)").
+country("Penguin_Books","United_Kingdom").
+location("Seattle_Computer_Products","Seattle").
+location("Seattle_Computer_Products","Washington_(state)").
+residence("Melinda_Gates","Medina,_Washington").
+residence("Steve_Ballmer","Hunts_Point,_Washington").
+residence("Carlos_Slim","Mexico_City").
+country("Seinfeld","United States").
+country("The_Dating_Game","United States").
+country("The_Social_Network","United States").
+deathPlace("Andrew_Carnegie","Lenox,_Massachusetts").
+birthPlace("Christos_Papadimitriou","Athens").
+birthPlace("Andrew_Carnegie","Fife").
+birthPlace("Andrew_Carnegie","Dunfermline").
+birthPlace("Sir_Mix-a-Lot","Seattle").
+birthPlace("Sir_Mix-a-Lot","Washington_(state)").
+country("Memorial_Day","United_States").
+hometown("Alice_in_Chains","Seattle").
+hometown("Alice_in_Chains","Washington_(state)").
+hometown("Soundgarden","Seattle").
+hometown("Soundgarden","Washington_(state)").
+location("Seattle_SuperSonics","Seattle").
+location("RealNetworks","United_States").
+location("RealNetworks","Seattle").
+location("RealNetworks","Washington_(state)").
+location("Seafair","United_States").
+location("Seafair","Seattle").
+location("Seafair","Washington_(state)").
+country("60_Minutes","United States").
+country("Women's_National_Basketball_Association","United States").
+location("Cebu_City","Cebu City").
+parent("Wave_Broadband","WaveDivision Holdings, LLC").
+predecessor("T-Mobile_US","MetroPCS Communications Inc.").
+predecessor("T-Mobile_US","T-Mobile USA Inc.").
+predecessor("T-Mobile_US","VoiceStream Wireless Inc.").

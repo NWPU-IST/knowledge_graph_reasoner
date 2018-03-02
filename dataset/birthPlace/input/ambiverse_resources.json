@@ -1,0 +1,492 @@
+{
+  "24": {
+    "Seattle": {
+      "confidence": 0.6648297629473043,
+      "wikidata_id": "Q5083",
+      "dbpedia_id": "Seattle"
+    },
+    "Mark Zuckerberg": {
+      "confidence": 1.0,
+      "wikidata_id": "Q36215",
+      "dbpedia_id": "Mark_Zuckerberg"
+    }
+  },
+  "25": {
+    "Bill Gates": {
+      "confidence": 0.28184653226192297,
+      "wikidata_id": "Q16556",
+      "dbpedia_id": "Bill_Gates"
+    },
+    "New York":{
+      "dbpedia_id": "New_York"
+    }
+  },
+  "26": {
+    "San Fransisco": {
+      "confidence": 1.0,
+      "wikidata_id": "Q62",
+      "dbpedia_id": "San_Francisco"
+    },
+    "Barack Obama": {
+      "confidence": 0.9717168167217909,
+      "wikidata_id": "Q76",
+      "dbpedia_id": "Barack_Obama"
+    }
+  },
+  "27": {
+    "Steve Jobs": {
+      "confidence": 0.8704544368200565,
+      "wikidata_id": "Q19837",
+      "dbpedia_id": "Steve_Jobs"
+    },
+    "Hawaii": {
+      "confidence": 0.6518544815672491,
+      "wikidata_id": "Q782",
+      "dbpedia_id": "Hawaii"
+    }
+  },
+  "20": {
+    "Neil Tyson": {
+      "confidence": 1.0,
+      "dbpedia_id": "Neil_deGrasse_Tyson",
+      "wikidata_id": "Q310903"
+    },
+    "Manhattan": {
+      "confidence": 0.735216312082464,
+      "dbpedia_id": "Manhattan",
+      "wikidata_id": "Q11299"
+    }
+  },
+  "21": {
+    "New Zealand": {
+      "confidence": 0.5648056144057242,
+      "dbpedia_id": "New_Zealand",
+      "wikidata_id": "Q664"
+    },
+    "Ernest Rutherford": {
+      "confidence": 1.0,
+      "dbpedia_id": "Ernest_Rutherford",
+      "wikidata_id": "Q9123"
+    }
+  },
+  "22": {
+    "Satya Nadella": {
+      "confidence": 1.0,
+      "wikidata_id": "Q7426870",
+      "dbpedia_id": "Satya_Nadella"
+    },
+    "South Africa": {
+      "confidence": 0.8389284052081037,
+      "wikidata_id": "Q258",
+      "dbpedia_id": "South_Africa"
+    }
+  },
+  "23": {
+    "Elon Musk": {
+      "confidence": 1.0,
+      "dbpedia_id": "Elon_Musk",
+      "wikidata_id": "Q317521"
+    },
+    "Seattle": {
+      "confidence": 0.7664783313902512,
+      "dbpedia_id": "Seattle",
+      "wikidata_id": "Q5083"
+    }
+  },
+  "28": {
+    "Michigan": {
+      "confidence": 0.1686145378711191,
+      "dbpedia_id": "Michigan",
+      "wikidata_id": "Q1166"
+    },
+    "Larry Page": {
+      "confidence": 0.9702936769441907,
+      "dbpedia_id": "Larry_Page",
+      "wikidata_id": "Q4934"
+    }
+  },
+  "29": {
+    "Jack Ma": {
+      "confidence": 1.0,
+      "wikidata_id": "Q1137062",
+      "dbpedia_id": "Jack_Ma"
+    },
+    "Michigan": {
+      "confidence": 0.13413468218890376,
+      "wikidata_id": "Q230492",
+      "dbpedia_id": "University_of_Michigan"
+    }
+  },
+  "40": {
+    "Manhattan": {
+      "confidence": 1.0,
+      "wikidata_id": "Q11299",
+      "dbpedia_id": "Manhattan"
+    },
+    "Stephen Cook": {
+      "confidence": 0.5928888824709837,
+      "dbpedia_id": "Stephen_Cook",
+      "wikidata_id": "Q62870"
+    }
+  },
+  "41": {
+    "Buffalo": {
+      "confidence": 0.15705061006044346,
+      "wikidata_id": "Q40435",
+      "dbpedia_id": "Buffalo,_New_York"
+    },
+    "Neil Tyson": {
+      "confidence": 1.0,
+      "wikidata_id": "Q310903",
+      "dbpedia_id": "Neil_deGrasse_Tyson"
+    }
+  },
+  "1": {
+    "Elon Musk": {
+      "confidence": 1.0,
+      "dbpedia_id": "Elon_Musk",
+      "wikidata_id": "Q317521"
+    },
+    "South Africa": {
+      "confidence": 0.5339096135684857,
+      "dbpedia_id": "South_Africa",
+      "wikidata_id": "Q258"
+    }
+  },
+  "3": {
+    "Bill Gates": {
+      "confidence": 0.23634557978541046,
+      "wikidata_id": "Q5284",
+      "dbpedia_id": "Bill_Gates"
+    },
+    "Seattle": {
+      "confidence": 0.36426343477847656,
+      "wikidata_id": "Q5083",
+      "dbpedia_id": "Seattle"
+    }
+  },
+  "2": {
+    "Hyderabad": {
+      "confidence": 0.23814501013164346,
+      "dbpedia_id": "Hyderabad",
+      "wikidata_id": "Q1361"
+    },
+    "Satya Nadella": {
+      "confidence": 1.0,
+      "dbpedia_id": "Satya_Nadella",
+      "wikidata_id": "Q7426870"
+    }
+  },
+  "5": {
+    "San Fransisco": {
+      "confidence": 1.0,
+      "dbpedia_id": "San_Francisco",
+      "wikidata_id": "Q62"
+    },
+    "Steve Jobs": {
+      "confidence": 0.9000739051222572,
+      "dbpedia_id": "Steve_Jobs",
+      "wikidata_id": "Q19837"
+    }
+  },
+  "4": {
+    "New York": {
+      "confidence": 0.11958782080118306,
+      "dbpedia_id": "New_York_(state)",
+      "wikidata_id": "Q1384"
+    },
+    "Mark Zuckerberg": {
+      "confidence": 1.0,
+      "dbpedia_id": "Mark_Zuckerberg",
+      "wikidata_id": "Q36215"
+    }
+  },
+  "7": {
+    "Jack Ma": {
+      "confidence": 1.0,
+      "dbpedia_id": "Jack_Ma",
+      "wikidata_id": "Q1137062"
+    },
+    "Hangzhou": {
+      "confidence": 0.9433918922600505,
+      "dbpedia_id": "Hangzhou",
+      "wikidata_id": "Q4970"
+    }
+  },
+  "6": {
+    "Barack Obama": {
+      "confidence": 0.9302584026946775,
+      "dbpedia_id": "Barack_Obama",
+      "wikidata_id": "Q76"
+    },
+    "Hawaii": {
+      "confidence": 0.5822008550381216,
+      "dbpedia_id": "Hawaii",
+      "wikidata_id": "Q782"
+    }
+  },
+  "9": {
+    "Seattle": {
+      "confidence": 0.44586619647859976,
+      "dbpedia_id": "Seattle",
+      "wikidata_id": "Q5083"
+    },
+    "Paul Allen": {
+      "confidence": 0.8856123419194768,
+      "dbpedia_id": "Paul_Allen",
+      "wikidata_id": "Q162005"
+    }
+  },
+  "8": {
+    "Michigan": {
+      "confidence": 0.1686145378711191,
+      "dbpedia_id": "Michigan",
+      "wikidata_id": "Q1166"
+    },
+    "Larry Page": {
+      "confidence": 0.9702936769441907,
+      "dbpedia_id": "Larry_Page",
+      "wikidata_id": "Q4934"
+    }
+  },
+  "11": {
+    "Tom Hanks": {
+      "confidence": 1.0,
+      "wikidata_id": "Q2263",
+      "dbpedia_id": "Tom_Hanks"
+    },
+    "Concord": {
+      "confidence": 0.22141105424552587,
+      "wikidata_id": "Q490441",
+      "dbpedia_id": "Concord,_California"
+    }
+  },
+  "39": {
+    "Donald Trump": {
+      "confidence": 0.9245811556303247,
+      "wikidata_id": "Q22686",
+      "dbpedia_id": "Donald_Trump"
+    },
+    "Philadelphia": {
+      "confidence": 0.49611147370892933,
+      "wikidata_id": "Q1345",
+      "dbpedia_id": "Philadelphia"
+    }
+  },
+  "38": {
+    "New York City": {
+      "confidence": 0.5285793912013713,
+      "wikidata_id": "Q60",
+      "dbpedia_id": "New_York_City"
+    },
+    "Noam Chomsky": {
+      "confidence": 1.0,
+      "wikidata_id": "Q9049",
+      "dbpedia_id": "Noam_Chomsky"
+    }
+  },
+  "a": "b",
+  "10": {
+    "San Jose": {
+      "confidence": 0.2290628355050519,
+      "dbpedia_id": "San_Jose,_California",
+      "wikidata_id": "Q16553"
+    },
+    "Steve Wozniak": {
+      "confidence": 1.0,
+      "dbpedia_id": "Steve_Wozniak",
+      "wikidata_id": "Q483382"
+    }
+  },
+  "13": {
+    "Ben Affleck": {
+      "confidence": 1.0,
+      "wikidata_id": "Q483118",
+      "dbpedia_id": "Ben_Affleck"
+    },
+    "Berkeley": {
+      "confidence": 0.22087356321927,
+      "wikidata_id": "Q484678",
+      "dbpedia_id": "Berkeley,_California"
+    }
+  },
+  "12": {
+    "George Clooney": {
+      "confidence": 1.0,
+      "wikidata_id": "Q23844",
+      "dbpedia_id": "George_Clooney"
+    },
+    "Lexington": {
+      "confidence": 0.15908801877272322,
+      "wikidata_id": "Q49241",
+      "dbpedia_id": "Lexington,_Kentucky"
+    }
+  },
+  "15": {
+    "Johnny Depp": {
+      "confidence": 1.0,
+      "wikidata_id": "Q37175",
+      "dbpedia_id": "Johnny_Depp"
+    },
+    "Owensboro": {
+      "confidence": 0.9867223141066879,
+      "wikidata_id": "Q494295",
+      "dbpedia_id": "Owensboro,_Kentucky"
+    }
+  },
+  "14": {
+    "Al Pacino": {
+      "confidence": 1.0,
+      "wikidata_id": "Q41163",
+      "dbpedia_id": "Al_Pacino"
+    },
+    "Manhattan": {
+      "confidence": 0.7205086326695125,
+      "wikidata_id": "Q11299",
+      "dbpedia_id": "Manhattan"
+    }
+  },
+  "17": {
+    "Philadelphia": {
+      "confidence": 0.7505002054648995,
+      "wikidata_id": "Q1345",
+      "dbpedia_id": "Philadelphia"
+    },
+    "Noam Chomsky": {
+      "confidence": 1.0,
+      "wikidata_id": "Q9049",
+      "dbpedia_id": "Noam_Chomsky"
+    }
+  },
+  "16": {
+    "London": {
+      "confidence": 0.5182531698064462,
+      "wikidata_id": "Q84",
+      "dbpedia_id": "London"
+    },
+    "Tim Berners-Lee": {
+      "confidence": 1.0,
+      "wikidata_id": "Q80",
+      "dbpedia_id": "Tim_Berners-Lee"
+    }
+  },
+  "19": {
+    "Buffalo": {
+      "confidence": 0.22862235263990682,
+      "dbpedia_id": "Buffalo,_New_York",
+      "wikidata_id": "Q40435"
+    },
+    "Stephen Cook": {
+      "confidence": 0.5928888824709837,
+      "dbpedia_id": "Stephen_Cook",
+      "wikidata_id": "Q62870"
+    }
+  },
+  "18": {
+    "Donald Trump": {
+      "confidence": 0.9387968106516545,
+      "dbpedia_id": "Donald_Trump",
+      "wikidata_id": "Q22686"
+    },
+    "New York City": {
+      "confidence": 0.4360526522225889,
+      "dbpedia_id": "New_York_City",
+      "wikidata_id": "Q60"
+    }
+  },
+  "31": {
+    "San Jose": {
+      "confidence": 0.1482545895181635,
+      "wikidata_id": "Q16553",
+      "dbpedia_id": "San_Jose,_California"
+    },
+    "Paul Allen": {
+      "confidence": 0.8929578993252758,
+      "wikidata_id": "Q162005",
+      "dbpedia_id": "Paul_Allen"
+    }
+  },
+  "30": {
+    "Seattle": {
+      "confidence": 0.6873989650549338,
+      "wikidata_id": "Q5083",
+      "dbpedia_id": "Seattle"
+    },
+    "Steve Wozniak": {
+      "confidence": 1.0,
+      "wikidata_id": "Q483382",
+      "dbpedia_id": "Steve_Wozniak"
+    }
+  },
+  "37": {
+    "Owensboro": {
+      "wikidata_id": "Q494295",
+      "dbpedia_id": "Owensboro"
+    },
+    "Tim Berners-Lee": {
+      "confidence": 1.0,
+      "wikidata_id": "Q80",
+      "dbpedia_id": "Tim_Berners-Lee"
+    }
+  },
+  "36": {
+    "Johnny Depp": {
+      "confidence": 1.0,
+      "wikidata_id": "Q37175",
+      "dbpedia_id": "Johnny_Depp"
+    },
+    "London": {
+      "confidence": 0.4826056707437386,
+      "wikidata_id": "Q84",
+      "dbpedia_id": "London"
+    }
+  },
+  "35": {
+    "Al Pacino": {
+      "confidence": 1.0,
+      "wikidata_id": "Q41163",
+      "dbpedia_id": "Al_Pacino"
+    },
+    "Berkeley": {
+      "confidence": 0.14506380169069108,
+      "wikidata_id": "Q484678",
+      "dbpedia_id": "Berkeley,_California"
+    }
+  },
+  "34": {
+    "Manhattan": {
+      "confidence": 0.736841964055875,
+      "wikidata_id": "Q11299",
+      "dbpedia_id": "Manhattan"
+    },
+    "Ben Affleck": {
+      "confidence": 1.0,
+      "wikidata_id": "Q483118",
+      "dbpedia_id": "Ben_Affleck"
+    }
+  },
+  "33": {
+    "George Clooney": {
+      "confidence": 1.0,
+      "wikidata_id": "Q23844",
+      "dbpedia_id": "George_Clooney"
+    },
+    "Concord": {
+      "confidence": 0.16954767371899798,
+      "wikidata_id": "Q1124061",
+      "dbpedia_id": "Concord_Records"
+    }
+  },
+  "32": {
+    "Tom Hanks": {
+      "confidence": 1.0,
+      "wikidata_id": "Q2263",
+      "dbpedia_id": "Tom_Hanks"
+    },
+    "Lexington": {
+      "confidence": 0.15012407540656927,
+      "wikidata_id": "Q1397",
+      "dbpedia_id": "Ohio"
+    }
+  }
+}

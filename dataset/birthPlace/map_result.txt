@@ -1,0 +1,46 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_check_kb/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=birthPlace dataset/birthPlace/evidence/api/amie/1_unique.txt 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_check_kb/out.txt ...
+Solving...
+
+
+
+
+birthPlace('Elon_Musk', 'Bel_Air,_Los_Angeles') 1.0
+birthPlace('Burt_Rutan', 'Estacada,_Oregon') 1.0
+birthPlace('Ashlee_Vance', 'South_Africa') 1.0
+birthPlace('Elon_Musk', 'Transvaal_Province') 1.0
+birthPlace('Elon_Musk', 'California') 1.0
+birthPlace('Olive_Schreiner', 'Union_of_South_Africa') 1.0
+birthPlace('Olive_Schreiner', 'Lesotho') 1.0
+birthPlace('Marco_Rubio', 'Miami') 1.0
+birthPlace('Joost_van_der_Westhuizen', 'Pretoria,_South_Africa') 1.0
+birthPlace('John_Glenn', 'Cambridge,_Ohio') 1.0
+birthPlace('Wernher_von_Braun', 'Alexandria,_Virginia') 1.0
+birthPlace('Sepp_Blatter', 'Visp') 1.0
+birthPlace('Joost_van_der_Westhuizen', 'Pretoria') 1.0
+birthPlace('Wernher_von_Braun', 'German_Empire') 1.0
+birthPlace('Thabo_Mbeki', 'Mbewuleni') 1.0
+birthPlace('Bartolomeu_Dias', 'Kingdom_of_Portugal') 1.0
+birthPlace('Olive_Schreiner', 'Wynberg,_Cape_Town') 1.0
+birthPlace('Elon_Musk', 'Pretoria') 1.0
+birthPlace('Olive_Schreiner', 'Cape_Colony') 1.0
+birthPlace('John_Glenn', 'Columbus,_Ohio') 1.0
+birthPlace('Wernher_von_Braun', 'Wyrzysk') 1.0
+birthPlace('Wernher_von_Braun', 'Posen_Province') 1.0
+birthPlace('Wernher_von_Braun', 'Kingdom_of_Prussia') 1.0
+birthPlace('Bartolomeu_Dias', 'Algarve') 1.0
+birthPlace('Thabo_Mbeki', 'Union_of_South_Africa') 1.0
+birthPlace('Elon_Musk', 'Los_Angeles') 1.0
+birthPlace('Bartolomeu_Dias', 'Cape_of_Good_Hope') 1.0
+birthPlace('Marco_Rubio', 'West_Miami,_Florida') 1.0
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.172s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.160s

@@ -1,0 +1,15 @@
+birthPlace("Jack_Ma","China").
+birthPlace("Jack_Ma","Zhejiang").
+country("Cheung_Kong_Graduate_School_of_Business","China").
+location("Hangzhou","Hangzhou").
+country("Hangzhou_Normal_University","People's_Republic_of_China").
+largestCity("China","Shanghai").
+country("Hangzhou_Railway_Station","China").
+location("Kaifeng","Kaifeng").
+country("Kaifeng","China").
+country("Jianggan_District","People's_Republic_of_China").
+country("Lin'an_City","China").
+country("Xihu_District,_Hangzhou","People's_Republic_of_China").
+country("Jiande","China").
+country("Tonglu_County","People's_Republic_of_China").
+country("Zhao_Yide","China").

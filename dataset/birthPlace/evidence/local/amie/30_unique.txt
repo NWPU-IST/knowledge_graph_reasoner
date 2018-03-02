@@ -1,0 +1,34 @@
+birthPlace("Steve_Wozniak","San_Jose,_California").
+birthPlace("Steve_Wozniak","California").
+country("California","United_States").
+country("California","California").
+country("University_of_California,_Berkeley","U.S.").
+location("San_Jose,_California","San Jose, California").
+country("San_Jose,_California","United_States").
+country("De_Anza_College","United_States").
+largestCity("California","Los_Angeles").
+birthPlace("Ed_Murray_(Washington_politician)","United_States").
+birthPlace("Ed_Murray_(Washington_politician)","Washington_(U.S._state)").
+birthPlace("Ed_Murray_(Washington_politician)","Aberdeen,_Washington").
+location("Washington_(state)","Washington State").
+location("Bellevue,_Washington","Bellevue, Washington").
+location("Renton,_Washington","Renton, Washington").
+country("Washington_(state)","United_States").
+country("Lake_Forest_Park,_Washington","United_States").
+country("Bellevue,_Washington","United_States").
+country("Renton,_Washington","United_States").
+country("Kirkland,_Washington","United_States").
+country("Tukwila,_Washington","United_States").
+country("Bainbridge_Island,_Washington","United_States").
+country("Shoreline,_Washington","United_States").
+country("Burien,_Washington","United_States").
+country("Vashon,_Washington","United_States").
+largestCity("Washington_(state)","Seattle").
+location("Seattle_City_Council","Seattle").
+location("Seattle_City_Council","Seattle_City_Hall").
+predecessor("Ed_Murray_(Washington_politician)","Michael_McGinn").
+residence("Ed_Murray_(Washington_politician)","United_States").
+residence("Ed_Murray_(Washington_politician)","Seattle,_Washington").
+country("White_Center,_Washington","United_States").
+country("King_County,_Washington","United_States").
+largestCity("King_County,_Washington","Seattle").

@@ -1,6 +1,5 @@
 
-sparql_dbpedia_api = 'http://dbpedia.org/sparql'
-sparql_dbpedia = 'http://localhost:8890/sparql'
+
 
 aux_verb = ['was', 'is', 'become', 'to', 'of', 'in', 'the', 'for', 'where', 'etc']
 
@@ -10,6 +9,10 @@ unwanted_predicates = [u'thumbnail', u'person function', u'c',u'b',u's',u'n',u'v
                        'endowment','rdf-schema#label','owl#differentFrom','description','filename','name','givenName', u'viafId',\
                        u'utcOffset','title','termPeriod',u'homepage','nick','rdf-schema#subClassOf','owl#unionOf']
 
-top_k = 5
+top_k = 15
 rule_mining = "amie"
-rule_type = "soft"
+rule_type = "hard"
+# dbpedia = 'local'
+dbpedia = 'api'
+sparql_dbpedia = 'http://dbpedia.org/sparql'
+# sparql_dbpedia = 'http://localhost:8890/sparql'

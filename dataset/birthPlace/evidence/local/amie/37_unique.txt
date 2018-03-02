@@ -1,0 +1,20 @@
+birthPlace("Tim_Berners-Lee","England").
+birthPlace("Tim_Berners-Lee","London").
+birthPlace("Mary_Lee_Woods","Birmingham").
+birthPlace("Conway_Berners-Lee","Birmingham").
+country("Massachusetts_Institute_of_Technology","United States").
+country("University_of_Southampton","United Kingdom").
+largestCity("England","capital").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+location("Fellow_of_the_Royal_Society","London").
+location("The_Queen's_College,_Oxford","High_Street,_Oxford").
+location("Fellow_of_the_Royal_Academy_of_Engineering","London").
+country("London","United_Kingdom").
+country("Fellow_of_the_Royal_Society","United_Kingdom").
+location("World_Wide_Web_Consortium","MIT").
+location("World_Wide_Web_Consortium","CSAIL").
+location("World_Wide_Web_Consortium","European_Research_Consortium_for_Informatics_and_Mathematics").
+location("Plessey","England").
+location("Plessey","Ilford").
+location("The_Queen's_College,_Oxford","Oxford").

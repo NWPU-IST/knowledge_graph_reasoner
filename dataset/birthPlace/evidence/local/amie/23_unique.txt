@@ -1,0 +1,52 @@
+birthPlace("Elon_Musk","Pretoria").
+birthPlace("Elon_Musk","South_Africa").
+birthPlace("Elon_Musk","Transvaal_Province").
+parent("Elon_Musk","Maye_Musk").
+residence("Elon_Musk","California").
+residence("Elon_Musk","Los_Angeles").
+residence("Elon_Musk","Bel_Air,_Los_Angeles").
+birthPlace("Kimbal_Musk","Pretoria").
+birthPlace("Kimbal_Musk","Pretoria,_South_Africa").
+birthPlace("Maye_Musk","Saskatchewan").
+birthPlace("Talulah_Riley","Hertfordshire").
+birthPlace("Justine_Musk","Peterborough,_Ontario").
+country("California","United_States").
+country("California","California").
+country("PayPal","United States 95131").
+country("Queen's_University","Canada").
+country("University_of_Pennsylvania","United States").
+location("Los_Angeles","Los Angeles").
+location("Pretoria","Pretoria").
+predecessor("PayPal","Confinity").
+country("Pretoria","South_Africa").
+country("Bel_Air,_Los_Angeles","United_States").
+largestCity("California","Los_Angeles").
+largestCity("South_Africa","Johannesburg").
+location("PayPal","San_Jose,_California").
+location("OpenAI","San_Francisco").
+parent("Tosca_Musk","Maye_Musk").
+birthPlace("Ed_Murray_(Washington_politician)","United_States").
+birthPlace("Ed_Murray_(Washington_politician)","Washington_(U.S._state)").
+birthPlace("Ed_Murray_(Washington_politician)","Aberdeen,_Washington").
+location("Washington_(state)","Washington State").
+location("Bellevue,_Washington","Bellevue, Washington").
+location("Renton,_Washington","Renton, Washington").
+country("Washington_(state)","United_States").
+country("Lake_Forest_Park,_Washington","United_States").
+country("Bellevue,_Washington","United_States").
+country("Renton,_Washington","United_States").
+country("Kirkland,_Washington","United_States").
+country("Tukwila,_Washington","United_States").
+country("Bainbridge_Island,_Washington","United_States").
+country("Shoreline,_Washington","United_States").
+country("Burien,_Washington","United_States").
+country("Vashon,_Washington","United_States").
+largestCity("Washington_(state)","Seattle").
+location("Seattle_City_Council","Seattle").
+location("Seattle_City_Council","Seattle_City_Hall").
+predecessor("Ed_Murray_(Washington_politician)","Michael_McGinn").
+residence("Ed_Murray_(Washington_politician)","United_States").
+residence("Ed_Murray_(Washington_politician)","Seattle,_Washington").
+country("White_Center,_Washington","United_States").
+country("King_County,_Washington","United_States").
+largestCity("King_County,_Washington","Seattle").

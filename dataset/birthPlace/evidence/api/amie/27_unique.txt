@@ -1,0 +1,23 @@
+deathPlace("Steve_Jobs","Palo_Alto,_California").
+birthPlace("Steve_Jobs","San_Francisco").
+country("Hawaii","United_States").
+deathPlace("Lyndon_B._Johnson","Stonewall,_Texas").
+deathPlace("Lyndon_B._Johnson","Texas").
+birthPlace("Lyndon_B._Johnson","Stonewall,_Texas").
+country("Hamburger","United_States").
+country("Hamburger","Germany").
+location("United_States_Census_Bureau","United_States").
+location("United_States_Census_Bureau","Maryland").
+location("United_States_Census_Bureau","Suitland,_Maryland").
+predecessor("Lyndon_B._Johnson","W._Lee_O'Daniel").
+predecessor("Lyndon_B._Johnson","Styles_Bridges").
+predecessor("Lyndon_B._Johnson","Richard_Nixon").
+predecessor("Lyndon_B._Johnson","James_P._Buchanan").
+predecessor("Lyndon_B._Johnson","John_F._Kennedy").
+predecessor("Lyndon_B._Johnson","Francis_J._Myers").
+predecessor("Lyndon_B._Johnson","William_F._Knowland").
+country("Tonkatsu","Japan").
+country("United_States_Secret_Service","United States").
+country("United_States_presidential_election,_1960","United States").
+country("United_States_presidential_election,_1972","United States").
+country("United_States_presidential_election,_1984","United States").
