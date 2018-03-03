@@ -1,0 +1,23 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_check_kb/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=capital dataset/capital/evidence/local/amie/40_unique.txt 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_check_kb/out.txt ...
+Solving...
+
+
+
+
+capital('Kingdom_of_Portugal', 'Coimbra') 1.0
+capital('Netherlands', 'capital') 1.0
+capital('County_of_Portugal', 'Braga') 1.0
+capital('Netherlands', 'Amsterdam') 1.0
+capital('Kingdom_of_Portugal', 'Lisbon') 1.0
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.172s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.170s

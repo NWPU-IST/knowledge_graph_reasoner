@@ -1,7 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d0bc4f1-0d50-4acf-998d-ff59c3576d47" name="Default" comment="" />
+    <list default="true" id="2d0bc4f1-0d50-4acf-998d-ff59c3576d47" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/clingo_result.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/clingo_result.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/10_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/10_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/11_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/11_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/12_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/12_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/13_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/13_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/15_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/15_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/16_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/16_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/17_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/17_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/18_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/18_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/19_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/19_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/1_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/1_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/20_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/20_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/21_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/21_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/22_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/22_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/23_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/23_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/24_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/24_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/25_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/25_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/26_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/26_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/27_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/27_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/28_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/28_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/29_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/29_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/2_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/2_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/30_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/30_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/31_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/31_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/32_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/32_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/33_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/33_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/34_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/34_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/36_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/36_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/37_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/37_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/38_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/38_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/39_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/39_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/3_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/3_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/41_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/41_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/4_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/4_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/5_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/5_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/6_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/6_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/7_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/7_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/8_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/8_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/9_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/api/amie/9_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/10_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/10_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/11_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/11_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/12_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/12_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/13_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/13_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/14_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/14_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/15_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/15_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/16_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/16_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/17_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/17_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/18_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/18_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/19_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/19_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/1_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/1_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/20_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/20_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/21_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/21_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/22_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/22_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/23_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/23_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/24_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/24_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/25_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/25_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/26_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/26_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/27_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/27_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/28_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/28_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/29_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/29_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/2_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/2_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/30_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/30_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/31_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/31_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/32_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/32_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/33_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/33_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/34_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/34_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/35_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/35_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/36_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/36_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/37_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/37_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/38_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/38_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/39_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/39_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/3_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/3_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/40_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/40_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/41_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/41_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/4_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/4_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/5_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/5_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/6_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/6_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/8_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/8_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/9_unique.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/9_unique.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/birthPlace/map_result.txt" afterPath="$PROJECT_DIR$/dataset/birthPlace/map_result.txt" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/ambiverse_resources.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/rules/amie/hard/curated.lpmln" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/rules/amie/hard/top15.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/rules/amie/hard/top5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/rules/amie/soft/curated.lpmln" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/rules/amie/soft/top15.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/rules/amie/soft/top5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/sentences.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/sentences_test.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_country/triples_raw.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/ambiverse_resources.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/rules/amie/hard/curated.lpmln" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/rules/amie/hard/top15.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/rules/amie/hard/top5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/rules/amie/soft/curated.lpmln" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/rules/amie/soft/top15.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/rules/amie/soft/top5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/sentences.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/sentences_test.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/capital_state/triples_raw.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/headquarter/ambiverse_resources.json" afterPath="$PROJECT_DIR$/dataset/headquarter/input/ambiverse_resources.json" />
+      <change beforePath="$PROJECT_DIR$/dataset/headquarter/sentences.csv" afterPath="$PROJECT_DIR$/dataset/headquarter/input/sentences.csv" />
+      <change beforePath="$PROJECT_DIR$/dataset/headquarter/sentences_test.csv" afterPath="$PROJECT_DIR$/dataset/headquarter/input/sentences_test.csv" />
+      <change beforePath="$PROJECT_DIR$/dataset/headquarter/triples_raw.json" afterPath="$PROJECT_DIR$/dataset/headquarter/input/triples_raw.json" />
+      <change beforePath="$PROJECT_DIR$/kb_query.py" afterPath="$PROJECT_DIR$/kb_query.py" />
+      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change beforePath="$PROJECT_DIR$/resource_writer.py" afterPath="$PROJECT_DIR$/resource_writer.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,116 +121,70 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reasoner.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reasoner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resources_loader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kb_query.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kb_query.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="54" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-              <folding>
-                <element signature="e#25#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sentences_test.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset/spouse/sentences_test.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resource_writer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource_writer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="83" lean-forward="false" selection-start-line="13" selection-start-column="83" selection-end-line="13" selection-end-column="83" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sentence_analysis.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sentence_analysis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1181">
-              <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ambiverse_resources.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset/spouse/ambiverse_resources.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sentences.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset/spouse/sentences.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.57608014">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="top5" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dataset/capital/rules/amie/hard/top5">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sentences_test.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dataset/capital/input/sentences_test.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="203">
+                  <caret line="52" column="15" lean-forward="false" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,31 +196,70 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Hillary_Rodham</find>
+      <find>New</find>
+      <find>Step</find>
+      <find>26</find>
+      <find>cour</find>
+      <find>Tokyo</find>
+      <find>37&quot;</find>
+      <find>dbpedia_wikidata_equivalent</find>
     </findStrings>
     <replaceStrings>
       <replace>Hillary</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dataset/spouse/sentences.csv" />
-        <option value="$PROJECT_DIR$/resources_loader.py" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/kb_query.py" />
         <option value="$PROJECT_DIR$/dataset/spouse/sentences_test.csv" />
         <option value="$PROJECT_DIR$/dataset/spouse/ambiverse_resources.json" />
-        <option value="$PROJECT_DIR$/resource_writer.py" />
-        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/dataset/spouse/rules/amie/soft/top5.lpmln" />
+        <option value="$PROJECT_DIR$/dataset/spouse/rules/amie/hard/top5" />
+        <option value="$PROJECT_DIR$/dataset/spouse/rules/amie/soft/top13" />
+        <option value="$PROJECT_DIR$/dataset/spouse/rules/amie/hard/top13" />
+        <option value="$PROJECT_DIR$/dataset/founder/rules/amie/soft/top15" />
+        <option value="$PROJECT_DIR$/dataset/founder/rules/amie/soft/top33" />
+        <option value="$PROJECT_DIR$/dataset/founder/rules/amie/hard/top33" />
+        <option value="$PROJECT_DIR$/dataset/founder/rules/amie/hard/top15" />
+        <option value="$PROJECT_DIR$/dataset/birthplace/rules/amie/soft/tp[15" />
+        <option value="$PROJECT_DIR$/dataset/birthplace/rules/amie/soft/top15" />
+        <option value="$PROJECT_DIR$/dataset/birthplace/rules/amie/hard/top15" />
+        <option value="$PROJECT_DIR$/dataset/birthplace/ambiverse_resources.json" />
+        <option value="$PROJECT_DIR$/dataset/birthplace/sentences_test.csv" />
+        <option value="$PROJECT_DIR$/dataset/birthPlace/rules/amie/soft/top15" />
+        <option value="$PROJECT_DIR$/dataset/birthPlace/ambiverse_resources.json" />
         <option value="$PROJECT_DIR$/reasoner.py" />
+        <option value="$PROJECT_DIR$/resources_loader.py" />
+        <option value="$PROJECT_DIR$/dataset/birthPlace/rules/amie/hard/top30" />
+        <option value="$PROJECT_DIR$/dataset/birthPlace/rules/amie/soft/top30" />
+        <option value="$PROJECT_DIR$/dataset/headquarter/rules/amie/hard/top15" />
+        <option value="$PROJECT_DIR$/kb_query.py" />
+        <option value="$PROJECT_DIR$/ambiverse_api.py" />
+        <option value="$PROJECT_DIR$/dataset/headquarter/input/ambiverse_resources.json" />
+        <option value="$PROJECT_DIR$/dataset/headquarter/rules/amie/soft/top15" />
+        <option value="$PROJECT_DIR$/dataset/headquarter/rules/amie/soft/top30" />
+        <option value="$PROJECT_DIR$/dataset/headquarter/rules/amie/hard/top30" />
+        <option value="$PROJECT_DIR$/resource_writer.py" />
+        <option value="$PROJECT_DIR$/dataset/capital_country/sentences.csv" />
+        <option value="$PROJECT_DIR$/dataset/capital_country/triples_raw.json" />
+        <option value="$PROJECT_DIR$/dataset/capital_country/ambiverse_resources.json" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/config.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1333" />
-    <option name="y" value="166" />
-    <option name="width" value="1916" />
-    <option name="height" value="1068" />
+    <option name="x" value="1321" />
+    <option name="y" value="171" />
+    <option name="width" value="1914" />
+    <option name="height" value="1060" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -172,6 +276,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,18 +294,54 @@
               <item name="fact_check_kb" type="b2602c69:ProjectViewProjectNode" />
               <item name="fact_check_kb" type="462c0819:PsiDirectoryNode" />
               <item name="dataset" type="462c0819:PsiDirectoryNode" />
-              <item name="spouse" type="462c0819:PsiDirectoryNode" />
+              <item name="capital" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fact_check_kb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fact_check_kb" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="capital" type="462c0819:PsiDirectoryNode" />
+              <item name="rules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fact_check_kb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fact_check_kb" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="capital" type="462c0819:PsiDirectoryNode" />
+              <item name="rules" type="462c0819:PsiDirectoryNode" />
+              <item name="amie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fact_check_kb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fact_check_kb" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="capital" type="462c0819:PsiDirectoryNode" />
+              <item name="rules" type="462c0819:PsiDirectoryNode" />
+              <item name="amie" type="462c0819:PsiDirectoryNode" />
+              <item name="hard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fact_check_kb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fact_check_kb" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="headquarter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dataset/capital/input" />
+      <recent name="$PROJECT_DIR$/dataset/capital_state/input" />
+      <recent name="$PROJECT_DIR$/dataset/headquarter/input" />
+      <recent name="$PROJECT_DIR$/dataset/birthPlace/input" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -257,16 +399,16 @@
   <component name="ToolWindowManager">
     <frame x="1680" y="-4" width="1920" height="1084" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.103125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32925585" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39959225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -284,160 +426,416 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/dataset/spouse/rules/amie/hard/top13">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resource_writer.py">
+    <entry file="file://$PROJECT_DIR$/dataset/founder/rules/amie/soft/top15">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources_loader.py">
+    <entry file="file://$PROJECT_DIR$/dataset/founder/rules/amie/soft/top33">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1908">
+          <caret line="106" column="56" lean-forward="false" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentence_analysis.py">
+    <entry file="file://$PROJECT_DIR$/dataset/founder/rules/amie/hard/top33">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="50" column="49" lean-forward="false" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/founder/rules/amie/hard/top15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthplace/rules/amie/soft/tp[15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/input/sentences.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
+          <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/input/sentences_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/evidence/amie/1_unique.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/spouse/sentences.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/evidence/amie/29_unique.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/spouse/sentences.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/spouse/sentences.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/spouse/sentences_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/spouse/ambiverse_resources.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentence_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1181">
-          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource_writer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="83" lean-forward="false" selection-start-line="13" selection-start-column="83" selection-end-line="13" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kb_query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="54" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-          <folding>
-            <element signature="e#25#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reasoner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="617">
+          <caret line="90" column="75" lean-forward="false" selection-start-line="90" selection-start-column="75" selection-end-line="90" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#58#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/lpmln_15.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/input/ambiverse_resources.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/lpmln_15_api.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/output/lpmln_15_api.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/evidence/local/amie/1_unique.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/rules/amie/hard/top15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="61" lean-forward="false" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/rules/amie/soft/top15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/rules/amie/hard/top30">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/headquarter/input/sentences_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/rules/amie/soft/top30">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="67" lean-forward="true" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/headquarter/rules/amie/hard/top15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/birthPlace/output/lpmln_15_local.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/headquarter/input/sentences.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/headquarter/input/ambiverse_resources.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="60" column="6" lean-forward="false" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambiverse_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="69" lean-forward="false" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentence_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1183">
+          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kb_query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/headquarter/rules/amie/soft/top15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/headquarter/rules/amie/soft/top30">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/headquarter/rules/amie/hard/top30">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/rules/amie/soft/top5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/rules/amie/soft/top15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/rules/amie/soft/curated.lpmln">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/rules/amie/hard/curated.lpmln">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/rules/amie/hard/top5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/rules/amie/hard/top15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/input/sentences_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_country/triples_raw.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="887">
+          <caret line="241" column="3" lean-forward="false" selection-start-line="241" selection-start-column="3" selection-end-line="241" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/input/sentences.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/input/triples_raw.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="49" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1584" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource_writer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_state/input/ambiverse_resources.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5979" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_country/sentences.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="70" column="1" lean-forward="false" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital_country/ambiverse_resources.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital/input/sentences_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/capital/rules/amie/hard/top5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>

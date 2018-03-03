@@ -1,0 +1,26 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_check_kb/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=headquarter dataset/headquarter/evidence/local/amie/40_unique.txt 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_check_kb/out.txt ...
+Solving...
+
+
+
+
+headquarter('Liberal_Democratic_Party_(Japan)', 'Japan') 1.0
+headquarter('Osaka', 'Osaka, Osaka') 1.0
+headquarter('Tokyo', 'Japan') 1.0
+headquarter('Liberal_Democratic_Party_(Japan)', 'Tokyo') 1.0
+headquarter('Liberal_Democratic_Party_(Japan)', 'Chiyoda,_Tokyo') 1.0
+headquarter('Tokyo', 'Ogouchi, Okutama town, Tokyo') 1.0
+headquarter('Osaka_Prefecture', 'Japan') 1.0
+headquarter('Tokyo', 'Chichijima, Ogasawara, Tokyo') 1.0
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.237s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.220s

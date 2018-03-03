@@ -1,0 +1,11 @@
+clingo version 4.5.4
+Reading from dataset/capital/rules/amie/hard/top5 ...
+Solving...
+Answer: 1
+largestCity("Netherlands","capital") capital("Netherlands","Amsterdam") capital("Kingdom_of_Portugal","Coimbra") capital("Kingdom_of_Portugal","Lisbon") capital("County_of_Portugal","Braga") capital("Netherlands","capital")
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s

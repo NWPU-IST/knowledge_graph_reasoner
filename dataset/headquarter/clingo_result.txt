@@ -1,0 +1,11 @@
+clingo version 4.5.4
+Reading from ...aset/headquarter/rules/amie/hard/top30 ...
+Solving...
+Answer: 1
+largestCity("Japan","capital") location("Tokyo","Chichijima, Ogasawara, Tokyo") location("Tokyo","Ogouchi, Okutama town, Tokyo") capital("Japan","Tokyo") country("Tokyo","Japan") isPartOf("Tokyo","Honshu") leader("Japan","Akihito") leaderName("Tokyo","Yuriko_Koike") isPartOf("Osaka","Osaka_Prefecture") isPartOf("Osaka","Kansai_region") leaderName("Osaka","Hirofumi_Yoshimura") birthPlace("Hirofumi_Yoshimura","Osaka_Prefecture") birthPlace("Hirofumi_Yoshimura","Kawachinagano,_Osaka") location("Osaka","Osaka, Osaka") capital("Osaka_Prefecture","Osaka") country("Osaka_Prefecture","Japan") country("Liberal_Democratic_Party_(Japan)","Japan") headquarter("Liberal_Democratic_Party_(Japan)","Japan") headquarter("Liberal_Democratic_Party_(Japan)","Tokyo") headquarter("Liberal_Democratic_Party_(Japan)","Chiyoda,_Tokyo") secretaryGeneral("Liberal_Democratic_Party_(Japan)","Toshihiro_Nikai") headquarter("Tokyo","Chichijima, Ogasawara, Tokyo") headquarter("Tokyo","Ogouchi, Okutama town, Tokyo") headquarter("Osaka","Osaka, Osaka") headquarter("Tokyo","Japan") headquarter("Osaka_Prefecture","Japan")
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s

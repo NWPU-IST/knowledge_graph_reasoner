@@ -1,3 +1,0 @@
-birthPlace("Al_Pacino","Manhattan").
-birthPlace("Al_Pacino","New_York_City").
-location("Berkeley,_California","Berkeley, California").

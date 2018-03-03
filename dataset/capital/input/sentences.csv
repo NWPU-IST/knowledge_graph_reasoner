@@ -1,0 +1,71 @@
+id,sentence,label
+1,"Kathmandu is the capital of Nepal.",T
+2,"Lisbon is the capital of Portugal.",T
+3,"New Delhi  is the capital of India.",T
+4,"Amsterdam is the capital of Netherlands.",T
+6,"Seoul is the capital of South Korea.",T
+7,"Havana is the capital of Cuba.",T
+8,"Cairo is the capital of Egypt.",T
+9,"Harare is the capital of Zimbabwe.",T
+10,"Beijing is the capital of China.",T
+21,"Kabul is the capital of Afghanistan.",T
+22,"Vienna is the capital of Austria.",T
+23,"Dhaka  is the capital of Bangladesh.",T
+24,"Brussels is the capital of Belgium.",T
+25,"Ottawa is the capital of Canada.",T
+26,"Suva is the capital of Fizi.",T
+27,"Paris is the capital of France.",T
+28,"Berlin is the capital of Germany.",T
+29,"Tehran is the capital of Iran.",T
+30,"Doha is the capital of Qatar.",T
+5,"Istanbul is the capital of Turkey.",F
+11,"Kyoto is the capital of Japan.",F
+12,"Hiroshima is the capital of Japan.",F
+13,"Nagasaki is the capital of Japan.",F
+14,"Vatican City is the capital of Italy.",F
+15,"Lyon is the capital of France.",F
+16,"Kabul is the capital of India.",F
+17,"Brisbane is the capital of Vietnam.",F
+18,"Arizona is the capital of Mexico.",F
+19,"Madrid is the capital of Portugal.",F
+20,"Amsterdam is the capital of England.",F
+31,"Kyoto is the capital of India.",F
+32,"Hiroshima is the capital of Italy.",F
+33,"Nagasaki is the capital of France.",F
+34,"Vatican City is the capital of Japan.",F
+35,"Lyon is the capital of Japan.",F
+36,"Kabul is the capital of Japan.",F
+37,"Brisbane is the capital of Mexico.",F
+38,"Arizona is the capital of Vietnam.",F
+39,"Madrid is the capital of England.",F
+40,"Amsterdam is the capital of Portugal.",F
+41,"Montgomery is the capital of Alabama.",T
+42,"Austin is the capital of Texas.",T
+43,"Salt Lake City is the capital of Utah.",T
+44,"Richmond is the capital of Virginia.",T
+45,"Santa Fe is the capital of New Mexico.",T
+46,"Madison is the capital of Wisconsin.",T
+47,"Albany is the capital of New York.",T
+48,"Juneau is the capital of Alaska.",T
+49,"Springfield is the capital of Illinois.",T
+50,"Helena is the capital of Montana.",T
+51,"Phoenix is the capital of Arizona.",T
+52,"Sacramento is the capital of California.",T
+53,"Little Rock is the capital of Arkansas.",T
+54,"Hartford is the capital of Connecticut.",T
+55,"Tucson is the capital of Arizona.",F
+56,"Denver is the capital of Arizona.",F
+57,"Montgomery is the capital of Texas.",F
+58,"Austin is the capital of Alabama.",F
+59,"Salt Lake City is the capital of Virginia.",F
+60,"Richmond is the capital of Utah.",F
+61,"Santa Fe is the capital of Wisconsin.",F
+62,"Madison is the capital of New Mexico.",F
+63,"Albany is the capital of Alaska.",F
+64,"Juneau is the capital of New York.",F
+65,"Springfield is the capital of Montana.",F
+66,"Helena is the capital of Illinois.",F
+67,"Phoenix is the capital of Alaska.",F
+68,"Sacramento is the capital of Arizona.",F
+69,"Little Rock is the capital of Connecticut.",F
+70,"Hartford is the capital of Arkansas.",F

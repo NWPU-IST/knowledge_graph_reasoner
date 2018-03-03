@@ -1,0 +1,30 @@
+0.9	birthPlace(A,F)  :-  location(F,B)   , placeOfBurial(A,B).
+0.7	birthPlace(A,F)  :-  country(F,B)    ,sportCountry(A,B).
+0.5	birthPlace(A,B)  :-  deathPlace(A,B) ,   billed(A,B).
+0.5	birthPlace(A,B)  :-  deathPlace(A,B) ,   placeOfBurial(A,B).
+0.5	birthPlace(A,F)  :-  largestCity(B,F),    sportCountry(A,B).
+0.4	birthPlace(A,B)  :-    hometown(A,B).
+0.4	birthPlace(A,B)  :-  residence(A,B)  , billed(A,B).
+0.3	birthPlace(A,B)  :-    billed(A,B).
+0.3	birthPlace(A,B)  :-    sportCountry(A,B).
+0.2	birthPlace(A,B)  :-    deathPlace(A,B).
+0.2	birthPlace(B,F)  :-  ceremonialCounty(F,A),    memberOfParliament(A,B).
+0.2	birthPlace(A,B)  :-    residence(A,B).
+0.2	birthPlace(E,B)  :-  parent(E,A)    ,placeOfBurial(A,B).
+0.2	birthPlace(A,B)  :-    placeOfBurial(A,B).
+0.2	birthPlace(E,B)  :-  predecessor(E,A),    placeOfBurial(A,B).
+0.1	birthPlace(A,B)  :-    stateOfOrigin(A,B).
+0.1	birthPlace(A,B)  :-    citizenship(A,B).
+0.1	birthPlace(F,B)  :-  predecessor(A,F),    placeOfBurial(A,B).
+0.1	birthPlace(F,B)  :- parent(A,F)    ,placeOfBurial(A,B).
+0.1	birthPlace(A,B)  :-    nationality(A,B).
+0.1	birthPlace(F,B)  :-  successor(A,F)  ,  placeOfBurial(A,B).
+0.1	birthPlace(E,B)  :-  successor(E,A)  ,  placeOfBurial(A,B).
+0.1	birthPlace(A,E)  :-  country(E,B)    ,billed(A,B).
+0.1	birthPlace(E,A)  :-  birthPlace(E,B) ,   ceremonialCounty(A,B).
+0.1	birthPlace(E,B)  :-  spouse(E,A)   ,placeOfBurial(A,B).
+0.1	birthPlace(A,E)  :-  country(E,B)    ,placeOfBurial(A,B).
+0.1	birthPlace(E,B)  :-  trainer(E,A)    ,billed(A,B).
+0.1	birthPlace(A,F)  :-  largestCity(B,F),    billed(A,B).
+0.1	birthPlace(A,E)  :-  largestCity(E,B),    billed(A,B).
+0.1	birthPlace(E,B)  :-  trainer(A,E)    ,billed(A,B).

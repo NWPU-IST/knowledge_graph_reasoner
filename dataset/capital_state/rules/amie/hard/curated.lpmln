@@ -1,3 +1,0 @@
-capital(C,B) :- deathPlace(A,C), deathPlace(A,B).
-capital(C,B) :- birthPlace(A,C), birthPlace(A,B).
-capital(C,B) :- headquarter(A,C), headquarter(A,B).

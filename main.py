@@ -8,7 +8,7 @@ from resource_writer import update_resources
 import pprint
 from kb_query import distance_one_query, distance_two_query
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob
-
+from ambiverse_api import ambiverse_entity_parser
 
 def fact_checker(sentence_lis, id_list,true_label, data_source):
     rule_predicates = get_rule_predicates(data_source)
@@ -62,7 +62,7 @@ def fact_checker(sentence_lis, id_list,true_label, data_source):
         # prob_all, prob  = inference_prob(sentence_id, data_source, resource_v)
         prob, prob_all = [], []
         print prob, prob_all
-        lpmln_evaluation.append([sentence_id, sentence_check, str(prob), str(map), str(answer_set), str(prob_all),\
+        lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set), str(prob_all),\
                                  str(answer_all), str(map_all)])
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source)
 

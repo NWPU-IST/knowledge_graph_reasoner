@@ -54,3 +54,12 @@ def distance_two_query(entity, distance_two):
                 else:
                     distance_two.append([vals[1].split('/')[-1], vals_2, vals[3].split('/')[-1]])
     return distance_two
+
+
+def dbpedia_wikidata_equivalent(dbpedia_url):
+    query = 'PREFIX owl:<http://www.w3.org/2002/07/owl#> PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> SELECT \
+    ?WikidataProp WHERE { <'+dbpedia_url+'>  owl:sameAs ?WikidataProp . FILTER (CONTAINS \
+    (str(?WikidataProp) , "wikidata.org")) .} '
+    result = sparql.query(sparql_dbpedia, query)
+    resources = [sparql.unpack_row(row_result) for row_result in result]
+    return resources
