@@ -4,6 +4,42 @@ import re
 import csv
 
 
+def rule_parser_rudik(fname, predicate):
+    with open(fname) as f:
+        content = f.readlines()
+    rule_list = []
+    rep = {"subject":"A", "object":"B", "v0":"C", "v1":"D"}
+    comp = ["<",">","="]
+    for it,con in enumerate(content):
+        relation = re.findall(r"\/([a-zA-Z]+\(.*?\))", con)
+        compare = re.findall(r"([>=<]\(.*?\))", con)
+        for i,com in enumerate(compare):
+            for c in comp:
+                if c in com:
+                    com = com.replace(c+'(', "")
+                    com = com.replace(')', "")
+                    com = com.replace(',', c)
+            compare[i] = com
+        relation += compare
+        for i,rel in enumerate(relation):
+            for r in rep.keys():
+                if r in rel:
+                    rel = rel.replace(r, rep[r])
+            relation[i] = rel
+        score = re.findall(r"\d.\d+", con)
+        i = 0
+        rule = str(score[0])+' '+predicate+"(A,B) :- "
+        for rel in relation:
+            rule += rel
+            if i == len(relation)-1:
+                rule += '.'
+            else:
+                rule += ' , '
+            i += 1
+        rule_list.append(rule)
+    return rule_list
+
+
 def rule_parser_amie(fname, predicate):
     with open(fname) as f:
         content = f.readlines()
@@ -49,4 +85,6 @@ if __name__ == "__main__":
     path = 'dataset/'+args.test_predicate+'/rules/'+args.rule_type+'/'+args.test_predicate+'.csv'
     if args.rule_type=='amie':
         rule_list = rule_parser_amie(path, args.test_predicate)
+    else:
+        rule_list = rule_parser_rudik(path, args.test_predicate)
     rule_writer(rule_list, args.test_predicate,args.rule_type, folder_path)
