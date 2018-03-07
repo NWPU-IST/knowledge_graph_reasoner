@@ -13,3 +13,6 @@ capital(B,C) :- headquarter(A,C), jurisdiction(A,B).
 capital(B,C) :- location(A,C), jurisdiction(A,B).
 capital(C,B) :- deathPlace(A,C), placeOfBurial(A,B).
 capital(C,B) :- assembly(A,C), assembly(A,B).
+capital(C,B) :- deathPlace(A,C), deathPlace(A,B).
+capital(C,B) :- birthPlace(A,C), birthPlace(A,B).
+capital(C,B) :- headquarter(A,C), headquarter(A,B).

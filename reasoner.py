@@ -25,7 +25,10 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
                 pass
             else:
                 try:
-                    item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
+                    if '"' not in evidence[0] and '"' not in evidence[2]:
+                        if ':' not in evidence[0] and ':' not in evidence[2]:
+                            if '#' not in evidence[0] and '#' not in evidence[2]:
+                                item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
                 except:
                     pass
     with open('dataset/' + data_source + '/evidence/'+dbpedia + '/' + rule_mining + '/' + str(sentence_id)+'_.txt', 'wb') as csvfile:
@@ -63,8 +66,12 @@ def clingo_map(sentence_id, data_source, resource_v):
         probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
         probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and data_source in p]
     else:
-        probs = []
-        probs_test = []
+        if "UNKNOWN" in f:
+            probs = "err"
+            probs_test = "err"
+        else:
+            probs = []
+            probs_test = []
     return probs, probs_test
 
 

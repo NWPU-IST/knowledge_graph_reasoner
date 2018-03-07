@@ -10,6 +10,7 @@ from kb_query import distance_one_query, distance_two_query
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob
 from ambiverse_api import ambiverse_entity_parser
 
+
 def fact_checker(sentence_lis, id_list,true_label, data_source):
     rule_predicates = get_rule_predicates(data_source)
     file_triples, ambiverse_resources = load_files(data_source)
