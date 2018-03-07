@@ -1,0 +1,60 @@
+headquarter(A,B) :-     location(A,B).
+headquarter(A,B)	:-	country(A,B)      .
+headquarter(A,B)	:-	locationCountry(A,B)      .
+headquarter(A,B)	:-	regionServed(A,B)     .
+headquarter(A,F)	:-	country(F,B)  ,       jurisdiction(A,B).
+headquarter(A,B) :-     regionServed(A,B).
+headquarter(A,B) :-     broadcastArea(A,B).
+headquarter(A,B) :-     locationCountry(A,B).
+headquarter(A,F) :-  largestCity(B,F) ,     jurisdiction(A,B).
+headquarter(A,F) :-  largestCity(B,F)  ,    nationalAffiliation(A,B).
+headquarter(A,F) :-  isPartOf(F,B)    , jurisdiction(A,B).
+headquarter(A,F)	:-	capital(B,F)    ,     jurisdiction(A,B).
+headquarter(A,B) :-     jurisdiction(A,B).
+headquarter(A,F) :-	country(F,B)     ,    nationalAffiliation(A,B).
+headquarter(A,B) :-    hubAirport(A,B).
+headquarter(F,B) :-  parentOrganisation(A,F) ,     jurisdiction(A,B).
+headquarter(A,F) :-  headquarter(B,F)      ,secretaryGeneral(A,B).
+headquarter(A,F) :-	capital(B,F),         nationalAffiliation(A,B).
+headquarter(A,F) :-  residence(B,F)      ,secretaryGeneral(A,B).
+headquarter(A,B) :-     parentOrganisation(A,B).
+headquarter(A,B) :-     targetAirport(A,B).
+headquarter(A,E) :-  leaderName(E,B)     ,leader(A,B).
+affiliation(A,F) :-  headquarter(B,F)     , authority(A,B).
+headquarter(A,F) :- city(B,F) ,       hubAirport(A,B).
+headquarter(A,F) :-  headquarter(B,F) ,     splitFromParty(A,B).
+headquarter(A,F) :-  owner(B,F)    , hubAirport(A,B).
+headquarter(A,F) :-  headquarter(B,F) ,     nationalAffiliation(A,B).
+headquarter(B,F) :-  location(A,F)     , politicalPartyInLegislature(A,B).
+headquarter(A,F) :- birthPlace(B,F)  ,       secretaryGeneral(A,B).
+headquarter(A,B) :-     destination(A,B).
+headquarter(A,E) :-  capital(E,B)    ,  destination(A,B).
+headquarter(B,F) :-  country(A,F)    , splitFromParty(A,B).
+headquarter(B,F) :-  country(A,F)    , nationalAffiliation(A,B).
+headquarter(A,F) :-  headquarter(B,F),     sisterNewspaper(A,B).
+headquarter(A,F) :-  headquarter(B,F),     parentCompany(A,B).
+headquarter(A,F) :- largestCity(F,B) ,     destination(A,B).
+headquarter(A,E) :- country(E,B)  	  ,    destination(A,B).
+headquarter(B,F) :- officialLanguage(F,A),     languageRegulator(A,B).
+headquarter(B,F) :- locatedInArea(A,F)   ,  maintainedBy(A,B).
+headquarter(B,F) :-  location(A,F)   ,  operatedBy(A,B).
+headquarter(B,F) :- regionalLanguage(F,A),     languageRegulator(A,B).
+headquarter(A,F) :- location(B,F)    ,  destination(A,B).
+headquarter(B,F) :- language(F,A)    , languageRegulator(A,B).
+headquarter(A,F) :- locationCity(B,F),     owningCompany(A,B).
+headquarter(A,F) :-  residence(B,F)  ,   leader(A,B).
+headquarter(A,F) :-	country(B,F)     ,      destination(A,B).
+headquarter(A,F) :- location(B,F)    , hubAirport(A,B).
+headquarter(B,F)  :-  country(A,F)   ,   schoolBoard(A,B).
+headquarter(A,F) :- locationCountry(B,F),     owningCompany(A,B).
+headquarter(A,F) :-  headquarter(B,F),     europeanParliamentGroup(A,B).
+headquarter(B,F) :-  location(A,F)   ,  nrhpType(A,B).
+birthPlace(B,F)  :- headquarter(A,F) ,    chairperson(A,B).
+headquarter(A,F) :-  headquarter(B,F),     alliance(A,B).
+headquarter(A,F) :- location(B,F)    , owningCompany(A,B).
+headquarter(A,F) :- isPartOf(B,F)    ,  jurisdiction(A,B).
+birthPlace(B,F)  :- headquarter(A,F) ,    leader(A,B).
+headquarter(B,F)  :-	country(A,F)    ,  affiliation(A,B).
+headquarter(B,F) :- spokenIn(A,F)    , languageRegulator(A,B).
+headquarter(B,F)  :- country(A,F) 		  ,   mayor(A,B).
+headquarter(A,F)   :- country(B,F)   	,     nationalAffiliation(A,B).
