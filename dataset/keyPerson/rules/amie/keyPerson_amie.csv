@@ -1,0 +1,37 @@
+0.93  keyPerson(B ,F)  :-  promotion(A ,F)   ,  promotion(A ,B).
+0.66  keyPerson(B ,A)  :-  employer(A ,B).
+0.57  keyPerson(B ,F)  :-  designer(A ,F)   ,  manufacturer(A ,B).
+0.47  keyPerson(A ,B)  :-  occupation(B ,A).
+0.46  keyPerson(B ,F)  :-  owningOrganisation(A ,F)   ,  owningOrganisation(A ,B).
+0.46  keyPerson(B ,F)  :-  owner(A ,F)   ,  owningOrganisation(A ,B).
+0.39  keyPerson(A ,B)  :-  foundedBy(A ,B).
+0.28  keyPerson(B ,F)  :-  gameArtist(A ,F)   ,  gameArtist(A ,B).
+0.27  keyPerson(B ,F)  :-  designer(A ,F)   ,  developer(A ,B).
+0.24  keyPerson(E ,B)  :-  product(E ,A)   ,  designer(A ,B).
+0.24  keyPerson(F ,B)  :-  gameArtist(A ,F)   ,  gameArtist(A ,B).
+0.15  keyPerson(E ,B)  :-  developer(A ,E)   ,  designer(A ,B).
+0.15  keyPerson(B ,F)  :-  developer(A ,F)   ,  gameArtist(A ,B).
+0.14  keyPerson(E ,B)  :-  manufacturer(A ,E)   ,  designer(A ,B).
+0.14  keyPerson(E ,B)  :-  company(A ,E)   ,  executiveProducer(A ,B).
+0.12  keyPerson(B ,F)  :-  composer(A ,F)   ,  gameArtist(A ,B).
+0.11  keyPerson(E ,B)  :-  owner(A ,E)   ,  owningOrganisation(A ,B).
+0.11  keyPerson(E ,B)  :-  owningOrganisation(A ,E)   ,  owningOrganisation(A ,B).
+0.10  keyPerson(A ,B)  :-  owningCompany(A ,B).
+0.09  keyPerson(B ,A)  :-  board(A ,B).
+0.08  keyPerson(A ,B)  :-  foundedBy(A ,B).
+0.08  keyPerson(A ,F)  :-  occupation(F ,B)   ,  parentCompany(A ,B).
+0.07  keyPerson(B ,F)  :-  occupation(F ,A)   ,  subsidiary(A ,B).
+0.06  keyPerson(B ,F)  :-  publisher(A ,F)   ,  gameArtist(A ,B).
+0.05  keyPerson(F ,B)  :-  publisher(A ,F)   ,  designer(A ,B).
+0.05  keyPerson(F ,B)  :-  developer(A ,F)   ,  gameArtist(A ,B).
+0.04  keyPerson(F ,B)  :-  manufacturer(A ,F)   ,  designCompany(A ,B).
+0.02  keyPerson(E ,B)  :-  developer(A ,E)   ,  developer(A ,B).
+0.02  keyPerson(B ,F)  :-  owningCompany(A ,F)   ,  owningCompany(A ,B).
+0.02  keyPerson(F ,B)  :-  promotion(A ,F)   ,  promotion(A ,B).
+0.01  keyPerson(F ,B)  :-  owningCompany(A ,F)   ,  owningCompany(A ,B).
+0.01  keyPerson(F ,B)  :-  publisher(A ,F)   ,  gameArtist(A ,B).
+0.01  keyPerson(A ,F)  :-  foundedBy(B ,F)   ,  subsidiary(A ,B).
+0.00  keyPerson(B ,F)  :-  foundedBy(A ,F)   ,  subsidiary(A ,B).
+0.00  keyPerson(A ,F)  :-  keyPerson(B ,F)   ,  subsidiary(A ,B).
+0.00  keyPerson(A ,F)  :-  keyPerson(B ,F)   ,  parentCompany(A ,B).
+0.00  keyPerson(A ,F)  :-  keyPerson(B ,F)   ,  owningCompany(A ,B).

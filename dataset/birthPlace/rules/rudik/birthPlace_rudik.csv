@@ -1,0 +1,1 @@
+0.000000  birthPlace(A ,B)  :-  areaTotal(A ,C)   ,  area(B ,D)   ,  C>D.

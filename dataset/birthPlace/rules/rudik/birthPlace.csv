@@ -1,0 +1,1 @@
+http://dbpedia.org/ontology/areaTotal(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/PopulatedPlace/area(object,v1),0.000000

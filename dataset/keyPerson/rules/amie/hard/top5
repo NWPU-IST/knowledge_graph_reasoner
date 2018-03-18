@@ -1,0 +1,5 @@
+keyPerson(B ,F)  :-  promotion(A ,F)   ,  promotion(A ,B).
+keyPerson(B ,A)  :-  employer(A ,B).
+keyPerson(B ,F)  :-  designer(A ,F)   ,  manufacturer(A ,B).
+keyPerson(A ,B)  :-  occupation(B ,A).
+keyPerson(B ,F)  :-  owningOrganisation(A ,F)   ,  owningOrganisation(A ,B).

@@ -1,7 +1,7 @@
 import json
 from os import remove, path
 from datetime import datetime
-from config import top_k, dbpedia
+from config import top_k, rule_mining
 import csv
 
 
@@ -29,6 +29,6 @@ def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resour
             json.dump(ambiverse_resources, fp, default=json_serial)
 
     if lpmln_evaluation:
-        with open('dataset/' + data_source + '/output/lpmln_' + str(top_k)+'_' + dbpedia+ '.csv', 'wb') as csvfile:
+        with open('dataset/' + data_source + '/output/top' + str(top_k)+'_' + rule_mining+ '.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)

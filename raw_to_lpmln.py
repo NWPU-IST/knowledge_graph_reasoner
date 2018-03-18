@@ -44,28 +44,33 @@ def rule_parser_amie(fname, predicate):
     with open(fname) as f:
         content = f.readlines()
     rule_list = []
-    for it,con in enumerate(content):
+    for it, con in enumerate(content):
+        vars = re.findall(r"\?(.)", con)
+        score = re.findall(r"\d.\d+", con)
+        vars = [var.upper() for var in vars]
         relation = re.findall(r":(.*?)\>", con)
         if relation.index(predicate) != 0:
             new_index = relation.index(predicate)
             temp = relation[0]
             relation[0] = predicate
             relation[new_index] = temp
-        vars = re.findall(r"\?(.)", con)
-        score = re.findall(r"\d.\d+", con)
-        vars = [var.upper() for var in vars]
+            vars[new_index*2],vars[0] = vars[0], vars[new_index*2]
+            vars[new_index*2+1], vars[1] = vars[1], vars[new_index*2+1]
         i = 0
         rule = str(score[0]+' ')
         for rel in relation:
-            rule += rel +'('+vars[i]+','+ vars[i+1]+')'
+            rule += rel + '('+vars[i] + ',' + vars[i+1]+')'
+            # print i, rule
             if i == 0:
                 rule += ' :- '
-            elif i == len(relation)-1:
+            elif i == len(vars)-2:
                 rule += '.'
             else:
                 rule += ' , '
-            i += 1
+            i += 2
+        # print rule
         rule_list.append(rule)
+        # sys.exit(0)
     return rule_list
 
 

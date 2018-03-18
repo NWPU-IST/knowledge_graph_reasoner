@@ -11,12 +11,13 @@ from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference
 from ambiverse_api import ambiverse_entity_parser
 
 
-def fact_checker(sentence_lis, id_list,true_label, data_source):
+def fact_checker(sentence_lis, id_list, true_label, data_source):
     rule_predicates = get_rule_predicates(data_source)
     file_triples, ambiverse_resources = load_files(data_source)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
-    lpmln_evaluation = []
+    lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'lpmln-prob', 'lpmln-map', 'clingo', 'prob_all',\
+                                 'clingo_all', 'map_all']]
     triple_flag = False
     ambiverse_flag = False
     for n, ne in enumerate(named_tags):
@@ -58,7 +59,7 @@ def fact_checker(sentence_lis, id_list,true_label, data_source):
             evidence_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
         answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
         print answer_set, answer_all
-        map_all, map  = inference_map(sentence_id, data_source, resource_v)
+        map_all, map = inference_map(sentence_id, data_source, resource_v)
         print map, map_all
         # prob_all, prob  = inference_prob(sentence_id, data_source, resource_v)
         prob, prob_all = [], []

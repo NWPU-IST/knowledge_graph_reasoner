@@ -23,7 +23,12 @@
       "wikidata_id": "Q28515"
     }
   },
-  "66": {
+  "66": { 
+    "Helena": {
+      "confidence": 0.12291771021888108,
+      "dbpedia_id": "Helena,_Montana",
+      "wikidata_id": "Q38733"
+    },
     "Illinois": {
       "confidence": 0.5535735137710059,
       "wikidata_id": "Q1204",
@@ -59,6 +64,11 @@
       "confidence": 0.6663694510982003,
       "dbpedia_id": "Wisconsin",
       "wikidata_id": "Q1537"
+    },
+       "Santa Fe": {
+      "confidence": 0.08253237541466983,
+      "dbpedia_id": "Santa_Fe,_New_Mexico",
+      "wikidata_id": "Q38555"
     }
   },
   "62": {
@@ -255,10 +265,15 @@
     }
   },
   "52": {
-    "California": {
+    "Sacramento": {
       "confidence": 0.14035713811510347,
       "wikidata_id": "Q18013",
       "dbpedia_id": "Sacramento,_California"
+    },
+    "California": {
+      "confidence": 0.14035713811510347,
+      "wikidata_id": "Q18013",
+      "dbpedia_id": "California"
     }
   },
   "55": {
@@ -290,6 +305,11 @@
       "confidence": 0.38714210555952183,
       "dbpedia_id": "Texas",
       "wikidata_id": "Q1439"
+    },
+     "Montgomery": {
+      "confidence": 0.18406887782905373,
+      "dbpedia_id": "Montgomery,_Alabama",
+      "wikidata_id": "Q29364"
     }
   },
   "56": {
