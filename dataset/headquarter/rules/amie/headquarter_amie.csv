@@ -1,0 +1,66 @@
+0.75  headquarter(A ,B)  :-  location(A ,B).
+0.72  headquarter(A ,B)  :-  location(A ,B).
+0.38  headquarter(A ,B)  :-  country(A ,B).
+0.36  headquarter(A ,B)  :-  locationCountry(A ,B).
+0.29  headquarter(A ,B)  :-  regionServed(A ,B).
+0.27  headquarter(A ,F)  :-  country(F ,B)   ,  jurisdiction(A ,B).
+0.27  headquarter(A ,B)  :-  regionServed(A ,B).
+0.25  headquarter(A ,B)  :-  broadcastArea(A ,B).
+0.23  headquarter(A ,B)  :-  broadcastArea(A ,B).
+0.22  headquarter(A ,B)  :-  locationCountry(A ,B).
+0.19  headquarter(A ,F)  :-  largestCity(B ,F)   ,  jurisdiction(A ,B).
+0.13  headquarter(A ,F)  :-  largestCity(B ,F)   ,  nationalAffiliation(A ,B).
+0.11  headquarter(A ,F)  :-  isPartOf(F ,B)   ,  jurisdiction(A ,B).
+0.10  headquarter(A ,F)  :-  capital(B ,F)   ,  jurisdiction(A ,B).
+0.09  headquarter(A ,B)  :-  jurisdiction(A ,B).
+0.08  headquarter(A ,F)  :-  country(F ,B)   ,  nationalAffiliation(A ,B).
+0.07  headquarter(A ,B)  :-  hubAirport(A ,B).
+0.05  headquarter(F ,B)  :-  parentOrganisation(A ,F)   ,  jurisdiction(A ,B).
+0.04  headquarter(A ,F)  :-  headquarter(B ,F)   ,  secretaryGeneral(A ,B).
+0.02  headquarter(A ,F)  :-  capital(B ,F)   ,  nationalAffiliation(A ,B).
+0.02  headquarter(A ,F)  :-  residence(B ,F)   ,  secretaryGeneral(A ,B).
+0.02  headquarter(A ,B)  :-  parentOrganisation(A ,B).
+0.01  headquarter(A ,B)  :-  targetAirport(A ,B).
+0.01  headquarter(A ,E)  :-  leaderName(E ,B)   ,  leader(A ,B).
+0.01  headquarter(B ,F)  :-  affiliation(A ,F)   ,  authority(A ,B).
+0.01  headquarter(A ,F)  :-  city(B ,F)   ,  hubAirport(A ,B).
+0.01  headquarter(A ,F)  :-  headquarter(B ,F)   ,  splitFromParty(A ,B).
+0.01  headquarter(A ,F)  :-  owner(B ,F)   ,  hubAirport(A ,B).
+0.01  headquarter(A ,F)  :-  headquarter(B ,F)   ,  nationalAffiliation(A ,B).
+0.01  headquarter(B ,F)  :-  location(A ,F)   ,  politicalPartyInLegislature(A ,B).
+0.00  headquarter(A ,F)  :-  birthPlace(B ,F)   ,  secretaryGeneral(A ,B).
+0.00  headquarter(A ,B)  :-  destination(A ,B).
+0.00  headquarter(A ,E)  :-  capital(E ,B)   ,  destination(A ,B).
+0.00  headquarter(B ,F)  :-  country(A ,F)   ,  splitFromParty(A ,B).
+0.00  headquarter(B ,F)  :-  country(A ,F)   ,  nationalAffiliation(A ,B).
+0.00  headquarter(A ,F)  :-  headquarter(B ,F)   ,  sisterNewspaper(A ,B).
+0.00  headquarter(A ,F)  :-  headquarter(B ,F)   ,  parentCompany(A ,B).
+0.00  headquarter(A ,F)  :-  largestCity(F ,B)   ,  destination(A ,B).
+0.00  headquarter(A ,E)  :-  country(E ,B)   ,  destination(A ,B).
+0.00  headquarter(B ,F)  :-  officialLanguage(F ,A)   ,  languageRegulator(A ,B).
+0.00  headquarter(B ,F)  :-  locatedInArea(A ,F)   ,  maintainedBy(A ,B).
+0.00  headquarter(B ,F)  :-  location(A ,F)   ,  operatedBy(A ,B).
+0.00  headquarter(B ,F)  :-  regionalLanguage(F ,A)   ,  languageRegulator(A ,B).
+0.00  headquarter(A ,F)  :-  location(B ,F)   ,  destination(A ,B).
+0.00  headquarter(B ,F)  :-  language(F ,A)   ,  languageRegulator(A ,B).
+0.00  headquarter(A ,F)  :-  locationCity(B ,F)   ,  owningCompany(A ,B).
+0.00  headquarter(A ,F)  :-  residence(B ,F)   ,  leader(A ,B).
+0.00  headquarter(A ,F)  :-  country(B ,F)   ,  destination(A ,B).
+0.00  headquarter(A ,F)  :-  location(B ,F)   ,  hubAirport(A ,B).
+0.00  headquarter(B ,F)  :-  country(A ,F)   ,  schoolBoard(A ,B).
+0.00  headquarter(A ,F)  :-  locationCountry(B ,F)   ,  owningCompany(A ,B).
+0.00  headquarter(A ,F)  :-  headquarter(B ,F)   ,  europeanParliamentGroup(A ,B).
+0.00  headquarter(B ,F)  :-  location(A ,F)   ,  nrhpType(A ,B).
+0.00  headquarter(A ,F)  :-  birthPlace(B ,F)   ,  chairperson(A ,B).
+0.00  headquarter(A ,F)  :-  headquarter(B ,F)   ,  alliance(A ,B).
+0.00  headquarter(A ,F)  :-  location(B ,F)   ,  owningCompany(A ,B).
+0.00  headquarter(A ,F)  :-  isPartOf(B ,F)   ,  jurisdiction(A ,B).
+0.00  headquarter(A ,F)  :-  birthPlace(B ,F)   ,  leader(A ,B).
+0.00  headquarter(B ,F)  :-  country(A ,F)   ,  affiliation(A ,B).
+0.00  headquarter(B ,F)  :-  spokenIn(A ,F)   ,  languageRegulator(A ,B).
+0.00  headquarter(B ,F)  :-  country(A ,F)   ,  mayor(A ,B).
+0.00  headquarter(A ,F)  :-  country(B ,F)   ,  nationalAffiliation(A ,B).
+0.00  headquarter(A ,F)  :-  country(B ,F)   ,  splitFromParty(A ,B).
+0.00  headquarter(B ,F)  :-  countryOrigin(A ,F)   ,  launchSite(A ,B).
+0.00  headquarter(A ,F)  :-  country(B ,F)   ,  owningCompany(A ,B).
+0.00  headquarter(A ,F)  :-  country(B ,F)   ,  hubAirport(A ,B).

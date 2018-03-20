@@ -1,0 +1,17 @@
+0.91  spouse(B ,A)  :-  spouse(A ,B).
+0.67  spouse(A ,F)  :-  lastAppearance(F ,B)   ,  lastAppearance(A ,B).
+0.66  spouse(A ,F)  :-  parent(B ,F)   ,  child(A ,B).
+0.64  spouse(E ,A)  :-  lastAppearance(E ,B)   ,  lastAppearance(A ,B).
+0.57  spouse(A ,F)  :-  child(F ,B)   ,  child(A ,B).
+0.53  spouse(E ,A)  :-  restingPlace(E ,B)   ,  placeOfBurial(A ,B).
+0.47  spouse(A ,F)  :-  relation(B ,F)   ,  child(A ,B).
+0.45  spouse(F ,A)  :-  parent(B ,F)   ,  child(A ,B).
+0.36  spouse(F ,A)  :-  relation(B ,F)   ,  child(A ,B).
+0.33  spouse(A ,F)  :-  relative(B ,F)   ,  child(A ,B).
+0.31  spouse(E ,A)  :-  child(E ,B)   ,  child(A ,B).
+0.30  spouse(F ,A)  :-  relative(B ,F)   ,  child(A ,B).
+0.19  spouse(E ,A)  :-  deathPlace(E ,B)   ,  placeOfBurial(A ,B).
+0.18  spouse(B ,A)  :-  partner(A ,B).
+0.15  spouse(E ,A)  :-  birthPlace(E ,B)   ,  placeOfBurial(A ,B).
+0.13  spouse(A ,B)  :-  child(A ,B).
+0.08  spouse(A ,B)  :-  relative(A ,B).

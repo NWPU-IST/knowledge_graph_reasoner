@@ -27,16 +27,18 @@ def rule_parser_rudik(fname, predicate):
                     rel = rel.replace(r, rep[r])
             relation[i] = rel
         score = re.findall(r"\d.\d+", con)
+        print score
         i = 0
-        rule = str(score[0])+' '+predicate+"(A,B) :- "
-        for rel in relation:
-            rule += rel
-            if i == len(relation)-1:
-                rule += '.'
-            else:
-                rule += ' , '
-            i += 1
-        rule_list.append(rule)
+        if score:
+            rule = str(score[0])+' '+predicate+"(A,B) :- "
+            for rel in relation:
+                rule += rel
+                if i == len(relation)-1:
+                    rule += '.'
+                else:
+                    rule += ' , '
+                i += 1
+            rule_list.append(rule)
     return rule_list
 
 

@@ -26,7 +26,7 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
         if evidence[1] in rule_predicates:
             if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == data_source:
                 pass
-            elif evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] in ["keyPerson"]:
+            elif evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] in ["keyPerson","capital"]:
                 pass
             else:
                 try:

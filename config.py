@@ -9,8 +9,9 @@ unwanted_predicates = [u'thumbnail', u'person function', u'c',u'b',u's',u'n',u'v
                        'endowment','rdf-schema#label','owl#differentFrom','description','filename','name','givenName', u'viafId',\
                        u'utcOffset','title','termPeriod',u'homepage','nick','rdf-schema#subClassOf','owl#unionOf']
 
-top_k = 5
+top_k = 37
 rule_mining = "amie"
+# rule_mining = "rudik"
 rule_type = "hard"
 dbpedia = 'local'
 # dbpedia = 'api'

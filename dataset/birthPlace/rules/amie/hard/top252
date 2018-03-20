@@ -1,0 +1,252 @@
+birthPlace(A ,F)  :-  location(F ,B)   ,  placeOfBurial(A ,B).
+birthPlace(A ,F)  :-  country(F ,B)   ,  sportCountry(A ,B).
+birthPlace(A ,B)  :-  deathPlace(A ,B)   ,  billed(A ,B).
+birthPlace(A ,B)  :-  deathPlace(A ,B)   ,  placeOfBurial(A ,B).
+birthPlace(A ,F)  :-  largestCity(B ,F)   ,  sportCountry(A ,B).
+birthPlace(A ,B)  :-  hometown(A ,B).
+birthPlace(A ,B)  :-  residence(A ,B)   ,  billed(A ,B).
+birthPlace(A ,B)  :-  billed(A ,B).
+birthPlace(A ,B)  :-  sportCountry(A ,B).
+birthPlace(A ,B)  :-  deathPlace(A ,B).
+birthPlace(B ,F)  :-  ceremonialCounty(F ,A)   ,  memberOfParliament(A ,B).
+birthPlace(A ,B)  :-  residence(A ,B).
+birthPlace(E ,B)  :-  parent(E ,A)   ,  placeOfBurial(A ,B).
+birthPlace(A ,B)  :-  placeOfBurial(A ,B).
+birthPlace(E ,B)  :-  predecessor(E ,A)   ,  placeOfBurial(A ,B).
+birthPlace(A ,B)  :-  stateOfOrigin(A ,B).
+birthPlace(A ,B)  :-  citizenship(A ,B).
+birthPlace(F ,B)  :-  predecessor(A ,F)   ,  placeOfBurial(A ,B).
+birthPlace(F ,B)  :-  parent(A ,F)   ,  placeOfBurial(A ,B).
+birthPlace(A ,B)  :-  nationality(A ,B).
+birthPlace(F ,B)  :-  successor(A ,F)   ,  placeOfBurial(A ,B).
+birthPlace(E ,B)  :-  successor(E ,A)   ,  placeOfBurial(A ,B).
+birthPlace(A ,E)  :-  country(E ,B)   ,  billed(A ,B).
+birthPlace(E ,A)  :-  birthPlace(E ,B)   ,  ceremonialCounty(A ,B).
+birthPlace(E ,B)  :-  spouse(E ,A)   ,  placeOfBurial(A ,B).
+birthPlace(A ,E)  :-  country(E ,B)   ,  placeOfBurial(A ,B).
+birthPlace(E ,B)  :-  trainer(E ,A)   ,  billed(A ,B).
+birthPlace(A ,F)  :-  largestCity(B ,F)   ,  billed(A ,B).
+birthPlace(A ,E)  :-  largestCity(E ,B)   ,  billed(A ,B).
+birthPlace(E ,B)  :-  trainer(A ,E)   ,  billed(A ,B).
+birthPlace(E ,A)  :-  birthPlace(E ,B)   ,  lieutenancyArea(A ,B).
+birthPlace(A ,F)  :-  capital(F ,B)   ,  placeOfBurial(A ,B).
+birthPlace(F ,B)  :-  leader(A ,F)   ,  jurisdiction(A ,B).
+birthPlace(A ,B)  :-  restingPlace(A ,B).
+birthPlace(A ,E)  :-  isPartOf(E ,B)   ,  billed(A ,B).
+birthPlace(E ,A)  :-  birthPlace(E ,B)   ,  federalState(A ,B).
+birthPlace(A ,B)  :-  beatifiedPlace(A ,B).
+birthPlace(A ,E)  :-  leaderName(E ,B)   ,  primeMinister(A ,B).
+birthPlace(B ,A)  :-  memberOfParliament(A ,B).
+birthPlace(A ,E)  :-  capital(E ,B)   ,  billed(A ,B).
+birthPlace(A ,F)  :-  capital(B ,F)   ,  sportCountry(A ,B).
+birthPlace(B ,F)  :-  leaderName(F ,A)   ,  vicePresident(A ,B).
+birthPlace(B ,F)  :-  isPartOf(F ,A)   ,  memberOfParliament(A ,B).
+birthPlace(F ,B)  :-  author(A ,F)   ,  premierePlace(A ,B).
+birthPlace(E ,A)  :-  birthPlace(E ,B)   ,  metropolitanBorough(A ,B).
+birthPlace(F ,B)  :-  leader(A ,F)   ,  nationalAffiliation(A ,B).
+birthPlace(A ,F)  :-  capital(B ,F)   ,  billed(A ,B).
+birthPlace(E ,A)  :-  party(E ,B)   ,  mayor(A ,B).
+birthPlace(A ,B)  :-  canonizedPlace(A ,B).
+birthPlace(A ,B)  :-  region(A ,B).
+birthPlace(E ,A)  :-  birthPlace(E ,B)   ,  countySeat(A ,B).
+birthPlace(B ,F)  :-  country(F ,A)   ,  memberOfParliament(A ,B).
+birthPlace(A ,F)  :-  isPartOf(F ,B)   ,  sportCountry(A ,B).
+birthPlace(B ,F)  :-  leaderName(F ,A)   ,  deputy(A ,B).
+birthPlace(E ,B)  :-  deathPlace(E ,A)   ,  ceremonialCounty(A ,B).
+birthPlace(E ,B)  :-  deathPlace(E ,A)   ,  lieutenancyArea(A ,B).
+birthPlace(E ,A)  :-  deathPlace(E ,B)   ,  ceremonialCounty(A ,B).
+birthPlace(A ,B)  :-  education(A ,B).
+birthPlace(E ,A)  :-  birthPlace(E ,B)   ,  governmentRegion(A ,B).
+birthPlace(A ,B)  :-  training(A ,B).
+birthPlace(E ,A)  :-  birthPlace(E ,B)   ,  highestRegion(A ,B).
+birthPlace(E ,B)  :-  region(E ,A)   ,  countySeat(A ,B).
+birthPlace(A ,B)  :-  school(A ,B).
+birthPlace(E ,A)  :-  successor(E ,B)   ,  memberOfParliament(A ,B).
+birthPlace(E ,A)  :-  residence(E ,B)   ,  countySeat(A ,B).
+birthPlace(E ,A)  :-  deathPlace(E ,B)   ,  metropolitanBorough(A ,B).
+birthPlace(A ,B)  :-  ethnicity(A ,B).
+birthPlace(E ,B)  :-  deathPlace(E ,A)   ,  metropolitanBorough(A ,B).
+birthPlace(B ,F)  :-  county(A ,F)   ,  alumni(A ,B).
+birthPlace(E ,A)  :-  deathPlace(E ,B)   ,  lieutenancyArea(A ,B).
+birthPlace(E ,A)  :-  deathPlace(E ,B)   ,  countySeat(A ,B).
+birthPlace(E ,B)  :-  deathPlace(E ,A)   ,  administrativeDistrict(A ,B).
+birthPlace(E ,A)  :-  deathPlace(E ,B)   ,  administrativeDistrict(A ,B).
+birthPlace(E ,B)  :-  party(E ,A)   ,  nationalAffiliation(A ,B).
+birthPlace(B ,F)  :-  headquarter(A ,F)   ,  secretaryGeneral(A ,B).
+birthPlace(B ,A)  :-  saint(A ,B).
+birthPlace(B ,F)  :-  region(A ,F)   ,  associate(A ,B).
+birthPlace(A ,F)  :-  region(B ,F)   ,  majorShrine(A ,B).
+birthPlace(B ,F)  :-  city(A ,F)   ,  alumni(A ,B).
+birthPlace(B ,A)  :-  mayor(A ,B).
+birthPlace(A ,F)  :-  region(B ,F)   ,  governor(A ,B).
+birthPlace(A ,F)  :-  region(B ,F)   ,  incumbent(A ,B).
+birthPlace(B ,A)  :-  leaderName(A ,B).
+birthPlace(A ,F)  :-  city(B ,F)   ,  highschool(A ,B).
+birthPlace(A ,F)  :-  city(B ,F)   ,  education(A ,B).
+birthPlace(B ,E)  :-  leaderName(E ,A)   ,  primeMinister(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  formerCoach(A ,B).
+birthPlace(A ,B)  :-  highschool(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  currentPartner(A ,B).
+birthPlace(A ,B)  :-  majorShrine(A ,B).
+birthPlace(A ,E)  :-  leaderName(E ,B)   ,  vicePresident(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  coach(A ,B).
+birthPlace(B ,F)  :-  region(A ,F)   ,  saint(A ,B).
+birthPlace(B ,F)  :-  leaderParty(F ,A)   ,  chairperson(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  formerChoreographer(A ,B).
+birthPlace(A ,F)  :-  isPartOf(B ,F)   ,  billed(A ,B).
+birthPlace(B ,F)  :-  state(A ,F)   ,  alumni(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  creativeDirector(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  primeMinister(A ,B).
+birthPlace(A ,E)  :-  leaderName(E ,B)   ,  deputy(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  vicePresident(A ,B).
+birthPlace(A ,F)  :-  region(B ,F)   ,  associate(A ,B).
+birthPlace(A ,F)  :-  state(B ,F)   ,  education(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  formerPartner(A ,B).
+birthPlace(A ,F)  :-  hometown(B ,F)   ,  associatedAct(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  memberOfParliament(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  doctoralStudent(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  associate(A ,B).
+birthPlace(B ,F)  :-  region(A ,F)   ,  governor(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  chairperson(A ,B).
+birthPlace(A ,F)  :-  location(B ,F)   ,  placeOfBurial(A ,B).
+birthPlace(B ,F)  :-  headquarter(A ,F)   ,  chairperson(A ,B).
+birthPlace(A ,F)  :-  country(F ,B)   ,  majorShrine(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  vicePresident(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  primeMinister(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  incumbent(A ,B).
+birthPlace(B ,F)  :-  deathPlace(A ,F)   ,  vicePresident(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  primeMinister(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  secretaryGeneral(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  vicePresident(A ,B).
+birthPlace(A ,F)  :-  capital(F ,B)   ,  majorShrine(A ,B).
+birthPlace(B ,F)  :-  nationality(A ,F)   ,  primeMinister(A ,B).
+birthPlace(A ,E)  :-  isPartOf(E ,B)   ,  highschool(A ,B).
+birthPlace(A ,F)  :-  regionServed(B ,F)   ,  employer(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  primeMinister(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  firstLeader(A ,B).
+birthPlace(A ,B)  :-  significantBuilding(A ,B).
+birthPlace(B ,F)  :-  headquarter(A ,F)   ,  leader(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  primeMinister(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  opponent(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  associate(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  currentPartner(A ,B).
+birthPlace(A ,F)  :-  region(B ,F)   ,  opponent(A ,B).
+birthPlace(A ,F)  :-  locationCountry(B ,F)   ,  employer(A ,B).
+birthPlace(A ,F)  :-  province(B ,F)   ,  highschool(A ,B).
+birthPlace(A ,F)  :-  location(B ,F)   ,  lastRace(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  primeMinister(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  child(A ,B).
+birthPlace(A ,F)  :-  location(B ,F)   ,  firstRace(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  formerPartner(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  deputy(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  deputy(A ,B).
+birthPlace(B ,F)  :-  deathPlace(A ,F)   ,  associate(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  formerPartner(A ,B).
+birthPlace(B ,F)  :-  nationality(A ,F)   ,  vicePresident(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  incumbent(A ,B).
+birthPlace(A ,F)  :-  isPartOf(B ,F)   ,  highschool(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  associate(A ,B).
+birthPlace(B ,F)  :-  deathPlace(A ,F)   ,  child(A ,B).
+birthPlace(A ,B)  :-  significantProject(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  governor(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  vicePresident(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  currentPartner(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  leader(A ,B).
+birthPlace(A ,F)  :-  state(B ,F)   ,  highschool(A ,B).
+birthPlace(A ,F)  :-  location(B ,F)   ,  highschool(A ,B).
+birthPlace(B ,F)  :-  nationality(A ,F)   ,  doctoralStudent(A ,B).
+birthPlace(B ,F)  :-  deathPlace(A ,F)   ,  deputy(A ,B).
+birthPlace(B ,F)  :-  deathPlace(A ,F)   ,  doctoralStudent(A ,B).
+birthPlace(B ,F)  :-  jurisdiction(A ,F)   ,  leader(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  governor(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  associate(A ,B).
+birthPlace(B ,F)  :-  deathPlace(A ,F)   ,  primeMinister(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  formerCoach(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  vicePresident(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  leader(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  formerCoach(A ,B).
+birthPlace(B ,F)  :-  nationality(A ,F)   ,  influencedBy(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  alumni(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  governor(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  formerChoreographer(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  child(A ,B).
+birthPlace(B ,F)  :-  city(A ,F)   ,  chairperson(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  coach(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  coach(A ,B).
+birthPlace(B ,F)  :-  poleDriverCountry(A ,F)   ,  poleDriver(A ,B).
+birthPlace(B ,F)  :-  deathPlace(A ,F)   ,  influencedBy(A ,B).
+birthPlace(B ,F)  :-  deathPlace(A ,F)   ,  governor(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  creativeDirector(A ,B).
+birthPlace(A ,F)  :-  leaderName(F ,B)   ,  opponent(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  deputy(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  opponent(A ,B).
+birthPlace(B ,F)  :-  nationality(A ,F)   ,  associate(A ,B).
+birthPlace(B ,F)  :-  nationality(A ,F)   ,  deputy(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  governor(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  deputy(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  influencedBy(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  child(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  influencedBy(A ,B).
+birthPlace(B ,F)  :-  state(A ,F)   ,  viceChancellor(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  choreographer(A ,B).
+birthPlace(B ,F)  :-  stateOfOrigin(A ,F)   ,  child(A ,B).
+birthPlace(B ,F)  :-  residence(A ,F)   ,  formerChoreographer(A ,B).
+birthPlace(B ,F)  :-  county(A ,F)   ,  chairperson(A ,B).
+birthPlace(B ,F)  :-  garrison(A ,F)   ,  secondCommander(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  choreographer(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  doctoralStudent(A ,B).
+birthPlace(A ,F)  :-  location(B ,F)   ,  significantBuilding(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  currentPartner(A ,B).
+birthPlace(B ,F)  :-  firstDriverCountry(A ,F)   ,  poleDriver(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  opponent(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  showJudge(A ,B).
+birthPlace(B ,F)  :-  secondDriverCountry(A ,F)   ,  secondDriver(A ,B).
+birthPlace(B ,F)  :-  city(A ,F)   ,  viceChancellor(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  opponent(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  opponent(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  executiveProducer(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  influencedBy(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  alumni(A ,B).
+birthPlace(A ,F)  :-  location(B ,F)   ,  employer(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  child(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  partner(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  coach(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  incumbent(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  associate(A ,B).
+birthPlace(B ,F)  :-  thirdDriverCountry(A ,F)   ,  thirdDriver(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  formerPartner(A ,B).
+birthPlace(A ,F)  :-  deathPlace(B ,F)   ,  doctoralStudent(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  incumbent(A ,B).
+birthPlace(B ,F)  :-  nationality(A ,F)   ,  child(A ,B).
+birthPlace(A ,F)  :-  birthPlace(B ,F)   ,  associatedAct(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  showJudge(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  doctoralStudent(A ,B).
+birthPlace(A ,F)  :-  residence(B ,F)   ,  doctoralStudent(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  child(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  executiveProducer(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  viceChancellor(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  voice(A ,B).
+birthPlace(A ,F)  :-  nationality(B ,F)   ,  partner(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  vicePresident(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  memberOfParliament(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  architect(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  ceo(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  chairperson(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  mayor(A ,B).
+birthPlace(B ,F)  :-  nationality(A ,F)   ,  portrayer(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  secondDriver(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  poleDriver(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  deputy(A ,B).
+birthPlace(B ,F)  :-  assembly(A ,F)   ,  designCompany(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  secondDriver(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  associate(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  secondCommander(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  illustrator(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  poleDriver(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  saint(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  coach(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  foundingPerson(A ,B).
+birthPlace(B ,F)  :-  location(A ,F)   ,  engineer(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  formerCoach(A ,B).
+birthPlace(B ,F)  :-  locatedInArea(A ,F)   ,  firstAscentPerson(A ,B).
+birthPlace(B ,F)  :-  country(A ,F)   ,  dean(A ,B).

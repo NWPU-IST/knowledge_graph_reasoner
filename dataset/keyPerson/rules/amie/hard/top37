@@ -1,0 +1,37 @@
+keyPerson(B ,F)  :-  promotion(A ,F)   ,  promotion(A ,B).
+keyPerson(B ,A)  :-  employer(A ,B).
+keyPerson(B ,F)  :-  designer(A ,F)   ,  manufacturer(A ,B).
+keyPerson(A ,B)  :-  occupation(B ,A).
+keyPerson(B ,F)  :-  owningOrganisation(A ,F)   ,  owningOrganisation(A ,B).
+keyPerson(B ,F)  :-  owner(A ,F)   ,  owningOrganisation(A ,B).
+keyPerson(A ,B)  :-  foundedBy(A ,B).
+keyPerson(B ,F)  :-  gameArtist(A ,F)   ,  gameArtist(A ,B).
+keyPerson(B ,F)  :-  designer(A ,F)   ,  developer(A ,B).
+keyPerson(E ,B)  :-  product(E ,A)   ,  designer(A ,B).
+keyPerson(F ,B)  :-  gameArtist(A ,F)   ,  gameArtist(A ,B).
+keyPerson(E ,B)  :-  developer(A ,E)   ,  designer(A ,B).
+keyPerson(B ,F)  :-  developer(A ,F)   ,  gameArtist(A ,B).
+keyPerson(E ,B)  :-  manufacturer(A ,E)   ,  designer(A ,B).
+keyPerson(E ,B)  :-  company(A ,E)   ,  executiveProducer(A ,B).
+keyPerson(B ,F)  :-  composer(A ,F)   ,  gameArtist(A ,B).
+keyPerson(E ,B)  :-  owner(A ,E)   ,  owningOrganisation(A ,B).
+keyPerson(E ,B)  :-  owningOrganisation(A ,E)   ,  owningOrganisation(A ,B).
+keyPerson(A ,B)  :-  owningCompany(A ,B).
+keyPerson(B ,A)  :-  board(A ,B).
+keyPerson(A ,B)  :-  foundedBy(A ,B).
+keyPerson(A ,F)  :-  occupation(F ,B)   ,  parentCompany(A ,B).
+keyPerson(B ,F)  :-  occupation(F ,A)   ,  subsidiary(A ,B).
+keyPerson(B ,F)  :-  publisher(A ,F)   ,  gameArtist(A ,B).
+keyPerson(F ,B)  :-  publisher(A ,F)   ,  designer(A ,B).
+keyPerson(F ,B)  :-  developer(A ,F)   ,  gameArtist(A ,B).
+keyPerson(F ,B)  :-  manufacturer(A ,F)   ,  designCompany(A ,B).
+keyPerson(E ,B)  :-  developer(A ,E)   ,  developer(A ,B).
+keyPerson(B ,F)  :-  owningCompany(A ,F)   ,  owningCompany(A ,B).
+keyPerson(F ,B)  :-  promotion(A ,F)   ,  promotion(A ,B).
+keyPerson(F ,B)  :-  owningCompany(A ,F)   ,  owningCompany(A ,B).
+keyPerson(F ,B)  :-  publisher(A ,F)   ,  gameArtist(A ,B).
+keyPerson(A ,F)  :-  foundedBy(B ,F)   ,  subsidiary(A ,B).
+keyPerson(B ,F)  :-  foundedBy(A ,F)   ,  subsidiary(A ,B).
+keyPerson(A ,F)  :-  keyPerson(B ,F)   ,  subsidiary(A ,B).
+keyPerson(A ,F)  :-  keyPerson(B ,F)   ,  parentCompany(A ,B).
+keyPerson(A ,F)  :-  keyPerson(B ,F)   ,  owningCompany(A ,B).
