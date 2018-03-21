@@ -22,6 +22,7 @@ def get_rule_predicates(data_source):
 
 def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates):
     item_set = OrderedSet()
+    entity_set = []
     for evidence in evidences:
         if evidence[1] in rule_predicates:
             if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == data_source:
@@ -34,6 +35,10 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
                         if ':' not in evidence[0] and ':' not in evidence[2]:
                             if '#' not in evidence[0] and '#' not in evidence[2]:
                                 item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
+                                if evidence[0] not in entity_set:
+                                    entity_set.append(evidence[0])
+                                if evidence[2] not in entity_set:
+                                    entity_set.append(evidence[2])
                 except:
                     pass
     with open(evidence_path + str(sentence_id) + '_.txt', 'wb') as csvfile:
@@ -49,7 +54,7 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
         out_file.writelines(unique_everseen(f))
     remove_file = evidence_path + str(sentence_id) + '_.txt'
     os.remove(remove_file)
-    return item_set
+    return item_set, entity_set
 
 
 def clingo_map(sentence_id, data_source, resource_v):
@@ -110,3 +115,13 @@ def inference_prob(sentence_id, data_source, resource_v):
     probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
     probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
     return probs, probs_test
+
+
+def domain_generator(entity_set, sentence_id):
+    domain_text = ''
+    for entity1 in entity_set:
+        for entity2 in entity_set:
+            domain_text += '"' + entity1 + '"' + '&' + '"' + entity2 + '"' + ';'
+    if domain_text:
+        with open(evidence_path + str(sentence_id) + "_domain.txt", "w") as text_file:
+            text_file.write(domain_text)
