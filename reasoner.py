@@ -17,7 +17,7 @@ def get_rule_predicates(data_source):
     probs = re.findall("(\w+\()", f)
     probs = list(set(probs))
     predicates = [p.replace('(', '') for p in probs]
-    return predicates
+    return predicates, f
 
 
 def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates):
@@ -58,7 +58,7 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
     return item_set, entity_set
 
 
-def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates):
+def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates, rules):
     item_set = OrderedSet()
     entity_set = []
     for evidence in evidences:
@@ -80,7 +80,9 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
                                         entity_set.append(evidence[2])
                 except:
                     pass
-    with open(evidence_path + str(sentence_id) + '_.txt', 'wb') as csvfile:
+    with open(evidence_path + str(sentence_id) + '_er.txt', 'wb') as csvfile:
+        csvfile.writelines(rules)
+        csvfile.write('\n')
         for i in item_set:
             if '*' not in i:
                 try:
@@ -88,10 +90,10 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
                     csvfile.write(i+'\n')
                 except:
                     pass
-    with open(evidence_path + str(sentence_id) + '_.txt', 'r') as f, \
-            open(evidence_path + str(sentence_id) + '_unique.txt', 'wb') as out_file:
+    with open(evidence_path + str(sentence_id) + '_er.txt', 'r') as f, \
+            open(evidence_path + str(sentence_id) + 'er_unique.txt', 'wb') as out_file:
         out_file.writelines(unique_everseen(f))
-    remove_file = evidence_path + str(sentence_id) + '_.txt'
+    remove_file = evidence_path + str(sentence_id) + '_er.txt'
     os.remove(remove_file)
     return item_set, entity_set
 
@@ -141,20 +143,30 @@ def inference_map(sentence_id, data_source, resource_v):
     return probs, probs_test
 
 
+def write_query_domain(data_source, sentence_id,resource_v):
+    with open('lpmln-learning/code/query_domain.txt', 'w') as the_file:
+        the_file.write(data_source+'\n')
+        the_file.write(str(resource_v)+'\n')
+        the_file.write("{1}{0}_domain.txt".format(sentence_id, evidence_path))
+
+
 def inference_prob(sentence_id, data_source, resource_v):
+    write_query_domain(data_source, sentence_id, resource_v)
     print "LPMLN Probability Inference"
-    cmd = "lpmln2asp -i {0}rules/{2}/soft/top{1} -e {5}{4}_unique.txt -r {0}prob_result.txt".format(
-        'dataset/' + data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
+    cmd = "lpmln2asp -i {1}{0}er_unique.txt".format(sentence_id, evidence_path)
     print cmd
-    sys.exit()
-    # subprocess.call(cmd, shell=True)
+    subprocess.call(cmd, shell=True)
+    cmd1 = "clingo lpmln-learning/code/marginal-mhsampling.py out.txt"
+    print cmd1
+    subprocess.call(cmd1, shell=True)
     # text = open('dataset/' + data_source + '/' + 'prob_result.txt', 'r')
     # f = text.read()
     # text.close()
     # probs = re.findall("(\w+\(\'[\s\S].+)", f)
     # probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
     # probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
-    # return probs, probs_test
+    probs, probs_all = [], []
+    return probs, probs_all
 
 
 def domain_generator(entity_set, sentence_id, data_source):

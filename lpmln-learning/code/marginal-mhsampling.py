@@ -7,6 +7,8 @@ import pickle
 import copy
 import random
 import sympy
+import ast
+
 
 w = 0
 curr_sample = None
@@ -17,6 +19,7 @@ queries = []
 query_count = {}
 domain = []
 atoms2count = []
+
 
 def main(prg):
 	global w
@@ -29,8 +32,16 @@ def main(prg):
 	global domain
 	global atoms2count
 
-	queries = raw_input('Queries?(Separated with Comma; No space) ').split(',')
-	domain_filename = raw_input('Domain File? ')
+	with open('lpmln-learning/code/query_domain.txt') as f:
+		content = f.readlines()
+	queries = content[0]
+	domain_filename = content[2]
+	resource = ast.literal_eval(content[1])
+
+	# queries, domain_filename = get_inputs()
+
+	# queries = raw_input('Queries?(Separated with Comma; No space) ').split(',')
+	# domain_filename = raw_input('Domain File? ')
 	domain_file = open(domain_filename, 'r')
 	for line in domain_file:
 		if len(line) <= 2:
@@ -60,8 +71,8 @@ def main(prg):
 	for _ in range(max_num_iteration):
 		curr_weight = w
 		print 'Sample ',sample_count,': ',curr_sample
-	 	print 'Weight: ' + str(w)
-	 	print "Query Count: ", query_count
+		print 'Weight: ' + str(w)
+		print "Query Count: ", query_count
 		for atom in atoms2count:
 			query_count[atom] += 1
 
@@ -87,7 +98,9 @@ def main(prg):
 
 	# Compute new marginal probabilities
 	for atom in query_count:
-		print atom, ": ", float(query_count[atom])/float(sample_count)
+		if resource[0] in atom or resource[1] in atom:
+			print atom, ": ", float(query_count[atom])/float(sample_count)
+
 
 def getSample(model):
 	global sample_attempt
@@ -107,6 +120,7 @@ def getSample(model):
 		else:
 			sample_attempt.append((r, False))
 	w = computeWeight(model)
+
 
 def computeWeight(model):
 	penalty = 0
