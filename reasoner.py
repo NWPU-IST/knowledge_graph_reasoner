@@ -34,11 +34,50 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
                     if '"' not in evidence[0] and '"' not in evidence[2]:
                         if ':' not in evidence[0] and ':' not in evidence[2]:
                             if '#' not in evidence[0] and '#' not in evidence[2]:
-                                item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
-                                if evidence[0] not in entity_set:
-                                    entity_set.append(evidence[0])
-                                if evidence[2] not in entity_set:
-                                    entity_set.append(evidence[2])
+                                if '&' not in evidence[0] and '&' not in evidence[2]:
+                                    item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
+                                    if evidence[0] not in entity_set:
+                                        entity_set.append(evidence[0])
+                                    if evidence[2] not in entity_set:
+                                        entity_set.append(evidence[2])
+                except:
+                    pass
+    with open(evidence_path + str(sentence_id) + '_.txt', 'wb') as csvfile:
+        for i in item_set:
+            if '*' not in i:
+                try:
+                    print i
+                    csvfile.write(i+'\n')
+                except:
+                    pass
+    with open(evidence_path + str(sentence_id) + '_.txt', 'r') as f, \
+            open(evidence_path + str(sentence_id) + '_unique.txt', 'wb') as out_file:
+        out_file.writelines(unique_everseen(f))
+    remove_file = evidence_path + str(sentence_id) + '_.txt'
+    os.remove(remove_file)
+    return item_set, entity_set
+
+
+def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates):
+    item_set = OrderedSet()
+    entity_set = []
+    for evidence in evidences:
+        if evidence[1] in rule_predicates:
+            if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == data_source:
+                pass
+            elif evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] in ["keyPerson","capital"]:
+                pass
+            else:
+                try:
+                    if '"' not in evidence[0] and '"' not in evidence[2]:
+                        if ':' not in evidence[0] and ':' not in evidence[2]:
+                            if '#' not in evidence[0] and '#' not in evidence[2]:
+                                if '&' not in evidence[0] and '&' not in evidence[2]:
+                                    item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
+                                    if evidence[0] not in entity_set:
+                                        entity_set.append(evidence[0])
+                                    if evidence[2] not in entity_set:
+                                        entity_set.append(evidence[2])
                 except:
                     pass
     with open(evidence_path + str(sentence_id) + '_.txt', 'wb') as csvfile:
@@ -104,24 +143,29 @@ def inference_map(sentence_id, data_source, resource_v):
 
 def inference_prob(sentence_id, data_source, resource_v):
     print "LPMLN Probability Inference"
-    cmd = "lpmln2asp -i {0}rules/{2}/soft/top{1} -q {3} -e {5}{4}_unique.txt -r {0}prob_result.txt".format(
+    cmd = "lpmln2asp -i {0}rules/{2}/soft/top{1} -e {5}{4}_unique.txt -r {0}prob_result.txt".format(
         'dataset/' + data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
     print cmd
-    subprocess.call(cmd, shell=True)
-    text = open('dataset/' + data_source + '/' + 'prob_result.txt', 'r')
-    f = text.read()
-    text.close()
-    probs = re.findall("(\w+\(\'[\s\S].+)", f)
-    probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
-    return probs, probs_test
+    sys.exit()
+    # subprocess.call(cmd, shell=True)
+    # text = open('dataset/' + data_source + '/' + 'prob_result.txt', 'r')
+    # f = text.read()
+    # text.close()
+    # probs = re.findall("(\w+\(\'[\s\S].+)", f)
+    # probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
+    # probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
+    # return probs, probs_test
 
 
-def domain_generator(entity_set, sentence_id):
-    domain_text = ''
+def domain_generator(entity_set, sentence_id, data_source):
+    domain_text = data_source+'~'
+    count = 0
     for entity1 in entity_set:
         for entity2 in entity_set:
-            domain_text += '"' + entity1 + '"' + '&' + '"' + entity2 + '"' + ';'
+            count += 1
+            domain_text += '"' + entity1 + '"' + '&' + '"' + entity2 + '"'
+            if count < (len(entity_set)*len(entity_set)):
+                domain_text += ';'
     if domain_text:
         with open(evidence_path + str(sentence_id) + "_domain.txt", "w") as text_file:
             text_file.write(domain_text)

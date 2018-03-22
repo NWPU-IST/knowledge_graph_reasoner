@@ -57,12 +57,12 @@ def fact_checker(sentence_lis, id_list, true_label, data_source):
             print rule_predicates
             print "Evidence Set:"
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-        domain_generator(entity_set, sentence_id)
+        domain_generator(entity_set, sentence_id, data_source)
         answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
         print answer_set, answer_all
         map_all, map = inference_map(sentence_id, data_source, resource_v)
         print map, map_all
-        # prob_all, prob  = inference_prob(sentence_id, data_source, resource_v)
+        prob_all, prob  = inference_prob(sentence_id, data_source, resource_v)
         prob, prob_all = [], []
         print prob, prob_all
         lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set), str(prob_all),\
