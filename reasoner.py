@@ -99,6 +99,7 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
 
 
 def clingo_map(sentence_id, data_source, resource_v):
+    resource_v = ['"' + res + '"' for res in resource_v]
     print "Clingo Inference"
     cmd = "clingo {0}rules/{2}/hard/top{1} {5}{4}_unique.txt > {0}clingo_result.txt ".format('dataset/' +\
                                                                                                          data_source +\
@@ -126,6 +127,7 @@ def clingo_map(sentence_id, data_source, resource_v):
 
 
 def inference_map(sentence_id, data_source, resource_v):
+    resource_v = ['"' + res + '"' for res in resource_v]
     print "LPMLN MAP Inference"
     cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -q {3} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                                                                                          data_source +\
