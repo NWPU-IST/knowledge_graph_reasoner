@@ -9,12 +9,12 @@ unwanted_predicates = [u'thumbnail', u'person function', u'c',u'b',u's',u'n',u'v
                        'endowment','rdf-schema#label','owl#differentFrom','description','filename','name','givenName', u'viafId',\
                        u'utcOffset','title','termPeriod',u'homepage','nick','rdf-schema#subClassOf','owl#unionOf']
 
-top_k = 5
+top_k = 30
 rule_mining = "amie"
 # rule_mining = "rudik"
 # rule_type = "hard"
 rule_type = "soft"
-# dbpedia = 'local'
-dbpedia = 'api'
-sparql_dbpedia = 'http://dbpedia.org/sparql'
-# sparql_dbpedia = 'http://localhost:8890/sparql'
+dbpedia = 'local'
+# dbpedia = 'api'
+# sparql_dbpedia = 'http://dbpedia.org/sparql'
+sparql_dbpedia = 'http://localhost:8890/sparql'

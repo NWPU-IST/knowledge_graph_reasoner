@@ -1,7 +1,7 @@
-0.17942  spouse(A ,B)  :-  spouse(B ,A).
-0.00227  spouse(A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsStartYear(B ,C)   ,  C<C.
-0.00093  spouse(A ,B)  :-  birthYear(A ,C)   ,  birthYear(B ,C)   ,  C<C.
-0.00089  spouse(A ,B)  :-  activeYearsEndYear(A ,C)   ,  activeYearsEndYear(B ,C)   ,  C<C.
+-0.17942  spouse(A ,B)  :-  spouse(B ,A).
+-0.00227  spouse(A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsStartYear(B ,C)   ,  C<C.
+-0.00093  spouse(A ,B)  :-  birthYear(A ,C)   ,  birthYear(B ,C)   ,  C<C.
+-0.00089  spouse(A ,B)  :-  activeYearsEndYear(A ,C)   ,  activeYearsEndYear(B ,C)   ,  C<C.
 0.0  spouse(A ,B)  :-  parent(A ,C)   ,  predecessor(A ,C)   ,  spouse(B ,A).
 0.0  spouse(A ,B)  :-  spouse(B ,A)   ,  activeYearsStartYear(B ,C)   ,  C<C.
 0.0  spouse(A ,B)  :-  spouse(B ,A)   ,  activeYearsStartYear(B ,C)   ,  C>C.
@@ -226,18 +226,18 @@
 4.5499  spouse(A ,B)  :-  starring(C ,A)   ,  writer(C ,B).
 5.42493  spouse(A ,B)  :-  parent(C ,A)   ,  predecessor(C ,B).
 7.48983  spouse(A ,B)  :-  writer(C ,A)   ,  writer(D ,B)   ,  C=D.
-1.89993  spouse(A ,B)  :-  starring(C ,A)   ,  director(C ,B).
-2.59983  spouse(A ,B)  :-  predecessor(C ,B)   ,  activeYearsStartYear(C ,D)   ,  activeYearsEndYear(A ,D).
-5.63326  spouse(A ,B)  :-  parent(C ,A)   ,  successor(B ,C).
-7.14973  spouse(A ,B)  :-  deathYear(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C>D.
-0.3  spouse(A ,B)  :-  predecessor(B ,C)   ,  spouse(C ,D)   ,  successor(D ,A).
-0.42385  spouse(A ,B)  :-  occupation(A ,C)   ,  birthPlace(B ,D)   ,  C=D.
-5.1999  spouse(A ,B)  :-  deathYear(A ,C)   ,  activeYearsEndYear(B ,D)   ,  C<D.
-5.24088  spouse(A ,B)  :-  occupation(B ,C)   ,  birthPlace(A ,D)   ,  C=D.
-6.6  spouse(A ,B)  :-  birthYear(B ,C)   ,  imdbId(A ,D)   ,  C<D.
-0.1  spouse(A ,B)  :-  parent(C ,B)   ,  predecessor(C ,A).
-3.07483  spouse(A ,B)  :-  occupation(A ,C)   ,  spouse(D ,B)   ,  C=D.
-5.23254  spouse(A ,B)  :-  activeYearsStartYear(A ,C)   ,  imdbId(B ,D)   ,  C<D.
-4.44983  spouse(A ,B)  :-  starring(C ,A)   ,  starring(C ,B).
-8.4  spouse(A ,B)  :-  deathYear(A ,C)   ,  deathYear(B ,D)   ,  C<D.
+11.89993  spouse(A ,B)  :-  starring(C ,A)   ,  director(C ,B).
+12.59983  spouse(A ,B)  :-  predecessor(C ,B)   ,  activeYearsStartYear(C ,D)   ,  activeYearsEndYear(A ,D).
+15.63326  spouse(A ,B)  :-  parent(C ,A)   ,  successor(B ,C).
+17.14973  spouse(A ,B)  :-  deathYear(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C>D.
+20.3  spouse(A ,B)  :-  predecessor(B ,C)   ,  spouse(C ,D)   ,  successor(D ,A).
+20.42385  spouse(A ,B)  :-  occupation(A ,C)   ,  birthPlace(B ,D)   ,  C=D.
+25.1999  spouse(A ,B)  :-  deathYear(A ,C)   ,  activeYearsEndYear(B ,D)   ,  C<D.
+25.24088  spouse(A ,B)  :-  occupation(B ,C)   ,  birthPlace(A ,D)   ,  C=D.
+26.6  spouse(A ,B)  :-  birthYear(B ,C)   ,  imdbId(A ,D)   ,  C<D.
+30.1  spouse(A ,B)  :-  parent(C ,B)   ,  predecessor(C ,A).
+33.07483  spouse(A ,B)  :-  occupation(A ,C)   ,  spouse(D ,B)   ,  C=D.
+35.23254  spouse(A ,B)  :-  activeYearsStartYear(A ,C)   ,  imdbId(B ,D)   ,  C<D.
+44.44983  spouse(A ,B)  :-  starring(C ,A)   ,  starring(C ,B).
+78.4  spouse(A ,B)  :-  deathYear(A ,C)   ,  deathYear(B ,D)   ,  C<D.
 188  spouse(A ,B)  :-  occupation(A ,C)   ,  deathPlace(B ,D)   ,  C=D.

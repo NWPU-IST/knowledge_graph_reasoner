@@ -156,17 +156,18 @@ def inference_prob(sentence_id, data_source, resource_v):
     cmd = "lpmln2asp -i {1}{0}er_unique.txt".format(sentence_id, evidence_path)
     print cmd
     subprocess.call(cmd, shell=True)
-    cmd1 = "clingo lpmln-learning/code/marginal-mhsampling.py out.txt"
-    print cmd1
-    subprocess.call(cmd1, shell=True)
-    # text = open('dataset/' + data_source + '/' + 'prob_result.txt', 'r')
-    # f = text.read()
-    # text.close()
-    # probs = re.findall("(\w+\(\'[\s\S].+)", f)
-    # probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-    # probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
-    probs, probs_all = [], []
-    return probs, probs_all
+    try:
+        cmd1 = "clingo -q lpmln-learning/code/marginal-mhsampling.py out.txt"
+        print cmd1
+        subprocess.call(cmd1, shell=True)
+    except:
+        pass
+    text = open('lpmln-learning/code/lpmln_prob.txt', 'r')
+    probs = text.read()
+    text.close()
+    with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
+        the_file.write('utf-8')
+    return probs
 
 
 def domain_generator(entity_set, sentence_id, data_source):
@@ -175,9 +176,9 @@ def domain_generator(entity_set, sentence_id, data_source):
     for entity1 in entity_set:
         for entity2 in entity_set:
             count += 1
-            domain_text += '"' + entity1 + '"' + '&' + '"' + entity2 + '"'
+            domain_text += '"' + entity1 + '"' + ';' + '"' + entity2 + '"'
             if count < (len(entity_set)*len(entity_set)):
-                domain_text += ';'
+                domain_text += '&'
     if domain_text:
         with open(evidence_path + str(sentence_id) + "_domain.txt", "w") as text_file:
-            text_file.write(domain_text)
+            text_file.write(domain_text.encode('utf-8'))

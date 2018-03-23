@@ -65,10 +65,9 @@ def fact_checker(sentence_lis, id_list, true_label, data_source):
         print answer_set, answer_all
         map_all, map = inference_map(sentence_id, data_source, resource_v)
         print map, map_all
-        prob_all, prob  = inference_prob(sentence_id, data_source, resource_v)
-
-        print prob, prob_all
-        lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set), str(prob_all),\
+        prob = inference_prob(sentence_id, data_source, resource_v)
+        print prob
+        lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set),\
                                  str(answer_all), str(map_all)])
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source)
 
