@@ -8,17 +8,19 @@ import copy
 import random
 import sympy
 import ast
+import time
 
 
 w = 0
 curr_sample = None
 sample_attempt = None
-max_num_iteration = 100
+max_num_iteration = 50
 isStableModelVar = False
 queries = []
 query_count = {}
 domain = []
 atoms2count = []
+timeout = time.time() + 60*3
 
 
 def main(prg):
@@ -81,7 +83,11 @@ def main(prg):
             query_count[atom] += 1
 
         # Generate next sample by randomly flipping atoms
+        i = 0
         while True:
+            time.sleep(.00001)
+            i+=1
+            print i, timeout - time.time()
             sample_attempt = []
             for r in curr_sample:
                 sample_attempt.append(r)
@@ -98,6 +104,8 @@ def main(prg):
                     sample_attempt = curr_sample
                     prg.solve(sample_attempt, getSample)
                 sample_count += 1
+                break
+            if time.time() > timeout:
                 break
 
     # Compute new marginal probabilities

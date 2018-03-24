@@ -1,0 +1,5 @@
+0.93  keyPerson(B ,F)  :-  promotion(A ,F)   ,  promotion(A ,B).
+0.66  keyPerson(B ,A)  :-  employer(A ,B).
+0.57  keyPerson(B ,F)  :-  designer(A ,F)   ,  manufacturer(A ,B).
+0.47  keyPerson(A ,B)  :-  occupation(B ,A).
+0.46  keyPerson(B ,F)  :-  owningOrganisation(A ,F)   ,  owningOrganisation(A ,B).

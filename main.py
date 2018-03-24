@@ -60,6 +60,7 @@ def fact_checker(sentence_lis, id_list, true_label, data_source):
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v,\
                                                             rule_predicates, rules)
+        print "Writing Domain"
         domain_generator(entity_set, sentence_id, data_source)
         answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
         print answer_set, answer_all
