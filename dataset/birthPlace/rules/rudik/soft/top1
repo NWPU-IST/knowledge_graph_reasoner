@@ -1,0 +1,1 @@
+1	 birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C>D.

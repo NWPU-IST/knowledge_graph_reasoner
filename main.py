@@ -49,29 +49,38 @@ def fact_checker(sentence_lis, id_list, true_label, data_source):
         for triples_k, triples_v in triple_dict.iteritems():
             for triple_v in triples_v:
                 resource_v = [resource.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
-        evidence = []
-        for entity in resource_v:
-            evidence = distance_one_query(entity, evidence)
-            evidence = distance_two_query(entity, evidence)
-        if evidence:
-            print "Predicate Set:"
-            print rule_predicates
-            print "Evidence Set:"
-            evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-            evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v,\
-                                                            rule_predicates, rules)
-        print "Writing Domain"
-        domain_generator(entity_set, sentence_id, data_source)
-        answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
-        print answer_set, answer_all
-        map_all, map = inference_map(sentence_id, data_source, resource_v)
-        print map, map_all
-        prob = inference_prob(sentence_id, data_source, resource_v)
-        print prob
-        lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set),\
+        print resource_v
+
+        answer_all, answer_set, map, map_all, prob = lpmln_reasoning(resource_v, rule_predicates, sentence_id,\
+                                                                     data_source, rules)
+        lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set), \
                                  str(answer_all), str(map_all)])
+
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source)
 
+
+def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules):
+    evidence = []
+    for entity in resource_v:
+        evidence = distance_one_query(entity, evidence)
+        evidence = distance_two_query(entity, evidence)
+    if evidence:
+        print "Predicate Set:"
+        print rule_predicates
+        print "Evidence Set:"
+        evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
+        evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
+                                                        rule_predicates, rules)
+    print "Writing Domain"
+    domain_generator(entity_set, sentence_id, data_source)
+    answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
+    print answer_set, answer_all
+    map_all, map = inference_map(sentence_id, data_source, resource_v)
+    print map, map_all
+    prob = inference_prob(sentence_id, data_source, resource_v)
+    print prob
+    # prob = ''
+    return answer_all, answer_set, map, map_all, prob
 
 
 if __name__ == "__main__":

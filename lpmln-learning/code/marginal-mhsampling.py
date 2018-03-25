@@ -52,8 +52,8 @@ def main(prg):
             continue
         parts = line.split('~')
         instances = parts[1].split('&')
-        print parts[0]
-        print instances
+        # print parts[0]
+        # print instances
         for inst in instances:
             domain.append(gringo.Fun(parts[0], [eval(arg) for arg in inst.split(';')]))
         if parts[0] in queries:

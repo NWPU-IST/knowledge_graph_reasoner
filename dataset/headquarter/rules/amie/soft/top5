@@ -1,0 +1,5 @@
+0.7  headquarter(A,B) :-     location(A,B).
+0.3  headquarter(A,B)	:-	country(A,B)      .
+0.3  headquarter(A,B)	:-	locationCountry(A,B)      .
+0.2  headquarter(A,B)	:-	regionServed(A,B)     .
+0.2  headquarter(A,F)	:-	country(F,B)  ,       jurisdiction(A,B).
