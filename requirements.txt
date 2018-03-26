@@ -1,0 +1,10 @@
+requests
+sparql-client
+nltk==3.2.1
+python-dateutil
+pandas
+ftfy==4.4.2
+gensim
+ordered_set
+pyspotlight
+more_itertools

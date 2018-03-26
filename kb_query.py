@@ -34,7 +34,6 @@ def distance_two_query(entity, distance_two):
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
     except:
         q1_values = []
-        pass
     if q1_values:
         for vals in q1_values:
             vals_0 = vals[0].split('/')[-1]

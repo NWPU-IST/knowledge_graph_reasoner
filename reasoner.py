@@ -12,7 +12,7 @@ def get_rule_predicates(data_source):
     global evidence_path
     evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/' + rule_mining + '/' + "top" + str(
         top_k) + '/'
-    text = open('dataset/' + data_source + '/rules/'+ rule_mining + '/'+ rule_type + '/' + "top" + str(top_k), 'r')
+    text = open('dataset/' + data_source + '/rules/' + rule_mining + '/'+ rule_type + '/' + "top" + str(top_k), 'r')
     f = text.read()
     text.close()
     probs = re.findall("(\w+\()", f)
@@ -47,7 +47,7 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
         for i in item_set:
             if '*' not in i:
                 try:
-                    print i
+                    # print i
                     csvfile.write(i+'\n')
                 except:
                     pass
@@ -101,11 +101,8 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
 def clingo_map(sentence_id, data_source, resource_v):
     resource_v = ['"' + res + '"' for res in resource_v]
     print "Clingo Inference"
-    cmd = "clingo {0}rules/{2}/hard/top{1} {5}{4}_unique.txt > {0}clingo_result.txt ".format('dataset/' +\
-                                                                                                         data_source +\
-                                                                                                         '/', top_k,\
-                                                                                                         rule_mining, \
-                                                                                                          data_source, sentence_id, evidence_path)
+    cmd = "clingo -q {0}rules/{2}/hard/top{1} {5}{4}_unique.txt > {0}clingo_result.txt ".format('dataset/' +\
+                                    data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('dataset/' +data_source + '/' + 'clingo_result.txt', 'r')
@@ -130,10 +127,7 @@ def inference_map(sentence_id, data_source, resource_v):
     resource_v = ["'" + res + "'" for res in resource_v]
     print "LPMLN MAP Inference"
     cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -q {3} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-                                                                                                         data_source +\
-                                                                                                         '/', top_k,\
-                                                                                                         rule_mining, \
-                                                                                                        data_source, sentence_id, evidence_path)
+                                        data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
