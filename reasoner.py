@@ -25,7 +25,7 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
     item_set = OrderedSet()
     entity_set = []
     for evidence in evidences:
-        if evidence[1] in rule_predicates or top_k==0:
+        if evidence[1] in rule_predicates or top_k == 0:
             if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == data_source:
                 pass
             elif evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] in ["keyPerson","capital"]:
@@ -81,6 +81,7 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
                                         entity_set.append(evidence[2])
                 except:
                     pass
+
     with open(evidence_path + str(sentence_id) + '_er.txt', 'wb') as csvfile:
         csvfile.writelines(rules)
         csvfile.write('\n')
@@ -101,7 +102,7 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
 def clingo_map(sentence_id, data_source, resource_v):
     resource_v = ['"' + res + '"' for res in resource_v]
     print "Clingo Inference"
-    cmd = "clingo -q {0}rules/{2}/hard/top{1} {5}{4}_unique.txt > {0}clingo_result.txt ".format('dataset/' +\
+    cmd = "clingo {0}rules/{2}/hard/top{1} {5}{4}_unique.txt > {0}clingo_result.txt ".format('dataset/' +\
                                     data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
     print cmd
     subprocess.call(cmd, shell=True)
