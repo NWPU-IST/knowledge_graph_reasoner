@@ -17,7 +17,7 @@ def query_test(triples_list, id_list, true_labels, data_source, input):
 
         answer_all, answer_set, map, map_all, prob = lpmln_reasoning(triple_check, rule_predicates, sentence_id,\
                                                                      data_source, rules)
-        lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set), \
+        lpmln_evaluation.append([sentence_id, true_label, triple_check, str(prob), str(map), str(answer_set), \
                                  str(answer_all), str(map_all)])
 
     update_resources(triple_flag=False, ambiverse_flag=False, file_triples=False, ambiverse_resources=False,\
