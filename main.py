@@ -12,7 +12,7 @@ from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference
 from ambiverse_api import ambiverse_entity_parser
 
 
-def fact_checker(sentence_lis, id_list, true_label, data_source):
+def fact_checker(sentence_lis, id_list, true_labels, data_source, input):
     rule_predicates, rules = get_rule_predicates(data_source)
     file_triples, ambiverse_resources = load_files(data_source)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -25,7 +25,7 @@ def fact_checker(sentence_lis, id_list, true_label, data_source):
         sentence_id = id_list[n]
         true_label = true_labels[n]
         sentence_check = sentence_lis[n]
-        print sentence_id, sentence_check, '\n'
+        print sentence_id, sentence_check, true_label, '\n'
         named_entities = get_nodes(ne)
         entity_dict = dict(named_entities)
         print "NER: " + str(entity_dict)
@@ -56,7 +56,7 @@ def fact_checker(sentence_lis, id_list, true_label, data_source):
         lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set), \
                                  str(answer_all), str(map_all)])
 
-    update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source)
+    update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
 
 def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules):
@@ -99,4 +99,4 @@ if __name__ == "__main__":
             sentences_list.append(row.get('sentence'))
             true_labels.append(row.get('label'))
             id_list.append(row.get('id'))
-        fact_checker(sentences_list, id_list, true_labels, args.test_predicate)
+        fact_checker(sentences_list, id_list, true_labels, args.test_predicate, args.input)

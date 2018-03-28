@@ -13,7 +13,7 @@ def json_serial(obj):
     raise TypeError ("Type not serializable")
 
 
-def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source):
+def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input):
     if triple_flag:
         print "Updating Relation Triples"
         if path.isfile('dataset/' + data_source + '/input/triples_raw.json'):
@@ -29,6 +29,7 @@ def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resour
             json.dump(ambiverse_resources, fp, default=json_serial)
 
     if lpmln_evaluation:
-        with open('dataset/' + data_source + '/output/top' + str(top_k)+'_' + rule_mining+ '.csv', 'wb') as csvfile:
+        with open('dataset/' + data_source + '/output/top' + str(top_k)+'_' + rule_mining + '_' +input+ '.csv', 'wb') \
+                as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)
