@@ -1,0 +1,10 @@
+sid,sub,pid,pred,oid,obj,class
+324032,dbr:Accenture,309,dbo:keyPerson,4131773,dbr:Pierre_Nanterme,1
+282155,dbr:ACE_Limited,309,dbo:keyPerson,1770287,dbr:Evan_G._Greenberg,1
+344428,dbr:Aditya_Birla_Group,309,dbo:keyPerson,3018608,dbr:Kumar_Mangalam_Birla,1
+346248,dbr:Adobe_Systems,309,dbo:keyPerson,4680292,dbr:Shantanu_Narayen,1
+1006320,dbr:CBS_Corporation,309,dbo:keyPerson,1419417,dbr:David_Gill_(executive),0
+1006320,dbr:CBS_Corporation,309,dbo:keyPerson,4904384,dbr:Sumner_Redstone,0
+1006320,dbr:CBS_Corporation,309,dbo:keyPerson,1189696,dbr:Christie_Hefner,0
+1006320,dbr:CBS_Corporation,309,dbo:keyPerson,2735346,dbr:John_Thain,0
+1006320,dbr:CBS_Corporation,309,dbo:keyPerson,3675532,dbr:Muhtar_Kent,0
