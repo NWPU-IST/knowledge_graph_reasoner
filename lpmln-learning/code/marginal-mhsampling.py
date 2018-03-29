@@ -110,17 +110,21 @@ def main(prg):
 
     # Compute new marginal probabilities
     output = []
+    label = 0
     for atom in query_count:
         try:
             atom_str = str(atom).encode('utf-8')
             if resource[0] in atom_str and resource[1] in atom_str:
                 prob = float(query_count[atom])/float(sample_count)
                 print atom, ": ", prob
+                if prob > 0:
+                    label = 1
                 output.append(str(atom) + ": " + str(prob))
         except:
             pass
     with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
         the_file.write(str(output).encode('utf-8'))
+        the_file.write(';'+str(label))
 
 
 def getSample(model):

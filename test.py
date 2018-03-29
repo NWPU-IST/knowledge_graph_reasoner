@@ -7,7 +7,7 @@ from reasoner import get_rule_predicates
 
 def query_test(triples_list, id_list, true_labels, data_source, input):
     rule_predicates, rules = get_rule_predicates(data_source)
-    lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'lpmln-prob', 'lpmln-map', 'clingo', 'prob_all',\
+    lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'label', 'prediction','lpmln-prob', 'lpmln-map', 'clingo', 'prob_all',\
                                  'clingo_all', 'map_all']]
     for t, triple in enumerate(triples_list):
         sentence_id = id_list[t]
@@ -15,9 +15,14 @@ def query_test(triples_list, id_list, true_labels, data_source, input):
         triple_check = triples_list[t]
         print sentence_id, triple_check, true_label, '\n'
 
-        answer_all, answer_set, map, map_all, prob = lpmln_reasoning(triple_check, rule_predicates, sentence_id,\
+        answer_all, answer_set, map, map_all, prob, label = lpmln_reasoning(triple_check, rule_predicates, sentence_id,\
                                                                      data_source, rules)
-        lpmln_evaluation.append([sentence_id, true_label, triple_check, str(prob), str(map), str(answer_set), \
+        compare = float(true_label)-float(label)
+        if compare != 0:
+            prediction = 0
+        else:
+            prediction = 1
+        lpmln_evaluation.append([sentence_id, true_label, triple_check,label,str(prediction), str(prob), str(map), str(answer_set), \
                                  str(answer_all), str(map_all)])
 
     update_resources(triple_flag=False, ambiverse_flag=False, file_triples=False, ambiverse_resources=False,\

@@ -162,9 +162,9 @@ def inference_prob(sentence_id, data_source, resource_v):
     text = open('lpmln-learning/code/lpmln_prob.txt', 'r')
     probs = text.read()
     text.close()
-    with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
-        the_file.write('utf-8')
-    return probs
+    # with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
+    #     the_file.write('utf-8')
+    return probs.split(";")
 
 
 def domain_generator(entity_set, sentence_id, data_source):

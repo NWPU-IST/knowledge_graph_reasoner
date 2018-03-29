@@ -1,0 +1,401 @@
+0.00000  keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  isPartOf(D ,C)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  owner(C ,A)   ,  employer(B ,A).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  owner(D ,A)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  isPartOf(D ,C)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  locationCity(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  foundationPlace(A ,C)   ,  nationality(B ,C).
+0.00000  keyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  foundingYear(A ,C)   ,  salary(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  isPartOf(D ,C)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  child(B ,C)   ,  keyPerson(A ,C).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  nationality(B ,C).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  locationCountry(C ,D)   ,  locationCountry(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  netIncome(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  foundedBy(C ,A)   ,  keyPerson(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  type(C ,A)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  personFunction(B ,C)   ,  occupation(B ,C)   ,  employer(B ,A).
+0.00000  keyPerson(A ,B)  :-  foundedBy(A ,C)   ,  birthPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  equity(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  operatingIncome(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  netIncome(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  numberOfLocations(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  industry(C ,D)   ,  product(A ,D).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  foundationPlace(A ,C)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  assets(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  location(D ,C)   ,  division(A ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  birthPlace(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  largestCity(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  occupation(B ,C).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  keyPerson(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  parent(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  location(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  isPartOf(C ,D)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  almaMater(B ,C)   ,  state(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  locationCountry(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  spouse(C ,B)   ,  spouse(B ,C)   ,  foundedBy(A ,B).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  netIncome(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  child(B ,C)   ,  birthPlace(C ,D)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  regionServed(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  operatingIncome(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  operatingIncome(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  location(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  industry(D ,C)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  revenue(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  wikiPageRedirects(D ,C)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  thumbnail(B ,C)   ,  thumbnail(A ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  country(D ,C)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  type(A ,C)   ,  owner(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  residence(B ,C).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  location(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  revenue(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  birthPlace(D ,C)   ,  knownFor(D ,A).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  capital(D ,C)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  wikiPageDisambiguates(D ,C)   ,  wikiPageDisambiguates(D ,A).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  numberOfEmployees(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  numberOfLocations(A ,C)   ,  birthYear(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  wikiPageRedirects(C ,A)   ,  occupation(B ,C).
+0.00000  keyPerson(A ,B)  :-  employer(C ,A)   ,  occupation(C ,D)   ,  occupation(B ,D).
+0.00000  keyPerson(A ,B)  :-  extinctionYear(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  country(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  foundationPlace(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  birthPlace(D ,C)   ,  keyPerson(A ,D).
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  country(D ,C)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  deathPlace(D ,C)   ,  occupation(D ,A).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  nationality(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  successor(C ,A)   ,  locationCountry(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  location(C ,D)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  keyPerson(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  nationality(D ,C)   ,  employer(D ,A).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  owner(C ,A)   ,  foundedBy(A ,B).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  locationCity(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  parent(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  regionServed(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  child(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  residence(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  operatingIncome(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  owner(A ,C)   ,  owningCompany(A ,C)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  isPartOf(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  parent(C ,B)   ,  product(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  keyPerson(C ,D)   ,  occupation(B ,D).
+0.00000  keyPerson(A ,B)  :-  revenue(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  deathPlace(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  industry(A ,C)   ,  product(D ,C)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  owningCompany(D ,A)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  foundingDate(A ,C)   ,  birthDate(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCountry(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  locationCountry(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  location(D ,C)   ,  subsidiary(A ,D).
+0.00000  keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  operatingIncome(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  country(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  regionServed(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  locationCountry(A ,C).
+0.00000  keyPerson(A ,B)  :-  parent(C ,B)   ,  birthPlace(C ,D)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  nationality(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  largestCity(D ,C)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  residence(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  numberOfEmployees(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  foundationPlace(A ,C)   ,  birthPlace(B ,C).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  predecessor(C ,A).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  location(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  revenue(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  birthPlace(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  birthPlace(B ,C).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  parent(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  locationCity(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  almaMater(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  locationCity(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  owningCompany(D ,A)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  knownFor(C ,A)   ,  birthPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  country(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  spouse(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  keyPerson(C ,D)   ,  occupation(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  occupation(C ,A)   ,  employer(B ,A).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  birthPlace(D ,C)   ,  child(B ,D).
+0.00000  keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  country(D ,C)   ,  foundationPlace(A ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  occupation(D ,A)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  product(D ,C)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  broadcastArea(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  wikiPageRedirects(D ,C)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCity(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  equity(A ,C)   ,  salary(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  equity(A ,C)   ,  networth(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  owningCompany(C ,A).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  locationCountry(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  location(D ,C)   ,  subsidiary(A ,D).
+0.00000  keyPerson(A ,B)  :-  employer(C ,A)   ,  birthPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  netIncome(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  wikiPageDisambiguates(C ,B)   ,  wikiPageDisambiguates(C ,D)   ,  foundedBy(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCountry(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  equity(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  locationCity(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  employer(B ,A).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  birthPlace(B ,C).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  regionServed(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  subsidiary(A ,C).
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  location(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  wikiPageDisambiguates(C ,A)   ,  wikiPageDisambiguates(C ,D)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  almaMater(B ,C)   ,  country(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  location(D ,C)   ,  subsidiary(A ,D).
+0.00000  keyPerson(A ,B)  :-  almaMater(B ,C)   ,  state(C ,D)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  location(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  birthYear(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  board(D ,A)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  parentCompany(C ,A)   ,  foundedBy(A ,B).
+0.00000  keyPerson(A ,B)  :-  birthDate(B ,C)   ,  foundingDate(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  nationality(D ,C)   ,  occupation(D ,A).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  keyPerson(C ,D)   ,  occupation(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  location(D ,C)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  almaMater(B ,C)   ,  city(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  residence(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  locationCountry(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  product(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  broadcastArea(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  spouse(C ,B)   ,  spouse(B ,C)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  owner(C ,A).
+0.00000  keyPerson(A ,B)  :-  type(A ,C)   ,  birthPlace(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  netIncome(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  assets(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  occupation(C ,A)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  location(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  largestCity(D ,C)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  locationCity(D ,C)   ,  subsidiary(A ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  foundedBy(C ,D)   ,  foundedBy(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  foundationPlace(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  isPartOf(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfLocations(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  netIncome(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  locationCountry(A ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  stateOfOrigin(D ,C)   ,  employer(D ,A).
+0.00000  keyPerson(A ,B)  :-  assets(A ,C)   ,  salary(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  almaMater(C ,D)   ,  almaMater(B ,D).
+0.00000  keyPerson(A ,B)  :-  assets(A ,C)   ,  networth(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  location(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCity(D ,C)   ,  subsidiary(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  operatingIncome(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  location(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  almaMater(B ,C)   ,  almaMater(D ,C)   ,  employer(D ,A).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  birthPlace(D ,C)   ,  foundedBy(A ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  thumbnail(C ,D)   ,  thumbnail(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  equity(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  netIncome(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  country(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  birthPlace(D ,C)   ,  keyPerson(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(D ,C)   ,  foundedBy(A ,D).
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  location(A ,C).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  residence(D ,C)   ,  occupation(D ,A).
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  parentCompany(C ,A)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  parentCompany(C ,D)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  birthYear(C ,D)   ,  birthYear(B ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  isPartOf(C ,D)   ,  foundationPlace(A ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  occupation(C ,D)   ,  occupation(B ,D).
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  foundationPlace(A ,C).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  city(D ,C)   ,  almaMater(B ,D).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  locationCountry(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  spouse(B ,C)   ,  product(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  residence(D ,C)   ,  occupation(D ,A).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  foundationPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  operatingIncome(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  child(C ,B)   ,  occupation(C ,A).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  wikiPageRedirects(C ,D)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  successor(C ,A)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  locationCity(C ,D)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  revenue(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  foundationPlace(A ,C)   ,  location(A ,C)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  employer(C ,A)   ,  occupation(C ,A)   ,  employer(B ,A).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  keyPerson(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  operatingIncome(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  keyPerson(A ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  country(D ,C)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  assets(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  product(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  equity(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  locationCountry(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfLocations(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  regionServed(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  foundedBy(A ,C)   ,  occupation(C ,A)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  keyPerson(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  foundedBy(A ,C)   ,  deathPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  nationality(D ,C)   ,  keyPerson(A ,D).
+0.00000  keyPerson(A ,B)  :-  almaMater(B ,C)   ,  almaMater(D ,C)   ,  keyPerson(A ,D).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  spouse(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  birthYear(D ,C)   ,  employer(D ,A).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  owner(C ,A)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  foundingYear(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  service(A ,C)   ,  keyPerson(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  division(A ,C)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  birthPlace(D ,C)   ,  employer(D ,A).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  equity(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  occupation(D ,C)   ,  keyPerson(A ,D).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  location(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  locationCountry(A ,C).
+0.00000  keyPerson(A ,B)  :-  foundedBy(A ,C)   ,  child(C ,B).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(C ,D)   ,  foundationPlace(A ,D).
+0.00000  keyPerson(A ,B)  :-  equity(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  netIncome(A ,C)   ,  birthYear(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  division(A ,C)   ,  keyPerson(C ,B).
+0.00000  keyPerson(A ,B)  :-  foundationPlace(A ,C)   ,  locationCountry(A ,C)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  location(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  operatingIncome(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  foundationPlace(A ,C)   ,  country(D ,C)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  locationCountry(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  spouse(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  board(B ,D).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  knownFor(B ,A).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  recordLabel(D ,A)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  location(D ,C)   ,  successor(D ,A).
+0.00000  keyPerson(A ,B)  :-  foundedBy(A ,C)   ,  parent(B ,C).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  child(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  assets(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  parentCompany(C ,D)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  wikiPageDisambiguates(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  parentCompany(D ,A)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  location(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  stateOfOrigin(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(D ,C)   ,  location(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(D ,C)   ,  foundationPlace(A ,D).
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  locationCity(D ,C)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  extinctionYear(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  foundationPlace(A ,C)   ,  country(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  author(C ,A)   ,  developer(C ,A)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  locationCountry(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  birthPlace(D ,C)   ,  board(D ,A).
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  parentCompany(C ,A)   ,  employer(B ,A).
+0.00000  keyPerson(A ,B)  :-  foundedBy(A ,C)   ,  foundedBy(D ,C)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  extinctionYear(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  headquarter(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  product(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  birthPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  foundedBy(A ,B).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  wikiPageRedirects(C ,B).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  product(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  headquarter(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  foundationPlace(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  assets(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  foundationPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  birthPlace(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  predecessor(C ,B).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  country(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  operatingIncome(A ,C)   ,  birthYear(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  isPartOf(D ,C)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  locationCity(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCountry(D ,C)   ,  subsidiary(A ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  locationCity(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  location(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  occupation(C ,A)   ,  foundedBy(A ,B).
+0.00000  keyPerson(A ,B)  :-  assets(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  employer(C ,A)   ,  almaMater(C ,D)   ,  almaMater(B ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  knownFor(D ,A)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCity(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  stateOfOrigin(D ,C)   ,  occupation(D ,A).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  spouse(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  spouse(B ,C)   ,  keyPerson(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  foundedBy(C ,B).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  locationCity(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  largestCity(D ,C)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  country(D ,C)   ,  almaMater(B ,D).
+0.00000  keyPerson(A ,B)  :-  subsidiary(A ,C)   ,  location(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  owner(C ,B)   ,  owningCompany(C ,B)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  location(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  salary(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  birthPlace(D ,C)   ,  occupation(D ,A).
+0.00000  keyPerson(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  employer(B ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  birthPlace(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  parentCompany(D ,C)   ,  owner(D ,A).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  birthPlace(D ,C)   ,  parent(D ,B).
+0.00000  keyPerson(A ,B)  :-  almaMater(B ,C)   ,  country(C ,D)   ,  locationCountry(A ,D).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  location(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  operatingIncome(A ,C)   ,  salary(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  foundedBy(A ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  successor(A ,C).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  wikiPageExternalLink(C ,D)   ,  wikiPageExternalLink(A ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  birthPlace(B ,C)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  location(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  wikiPageExternalLink(B ,C)   ,  wikiPageExternalLink(A ,C).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  birthPlace(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  birthPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  foundedBy(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  employer(C ,A)   ,  birthYear(C ,D)   ,  birthYear(B ,D).
+0.00000  keyPerson(A ,B)  :-  location(A ,C)   ,  country(D ,C)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(D ,C)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  extinctionYear(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  foundedBy(C ,B)   ,  location(C ,D)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  netIncome(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  stateOfOrigin(B ,C)   ,  location(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  locationCity(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  child(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCity(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  regionServed(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  residence(D ,C)   ,  keyPerson(A ,D).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  operatingIncome(A ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  location(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  parentCompany(C ,D)   ,  wikiPageRedirects(D ,A).
+0.00000  keyPerson(A ,B)  :-  owningCompany(C ,A)   ,  owner(C ,A)   ,  employer(B ,A).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  foundationPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  residence(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  board(C ,A)   ,  birthPlace(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  residence(D ,C)   ,  keyPerson(A ,D).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  keyPerson(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  type(C ,D)   ,  type(A ,D).
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  occupation(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  birthPlace(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  locationCity(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  salary(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  location(D ,C)   ,  parentCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCountry(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  country(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  operatingIncome(A ,C)   ,  salary(B ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  product(A ,C)   ,  parent(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  type(C ,A)   ,  keyPerson(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  child(B ,C)   ,  parent(C ,B)   ,  occupation(B ,A).
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  parentCompany(C ,A).
+0.00000  keyPerson(A ,B)  :-  netIncome(A ,C)   ,  salary(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  foundedBy(A ,C)   ,  wikiPageDisambiguates(D ,C)   ,  wikiPageDisambiguates(D ,B).
+0.00000  keyPerson(A ,B)  :-  parent(C ,B)   ,  keyPerson(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  thumbnail(A ,C)   ,  thumbnail(D ,C)   ,  keyPerson(D ,B).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  child(B ,D)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  parentCompany(D ,C)   ,  owningCompany(D ,A).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  locationCountry(C ,D)   ,  residence(B ,D).
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  country(C ,D)   ,  locationCountry(A ,D).
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  birthPlace(C ,D)   ,  stateOfOrigin(B ,D).
+0.00000  keyPerson(A ,B)  :-  salary(B ,C)   ,  assets(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(C ,D)   ,  locationCountry(A ,D).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  residence(B ,C).
+0.00000  keyPerson(A ,B)  :-  locationCity(A ,C)   ,  isPartOf(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(B ,C)   ,  occupation(D ,C)   ,  employer(D ,A).
+0.00000  keyPerson(A ,B)  :-  netIncome(A ,C)   ,  networth(B ,D)   ,  C>D.
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  stateOfOrigin(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  foundedBy(C ,B)   ,  product(A ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  residence(B ,C)   ,  wikiPageRedirects(C ,D)   ,  locationCity(A ,D).
+0.00000  keyPerson(A ,B)  :-  networth(B ,C)   ,  equity(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  type(A ,C)   ,  keyPerson(D ,B)   ,  C=D.
+0.00000  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCountry(D ,C)   ,  successor(D ,A).
+0.00000  keyPerson(A ,B)  :-  owner(C ,A)   ,  regionServed(C ,D)   ,  birthPlace(B ,D).
+0.00000  keyPerson(A ,B)  :-  occupation(C ,A)   ,  occupation(B ,D)   ,  D=C.
+0.00000  keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  equity(A ,D)   ,  C<D.
+0.00000  keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  birthPlace(C ,D)   ,  nationality(B ,D).
+0.00000  keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  location(C ,D)   ,  nationality(B ,D).

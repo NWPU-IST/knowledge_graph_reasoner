@@ -17,8 +17,10 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input):
     file_triples, ambiverse_resources = load_files(data_source)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
-    lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'lpmln-prob', 'lpmln-map', 'clingo', 'prob_all',\
-                                 'clingo_all', 'map_all']]
+    lpmln_evaluation = [
+        ['sentence_id', 'true_label', 'sentence', 'label', 'prediction', 'lpmln-prob', 'lpmln-map', 'clingo',
+         'prob_all', \
+         'clingo_all', 'map_all']]
     triple_flag = False
     ambiverse_flag = False
     for n, ne in enumerate(named_tags):
@@ -51,10 +53,11 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input):
                 resource_v = [resource.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
         print resource_v
 
-        answer_all, answer_set, map, map_all, prob = lpmln_reasoning(resource_v, rule_predicates, sentence_id,\
+        answer_all, answer_set, map, map_all, prob, label = lpmln_reasoning(resource_v, rule_predicates, sentence_id,\
                                                                      data_source, rules)
-        lpmln_evaluation.append([sentence_id, true_label, sentence_check, str(prob), str(map), str(answer_set), \
-                                 str(answer_all), str(map_all)])
+        lpmln_evaluation.append(
+            [sentence_id, true_label, triple_check, label, str(prediction), str(prob), str(map), str(answer_set), \
+             str(answer_all), str(map_all)])
 
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
@@ -77,10 +80,10 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
     print answer_set, answer_all
     map_all, map = inference_map(sentence_id, data_source, resource_v)
     print map, map_all
-    prob = inference_prob(sentence_id, data_source, resource_v)
-    print prob
+    prob, label = inference_prob(sentence_id, data_source, resource_v)
+    print prob, label
     # prob = ''
-    return answer_all, answer_set, map, map_all, prob
+    return answer_all, answer_set, map, map_all, prob, label
 
 
 if __name__ == "__main__":

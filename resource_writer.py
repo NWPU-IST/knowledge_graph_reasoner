@@ -29,7 +29,7 @@ def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resour
             json.dump(ambiverse_resources, fp, default=json_serial)
 
     if lpmln_evaluation:
-        with open('dataset/' + data_source + '/output/top' + str(top_k)+'_' + rule_mining + '_' +input+ '.csv', 'wb') \
+        with open('dataset/' + data_source + '/output/top' + str(top_k)+'_' + rule_mining + '_' +input, 'wb') \
                 as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)
