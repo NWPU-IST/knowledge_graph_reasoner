@@ -1,2 +1,4 @@
 id,sentence,label
 1,"Bill Clinton is married to Hillary Clinton.",T
+20,"Bill Clinton is married to Laura Bush.",F
+21,"George W Bush is married to Hillary Clinton.",F

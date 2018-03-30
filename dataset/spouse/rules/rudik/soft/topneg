@@ -1,0 +1,25 @@
+1 negspouse(A ,B)  :-  parent(A ,B).
+1 negspouse(A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(B ,C)   ,  predecessor(B ,A).
+1 negspouse(A ,B)  :-  spouse(C ,B)   ,  spouse(A ,C).
+1 negspouse(A ,B)  :-  spouse(C ,B)   ,  spouse(B ,C)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  activeYearsEndYear(B ,C)   ,  deathYear(B ,C)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  birthPlace(A ,C)   ,  restingPlace(B ,C)   ,  successor(B ,A).
+1 negspouse(A ,B)  :-  parent(B ,C)   ,  spouse(C ,A)   ,  successor(A ,B).
+1 negspouse(A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(A ,C)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  parent(B ,C)   ,  spouse(C ,A)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  deathPlace(B ,C)   ,  restingPlace(B ,C)   ,  successor(B ,A).
+1 negspouse(A ,B)  :-  successor(A ,B)   ,  predecessor(B ,A)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  deathPlace(B ,C)   ,  deathPlace(A ,C)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  activeYearsStartYear(B ,C)   ,  activeYearsEndYear(B ,C)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  parent(C ,B)   ,  predecessor(C ,B)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  parent(A ,C)   ,  successor(C ,A)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  deathYear(B ,C)   ,  activeYearsEndYear(B ,C)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  genre(A ,C)   ,  musicFusionGenre(C ,D)   ,  genre(B ,D).
+1 negspouse(A ,B)  :-  deathDate(B ,C)   ,  deathYear(B ,C)   ,  successor(A ,B).
+1 negspouse(A ,B)  :-  birthPlace(B ,C)   ,  birthPlace(A ,C)   ,  predecessor(A ,B).
+1 negspouse(A ,B)  :-  spouse(A ,C)   ,  parent(B ,C)   ,  parent(B ,A).
+1 negspouse(A ,B)  :-  spouse(A ,C)   ,  parent(B ,C)   ,  child(C ,B).
+1 negspouse(A ,B)  :-  successor(B ,A)   ,  spouse(C ,B)   ,  parent(A ,C).
+1 negspouse(A ,B)  :-  predecessor(A ,B)   ,  spouse(C ,B)   ,  parent(A ,C).
+1 negspouse(A ,B)  :-  predecessor(A ,B)   ,  restingPlace(B ,C)   ,  birthPlace(B ,C).
+1 negspouse(A,B) :- spouse(C,A), spouse(D,B)

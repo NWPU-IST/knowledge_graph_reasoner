@@ -124,11 +124,11 @@ def clingo_map(sentence_id, data_source, resource_v):
     return probs, probs_test
 
 
-def inference_map(sentence_id, data_source, resource_v):
+def inference_map(sentence_id, data_source, resource_v, pos_neg):
     resource_v = ["'" + res + "'" for res in resource_v]
     print "LPMLN MAP Inference"
     cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -q {3} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-                                        data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
+                                        data_source + '/', top_k, rule_mining, pos_neg+data_source, sentence_id, evidence_path)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
@@ -136,7 +136,7 @@ def inference_map(sentence_id, data_source, resource_v):
     text.close()
     probs = re.findall("(\w+\(\'[\s\S].+)", f)
     probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and data_source in p]
+    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
     return probs, probs_test
 
 

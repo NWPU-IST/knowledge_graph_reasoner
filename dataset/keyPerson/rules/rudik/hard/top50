@@ -1,0 +1,50 @@
+keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  location(A ,C)   ,  stateOfOrigin(B ,C).      
+keyPerson(A ,B)  :-  location(A ,C)   ,  isPartOf(D ,C)   ,  birthPlace(B ,D).
+keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCity(A ,C).      
+keyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  capital(C ,D)   ,  location(A ,D).
+keyPerson(A ,B)  :-  occupation(B ,C)   ,  keyPerson(A ,D)   ,  C=D. 
+keyPerson(A ,B)  :-  residence(B ,C)   ,  country(D ,C)   ,  location(A ,D).
+keyPerson(A ,B)  :-  networth(B ,C)   ,  assets(A ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  networth(B ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  location(A ,C)   ,  birthPlace(D ,C)   ,  predecessor(D ,B).
+keyPerson(A ,B)  :-  foundingYear(A ,C)   ,  salary(B ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  nationality(B ,C)   ,  location(D ,C)   ,  owner(D ,A).
+keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  keyPerson(C ,D)   ,  keyPerson(A ,D).
+keyPerson(A ,B)  :-  revenue(A ,C)   ,  birthYear(B ,D)   ,  C>D. 
+keyPerson(A ,B)  :-  owner(C ,A)   ,  location(C ,D)   ,  nationality(B ,D).
+keyPerson(A ,B)  :-  locationCity(A ,C)   ,  capital(D ,C)   ,  birthPlace(B ,D).
+keyPerson(A ,B)  :-  location(A ,C)   ,  nationality(B ,C).      
+keyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfLocations(A ,D)   ,  C>D. 
+keyPerson(A ,B)  :-  numberOfLocations(A ,C)   ,  networth(B ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  regionServed(A ,D)   ,  C=D. 
+keyPerson(A ,B)  :-  owner(C ,A)   ,  owningCompany(C ,A)   ,  occupation(B ,A).
+keyPerson(A ,B)  :-  location(A ,C)   ,  hometown(B ,C).      
+keyPerson(A ,B)  :-  type(A ,C)   ,  legalForm(D ,C)   ,  keyPerson(D ,B).
+keyPerson(A ,B)  :-  location(A ,C)   ,  country(D ,C)   ,  birthPlace(B ,D).
+keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  nationality(C ,D)   ,  birthPlace(B ,D).
+keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  nationality(D ,C)   ,  keyPerson(A ,D).
+keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(D ,C)   ,  locationCity(A ,D).
+keyPerson(A ,B)  :-  hometown(B ,C)   ,  country(C ,D)   ,  location(A ,D).
+keyPerson(A ,B)  :-  keyPerson(C ,B)   ,  owningCompany(D ,A)   ,  D=C. 
+keyPerson(A ,B)  :-  birthYear(B ,C)   ,  equity(A ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  foundationPlace(A ,C)   ,  occupation(B ,D)   ,  D=C. 
+keyPerson(A ,B)  :-  locationCity(A ,C)   ,  occupation(B ,D)   ,  D=C. 
+keyPerson(A ,B)  :-  parentCompany(C ,A)   ,  location(C ,D)   ,  birthPlace(B ,D).
+keyPerson(A ,B)  :-  almaMater(B ,C)   ,  almaMater(D ,C)   ,  keyPerson(A ,D).
+keyPerson(A ,B)  :-  netIncome(A ,C)   ,  networth(B ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  occupation(B ,A).            
+keyPerson(A ,B)  :-  occupation(B ,C)   ,  parentCompany(A ,C).      
+keyPerson(A ,B)  :-  occupation(B ,C)   ,  occupation(D ,A)   ,  C=D. 
+keyPerson(A ,B)  :-  product(A ,C)   ,  product(D ,C)   ,  keyPerson(D ,B).
+keyPerson(A ,B)  :-  foundingYear(A ,C)   ,  networth(B ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  location(A ,C)   ,  birthPlace(B ,C)   ,  nationality(B ,C).
+keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  largestCity(C ,D)   ,  location(A ,D).
+keyPerson(A ,B)  :-  occupation(B ,C)   ,  occupation(D ,C)   ,  keyPerson(A ,D).
+keyPerson(A ,B)  :-  keyPerson(A ,C)   ,  occupation(B ,C).      
+keyPerson(A ,B)  :-  occupation(B ,C)   ,  locationCity(A ,D)   ,  C=D. 
+keyPerson(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C<D. 
+keyPerson(A ,B)  :-  location(A ,C)   ,  country(C ,D)   ,  nationality(B ,D).
+keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  country(C ,D)   ,  foundationPlace(A ,D).
+keyPerson(A ,B)  :-  equity(A ,C)   ,  birthYear(B ,D)   ,  C>D. 

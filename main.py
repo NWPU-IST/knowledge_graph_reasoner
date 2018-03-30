@@ -12,7 +12,11 @@ from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference
 from ambiverse_api import ambiverse_entity_parser
 
 
-def fact_checker(sentence_lis, id_list, true_labels, data_source, input):
+def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg):
+    true_count = 0
+    false_count = 0
+    true_pos = 0
+    true_neg = 0
     rule_predicates, rules = get_rule_predicates(data_source)
     file_triples, ambiverse_resources = load_files(data_source)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -26,6 +30,16 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input):
     for n, ne in enumerate(named_tags):
         sentence_id = id_list[n]
         true_label = true_labels[n]
+        if not pos_neg:
+            if true_label == 'T':
+                true_count += 1
+            else:
+                false_count += 1
+        else:
+            if true_label == 'F':
+                true_count += 1
+            else:
+                false_count += 1
         sentence_check = sentence_lis[n]
         print sentence_id, sentence_check, true_label, '\n'
         named_entities = get_nodes(ne)
@@ -54,15 +68,34 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input):
         print resource_v
 
         answer_all, answer_set, map, map_all, prob, label = lpmln_reasoning(resource_v, rule_predicates, sentence_id,\
-                                                                     data_source, rules)
-        lpmln_evaluation.append(
-            [sentence_id, true_label, triple_check, label, str(prediction), str(prob), str(map), str(answer_set), \
-             str(answer_all), str(map_all)])
+                                                                     data_source, rules, pos_neg)
+        if not pos_neg:
+            if true_label == 'T' and len(map) > 0:
+                true_pos += 1
+                prediction = 1
+            elif true_label == 'F' and len(map) == 0:
+                true_neg += 1
+                prediction = 1
+            else:
+                prediction = 0
+        else:
+            if true_label == 'F' and len(map) > 0:
+                true_pos += 1
+                prediction = 1
+            elif true_label == 'T' and len(map) == 0:
+                true_neg += 1
+                prediction = 1
+            else:
+                prediction = 0
 
+        lpmln_evaluation.append(
+            [sentence_id, true_label, sentence_check, label, str(prediction), str(prob), str(map), str(answer_set), \
+             str(answer_all), str(map_all)])
+    stats_computer(true_count, true_pos, false_count, true_neg)
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
 
-def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules):
+def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, pos_neg):
     evidence = []
     for entity in resource_v:
         evidence = distance_one_query(entity, evidence)
@@ -79,7 +112,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
         answer_set, answer_all = '',''
         print answer_set, answer_all
-        map_all, map = inference_map(sentence_id, data_source, resource_v)
+        map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
         print map, map_all
         # prob, label = inference_prob(sentence_id, data_source, resource_v)
         prob, label = '',''
@@ -89,12 +122,22 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
     return '', '', '', '', '', ''
 
 
+def stats_computer(true_count, true_pos, false_count, true_neg):
+    false_pos = true_count-true_pos
+    false_neg = false_count - true_neg
+    print "True Count:", true_count, "True Pos: ", true_pos,"=>", float(true_pos)/float(true_count), "False Pos: ", false_pos
+    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", float(true_neg)/float(false_count), "False Neg: ", false_neg
+    print "Precision: ", float(true_pos) / float(true_count)
+    print "Recall: ", float(true_pos) / float(true_pos + false_neg)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", default='sentences_test.csv')
     parser.add_argument("-l", "--lpmln", default=False)
     parser.add_argument("-s", "--sentence", default='')
     parser.add_argument("-t", "--test_predicate", default='sample_case')
+    parser.add_argument("-p", "--pos_neg", default='')
     args = parser.parse_args()
     with open('dataset/' + args.test_predicate + '/input/' + args.input) as f:
         reader = csv.DictReader(f)
@@ -105,4 +148,4 @@ if __name__ == "__main__":
             sentences_list.append(row.get('sentence'))
             true_labels.append(row.get('label'))
             id_list.append(row.get('id'))
-        fact_checker(sentences_list, id_list, true_labels, args.test_predicate, args.input)
+        fact_checker(sentences_list, id_list, true_labels, args.test_predicate, args.input, args.pos_neg)
