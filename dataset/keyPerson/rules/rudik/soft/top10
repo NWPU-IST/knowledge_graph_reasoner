@@ -1,0 +1,10 @@
+0  keyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0  keyPerson(A ,B)  :-  location(A ,C)   ,  stateOfOrigin(B ,C).
+0  keyPerson(A ,B)  :-  location(A ,C)   ,  isPartOf(D ,C)   ,  birthPlace(B ,D).
+0  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCity(A ,C).
+0  keyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0  keyPerson(A ,B)  :-  birthPlace(B ,C)   ,  capital(C ,D)   ,  location(A ,D).
+0  keyPerson(A ,B)  :-  occupation(B ,C)   ,  keyPerson(A ,D)   ,  C=D.
+0  keyPerson(A ,B)  :-  residence(B ,C)   ,  country(D ,C)   ,  location(A ,D).
+0  keyPerson(A ,B)  :-  networth(B ,C)   ,  assets(A ,D)   ,  C<D.
+0.0011  keyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  networth(B ,D)   ,  C<D.
