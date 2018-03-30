@@ -10,6 +10,7 @@ from kb_query import distance_one_query, distance_two_query
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob, domain_generator,\
     rule_evidence_writer
 from ambiverse_api import ambiverse_entity_parser
+from config import top_k
 
 
 def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg):
@@ -125,10 +126,16 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
 def stats_computer(true_count, true_pos, false_count, true_neg):
     false_pos = true_count-true_pos
     false_neg = false_count - true_neg
-    print "True Count:", true_count, "True Pos: ", true_pos,"=>", float(true_pos)/float(true_count), "False Pos: ", false_pos
-    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", float(true_neg)/float(false_count), "False Neg: ", false_neg
-    print "Precision: ", float(true_pos) / float(true_count)
-    print "Recall: ", float(true_pos) / float(true_pos + false_neg)
+    tp = float(true_pos)/float(true_count)
+    tn = float(true_neg)/float(false_count)
+    pre = float(true_pos) / float(true_count)
+    rec = float(true_pos) / float(true_pos + false_neg)
+    print "True Count:", true_count, "True Pos: ", true_pos,"=>", tp, "False Pos: ", false_pos
+    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn , "False Neg: ", false_neg
+    print "Precision: ", pre
+    print "Recall: ", rec
+    print top_k , '&', round(tp,2), '(',true_pos,'/',true_count,')', '&', 1-tp , '(',false_pos,'/',true_count,')', '&', tn, '(',true_neg,'/',false_count,')', '&', 1-tn ,  '(', false_neg,'/',false_count,')', '&', pre, '&', rec
+
 
 
 if __name__ == "__main__":

@@ -1,100 +1,100 @@
-1	 birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  activeYearsEndYear(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  areaWater(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  locationCountry(D ,C)   ,  foundationPlace(D ,B).
-1	 birthPlace(A ,B)  :-  team(A ,C)   ,  chairman(C ,D)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  populationAsOf(B ,C)   ,  birthDate(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  populationDensity(B ,C)   ,  height(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  utcOffset(B ,C)   ,  birthYear(A ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  stateOfOrigin(D ,C)   ,  deathPlace(D ,B).
-1	 birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  weight(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  city(C ,B)   ,  county(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  region(C ,B)   ,  country(C ,D)   ,  nationality(A ,D).
-1	 birthPlace(A ,B)  :-  areaMetro(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  team(A ,C)   ,  managerClub(D ,C)   ,  deathPlace(D ,B).
-1	 birthPlace(A ,B)  :-  location(C ,B)   ,  jurisdiction(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  region(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  height(A ,C)   ,  height(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  jurisdiction(D ,C)   ,  location(D ,B).
-1	 birthPlace(A ,B)  :-  deathYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  mouthPlace(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  weight(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  elevation(B ,C)   ,  weight(A ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  utcOffset(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  foundationPlace(C ,B)   ,  locationCountry(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  termPeriod(A ,C)   ,  country(B ,D)   ,  C=D. 
-1	 birthPlace(A ,B)  :-  area(B ,C)   ,  weight(A ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  nationality(A ,C)   ,  residence(D ,C)   ,  deathPlace(D ,B).
-1	 birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  areaUrban(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  country(A ,C)   ,  stateOfOrigin(D ,C)   ,  deathPlace(D ,B).
-1	 birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  utcOffset(B ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  nationality(A ,C)   ,  stateOfOrigin(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  team(A ,C)   ,  position(C ,D)   ,  country(D ,B).
-1	 birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  state(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  residence(A ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  ground(D ,C)   ,  ground(D ,B).
-1	 birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  activeYearsEndYear(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  deathYear(A ,C)   ,  area(B ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  area(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  leaderTitle(B ,C)   ,  chairmanTitle(D ,C)   ,  team(A ,D).
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(D ,C)   ,  placeOfBurial(D ,B).
-1	 birthPlace(A ,B)  :-  stateOfOrigin(A ,C)   ,  stateOfOrigin(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  headquarter(C ,B)   ,  regionServed(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  birthYear(A ,C)   ,  populationMetro(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  jurisdiction(D ,C)   ,  headquarter(D ,B).
-1	 birthPlace(A ,B)  :-  city(C ,B)   ,  mouthCountry(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  country(D ,C)   ,  province(D ,B).
-1	 birthPlace(A ,B)  :-  routeEnd(C ,B)   ,  location(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  successor(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
-1	 birthPlace(A ,B)  :-  nearestCity(C ,B)   ,  location(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  headquarter(C ,B)   ,  jurisdiction(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  deathYear(A ,C)   ,  birthYear(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  area(B ,C)   ,  activeYearsEndYear(A ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  headquarter(C ,B)   ,  location(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  team(A ,C)   ,  tenant(D ,C)   ,  location(D ,B).
-1	 birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  areaLand(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  deathPlace(A ,C)   ,  nationality(D ,C)   ,  deathPlace(D ,B).
-1	 birthPlace(A ,B)  :-  nationality(A ,C)   ,  citizenship(D ,C)   ,  residence(D ,B).
-1	 birthPlace(A ,B)  :-  birthYear(A ,C)   ,  populationDensity(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  deathYear(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  stateOfOrigin(A ,C)   ,  nationality(D ,C)   ,  deathPlace(D ,B).
-1	 birthPlace(A ,B)  :-  height(A ,C)   ,  populationMetro(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  nearestCity(C ,B)   ,  location(C ,D)   ,  nationality(A ,D).
-1	 birthPlace(A ,B)  :-  country(A ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  capital(C ,B)   ,  country(B ,C).
-1	 birthPlace(A ,B)  :-  height(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  location(C ,B)   ,  regionServed(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  location(C ,B)   ,  locationCountry(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  deathYear(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  foundingYear(D ,C)   ,  location(D ,B).
-1	 birthPlace(A ,B)  :-  deathYear(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
-1	 birthPlace(A ,B)  :-  spouse(A ,C)   ,  deathPlace(D ,B)   ,  C=D. 
-1	 birthPlace(A ,B)  :-  residence(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  countySeat(C ,B)   ,  state(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  deathPlace(A ,C)   ,  residence(D ,C)   ,  deathPlace(D ,B).
-1	 birthPlace(A ,B)  :-  campus(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  builder(C ,B)   ,  homeport(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  areaMetro(B ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  destination(C ,B)   ,  headquarter(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  height(A ,C)   ,  elevation(B ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  deathYear(A ,C)   ,  populationDensity(B ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  deathYear(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  occupation(A ,C)   ,  country(B ,D)   ,  C=D. 
-1	 birthPlace(A ,B)  :-  spouse(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
-1	 birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  area(B ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  routeEnd(C ,B)   ,  county(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  height(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  height(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  birthYear(A ,C)   ,  areaUrban(B ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  headquarter(C ,B)   ,  locationCountry(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C>D. 
-1	 birthPlace(A ,B)  :-  leaderName(B ,C)   ,  residence(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  city(C ,B)   ,  sourceCountry(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  isPartOf(B ,C)   ,  isPartOf(C ,D)   ,  birthPlace(A ,D).
-1	 birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  residence(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  residence(A ,C)   ,  residence(D ,C)   ,  birthPlace(D ,B).
-1	 birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  activeYearsEndYear(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  areaWater(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  locationCountry(D ,C)   ,  foundationPlace(D ,B).
+0  birthPlace(A ,B)  :-  team(A ,C)   ,  chairman(C ,D)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  populationAsOf(B ,C)   ,  birthDate(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  populationDensity(B ,C)   ,  height(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  utcOffset(B ,C)   ,  birthYear(A ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  stateOfOrigin(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  weight(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  city(C ,B)   ,  county(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  region(C ,B)   ,  country(C ,D)   ,  nationality(A ,D).
+0  birthPlace(A ,B)  :-  areaMetro(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  team(A ,C)   ,  managerClub(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  location(C ,B)   ,  jurisdiction(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  region(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  height(A ,C)   ,  height(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  jurisdiction(D ,C)   ,  location(D ,B).
+0  birthPlace(A ,B)  :-  deathYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  mouthPlace(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  weight(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  elevation(B ,C)   ,  weight(A ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  utcOffset(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  foundationPlace(C ,B)   ,  locationCountry(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  termPeriod(A ,C)   ,  country(B ,D)   ,  C=D. 
+0  birthPlace(A ,B)  :-  area(B ,C)   ,  weight(A ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  nationality(A ,C)   ,  residence(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  areaUrban(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  country(A ,C)   ,  stateOfOrigin(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  utcOffset(B ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  nationality(A ,C)   ,  stateOfOrigin(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  team(A ,C)   ,  position(C ,D)   ,  country(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  state(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  residence(A ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  ground(D ,C)   ,  ground(D ,B).
+0  birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  activeYearsEndYear(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  deathYear(A ,C)   ,  area(B ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  area(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  leaderTitle(B ,C)   ,  chairmanTitle(D ,C)   ,  team(A ,D).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(D ,C)   ,  placeOfBurial(D ,B).
+0  birthPlace(A ,B)  :-  stateOfOrigin(A ,C)   ,  stateOfOrigin(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  headquarter(C ,B)   ,  regionServed(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  birthYear(A ,C)   ,  populationMetro(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  jurisdiction(D ,C)   ,  headquarter(D ,B).
+0  birthPlace(A ,B)  :-  city(C ,B)   ,  mouthCountry(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  country(D ,C)   ,  province(D ,B).
+0  birthPlace(A ,B)  :-  routeEnd(C ,B)   ,  location(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  successor(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
+0  birthPlace(A ,B)  :-  nearestCity(C ,B)   ,  location(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  headquarter(C ,B)   ,  jurisdiction(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  deathYear(A ,C)   ,  birthYear(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  area(B ,C)   ,  activeYearsEndYear(A ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  headquarter(C ,B)   ,  location(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  team(A ,C)   ,  tenant(D ,C)   ,  location(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  areaLand(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  deathPlace(A ,C)   ,  nationality(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  nationality(A ,C)   ,  citizenship(D ,C)   ,  residence(D ,B).
+0  birthPlace(A ,B)  :-  birthYear(A ,C)   ,  populationDensity(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  deathYear(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  stateOfOrigin(A ,C)   ,  nationality(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  height(A ,C)   ,  populationMetro(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  nearestCity(C ,B)   ,  location(C ,D)   ,  nationality(A ,D).
+0  birthPlace(A ,B)  :-  country(A ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  capital(C ,B)   ,  country(B ,C).
+0  birthPlace(A ,B)  :-  height(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  location(C ,B)   ,  regionServed(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  location(C ,B)   ,  locationCountry(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  deathYear(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  foundingYear(D ,C)   ,  location(D ,B).
+0  birthPlace(A ,B)  :-  deathYear(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
+0  birthPlace(A ,B)  :-  spouse(A ,C)   ,  deathPlace(D ,B)   ,  C=D. 
+0  birthPlace(A ,B)  :-  residence(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  countySeat(C ,B)   ,  state(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  deathPlace(A ,C)   ,  residence(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  campus(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  builder(C ,B)   ,  homeport(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  areaMetro(B ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  destination(C ,B)   ,  headquarter(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  height(A ,C)   ,  elevation(B ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  deathYear(A ,C)   ,  populationDensity(B ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  deathYear(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  occupation(A ,C)   ,  country(B ,D)   ,  C=D. 
+0  birthPlace(A ,B)  :-  spouse(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
+0  birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  area(B ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  routeEnd(C ,B)   ,  county(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  height(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  height(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  birthYear(A ,C)   ,  areaUrban(B ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  headquarter(C ,B)   ,  locationCountry(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C>D. 
+0  birthPlace(A ,B)  :-  leaderName(B ,C)   ,  residence(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  city(C ,B)   ,  sourceCountry(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  isPartOf(B ,C)   ,  isPartOf(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  residence(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  residence(A ,C)   ,  residence(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  areaTotal(B ,D)   ,  C>D. 

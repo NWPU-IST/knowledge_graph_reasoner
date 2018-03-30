@@ -1,0 +1,50 @@
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  location(D ,C)   ,  locationCity(D ,B).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  populationPlace(D ,C)   ,  populationPlace(D ,B).
+headquarter(A ,B)  :-  populationPlace(C ,B)   ,  ethnicGroup(D ,C)   ,  headquarter(A ,D).
+headquarter(A ,B)  :-  birthPlace(C ,B)   ,  deathPlace(C ,D)   ,  destination(A ,D).
+headquarter(A ,B)  :-  location(C ,B)   ,  hubAirport(A ,D)   ,  C=D.
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  billed(D ,C)   ,  deathPlace(D ,B).
+headquarter(A ,B)  :-  country(B ,C)   ,  headquarter(A ,D)   ,  D=C.
+headquarter(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  locationCountry(D ,C)   ,  locationCity(D ,B).
+headquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  targetAirport(D ,B).
+headquarter(A ,B)  :-  garrison(C ,B)   ,  country(C ,D)   ,  headquarter(A ,D).
+headquarter(A ,B)  :-  icaoAirlineCode(A ,C)   ,  number(D ,C)   ,  birthPlace(D ,B).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  citizenship(D ,C)   ,  deathPlace(D ,B).
+headquarter(A ,B)  :-  parentCompany(A ,C)   ,  hubAirport(C ,D)   ,  city(D ,B).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  citizenship(D ,C)   ,  birthPlace(D ,B).
+headquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  billed(D ,C)   ,  birthPlace(D ,B).
+headquarter(A ,B)  :-  revenue(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  ethnicity(D ,C)   ,  deathPlace(D ,B).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  significantBuilding(D ,C)   ,  deathPlace(D ,B).
+headquarter(A ,B)  :-  headquarter(C ,B)   ,  iataAirlineCode(C ,D)   ,  icaoAirlineCode(A ,D).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  country(C ,D)   ,  country(B ,D).
+headquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  headquarter(D ,B).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  leaderName(C ,D)   ,  birthPlace(D ,B).
+headquarter(A ,B)  :-  location(C ,B)   ,  hubAirport(D ,C)   ,  parentCompany(A ,D).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  ethnicity(D ,C)   ,  birthPlace(D ,B).
+headquarter(A ,B)  :-  leaderName(B ,C)   ,  country(C ,D)   ,  headquarter(A ,D).
+headquarter(A ,B)  :-  country(B ,C)   ,  location(D ,C)   ,  headquarter(A ,D).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  significantBuilding(D ,C)   ,  birthPlace(D ,B).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  nationality(D ,C)   ,  leaderName(B ,D).
+headquarter(A ,B)  :-  location(C ,B)   ,  location(C ,D)   ,  hubAirport(A ,D).
+headquarter(A ,B)  :-  areaCode(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+headquarter(A ,B)  :-  areaLand(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+headquarter(A ,B)  :-  birthPlace(C ,B)   ,  deathPlace(C ,D)   ,  targetAirport(A ,D).
+headquarter(A ,B)  :-  residence(C ,B)   ,  birthPlace(C ,D)   ,  destination(A ,D).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  destination(D ,C)   ,  headquarter(D ,B).
+headquarter(A ,B)  :-  ground(C ,B)   ,  homeStadium(C ,D)   ,  headquarter(A ,D).
+headquarter(A ,B)  :-  destination(A ,C)   ,  location(D ,C)   ,  location(D ,B).
+headquarter(A ,B)  :-  headquarter(C ,B)   ,  icaoAirlineCode(C ,D)   ,  icaoAirlineCode(A ,D).
+headquarter(A ,B)  :-  leaderName(B ,C)   ,  birthPlace(C ,D)   ,  headquarter(A ,D).
+headquarter(A ,B)  :-  birthPlace(C ,B)   ,  birthPlace(C ,D)   ,  destination(A ,D).
+headquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaCode(B ,D)   ,  C>D.
+headquarter(A ,B)  :-  hubAirport(A ,C)   ,  location(D ,C)   ,  location(D ,B).
+headquarter(A ,B)  :-  targetAirport(A ,C)   ,  hometown(D ,C)   ,  birthPlace(D ,B).
+headquarter(A ,B)  :-  headquarter(A ,C)   ,  hometown(D ,C)   ,  deathPlace(D ,B).
+headquarter(A ,B)  :-  type(A ,C)   ,  legalForm(D ,C)   ,  headquarter(D ,B).
+headquarter(A ,B)  :-  region(C ,B)   ,  birthPlace(C ,D)   ,  headquarter(A ,D).
+headquarter(A ,B)  :-  headquarter(C ,B)   ,  hubAirport(C ,D)   ,  headquarter(A ,D).
+headquarter(A ,B)  :-  targetAirport(C ,B)   ,  hubAirport(C ,D)   ,  hubAirport(A ,D).
+headquarter(A ,B)  :-  parentCompany(A ,C)   ,  headquarter(C ,D)   ,  capital(D ,B).

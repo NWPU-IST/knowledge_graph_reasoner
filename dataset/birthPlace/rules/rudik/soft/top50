@@ -1,0 +1,50 @@
+0  birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  activeYearsEndYear(A ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  areaWater(B ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  locationCountry(D ,C)   ,  foundationPlace(D ,B).
+0  birthPlace(A ,B)  :-  team(A ,C)   ,  chairman(C ,D)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  populationAsOf(B ,C)   ,  birthDate(A ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  populationDensity(B ,C)   ,  height(A ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  utcOffset(B ,C)   ,  birthYear(A ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  stateOfOrigin(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  weight(A ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  city(C ,B)   ,  county(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  region(C ,B)   ,  country(C ,D)   ,  nationality(A ,D).
+0  birthPlace(A ,B)  :-  areaMetro(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  team(A ,C)   ,  managerClub(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  location(C ,B)   ,  jurisdiction(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  region(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  height(A ,C)   ,  height(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  jurisdiction(D ,C)   ,  location(D ,B).
+0  birthPlace(A ,B)  :-  deathYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  mouthPlace(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  areaTotal(B ,C)   ,  weight(A ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  elevation(B ,C)   ,  weight(A ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  utcOffset(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  foundationPlace(C ,B)   ,  locationCountry(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  termPeriod(A ,C)   ,  country(B ,D)   ,  C=D.
+0  birthPlace(A ,B)  :-  area(B ,C)   ,  weight(A ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  nationality(A ,C)   ,  residence(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  areaUrban(B ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  country(A ,C)   ,  stateOfOrigin(D ,C)   ,  deathPlace(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsStartYear(A ,C)   ,  utcOffset(B ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  nationality(A ,C)   ,  stateOfOrigin(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  team(A ,C)   ,  position(C ,D)   ,  country(D ,B).
+0  birthPlace(A ,B)  :-  activeYearsEndYear(A ,C)   ,  populationTotal(B ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  state(C ,B)   ,  country(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  residence(A ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  elevation(B ,C)   ,  height(A ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  ground(D ,C)   ,  ground(D ,B).
+0  birthPlace(A ,B)  :-  populationTotal(B ,C)   ,  activeYearsEndYear(A ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  deathYear(A ,C)   ,  area(B ,D)   ,  C>D.
+0  birthPlace(A ,B)  :-  area(B ,C)   ,  activeYearsStartYear(A ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  leaderTitle(B ,C)   ,  chairmanTitle(D ,C)   ,  team(A ,D).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(D ,C)   ,  placeOfBurial(D ,B).
+0  birthPlace(A ,B)  :-  stateOfOrigin(A ,C)   ,  stateOfOrigin(D ,C)   ,  birthPlace(D ,B).
+0  birthPlace(A ,B)  :-  headquarter(C ,B)   ,  regionServed(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  birthYear(A ,C)   ,  populationMetro(B ,D)   ,  C<D.
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  jurisdiction(D ,C)   ,  headquarter(D ,B).
+0  birthPlace(A ,B)  :-  city(C ,B)   ,  mouthCountry(C ,D)   ,  birthPlace(A ,D).
+0  birthPlace(A ,B)  :-  birthPlace(A ,C)   ,  country(D ,C)   ,  province(D ,B).
