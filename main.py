@@ -128,13 +128,18 @@ def stats_computer(true_count, true_pos, false_count, true_neg):
     false_neg = false_count - true_neg
     tp = float(true_pos)/float(true_count)
     tn = float(true_neg)/float(false_count)
+    print "True Count:", true_count, "True Pos: ", true_pos, "=>", tp, "False Pos: ", false_pos
+    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Neg: ", false_neg
     pre = float(true_pos) / float(true_count)
     rec = float(true_pos) / float(true_pos + false_neg)
-    print "True Count:", true_count, "True Pos: ", true_pos,"=>", tp, "False Pos: ", false_pos
-    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn , "False Neg: ", false_neg
     print "Precision: ", pre
     print "Recall: ", rec
-    print top_k , '&', round(tp,2), '(',true_pos,'/',true_count,')', '&', 1-tp , '(',false_pos,'/',true_count,')', '&', tn, '(',true_neg,'/',false_count,')', '&', 1-tn ,  '(', false_neg,'/',false_count,')', '&', pre, '&', rec
+    true_data_pos = str(round(tp,2)) + ' ('+str(true_pos)+'/'+str(true_count)+')'
+    false_data_pos = str(round(1-tp,2)) + ' (' + str(false_pos)+'/'+str(true_count)+')'
+    true_data_neg = str(round(tn,2))+ ' ('+str(true_neg)+'/'+str(false_count)+')'
+    false_data_neg = str(round(1-tn,2))+' ('+str(false_neg)+'/'+str(false_count)+')'
+    print top_k, '&', true_data_pos, '&', false_data_pos, '&', true_data_neg, '&', false_data_neg, '&', round(pre,2), \
+        '&', round(rec,2)
 
 
 

@@ -1,0 +1,10 @@
+negspouse(A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsEndYear(A ,C)   ,  parent(B ,A).
+negspouse(A ,B)  :-  birthPlace(A ,C)   ,  region(D ,C)   ,  president(D ,B).
+negspouse(A ,B)  :-  successor(A ,B)   ,  activeYearsStartYear(B ,C)   ,  activeYearsEndYear(A ,C).
+negspouse(A ,B)  :-  successor(B ,A)   ,  deathPlace(B ,C)   ,  birthPlace(A ,C).
+negspouse(A ,B)  :-  deathPlace(B ,C)   ,  deathPlace(A ,C)   ,  predecessor(B ,A).
+negspouse(A ,B)  :-  successor(C ,B)   ,  predecessor(B ,C)   ,  parent(A ,B).
+negspouse(A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(B ,C)   ,  parent(A ,B).
+negspouse(A ,B)  :-  office(A ,C)   ,  office(B ,C)   ,  successor(B ,A).
+negspouse(A ,B)  :-  successor(A ,C)   ,  parent(C ,A)   ,  parent(B ,A).
+negspouse(A ,B)  :-  child(C ,B)   ,  parent(D ,C)   ,  parent(D ,A).
