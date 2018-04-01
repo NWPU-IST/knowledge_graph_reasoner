@@ -11,6 +11,7 @@ from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference
     rule_evidence_writer
 from ambiverse_api import ambiverse_entity_parser
 from config import top_k
+import datetime
 
 
 def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg):
@@ -92,7 +93,7 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
         lpmln_evaluation.append(
             [sentence_id, true_label, sentence_check, label, str(prediction), str(prob), str(map), str(answer_set), \
              str(answer_all), str(map_all)])
-    stats_computer(true_count, true_pos, false_count, true_neg)
+    stats_computer(true_count, true_pos, false_count, true_neg, data_source)
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
 
@@ -123,7 +124,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
     return '', '', '', '', '', ''
 
 
-def stats_computer(true_count, true_pos, false_count, true_neg):
+def stats_computer(true_count, true_pos, false_count, true_neg, data_source):
     false_pos = true_count-true_pos
     false_neg = false_count - true_neg
     tp = float(true_pos)/float(true_count)
@@ -138,8 +139,12 @@ def stats_computer(true_count, true_pos, false_count, true_neg):
     false_data_pos = str(round(1-tp,2)) + ' (' + str(false_pos)+'/'+str(true_count)+')'
     true_data_neg = str(round(tn,2))+ ' ('+str(true_neg)+'/'+str(false_count)+')'
     false_data_neg = str(round(1-tn,2))+' ('+str(false_neg)+'/'+str(false_count)+')'
-    print top_k, '&', true_data_pos, '&', false_data_pos, '&', true_data_neg, '&', false_data_neg, '&', round(pre,2), \
-        '&', round(rec,2)
+    st = datetime.datetime.now()
+    output_stats = str(st) +' '+data_source +' top-' + str(top_k )+ ' & '+ true_data_pos+ ' & '+ false_data_pos+ ' & '+ \
+                   true_data_neg+ ' & '+ false_data_neg+ ' & '+ str(round(pre,2))+ ' & '+ str(round(rec,2))
+    with open('output_all.txt', 'a') as the_file:
+        the_file.write(str(output_stats))
+    print output_stats
 
 
 

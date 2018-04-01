@@ -1,7 +1,4 @@
 http://dbpedia.org/ontology/spouse(object,subject),,,-0.17942
-http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & <(v0,v0) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0),-0.00227
-http://dbpedia.org/ontology/birthYear(subject,v0) & <(v0,v0) & http://dbpedia.org/ontology/birthYear(object,v0),-0.00093
-http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & <(v0,v0) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0),-0.00089
 http://dbpedia.org/ontology/parent(subject,v0) & http://dbpedia.org/ontology/predecessor(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.0
 http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v0),0.0
 http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v0),0.0

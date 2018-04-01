@@ -1,0 +1,87 @@
+0 headquarter(A ,B)  :-  populationPlace(C ,B)   ,  ethnicGroup(D ,C)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  revenue(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  ethnicity(D ,C)   ,  deathPlace(D ,B).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  leaderName(C ,D)   ,  birthPlace(D ,B).
+0 headquarter(A ,B)  :-  location(C ,B)   ,  hubAirport(D ,C)   ,  parentCompany(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  ethnicity(D ,C)   ,  birthPlace(D ,B).
+0 headquarter(A ,B)  :-  leaderName(B ,C)   ,  country(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  country(B ,C)   ,  location(D ,C)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  significantBuilding(D ,C)   ,  birthPlace(D ,B).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  nationality(D ,C)   ,  leaderName(B ,D).
+0 headquarter(A ,B)  :-  areaCode(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  destination(D ,C)   ,  headquarter(D ,B).
+0 headquarter(A ,B)  :-  ground(C ,B)   ,  homeStadium(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaCode(B ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  headquarter(C ,B)   ,  hubAirport(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  parentCompany(A ,C)   ,  headquarter(C ,D)   ,  capital(D ,B).
+0 headquarter(A ,B)  :-  parentCompany(A ,C)   ,  hubAirport(C ,D)   ,  location(D ,B).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  hubAirport(D ,C)   ,  headquarter(D ,B).
+0 headquarter(A ,B)  :-  utcOffset(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaWater(B ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  ethnicGroup(C ,D)   ,  populationPlace(D ,B).
+0 headquarter(A ,B)  :-  utcOffset(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  location(C ,B)   ,  secondDriverCountry(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  location(C ,B).
+0 headquarter(A ,B)  :-  areaMetro(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  populationTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  residence(C ,B)   ,  restingPlace(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  populationDensity(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  headquarter(C ,B)   ,  destination(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  utcOffset(B ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  leaderName(B ,C)   ,  nationality(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(C ,B)   ,  parentCompany(C ,D)   ,  parentCompany(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  majorShrine(D ,C)   ,  birthPlace(D ,B).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  country(D ,C)   ,  leaderName(B ,D).
+0 headquarter(A ,B)  :-  birthPlace(C ,B)   ,  beatifiedPlace(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  deathPlace(C ,B)   ,  beatifiedPlace(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  populationUrban(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  icaoAirlineCode(A ,C)   ,  icaoAirlineCode(D ,C)   ,  headquarter(D ,B).
+0 headquarter(A ,B)  :-  areaWater(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  capital(C ,B)   ,  headquarter(D ,C)   ,  parentCompany(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  language(D ,C)   ,  deathPlace(D ,B).
+0 headquarter(A ,B)  :-  location(C ,B)   ,  thirdDriverCountry(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  country(C ,B)   ,  headquarter(D ,C)   ,  parentCompany(D ,A).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  city(C ,B).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  occupation(D ,C)   ,  deathPlace(D ,B).
+0 headquarter(A ,B)  :-  headquarter(C ,B)   ,  ideology(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  location(C ,B)   ,  locationCity(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationMetro(B ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  residence(D ,C)   ,  leaderName(B ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  beatifiedPlace(D ,C)   ,  deathPlace(D ,B).
+0 headquarter(A ,B)  :-  birthPlace(C ,B)   ,  leaderName(D ,C)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  deathPlace(C ,B)   ,  language(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  locationCity(D ,C)   ,  location(D ,B).
+0 headquarter(A ,B)  :-  residence(C ,B)   ,  leaderName(D ,C)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  headquarter(D ,C)   ,  regionServed(D ,B).
+0 headquarter(A ,B)  :-  leaderName(B ,C)   ,  location(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  routeStart(D ,C)   ,  location(D ,B).
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationUrban(B ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  ideology(D ,C)   ,  headquarter(D ,B).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  leaderName(C ,D)   ,  residence(D ,B).
+0 headquarter(A ,B)  :-  birthPlace(C ,B)   ,  ethnicity(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  location(C ,B)   ,  operator(D ,C)   ,  hubAirport(A ,D).
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaMetro(B ,D)   ,  C<D.
+0 headquarter(A ,B)  :-  city(C ,B)   ,  hubAirport(D ,C)   ,  parentCompany(A ,D).
+0 headquarter(A ,B)  :-  populationMetro(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  populationDensity(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  birthPlace(C ,B)   ,  significantBuilding(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  leaderName(B ,C)   ,  residence(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  hubAirport(A ,C)   ,  operator(C ,D)   ,  location(D ,B).
+0 headquarter(A ,B)  :-  country(B ,C)   ,  headquarter(D ,C)   ,  parentCompany(A ,D).
+0 headquarter(A ,B)  :-  birthPlace(C ,B)   ,  leader(D ,C)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  deathPlace(C ,B)   ,  occupation(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  restingPlace(D ,C)   ,  residence(D ,B).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  homeStadium(D ,C)   ,  ground(D ,B).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  beatifiedPlace(D ,C)   ,  birthPlace(D ,B).
+0 headquarter(A ,B)  :-  areaTotal(B ,C)   ,  revenue(A ,D)   ,  C>D.
+0 headquarter(A ,B)  :-  deathPlace(C ,B)   ,  ethnicity(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  isPartOf(B ,C).
+0 headquarter(A ,B)  :-  parentCompany(C ,A)   ,  hubAirport(C ,D)   ,  city(D ,B).
+0 headquarter(A ,B)  :-  birthPlace(C ,B)   ,  majorShrine(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  headquarter(A ,C)   ,  state(D ,C)   ,  isPartOf(B ,D).
+0 headquarter(A ,B)  :-  deathPlace(C ,B)   ,  placeOfBurial(C ,D)   ,  headquarter(A ,D).
+0 headquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationDensity(B ,D)   ,  C>D.

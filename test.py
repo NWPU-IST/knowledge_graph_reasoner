@@ -44,7 +44,7 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
 
         lpmln_evaluation.append([sentence_id, true_label, triple_check,label,str(prediction), str(prob), str(map), str(answer_set), \
                                  str(answer_all), str(map_all)])
-    stats_computer(true_count, true_pos, false_count, true_neg)
+    stats_computer(true_count, true_pos, false_count, true_neg, data_source)
 
 
     update_resources(triple_flag=False, ambiverse_flag=False, file_triples=False, ambiverse_resources=False,\

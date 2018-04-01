@@ -1,4 +1,3 @@
-spouse(A ,B)  :-  spouse(B ,A).
 spouse(A ,B)  :-  parent(A ,C)   ,  predecessor(A ,C)   ,  spouse(B ,A).
 spouse(A ,B)  :-  birthPlace(B ,C)   ,  nationality(B ,C)   ,  spouse(B ,A).
 spouse(A ,B)  :-  deathPlace(B ,C)   ,  restingPlace(B ,C)   ,  spouse(B ,A).
@@ -8,3 +7,4 @@ spouse(A ,B)  :-  almaMater(A ,C)   ,  almaMater(B ,C)   ,  spouse(B ,A).
 spouse(A ,B)  :-  parent(C ,B)   ,  child(B ,C)   ,  spouse(B ,A).
 spouse(A ,B)  :-  parent(C ,B)   ,  child(A ,C)   ,  spouse(B ,A).
 spouse(A ,B)  :-  parent(A ,C)   ,  child(C ,A)   ,  spouse(B ,A).
+spouse(A ,B)  :-  parent(B ,C)   ,  successor(C ,B)   ,  spouse(B ,A).
