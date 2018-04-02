@@ -143,7 +143,7 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source):
     output_stats = str(st) +' '+data_source +' top-' + str(top_k )+ ' & '+ true_data_pos+ ' & '+ false_data_pos+ ' & '+ \
                    true_data_neg+ ' & '+ false_data_neg+ ' & '+ str(round(pre,2))+ ' & '+ str(round(rec,2))
     with open('output_all.txt', 'a') as the_file:
-        the_file.write(str(output_stats))
+        the_file.write(str(output_stats)+'\n')
     print output_stats
 
 

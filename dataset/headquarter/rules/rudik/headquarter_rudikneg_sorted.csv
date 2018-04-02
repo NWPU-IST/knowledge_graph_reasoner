@@ -1,0 +1,250 @@
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  service(D ,C)   ,  location(D ,B).
+0; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  revenue(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  areaLand(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  distributingLabel(D ,C)   ,  location(D ,B).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  year(D ,C)   ,  birthPlace(D ,B).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  maximumElevation(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaUrban(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  closingYear(D ,C)   ,  location(D ,B).
+0; negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  service(C ,D)   ,  industry(A ,D).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaUrban(B ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  recordLabel(D ,C)   ,  birthPlace(D ,B).
+0; negheadquarter(A ,B)  :-  utcOffset(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaWater(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  areaUrban(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  utcOffset(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  service(D ,C)   ,  foundationPlace(D ,B).
+0; negheadquarter(A ,B)  :-  areaMetro(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  populationTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  product(D ,C)   ,  foundationPlace(D ,B).
+0; negheadquarter(A ,B)  :-  netIncome(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  utcOffset(B ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  service(D ,C)   ,  locationCountry(D ,B).
+0; negheadquarter(A ,B)  :-  maximumElevation(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  service(D ,C)   ,  regionServed(D ,B).
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  country(C ,B).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  censusYear(D ,C)   ,  country(D ,B).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  impactFactorAsOf(D ,C)   ,  country(D ,B).
+0; negheadquarter(A ,B)  :-  populationUrban(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  billed(C ,B)   ,  activeYearsEndYear(C ,D)   ,  foundingYear(A ,D).
+0; negheadquarter(A ,B)  :-  areaWater(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  product(D ,C)   ,  locationCity(D ,B).
+0; negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  product(C ,D)   ,  industry(A ,D).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(D ,C)   ,  restingPlace(D ,B).
+0; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  utcOffset(B ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationMetro(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  recordLabel(D ,C)   ,  recordedIn(D ,B).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsEndYear(D ,C)   ,  billed(D ,B).
+0; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  facultySize(D ,C)   ,  country(D ,B).
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  almaMater(D ,C)   ,  birthPlace(D ,B).
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  distributingLabel(D ,C)   ,  country(D ,B).
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  profession(D ,C)   ,  birthPlace(D ,B).
+0; negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  service(C ,D)   ,  industry(A ,D).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationUrban(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  subsidiary(D ,C)   ,  locationCountry(D ,B).
+0; negheadquarter(A ,B)  :-  restingPlace(C ,B)   ,  activeYearsStartYear(C ,D)   ,  foundingYear(A ,D).
+0; negheadquarter(A ,B)  :-  occupation(C ,B)   ,  deathYear(C ,D)   ,  foundingYear(A ,D).
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  distributingCompany(D ,C)   ,  country(D ,B).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaMetro(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  populationMetro(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  occupation(D ,B).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  education(D ,B).
+0; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  type(D ,C)   ,  location(D ,B).
+0; negheadquarter(A ,B)  :-  areaUrban(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  draftYear(D ,C)   ,  deathPlace(D ,B).
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  occupation(D ,C)   ,  birthPlace(D ,B).
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  country(D ,B).
+0; negheadquarter(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  country(D ,B).
+0; negheadquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  locationCity(D ,B).
+0; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  revenue(A ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0; negheadquarter(A ,B)  :-  locationCity(C ,B)   ,  product(C ,D)   ,  industry(A ,D).
+0; negheadquarter(A ,B)  :-  parentCompany(C ,A)   ,  location(C ,B).
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  distributingCompany(D ,C)   ,  location(D ,B).
+0; negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  type(C ,D)   ,  industry(A ,D).
+0; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0; negheadquarter(A ,B)  :-  education(C ,B)   ,  birthYear(C ,D)   ,  foundingYear(A ,D).
+0; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  recordLabel(D ,C)   ,  hometown(D ,B).
+0.00034; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  recordLabel(D ,C)   ,  deathPlace(D ,B).
+0.00034; negheadquarter(A ,B)  :-  industry(A ,C)   ,  type(D ,C)   ,  foundationPlace(D ,B).
+0.00034; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  netIncome(A ,D)   ,  C>D.
+0.00034; negheadquarter(A ,B)  :-  parentCompany(C ,A)   ,  country(C ,B).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  serviceEndYear(D ,C)   ,  residence(D ,B).
+0.0007; negheadquarter(A ,B)  :-  industry(A ,C)   ,  product(D ,C)   ,  regionServed(D ,B).
+0.0007; negheadquarter(A ,B)  :-  restingPlace(C ,B)   ,  activeYearsEndYear(C ,D)   ,  foundingYear(A ,D).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsEndYear(D ,C)   ,  restingPlace(D ,B).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  occupation(D ,B).
+0.0007; negheadquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  locationCountry(D ,B).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  openingYear(D ,C)   ,  region(D ,B).
+0.0007; negheadquarter(A ,B)  :-  restingPlace(C ,B)   ,  deathYear(C ,D)   ,  foundingYear(A ,D).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsEndYear(D ,C)   ,  residence(D ,B).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  numberOfVisitorsAsOf(D ,C)   ,  location(D ,B).
+0.0007; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  owningCompany(C ,D)   ,  locationCountry(D ,B).
+0.0007; negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  product(C ,D)   ,  industry(A ,D).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  extinctionYear(D ,C)   ,  regionServed(D ,B).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  serviceStartYear(D ,C)   ,  residence(D ,B).
+0.0007; negheadquarter(A ,B)  :-  industry(A ,C)   ,  product(D ,C)   ,  locationCountry(D ,B).
+0.0007; negheadquarter(A ,B)  :-  location(C ,B)   ,  product(C ,D)   ,  industry(A ,D).
+0.0007; negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  extinctionYear(C ,D)   ,  foundingYear(A ,D).
+0.0007; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  owner(C ,D)   ,  locationCountry(D ,B).
+0.0007; negheadquarter(A ,B)  :-  occupation(C ,B)   ,  birthYear(C ,D)   ,  foundingYear(A ,D).
+0.0007; negheadquarter(A ,B)  :-  restingPlace(C ,B)   ,  birthYear(C ,D)   ,  foundingYear(A ,D).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  restingPlace(D ,B).
+0.0007; negheadquarter(A ,B)  :-  assembly(C ,B)   ,  modelStartYear(C ,D)   ,  foundingYear(A ,D).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  restingPlace(D ,B).
+0.0007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  buildingStartYear(D ,C)   ,  location(D ,B).
+0.00103; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0.00137; negheadquarter(A ,B)  :-  locationCity(C ,B)   ,  industry(C ,D)   ,  industry(A ,D).
+0.00137; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  parentCompany(D ,C)   ,  country(D ,B).
+0.0014; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  year(D ,C)   ,  city(D ,B).
+0.0014; negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  numberOfEmployees(C ,D)   ,  numberOfEmployees(A ,D).
+0.0014; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  formationYear(D ,C)   ,  jurisdiction(D ,B).
+0.0014; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  numberOfEmployees(D ,C)   ,  foundationPlace(D ,B).
+0.0014; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  numberOfEmployees(D ,C)   ,  regionServed(D ,B).
+0.0014; negheadquarter(A ,B)  :-  jurisdiction(C ,B)   ,  formationYear(C ,D)   ,  foundingYear(A ,D).
+0.0014; negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  extinctionYear(C ,D)   ,  foundingYear(A ,D).
+0.0014; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  undraftedYear(D ,C)   ,  birthPlace(D ,B).
+0.0014; negheadquarter(A ,B)  :-  knownFor(C ,B)   ,  deathYear(C ,D)   ,  foundingYear(A ,D).
+0.0014; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  knownFor(D ,B).
+0.0014; negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  numberOfEmployees(C ,D)   ,  numberOfEmployees(A ,D).
+0.0014; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  extinctionYear(D ,C)   ,  foundationPlace(D ,B).
+0.00171; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationTotal(B ,D)   ,  C<D.
+0.0021; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  formationYear(D ,C)   ,  country(D ,B).
+0.0021; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  extinctionYear(D ,C)   ,  locationCountry(D ,B).
+0.0021; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  numberOfEmployees(D ,C)   ,  locationCountry(D ,B).
+0.0021; negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  formationYear(C ,D)   ,  foundingYear(A ,D).
+0.0021; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  serviceStartYear(D ,C)   ,  country(D ,B).
+0.0021; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  country(D ,B).
+0.0021; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  formationYear(D ,C)   ,  regionServed(D ,B).
+0.0021; negheadquarter(A ,B)  :-  assembly(C ,B)   ,  productionEndYear(C ,D)   ,  foundingYear(A ,D).
+0.0021; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  hometown(D ,B).
+0.0028; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  extinctionYear(D ,C)   ,  headquarter(D ,B).
+0.0028; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(D ,C)   ,  country(D ,B).
+0.0028; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  year(D ,C)   ,  country(D ,B).
+0.0028; negheadquarter(A ,B)  :-  headquarter(C ,B)   ,  extinctionYear(C ,D)   ,  foundingYear(A ,D).
+0.0028; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  locationCity(C ,D)   ,  country(D ,B).
+0.0028; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  hometown(D ,B).
+0.0035; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  parentCompany(D ,C)   ,  location(D ,B).
+0.0035; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  serviceEndYear(D ,C)   ,  country(D ,B).
+0.0035; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  populationTotal(D ,C)   ,  country(D ,B).
+0.0035; negheadquarter(A ,B)  :-  location(C ,B)   ,  parentCompany(C ,D)   ,  parentCompany(A ,D).
+0.0035; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  locationCountry(C ,B).
+0.0035; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  numberOfStudents(D ,C)   ,  country(D ,B).
+0.0035; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  residence(D ,B).
+0.0035; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  openingYear(D ,C)   ,  locatedInArea(D ,B).
+0.0042; negheadquarter(A ,B)  :-  locationCity(C ,B)   ,  type(C ,D)   ,  type(A ,D).
+0.0042; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  locationCity(C ,B).
+0.0042; negheadquarter(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  locationCity(D ,B).
+0.0042; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsEndYear(D ,C)   ,  country(D ,B).
+0.0042; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  yearOfConstruction(D ,C)   ,  location(D ,B).
+0.0042; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  country(D ,B).
+0.0042; negheadquarter(A ,B)  :-  assembly(C ,B)   ,  productionStartYear(C ,D)   ,  foundingYear(A ,D).
+0.0049; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  extinctionYear(D ,C)   ,  location(D ,B).
+0.0049; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  openingYear(D ,C)   ,  location(D ,B).
+0.0049; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  numberOfEmployees(D ,C)   ,  location(D ,B).
+0.0049; negheadquarter(A ,B)  :-  location(C ,B)   ,  numberOfEmployees(C ,D)   ,  numberOfEmployees(A ,D).
+0.0049; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  serviceEndYear(D ,C)   ,  deathPlace(D ,B).
+0.0049; negheadquarter(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  locationCountry(D ,B).
+0.0056; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  foundingYear(D ,C)   ,  locationCountry(D ,B).
+0.0056; negheadquarter(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  foundationPlace(D ,B).
+0.0056; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  serviceStartYear(D ,C)   ,  deathPlace(D ,B).
+0.0056; negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  type(C ,D)   ,  type(A ,D).
+0.0063; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  foundingYear(D ,C)   ,  regionServed(D ,B).
+0.0063; negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  foundingYear(C ,D)   ,  foundingYear(A ,D).
+0.0063; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  netIncome(A ,D)   ,  C<D.
+0.0063; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  location(C ,B).
+0.0063; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  openingYear(D ,C)   ,  country(D ,B).
+0.0063; negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  industry(C ,D)   ,  industry(A ,D).
+0.0063; negheadquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  regionServed(D ,B).
+0.0063; negheadquarter(A ,B)  :-  netIncome(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0.0063; negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  industry(C ,D)   ,  industry(A ,D).
+0.0063; negheadquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  foundationPlace(D ,B).
+0.007; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  location(C ,D)   ,  country(D ,B).
+0.007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(D ,C)   ,  residence(D ,B).
+0.007; negheadquarter(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  regionServed(D ,B).
+0.007; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  draftYear(D ,C)   ,  birthPlace(D ,B).
+0.007; negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  type(C ,D)   ,  type(A ,D).
+0.0077; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsEndYear(D ,C)   ,  hometown(D ,B).
+0.0084; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  numberOfEmployees(A ,D)   ,  C>D.
+0.0084; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+0.0084; negheadquarter(A ,B)  :-  occupation(C ,A)   ,  country(D ,B)   ,  C=D.
+0.0084; negheadquarter(A ,B)  :-  city(C ,B)   ,  foundingYear(C ,D)   ,  foundingYear(A ,D).
+0.00868; negheadquarter(A ,B)  :-  industry(A ,C)   ,  product(D ,C)   ,  location(D ,B).
+0.0091; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  serviceEndYear(D ,C)   ,  birthPlace(D ,B).
+0.0098; negheadquarter(A ,B)  :-  headquarter(C ,B)   ,  formationYear(C ,D)   ,  foundingYear(A ,D).
+0.0098; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  percentageOfAreaWater(B ,D)   ,  C>D.
+0.0098; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  formationYear(D ,C)   ,  headquarter(D ,B).
+0.0098; negheadquarter(A ,B)  :-  percentageOfAreaWater(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0.0098; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  serviceStartYear(D ,C)   ,  birthPlace(D ,B).
+0.0105; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  formationYear(D ,C)   ,  location(D ,B).
+0.0105; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  foundingYear(D ,C)   ,  country(D ,B).
+0.0112; negheadquarter(A ,B)  :-  occupation(C ,A)   ,  deathPlace(D ,B)   ,  C=D.
+0.0112; negheadquarter(A ,B)  :-  occupation(C ,A)   ,  birthPlace(D ,B)   ,  C=D.
+0.0112; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  foundingYear(D ,C)   ,  locationCity(D ,B).
+0.0112; negheadquarter(A ,B)  :-  revenue(A ,C)   ,  percentageOfAreaWater(B ,D)   ,  C>D.
+0.0112; negheadquarter(A ,B)  :-  locationCity(C ,B)   ,  foundingYear(C ,D)   ,  foundingYear(A ,D).
+0.0112; negheadquarter(A ,B)  :-  percentageOfAreaWater(B ,C)   ,  revenue(A ,D)   ,  C<D.
+0.0119; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  foundingYear(D ,C)   ,  foundationPlace(D ,B).
+0.0119; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0.0119; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0.0119; negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  foundingYear(C ,D)   ,  foundingYear(A ,D).
+0.0119; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  residence(D ,B).
+0.0119; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(D ,C)   ,  deathPlace(D ,B).
+0.0126; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  minimumElevation(B ,D)   ,  C>D.
+0.0126; negheadquarter(A ,B)  :-  minimumElevation(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0.0126; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(D ,C)   ,  hometown(D ,B).
+0.0126; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaMetro(B ,D)   ,  C<D.
+0.0126; negheadquarter(A ,B)  :-  areaMetro(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0.0147; negheadquarter(A ,B)  :-  populationTotalRanking(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0.0147; negheadquarter(A ,B)  :-  revenue(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0.0147; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationTotalRanking(B ,D)   ,  C>D.
+0.0147; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  revenue(A ,D)   ,  C<D.
+0.0154; negheadquarter(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  location(D ,B).
+0.0154; negheadquarter(A ,B)  :-  location(C ,B)   ,  type(C ,D)   ,  type(A ,D).
+0.0168; negheadquarter(A ,B)  :-  parentCompany(C ,A)   ,  destination(D ,B)   ,  C=D.
+0.0175; negheadquarter(A ,B)  :-  percentageOfAreaWater(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0.0175; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  percentageOfAreaWater(B ,D)   ,  C>D.
+0.0175; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsEndYear(D ,C)   ,  deathPlace(D ,B).
+0.0196; negheadquarter(A ,B)  :-  revenue(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0.0196; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  deathPlace(D ,B).
+0.0196; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  revenue(A ,D)   ,  C<D.
+0.0203; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsEndYear(D ,C)   ,  birthPlace(D ,B).
+0.021; negheadquarter(A ,B)  :-  elevation(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0.021; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  elevation(B ,D)   ,  C>D.
+0.0217; negheadquarter(A ,B)  :-  revenue(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0.0217; negheadquarter(A ,B)  :-  location(C ,B)   ,  foundingYear(C ,D)   ,  foundingYear(A ,D).
+0.0217; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  foundingYear(D ,C)   ,  location(D ,B).
+0.0217; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  revenue(A ,D)   ,  C<D.
+0.0238; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(D ,C)   ,  birthPlace(D ,B).
+0.0245; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  deathPlace(D ,B).
+0.0252; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  birthPlace(D ,B).
+0.0259; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  populationTotal(B ,D)   ,  C<D.
+0.0259; negheadquarter(A ,B)  :-  populationTotal(B ,C)   ,  numberOfEmployees(A ,D)   ,  C>D.
+0.0287; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  numberOfEmployees(A ,D)   ,  C>D.
+0.0287; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0.0287; negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0.0287; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  numberOfEmployees(A ,D)   ,  C>D.
+0.0287; negheadquarter(A ,B)  :-  location(C ,B)   ,  industry(C ,D)   ,  industry(A ,D).
+0.0287; negheadquarter(A ,B)  :-  parentCompany(C ,A)   ,  locationCountry(D ,B)   ,  C=D.
+0.0287; negheadquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  location(D ,B).
+0.0308; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  birthPlace(D ,B).
+0.0322; negheadquarter(A ,B)  :-  hubAirport(C ,B)   ,  parentCompany(A ,D)   ,  D=C.
+0.0329; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0.0329; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+0.0329; negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0.0329; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+0.0392; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0.0392; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0.0427; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  destination(D ,B)   ,  C=D.
+0.0777; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  locationCountry(D ,B)   ,  C=D.
+0.175; negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  closingYear(D ,C)   ,  headquarter(D ,B).
+0.25342; negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0.73333; negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  hubAirport(D ,B)   ,  C=D.
+2.1; negheadquarter(A ,B)  :-  parentCompany(C ,A)   ,  hubAirport(D ,B)   ,  C=D.

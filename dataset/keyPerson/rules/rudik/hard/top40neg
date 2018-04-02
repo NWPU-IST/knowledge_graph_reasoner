@@ -1,0 +1,40 @@
+negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  parentCompany(D ,C)   ,  parentCompany(A ,D).
+negkeyPerson(A ,B)  :-  location(A ,C)   ,  country(C ,D)   ,  deathPlace(B ,D).
+negkeyPerson(A ,B)  :-  networth(B ,C)   ,  netIncome(A ,D)   ,  C>D.
+negkeyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+negkeyPerson(A ,B)  :-  keyPerson(A ,C)   ,  parent(C ,B).
+negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  recordLabel(D ,C)   ,  recordLabel(D ,A).
+negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  locationCountry(C ,D)   ,  headquarter(A ,D).
+negkeyPerson(A ,B)  :-  foundedBy(A ,B)   ,  keyPerson(C ,B)   ,  owner(C ,B).
+negkeyPerson(A ,B)  :-  subsidiary(C ,A)   ,  occupation(B ,D)   ,  D=C.
+negkeyPerson(A ,B)  :-  occupation(B ,C)   ,  subsidiary(C ,A).
+negkeyPerson(A ,B)  :-  headquarter(A ,C)   ,  locationCity(D ,C)   ,  keyPerson(D ,B).
+negkeyPerson(A ,B)  :-  keyPerson(A ,C)   ,  occupation(C ,A)   ,  foundedBy(A ,B).
+negkeyPerson(A ,B)  :-  headquarter(A ,C)   ,  location(D ,C)   ,  keyPerson(D ,B).
+negkeyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+negkeyPerson(A ,B)  :-  occupation(B ,C)   ,  subsidiary(D ,A)   ,  C=D.
+negkeyPerson(A ,B)  :-  parentCompany(A ,C)   ,  locationCity(C ,D)   ,  birthPlace(B ,D).
+negkeyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCity(D ,C)   ,  parentCompany(A ,D).
+negkeyPerson(A ,B)  :-  foundedBy(C ,B)   ,  locationCity(C ,D)   ,  location(A ,D).
+negkeyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+negkeyPerson(A ,B)  :-  foundedBy(A ,B).
+negkeyPerson(A ,B)  :-  location(A ,C)   ,  locationCity(D ,C)   ,  foundedBy(D ,B).
+negkeyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+negkeyPerson(A ,B)  :-  netIncome(A ,C)   ,  networth(B ,D)   ,  C<D.
+negkeyPerson(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(B ,D)   ,  C<D.
+negkeyPerson(A ,B)  :-  foundedBy(C ,B)   ,  parentCompany(C ,A).
+negkeyPerson(A ,B)  :-  headquarter(A ,C)   ,  locationCountry(D ,C)   ,  keyPerson(D ,B).
+negkeyPerson(A ,B)  :-  recordLabel(C ,A)   ,  recordLabel(C ,D)   ,  keyPerson(D ,B).
+negkeyPerson(A ,B)  :-  birthPlace(B ,C)   ,  headquarter(A ,C).
+negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  location(C ,D)   ,  headquarter(A ,D).
+negkeyPerson(A ,B)  :-  birthPlace(B ,C)   ,  largestCity(D ,C)   ,  location(A ,D).
+negkeyPerson(A ,B)  :-  parentCompany(A ,C)   ,  parentCompany(C ,D)   ,  keyPerson(D ,B).
+negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  locationCity(C ,D)   ,  headquarter(A ,D).
+negkeyPerson(A ,B)  :-  deathYear(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negkeyPerson(A ,B)  :-  parentCompany(A ,C)   ,  location(C ,D)   ,  birthPlace(B ,D).
+negkeyPerson(A ,B)  :-  parentCompany(C ,A)   ,  foundedBy(D ,B)   ,  C=D.
+negkeyPerson(A ,B)  :-  industry(A ,C)   ,  product(A ,C)   ,  foundedBy(A ,B).
+negkeyPerson(A ,B)  :-  foundedBy(A ,B)   ,  birthPlace(B ,C)   ,  location(A ,C).
+negkeyPerson(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+negkeyPerson(A ,B)  :-  foundedBy(A ,B)   ,  foundedBy(C ,B)   ,  parentCompany(C ,A).
+negkeyPerson(A ,B)  :-  foundedBy(C ,B)   ,  parentCompany(D ,A)   ,  D=C.

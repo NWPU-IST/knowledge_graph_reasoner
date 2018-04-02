@@ -1,0 +1,40 @@
+0.00488  negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  parentCompany(D ,C)   ,  parentCompany(A ,D).
+0.70000  negkeyPerson(A ,B)  :-  location(A ,C)   ,  country(C ,D)   ,  deathPlace(B ,D).
+0.00257  negkeyPerson(A ,B)  :-  networth(B ,C)   ,  netIncome(A ,D)   ,  C>D.
+0.00000  negkeyPerson(A ,B)  :-  birthYear(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+0.00244  negkeyPerson(A ,B)  :-  keyPerson(A ,C)   ,  parent(C ,B).
+0.00901  negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  recordLabel(D ,C)   ,  recordLabel(D ,A).
+0.00000  negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  locationCountry(C ,D)   ,  headquarter(A ,D).
+2.80000  negkeyPerson(A ,B)  :-  foundedBy(A ,B)   ,  keyPerson(C ,B)   ,  owner(C ,B).
+0.00901  negkeyPerson(A ,B)  :-  subsidiary(C ,A)   ,  occupation(B ,D)   ,  D=C.
+0.00129  negkeyPerson(A ,B)  :-  occupation(B ,C)   ,  subsidiary(C ,A).
+0.00000  negkeyPerson(A ,B)  :-  headquarter(A ,C)   ,  locationCity(D ,C)   ,  keyPerson(D ,B).
+5.59634  negkeyPerson(A ,B)  :-  keyPerson(A ,C)   ,  occupation(C ,A)   ,  foundedBy(A ,B).
+0.00000  negkeyPerson(A ,B)  :-  headquarter(A ,C)   ,  location(D ,C)   ,  keyPerson(D ,B).
+0.03659  negkeyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  birthYear(B ,D)   ,  C>D.
+0.00901  negkeyPerson(A ,B)  :-  occupation(B ,C)   ,  subsidiary(D ,A)   ,  C=D.
+0.00257  negkeyPerson(A ,B)  :-  parentCompany(A ,C)   ,  locationCity(C ,D)   ,  birthPlace(B ,D).
+0.00257  negkeyPerson(A ,B)  :-  birthPlace(B ,C)   ,  locationCity(D ,C)   ,  parentCompany(A ,D).
+0.87012  negkeyPerson(A ,B)  :-  foundedBy(C ,B)   ,  locationCity(C ,D)   ,  location(A ,D).
+0.00122  negkeyPerson(A ,B)  :-  numberOfEmployees(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+3.04512  negkeyPerson(A ,B)  :-  foundedBy(A ,B).
+0.00643  negkeyPerson(A ,B)  :-  location(A ,C)   ,  locationCity(D ,C)   ,  foundedBy(D ,B).
+0.01673  negkeyPerson(A ,B)  :-  activeYearsStartYear(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+1.39512  negkeyPerson(A ,B)  :-  netIncome(A ,C)   ,  networth(B ,D)   ,  C<D.
+0.01287  negkeyPerson(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(B ,D)   ,  C<D.
+0.00488  negkeyPerson(A ,B)  :-  foundedBy(C ,B)   ,  parentCompany(C ,A).
+0.00000  negkeyPerson(A ,B)  :-  headquarter(A ,C)   ,  locationCountry(D ,C)   ,  keyPerson(D ,B).
+2.45000  negkeyPerson(A ,B)  :-  recordLabel(C ,A)   ,  recordLabel(C ,D)   ,  keyPerson(D ,B).
+0.00643  negkeyPerson(A ,B)  :-  birthPlace(B ,C)   ,  headquarter(A ,C).
+0.00732  negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  location(C ,D)   ,  headquarter(A ,D).
+0.03974  negkeyPerson(A ,B)  :-  birthPlace(B ,C)   ,  largestCity(D ,C)   ,  location(A ,D).
+0.00000  negkeyPerson(A ,B)  :-  parentCompany(A ,C)   ,  parentCompany(C ,D)   ,  keyPerson(D ,B).
+0.00000  negkeyPerson(A ,B)  :-  keyPerson(C ,B)   ,  locationCity(C ,D)   ,  headquarter(A ,D).
+3.49146  negkeyPerson(A ,B)  :-  deathYear(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+0.00257  negkeyPerson(A ,B)  :-  parentCompany(A ,C)   ,  location(C ,D)   ,  birthPlace(B ,D).
+0.00901  negkeyPerson(A ,B)  :-  parentCompany(C ,A)   ,  foundedBy(D ,B)   ,  C=D.
+0.27634  negkeyPerson(A ,B)  :-  industry(A ,C)   ,  product(A ,C)   ,  foundedBy(A ,B).
+0.00257  negkeyPerson(A ,B)  :-  foundedBy(A ,B)   ,  birthPlace(B ,C)   ,  location(A ,C).
+1.77488  negkeyPerson(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(B ,D)   ,  C>D.
+0.00000  negkeyPerson(A ,B)  :-  foundedBy(A ,B)   ,  foundedBy(C ,B)   ,  parentCompany(C ,A).
+0.00901  negkeyPerson(A ,B)  :-  foundedBy(C ,B)   ,  parentCompany(D ,A)   ,  D=C.

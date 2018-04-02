@@ -1,0 +1,146 @@
+0 negcapital(A ,B)  :-  country(A ,C)   ,  language(D ,C)   ,  city(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  populationDensity(B ,C)   ,  areaWater(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaCode(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  numberOfStudents(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  areaWater(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  populationDensity(A ,C)   ,  populationDensity(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  thirdDriverCountry(D ,C)   ,  location(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(B ,C)   ,  areaLand(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaWater(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  ethnicity(D ,C)   ,  deathPlace(D ,B).
+0 negcapital(A ,B)  :-  populationTotal(B ,C)   ,  areaLand(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  isPartOf(D ,C)   ,  isPartOf(D ,B).
+0 negcapital(A ,B)  :-  areaLand(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  city(C ,B)   ,  language(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaMetro(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  residence(C ,B)   ,  billed(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  populationMetro(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaLand(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  populationTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  populationDensity(B ,C)   ,  areaLand(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(B ,C)   ,  areaWater(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  routeEnd(C ,B)   ,  county(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  populationTotal(B ,C)   ,  areaWater(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  residence(C ,B)   ,  hometown(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  populationTotal(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  areaLand(A ,C)   ,  populationTotal(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  populationDensity(A ,C)   ,  populationTotal(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  areaMetro(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaMetro(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  hometown(D ,C)   ,  residence(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  majorShrine(D ,C)   ,  deathPlace(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaWater(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(D ,C)   ,  isPartOf(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaMetro(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  location(C ,A)   ,  country(C ,B).
+0 negcapital(A ,B)  :-  utcOffset(B ,C)   ,  populationTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  maximumElevation(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  city(C ,B)   ,  county(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  populationDensity(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaLand(A ,C)   ,  areaWater(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(B ,C)   ,  areaLand(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaLand(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  routeStart(C ,B)   ,  location(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  beatifiedPlace(D ,C)   ,  birthPlace(D ,B).
+0 negcapital(A ,B)  :-  areaLand(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  county(D ,C)   ,  routeStart(D ,B).
+0 negcapital(A ,B)  :-  areaWater(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  occupation(D ,C)   ,  deathPlace(D ,B).
+0 negcapital(A ,B)  :-  hometown(C ,B)   ,  deathPlace(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  city(C ,A)   ,  state(C ,D)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  location(C ,B)   ,  thirdDriverCountry(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  areaWater(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  location(D ,C)   ,  routeStart(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  education(D ,C)   ,  birthPlace(D ,B).
+0 negcapital(A ,B)  :-  broadcastArea(C ,B)   ,  headquarter(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  utcOffset(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaMetro(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaMetro(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaWater(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  elevation(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  foundationPlace(C ,B)   ,  locationCity(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  city(C ,B)   ,  mouthCountry(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  areaWater(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaMetro(B ,C)   ,  populationTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  routeStart(C ,B)   ,  county(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaWater(B ,C)   ,  areaLand(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaWater(A ,C)   ,  height(D ,C)   ,  birthPlace(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaLand(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  majorShrine(D ,C)   ,  birthPlace(D ,B).
+0 negcapital(A ,B)  :-  populationTotal(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  language(D ,C)   ,  location(D ,B).
+0 negcapital(A ,B)  :-  location(C ,B)   ,  poleDriverCountry(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  sourceCountry(D ,C)   ,  city(D ,B).
+0 negcapital(A ,B)  :-  areaLand(B ,C)   ,  areaWater(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaWater(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  isPartOf(C ,B)   ,  leaderTitle(C ,D)   ,  leaderTitle(A ,D).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  ethnicity(D ,C)   ,  birthPlace(D ,B).
+0 negcapital(A ,B)  :-  birthPlace(C ,A)   ,  party(C ,D)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(D ,C)   ,  isPartOf(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  language(D ,C)   ,  headquarter(D ,B).
+0 negcapital(A ,B)  :-  areaLand(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  isPartOf(C ,B)   ,  areaTotal(C ,D)   ,  areaTotal(A ,D).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  nearestCity(D ,C)   ,  location(D ,B).
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  city(C ,B)   ,  sourceCountry(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  areaWater(B ,C)   ,  areaWater(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  isPartOf(C ,B)   ,  areaTotal(C ,D)   ,  areaTotal(A ,D).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  language(D ,C)   ,  deathPlace(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  location(D ,C)   ,  birthPlace(D ,B).
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  populationTotal(D ,C)   ,  isPartOf(D ,B).
+0 negcapital(A ,B)  :-  areaLand(B ,C)   ,  areaLand(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaWater(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  populationDensity(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(B ,C)   ,  populationTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  areaTotal(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  locationCity(D ,C)   ,  foundationPlace(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  sportCountry(D ,C)   ,  birthPlace(D ,B).
+0 negcapital(A ,B)  :-  areaWater(A ,C)   ,  areaWater(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  county(D ,C)   ,  routeEnd(D ,B).
+0 negcapital(A ,B)  :-  restingPlace(C ,B)   ,  residence(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  utcOffset(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  location(C ,B)   ,  language(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  populationTotal(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  populationDensity(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  populationDensity(B ,C)   ,  populationTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaMetro(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaCode(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  broadcastArea(D ,C)   ,  city(D ,B).
+0 negcapital(A ,B)  :-  populationDensity(B ,C)   ,  populationDensity(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  headquarter(D ,C)   ,  broadcastArea(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaLand(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  areaCode(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  beatifiedPlace(D ,C)   ,  deathPlace(D ,B).
+0 negcapital(A ,B)  :-  areaWater(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  routeJunction(C ,B)   ,  county(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  headquarter(C ,B)   ,  language(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  isPartOf(C ,B)   ,  isPartOf(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  areaTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  populationMetro(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  utcOffset(B ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  mouthCountry(D ,C)   ,  city(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  county(D ,C)   ,  routeJunction(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  poleDriverCountry(D ,C)   ,  location(D ,B).
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  residence(D ,C)   ,  restingPlace(D ,B).
+0 negcapital(A ,B)  :-  country(A ,C)   ,  county(D ,C)   ,  city(D ,B).
+0 negcapital(A ,B)  :-  populationTotal(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaTotal(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  populationTotal(A ,C)   ,  facultySize(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  location(C ,B)   ,  nearestCity(C ,D)   ,  country(A ,D).
+0 negcapital(A ,B)  :-  populationDensity(B ,C)   ,  populationTotal(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  maximumElevation(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  populationDensity(A ,C)   ,  populationDensity(D ,C)   ,  country(D ,B).
+0 negcapital(A ,B)  :-  elevation(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  areaTotal(B ,C)   ,  areaWater(A ,D)   ,  C<D.
+0 negcapital(A ,B)  :-  populationDensity(B ,C)   ,  populationDensity(A ,D)   ,  C>D.
+0 negcapital(A ,B)  :-  country(A ,C)   ,  billed(D ,C)   ,  residence(D ,B).

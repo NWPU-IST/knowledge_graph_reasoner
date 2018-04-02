@@ -1,0 +1,74 @@
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  service(D ,C)   ,  location(D ,B).
+negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  revenue(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  areaLand(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  distributingLabel(D ,C)   ,  location(D ,B).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  year(D ,C)   ,  birthPlace(D ,B).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  maximumElevation(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaUrban(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  closingYear(D ,C)   ,  location(D ,B).
+negheadquarter(A ,B)  :-  regionServed(C ,B)   ,  service(C ,D)   ,  industry(A ,D).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaUrban(B ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  recordLabel(D ,C)   ,  birthPlace(D ,B).
+negheadquarter(A ,B)  :-  utcOffset(B ,C)   ,  numberOfEmployees(A ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaWater(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  areaUrban(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  utcOffset(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  service(D ,C)   ,  foundationPlace(D ,B).
+negheadquarter(A ,B)  :-  areaMetro(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  populationTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  product(D ,C)   ,  foundationPlace(D ,B).
+negheadquarter(A ,B)  :-  netIncome(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  utcOffset(B ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  service(D ,C)   ,  locationCountry(D ,B).
+negheadquarter(A ,B)  :-  maximumElevation(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  service(D ,C)   ,  regionServed(D ,B).
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  country(C ,B).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  censusYear(D ,C)   ,  country(D ,B).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  impactFactorAsOf(D ,C)   ,  country(D ,B).
+negheadquarter(A ,B)  :-  populationUrban(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  billed(C ,B)   ,  activeYearsEndYear(C ,D)   ,  foundingYear(A ,D).
+negheadquarter(A ,B)  :-  areaWater(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  product(D ,C)   ,  locationCity(D ,B).
+negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  product(C ,D)   ,  industry(A ,D).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsStartYear(D ,C)   ,  restingPlace(D ,B).
+negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  utcOffset(B ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationMetro(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  recordLabel(D ,C)   ,  recordedIn(D ,B).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  activeYearsEndYear(D ,C)   ,  billed(D ,B).
+negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  numberOfEmployees(A ,C)   ,  facultySize(D ,C)   ,  country(D ,B).
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  almaMater(D ,C)   ,  birthPlace(D ,B).
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  distributingLabel(D ,C)   ,  country(D ,B).
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  profession(D ,C)   ,  birthPlace(D ,B).
+negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  service(C ,D)   ,  industry(A ,D).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationUrban(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  subsidiary(D ,C)   ,  locationCountry(D ,B).
+negheadquarter(A ,B)  :-  restingPlace(C ,B)   ,  activeYearsStartYear(C ,D)   ,  foundingYear(A ,D).
+negheadquarter(A ,B)  :-  occupation(C ,B)   ,  deathYear(C ,D)   ,  foundingYear(A ,D).
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  distributingCompany(D ,C)   ,  country(D ,B).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaMetro(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  populationMetro(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  deathYear(D ,C)   ,  occupation(D ,B).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  birthYear(D ,C)   ,  education(D ,B).
+negheadquarter(A ,B)  :-  populationDensity(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  type(D ,C)   ,  location(D ,B).
+negheadquarter(A ,B)  :-  areaUrban(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  draftYear(D ,C)   ,  deathPlace(D ,B).
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  occupation(D ,C)   ,  birthPlace(D ,B).
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  country(D ,B).
+negheadquarter(A ,B)  :-  type(A ,C)   ,  type(D ,C)   ,  country(D ,B).
+negheadquarter(A ,B)  :-  industry(A ,C)   ,  industry(D ,C)   ,  locationCity(D ,B).
+negheadquarter(A ,B)  :-  areaTotal(B ,C)   ,  revenue(A ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+negheadquarter(A ,B)  :-  locationCity(C ,B)   ,  product(C ,D)   ,  industry(A ,D).
+negheadquarter(A ,B)  :-  parentCompany(C ,A)   ,  location(C ,B).
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  distributingCompany(D ,C)   ,  location(D ,B).
+negheadquarter(A ,B)  :-  foundationPlace(C ,B)   ,  type(C ,D)   ,  industry(A ,D).
+negheadquarter(A ,B)  :-  foundingYear(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+negheadquarter(A ,B)  :-  education(C ,B)   ,  birthYear(C ,D)   ,  foundingYear(A ,D).
+negheadquarter(A ,B)  :-  parentCompany(A ,C)   ,  recordLabel(D ,C)   ,  hometown(D ,B).
