@@ -57,6 +57,7 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", default='triples_test.csv')
     parser.add_argument("-t", "--test_predicate", default='sample_case')
     parser.add_argument("-p", "--pos_neg", default='')
+    parser.add_argument("-s", "--sampling", default='')
     args = parser.parse_args()
     with open('dataset/' + args.test_predicate + '/input/' + args.input) as f:
         reader = csv.DictReader(f)
@@ -64,8 +65,12 @@ if __name__ == "__main__":
         id_list = []
         true_labels = []
         for row in reader:
-            triples_list.append([row.get('sub').split(":")[1],row.get('obj').split(":")[1]])
+            if args.sampling:
+                triples_list.append([row.get('sub'), row.get('obj')])
+            else:
+                triples_list.append([row.get('sub').split(":")[1], row.get('obj').split(":")[1]])
             true_labels.append(row.get('class'))
             id_list.append(row.get('sid'))
         print triples_list
+        # sys.exit()
         query_test(triples_list, id_list, true_labels, args.test_predicate, args.input, args.pos_neg)

@@ -100,8 +100,10 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
 def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, pos_neg):
     evidence = []
     for entity in resource_v:
+        print entity
         evidence = distance_one_query(entity, evidence)
         evidence = distance_two_query(entity, evidence)
+    # print evidence
     if evidence:
         print "Predicate Set:"
         print rule_predicates
@@ -128,7 +130,10 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source):
     false_pos = true_count-true_pos
     false_neg = false_count - true_neg
     tp = float(true_pos)/float(true_count)
-    tn = float(true_neg)/float(false_count)
+    if false_count:
+        tn = float(true_neg)/float(false_count)
+    else:
+        tn = 0
     print "True Count:", true_count, "True Pos: ", true_pos, "=>", tp, "False Pos: ", false_pos
     print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Neg: ", false_neg
     pre = float(true_pos) / float(true_count)
@@ -145,7 +150,6 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source):
     with open('output_all.txt', 'a') as the_file:
         the_file.write(str(output_stats)+'\n')
     print output_stats
-
 
 
 if __name__ == "__main__":
