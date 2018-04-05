@@ -7,6 +7,8 @@ import sys
 
 
 def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
+    print row
+    inferred = []
     true_count = 0
     false_count = 0
     true_pos = 0
@@ -34,6 +36,7 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
         if true_label == 1 and len(map) > 0:
             true_pos += 1
             prediction = 1
+            inferred.append({'sid':sentence_id,'class':1,'sub':triple_check[0],'obj':triple_check[1]})
         elif true_label == 0 and len(map) == 0:
             true_neg += 1
             prediction = 1
@@ -48,7 +51,7 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
 
 
     update_resources(triple_flag=False, ambiverse_flag=False, file_triples=False, ambiverse_resources=False,\
-                     lpmln_evaluation=lpmln_evaluation, data_source=data_source, input=input)
+                     lpmln_evaluation=lpmln_evaluation, data_source=data_source, input=input, inferred=inferred)
 
 
 

@@ -1,0 +1,41 @@
+capital(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+capital(A ,B)  :-  areaCode(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaMetro(B ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationMetro(B ,D)   ,  C<D.
+capital(A ,B)  :-  areaLand(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+capital(A ,B)  :-  populationTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D.
+capital(A ,B)  :-  populationDensity(A ,C)   ,  populationTotal(B ,D)   ,  C<D.
+capital(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaMetro(B ,D)   ,  C>D.
+capital(A ,B)  :-  utcOffset(B ,C)   ,  populationTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationDensity(A ,D)   ,  C<D.
+capital(A ,B)  :-  capital(C ,B)   ,  dissolutionDate(C ,D)   ,  foundingDate(A ,D).
+capital(A ,B)  :-  utcOffset(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  areaMetro(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+capital(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+capital(A ,B)  :-  populationUrban(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+capital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C>D.
+capital(A ,B)  :-  populationTotal(A ,C)   ,  populationDensity(B ,D)   ,  C>D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationUrban(B ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+capital(A ,B)  :-  populationTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D.
+capital(A ,B)  :-  populationDensity(A ,C)   ,  populationDensity(B ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  birthPlace(C ,A)   ,  militaryBranch(C ,D)   ,  garrison(D ,B).
+capital(A ,B)  :-  areaTotal(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  utcOffset(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationTotal(B ,D)   ,  C<D.
+capital(A ,B)  :-  areaMetro(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+capital(A ,B)  :-  populationTotal(A ,C)   ,  areaCode(B ,D)   ,  C>D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaLand(B ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D.
+capital(A ,B)  :-  populationMetro(B ,C)   ,  areaTotal(A ,D)   ,  C>D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  utcOffset(B ,D)   ,  C>D.
+capital(A ,B)  :-  areaCode(B ,C)   ,  populationTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+capital(A ,B)  :-  populationDensity(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  populationDensity(B ,C)   ,  populationTotal(A ,D)   ,  C<D.
+capital(A ,B)  :-  populationDensity(B ,C)   ,  populationDensity(A ,D)   ,  C>D.
+capital(A ,B)  :-  country(B ,C)   ,  leader(C ,D)   ,  birthPlace(D ,A).

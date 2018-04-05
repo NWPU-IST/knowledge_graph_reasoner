@@ -1,0 +1,28 @@
+largestCity(B ,F)  :-  deathPlace(A ,F)   ,  sportCountry(A ,B).
+largestCity(A ,B)  :-  region(B ,A)   ,  countySeat(A ,B).
+largestCity(A ,B)  :-  isPartOf(B ,A)   ,  countySeat(A ,B).
+largestCity(A ,B)  :-  countySeat(A ,B).
+largestCity(A ,B)  :-  countySeat(A ,B).
+largestCity(B ,F)  :-  birthPlace(A ,F)   ,  sportCountry(A ,B).
+largestCity(A ,B)  :-  capital(A ,B).
+largestCity(B ,F)  :-  placeOfBurial(A ,F)   ,  placeOfBurial(A ,B).
+largestCity(E ,B)  :-  premierePlace(A ,E)   ,  premierePlace(A ,B).
+largestCity(F ,B)  :-  billed(A ,F)   ,  billed(A ,B).
+largestCity(B ,F)  :-  headquarter(A ,F)   ,  jurisdiction(A ,B).
+largestCity(B ,F)  :-  location(A ,F)   ,  jurisdiction(A ,B).
+largestCity(F ,B)  :-  placeOfBurial(A ,F)   ,  placeOfBurial(A ,B).
+largestCity(F ,B)  :-  region(A ,F)   ,  municipality(A ,B).
+largestCity(B ,F)  :-  city(A ,F)   ,  mouthCountry(A ,B).
+largestCity(B ,F)  :-  deathPlace(A ,F)   ,  placeOfBurial(A ,B).
+largestCity(B ,F)  :-  headquarter(A ,F)   ,  nationalAffiliation(A ,B).
+largestCity(B ,F)  :-  assembly(A ,F)   ,  assembly(A ,B).
+largestCity(B ,F)  :-  billed(A ,F)   ,  billed(A ,B).
+largestCity(B ,F)  :-  birthPlace(A ,F)   ,  billed(A ,B).
+largestCity(E ,B)  :-  assembly(A ,E)   ,  assembly(A ,B).
+largestCity(B ,F)  :-  premierePlace(A ,F)   ,  premierePlace(A ,B).
+largestCity(F ,B)  :-  country(A ,F)   ,  garrison(A ,B).
+largestCity(A ,B)  :-  region(B ,A).
+largestCity(A ,B)  :-  isPartOf(B ,A).
+largestCity(F ,B)  :-  headquarter(A ,F)   ,  destination(A ,B).
+largestCity(A ,B)  :-  country(B ,A).
+largestCity(F ,B)  :-  deathPlace(A ,F)   ,  placeOfBurial(A ,B).

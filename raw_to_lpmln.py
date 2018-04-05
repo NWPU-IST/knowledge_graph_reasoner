@@ -49,10 +49,12 @@ def rule_parser_amie(fname, predicate):
         content = f.readlines()
     rule_list = []
     for it, con in enumerate(content):
+        print it, con
         vars = re.findall(r"\?(.)", con)
         score = re.findall(r"\d.\d+", con)
         vars = [var.upper() for var in vars]
         relation = re.findall(r":(.*?)\>", con)
+        print relation
         if relation.index(predicate) != 0:
             new_index = relation.index(predicate)
             temp = relation[0]

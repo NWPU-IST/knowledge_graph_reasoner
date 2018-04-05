@@ -1,0 +1,496 @@
+capital(A ,B)  :-  deathPlace(C ,B)   ,  residence(D ,A)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  deathPlace(C ,D)   ,  isPartOf(B ,D).
+capital(A ,B)  :-  place(C ,A)   ,  isPartOfMilitaryConflict(D ,C)   ,  place(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  predecessor(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  leaderName(B ,C)   ,  deathPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  leader(D ,C)   ,  country(B ,D).
+capital(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  nationality(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationTotal(B ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  hometown(D ,A)   ,  C=D. 
+capital(A ,B)  :-  areaCode(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  residence(C ,A)   ,  restingPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  headquarter(C ,B)   ,  party(D ,C)   ,  residence(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  birthPlace(C ,A).      
+capital(A ,B)  :-  birthPlace(C ,A)   ,  president(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  place(C ,A)   ,  battle(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  monarch(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  populationTotal(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  ground(C ,B)   ,  ground(C ,A).      
+capital(A ,B)  :-  birthPlace(C ,B)   ,  successor(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  leader(D ,C)   ,  headquarter(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  successor(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  residence(C ,D)   ,  isPartOf(B ,D).
+capital(A ,B)  :-  headquarter(C ,B)   ,  targetAirport(C ,D)   ,  location(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  restingPlace(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  capital(C ,B)   ,  place(D ,C)   ,  place(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  predecessor(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  areaTotal(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  capital(C ,B)   ,  citizenship(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  headquarter(C ,A)   ,  location(D ,B)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  restingPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  influenced(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  primeMinister(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaLand(B ,D)   ,  C>D. 
+capital(A ,B)  :-  hometown(C ,B)   ,  bandMember(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  residence(C ,A)   ,  restingPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  populationTotal(A ,C)   ,  populationTotal(B ,D)   ,  C>D. 
+capital(A ,B)  :-  isPartOf(C ,A)   ,  utcOffset(C ,D)   ,  utcOffset(B ,D).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  relative(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  influenced(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  location(C ,B)   ,  occupation(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  restingPlace(C ,B)   ,  parent(C ,D)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  garrison(C ,B)   ,  militaryBranch(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  residence(C ,A)   ,  residence(D ,B)   ,  D=C. 
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  associatedBand(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaMetro(B ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  monarch(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  restingPlace(C ,B)   ,  deathPlace(C ,B).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  predecessor(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  beatifiedPlace(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationMetro(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  successor(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  residence(D ,B)   ,  D=C. 
+capital(A ,B)  :-  capital(C ,B)   ,  deathPlace(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  deathPlace(D ,A)   ,  D=C. 
+capital(A ,B)  :-  areaLand(B ,C)   ,  areaTotal(A ,D)   ,  C>D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  team(C ,D)   ,  ground(D ,B).
+capital(A ,B)  :-  populationTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D. 
+capital(A ,B)  :-  headquarter(C ,A)   ,  politicalPartyInLegislature(D ,C)   ,  location(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  successor(C ,D)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  region(D ,A)   ,  C=D. 
+capital(A ,B)  :-  headquarter(C ,A)   ,  location(D ,B)   ,  C=D. 
+capital(A ,B)  :-  hometown(C ,B)   ,  hometown(C ,A).      
+capital(A ,B)  :-  birthPlace(C ,B)   ,  birthPlace(C ,A)   ,  restingPlace(C ,A).
+capital(A ,B)  :-  capital(C ,B)   ,  stateOfOrigin(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  party(C ,D)   ,  leaderParty(B ,D).
+capital(A ,B)  :-  location(C ,B)   ,  ground(D ,C)   ,  ground(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  influenced(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  relative(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  location(C ,A)   ,  keyPerson(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  location(C ,A)   ,  tenant(C ,D)   ,  ground(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  battle(C ,D)   ,  place(D ,A).
+capital(A ,B)  :-  restingPlace(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D. 
+capital(A ,B)  :-  populationTotal(B ,C)   ,  populationTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  restingPlace(C ,B)   ,  birthPlace(C ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  deathPlace(C ,D)   ,  location(D ,B).
+capital(A ,B)  :-  place(C ,B)   ,  commander(C ,D)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  education(C ,D)   ,  city(D ,B).
+capital(A ,B)  :-  location(C ,A)   ,  location(D ,B)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  president(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  deathPlace(C ,A)   ,  residence(C ,A).
+capital(A ,B)  :-  populationDensity(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  spouse(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  influenced(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  ground(C ,A)   ,  managerClub(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  place(C ,A)   ,  place(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  country(B ,C)   ,  country(A ,C)   ,  isPartOf(B ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  commander(D ,C)   ,  place(D ,B).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaCode(B ,D)   ,  C>D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  deathPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  populationUrban(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  relative(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  capital(C ,B)   ,  country(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  deathPlace(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  populationUrban(B ,C)   ,  populationTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  president(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  residence(C ,A).      
+capital(A ,B)  :-  deathPlace(C ,A)   ,  parent(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  city(C ,B)   ,  education(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  hometown(D ,B)   ,  D=C. 
+capital(A ,B)  :-  ground(C ,A)   ,  ground(C ,D)   ,  location(D ,B).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaMetro(B ,D)   ,  C>D. 
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(B ,D)   ,  C>D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  country(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  location(C ,A)   ,  location(D ,B)   ,  C=D. 
+capital(A ,B)  :-  headquarter(C ,B)   ,  otherParty(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  starring(D ,C)   ,  location(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  almaMater(C ,D)   ,  city(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  bandMember(D ,C)   ,  hometown(D ,B).
+capital(A ,B)  :-  populationDensity(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  restingPlace(C ,B).      
+capital(A ,B)  :-  birthPlace(C ,A)   ,  stateOfOrigin(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  birthPlace(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  ground(C ,A)   ,  manager(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  birthPlace(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  elevation(B ,D)   ,  C>D. 
+capital(A ,B)  :-  country(B ,C)   ,  nationality(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  hometown(C ,A)   ,  deathPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  headquarter(C ,A)   ,  hubAirport(C ,D)   ,  location(D ,B).
+capital(A ,B)  :-  utcOffset(B ,C)   ,  populationTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  nearestCity(C ,B)   ,  location(C ,A).      
+capital(A ,B)  :-  isPartOf(C ,A)   ,  type(C ,D)   ,  type(B ,D).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  associatedBand(D ,C)   ,  hometown(D ,B).
+capital(A ,B)  :-  place(C ,A)   ,  city(D ,B)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  hometown(C ,A).      
+capital(A ,B)  :-  residence(C ,B)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  restingPlace(C ,A)   ,  deathPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  relation(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  restingPlace(C ,B).      
+capital(A ,B)  :-  birthPlace(C ,A)   ,  nationality(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  associatedMusicalArtist(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  birthPlace(C ,D)   ,  isPartOf(D ,B).
+capital(A ,B)  :-  isPartOf(B ,C)   ,  deathPlace(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  birthPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  residence(C ,A)   ,  birthPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  leaderName(B ,D)   ,  D=C. 
+capital(A ,B)  :-  ground(C ,A)   ,  ground(D ,B)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  relation(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  location(C ,A)   ,  country(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  primeMinister(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  education(C ,B)   ,  deathPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  hometown(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  restingPlace(C ,B)   ,  birthPlace(D ,A)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  child(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  hometown(C ,B)   ,  associatedBand(C ,D)   ,  hometown(D ,A).
+capital(A ,B)  :-  location(C ,B)   ,  location(C ,A)   ,  headquarter(C ,A).
+capital(A ,B)  :-  country(B ,C)   ,  leaderTitle(C ,D)   ,  leaderTitle(A ,D).
+capital(A ,B)  :-  headquarter(C ,A)   ,  hubAirport(C ,D)   ,  city(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  stateOfOrigin(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  ground(C ,B)   ,  team(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  child(C ,D)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  leaderName(B ,D)   ,  D=C. 
+capital(A ,B)  :-  significantBuilding(C ,B)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  isPartOf(B ,A).            
+capital(A ,B)  :-  capital(C ,B)   ,  nationality(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  battle(C ,D)   ,  place(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  influencedBy(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  city(C ,B)   ,  almaMater(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  birthPlace(D ,A)   ,  D=C. 
+capital(A ,B)  :-  residence(C ,B)   ,  birthPlace(D ,A)   ,  D=C. 
+capital(A ,B)  :-  restingPlace(C ,A)   ,  deathPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  relation(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  location(C ,B)   ,  hubAirport(D ,C)   ,  headquarter(D ,A).
+capital(A ,B)  :-  isPartOf(B ,C)   ,  residence(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationDensity(A ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  leaderName(B ,D)   ,  C=D. 
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationMetro(B ,D)   ,  C>D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  nationality(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  influencedBy(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  parent(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  deathPlace(C ,A)   ,  birthPlace(C ,A).
+capital(A ,B)  :-  locationCity(C ,B)   ,  ground(D ,A)   ,  C=D. 
+capital(A ,B)  :-  location(C ,B)   ,  foundedBy(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  restingPlace(C ,B)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  city(C ,B)   ,  team(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  influencedBy(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  spouse(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  capital(C ,B)   ,  dissolutionDate(C ,D)   ,  foundingDate(A ,D).
+capital(A ,B)  :-  isPartOf(B ,C)   ,  birthPlace(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  areaCode(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  leaderName(B ,D)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  monarch(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  headquarter(C ,B)   ,  hubAirport(C ,D)   ,  city(D ,A).
+capital(A ,B)  :-  leaderTitle(A ,C)   ,  leaderTitle(D ,C)   ,  country(B ,D).
+capital(A ,B)  :-  ground(C ,B)   ,  tenant(D ,C)   ,  location(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  primeMinister(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  populationTotal(A ,C)   ,  populationMetro(B ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  child(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  utcOffset(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  nationality(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  areaMetro(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  birthPlace(C ,A)   ,  hometown(C ,A).
+capital(A ,B)  :-  placeOfBurial(C ,B)   ,  deathPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  leaderParty(B ,C)   ,  party(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  predecessor(C ,D)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  hometown(D ,A)   ,  C=D. 
+capital(A ,B)  :-  capital(C ,B)   ,  residence(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  relation(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationDensity(B ,D)   ,  C>D. 
+capital(A ,B)  :-  location(C ,B)   ,  headquarter(D ,A)   ,  C=D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  commander(D ,C)   ,  place(D ,A).
+capital(A ,B)  :-  restingPlace(C ,B)   ,  parent(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  restingPlace(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  ground(C ,B)   ,  manager(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  residence(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  place(C ,A)   ,  commander(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  foundingYear(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  child(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D. 
+capital(A ,B)  :-  city(C ,B)   ,  city(C ,A).      
+capital(A ,B)  :-  birthPlace(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  foundingYear(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  residence(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  populationUrban(B ,C)   ,  areaTotal(A ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  restingPlace(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  location(C ,B)   ,  location(C ,A).      
+capital(A ,B)  :-  type(B ,C)   ,  type(D ,C)   ,  isPartOf(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  commander(D ,C)   ,  place(D ,A).
+capital(A ,B)  :-  ground(C ,A)   ,  locationCity(D ,B)   ,  D=C. 
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaWater(B ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  relation(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  citizenship(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  populationTotal(A ,C)   ,  populationDensity(B ,D)   ,  C>D. 
+capital(A ,B)  :-  leaderName(B ,C)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  hometown(C ,B)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  isPartOf(C ,A)   ,  leaderTitle(C ,D)   ,  leaderTitle(B ,D).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  influenced(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  president(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  spouse(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  deathPlace(C ,A)   ,  hometown(C ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  hometown(D ,B)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  associatedMusicalArtist(D ,C)   ,  hometown(D ,B).
+capital(A ,B)  :-  place(C ,B)   ,  isPartOfMilitaryConflict(C ,D)   ,  place(D ,A).
+capital(A ,B)  :-  residence(C ,B)   ,  residence(D ,A)   ,  D=C. 
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(B ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  associatedBand(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  parent(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  place(C ,A)   ,  battle(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  primeMinister(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  locationCity(C ,A)   ,  location(D ,B)   ,  C=D. 
+capital(A ,B)  :-  location(C ,B)   ,  place(D ,A)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  restingPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  restingPlace(C ,A)   ,  hometown(D ,B)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  residence(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  hometown(C ,B)   ,  associatedBand(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationUrban(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  relative(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  location(C ,A)   ,  ground(D ,C)   ,  ground(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  successor(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  country(B ,C)   ,  majorShrine(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  populationTotal(B ,C)   ,  areaTotal(A ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  monarch(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  city(C ,A)   ,  targetAirport(D ,C)   ,  headquarter(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  residence(D ,B)   ,  D=C. 
+capital(A ,B)  :-  foundingDate(A ,C)   ,  foundingDate(D ,C)   ,  capital(D ,B).
+capital(A ,B)  :-  headquarter(C ,B)   ,  targetAirport(C ,D)   ,  city(D ,A).
+capital(A ,B)  :-  headquarter(C ,B)   ,  leader(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  stateOfOrigin(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  influenced(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  hometown(D ,B)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  country(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  foundedBy(D ,C)   ,  location(D ,B).
+capital(A ,B)  :-  foundingDate(B ,C)   ,  foundingDate(A ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  almaMater(C ,D)   ,  city(D ,B).
+capital(A ,B)  :-  location(C ,B)   ,  tenant(C ,D)   ,  ground(D ,A).
+capital(A ,B)  :-  residence(C ,A)   ,  almaMater(C ,D)   ,  city(D ,B).
+capital(A ,B)  :-  foundingDate(A ,C)   ,  foundingDate(B ,D)   ,  C>D. 
+capital(A ,B)  :-  capital(C ,B)   ,  foundingDate(C ,D)   ,  foundingDate(A ,D).
+capital(A ,B)  :-  residence(C ,B)   ,  residence(D ,A)   ,  C=D. 
+capital(A ,B)  :-  location(C ,B)   ,  recordLabel(D ,C)   ,  hometown(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  primeMinister(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  monarch(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  location(C ,B)   ,  politicalPartyInLegislature(C ,D)   ,  headquarter(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  primeMinister(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  elevation(B ,D)   ,  C>D. 
+capital(A ,B)  :-  populationMetro(B ,C)   ,  populationTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  primeMinister(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  residence(C ,A)   ,  nationality(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  predecessor(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  country(B ,C)   ,  stateOfOrigin(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  team(C ,D)   ,  city(D ,B).
+capital(A ,B)  :-  country(B ,C)   ,  restingPlace(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  residence(D ,A)   ,  C=D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  birthPlace(D ,A)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  deathPlace(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  residence(D ,B)   ,  C=D. 
+capital(A ,B)  :-  areaTotal(B ,C)   ,  areaTotal(A ,D)   ,  C>D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  spouse(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  residence(C ,A)   ,  successor(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  location(C ,B)   ,  headquarter(D ,A)   ,  D=C. 
+capital(A ,B)  :-  largestCity(A ,C)   ,  leaderTitle(C ,D)   ,  leaderTitle(B ,D).
+capital(A ,B)  :-  isPartOf(C ,B)   ,  birthPlace(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  capital(C ,B)   ,  birthPlace(D ,C)   ,  residence(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  restingPlace(C ,B)   ,  birthPlace(C ,B).
+capital(A ,B)  :-  place(C ,B)   ,  commander(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  influencedBy(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  residence(C ,A)   ,  birthPlace(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  restingPlace(C ,B)   ,  residence(D ,A)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  birthPlace(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  president(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  location(C ,A)   ,  city(D ,B)   ,  C=D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  restingPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  keyPerson(D ,C)   ,  location(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  birthPlace(C ,A).      
+capital(A ,B)  :-  place(C ,B)   ,  place(D ,A)   ,  C=D. 
+capital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  hometown(C ,B)   ,  birthPlace(C ,A).      
+capital(A ,B)  :-  populationTotal(B ,C)   ,  foundingYear(A ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  associate(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  city(C ,B)   ,  place(D ,A)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  influencedBy(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  successor(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  city(C ,A)   ,  city(D ,B)   ,  D=C. 
+capital(A ,B)  :-  city(C ,B)   ,  hubAirport(D ,C)   ,  headquarter(D ,A).
+capital(A ,B)  :-  populationTotal(A ,C)   ,  utcOffset(B ,D)   ,  C>D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  country(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  residence(C ,B)   ,  deathPlace(D ,A)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  predecessor(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  hometown(C ,B)   ,  restingPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  restingPlace(C ,B)   ,  deathPlace(D ,A)   ,  D=C. 
+capital(A ,B)  :-  region(C ,A)   ,  birthPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D. 
+capital(A ,B)  :-  capital(C ,B)   ,  birthPlace(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  place(C ,B)   ,  place(C ,A).      
+capital(A ,B)  :-  birthPlace(C ,A)   ,  influenced(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  city(C ,B)   ,  headquarter(D ,A)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  restingPlace(C ,B)   ,  deathPlace(C ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  birthPlace(C ,D)   ,  isPartOf(B ,D).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  party(C ,D)   ,  headquarter(D ,B).
+capital(A ,B)  :-  headquarter(C ,A)   ,  city(D ,B)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  child(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  populationTotal(A ,C)   ,  areaTotal(B ,D)   ,  C>D. 
+capital(A ,B)  :-  isPartOf(C ,A)   ,  isPartOf(B ,D)   ,  C=D. 
+capital(A ,B)  :-  foundingDate(B ,C)   ,  foundingDate(A ,D)   ,  C<D. 
+capital(A ,B)  :-  hometown(C ,A)   ,  associatedMusicalArtist(D ,C)   ,  hometown(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  influenced(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  restingPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  foundingDate(A ,C)   ,  dissolutionDate(D ,C)   ,  capital(D ,B).
+capital(A ,B)  :-  populationDensity(A ,C)   ,  populationDensity(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  relative(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  parent(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  ground(C ,A)   ,  tenant(D ,C)   ,  location(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  managerClub(C ,D)   ,  ground(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  team(C ,D)   ,  ground(D ,B).
+capital(A ,B)  :-  country(B ,C)   ,  nationality(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  city(C ,B)   ,  almaMater(D ,C)   ,  residence(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  relation(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  militaryBranch(C ,D)   ,  garrison(D ,B).
+capital(A ,B)  :-  ground(C ,A)   ,  ground(D ,B)   ,  C=D. 
+capital(A ,B)  :-  areaTotal(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  place(C ,A)   ,  location(D ,B)   ,  C=D. 
+capital(A ,B)  :-  hometown(C ,A)   ,  birthPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  commander(D ,C)   ,  place(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  successor(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  manager(D ,C)   ,  ground(D ,A).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  utcOffset(B ,D)   ,  C>D. 
+capital(A ,B)  :-  city(C ,A)   ,  city(D ,B)   ,  C=D. 
+capital(A ,B)  :-  residence(C ,B)   ,  deathPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  hometown(C ,B)   ,  restingPlace(D ,A)   ,  D=C. 
+capital(A ,B)  :-  residence(C ,A)   ,  party(C ,D)   ,  headquarter(D ,B).
+capital(A ,B)  :-  headquarter(C ,B)   ,  location(C ,A).      
+capital(A ,B)  :-  region(C ,A)   ,  birthPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  areaWater(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  elevation(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  training(C ,D)   ,  city(D ,B).
+capital(A ,B)  :-  residence(C ,B)   ,  birthPlace(C ,A)   ,  residence(C ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  associatedMusicalArtist(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  restingPlace(C ,A).      
+capital(A ,B)  :-  populationTotal(B ,C)   ,  percentageOfAreaWater(A ,D)   ,  C>D. 
+capital(A ,B)  :-  utcOffset(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  relation(D ,C)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  birthPlace(C ,A)   ,  residence(C ,A).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  majorShrine(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  populationUrban(B ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  deathPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  percentageOfAreaWater(A ,C)   ,  populationTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  place(C ,A)   ,  place(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  ground(C ,B)   ,  ground(D ,A)   ,  C=D. 
+capital(A ,B)  :-  areaMetro(B ,C)   ,  areaTotal(A ,D)   ,  C>D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  otherParty(C ,D)   ,  headquarter(D ,B).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaCode(B ,D)   ,  C>D. 
+capital(A ,B)  :-  education(C ,B)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  relation(C ,D)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  hometown(C ,A)   ,  associatedBand(D ,C)   ,  hometown(D ,B).
+capital(A ,B)  :-  location(C ,A)   ,  hubAirport(D ,C)   ,  headquarter(D ,B).
+capital(A ,B)  :-  capital(C ,B)   ,  birthPlace(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  city(C ,B)   ,  almaMater(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  residence(C ,A)   ,  deathPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  capital(C ,B)   ,  country(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  parent(C ,D)   ,  restingPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  child(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  hometown(C ,B)   ,  associatedMusicalArtist(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  president(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  isPartOf(C ,A)   ,  country(C ,D)   ,  country(B ,D).
+capital(A ,B)  :-  hometown(C ,A)   ,  deathPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  leaderName(B ,C)   ,  restingPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  populationTotal(A ,C)   ,  areaCode(B ,D)   ,  C>D. 
+capital(A ,B)  :-  country(B ,C)   ,  beatifiedPlace(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaLand(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  restingPlace(C ,A).      
+capital(A ,B)  :-  headquarter(C ,B)   ,  party(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  placeOfBurial(C ,B)   ,  birthPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  deathPlace(C ,A)   ,  residence(C ,A).
+capital(A ,B)  :-  location(C ,A)   ,  targetAirport(D ,C)   ,  headquarter(D ,B).
+capital(A ,B)  :-  country(B ,C)   ,  country(D ,C)   ,  isPartOf(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  birthPlace(C ,A)   ,  residence(C ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  parent(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  areaTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D. 
+capital(A ,B)  :-  populationMetro(B ,C)   ,  areaTotal(A ,D)   ,  C>D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  relation(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  hometown(C ,A)   ,  recordLabel(C ,D)   ,  location(D ,B).
+capital(A ,B)  :-  restingPlace(C ,A)   ,  birthPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  monarch(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  areaTotal(A ,C)   ,  utcOffset(B ,D)   ,  C>D. 
+capital(A ,B)  :-  capital(C ,B)   ,  deathPlace(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  country(B ,C)   ,  birthPlace(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  significantBuilding(C ,B)   ,  deathPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  city(C ,A)   ,  hubAirport(D ,C)   ,  headquarter(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  child(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  populationMetro(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  elevation(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  country(B ,C)   ,  restingPlace(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  place(C ,A)   ,  place(D ,B)   ,  C=D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  residence(C ,A).      
+capital(A ,B)  :-  deathPlace(C ,B)   ,  influencedBy(C ,D)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  country(C ,D)   ,  capital(D ,B).
+capital(A ,B)  :-  restingPlace(C ,B)   ,  deathPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  areaCode(B ,C)   ,  populationTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,A)   ,  parent(D ,C)   ,  restingPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  primeMinister(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  restingPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  location(C ,B)   ,  deathPlace(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  leaderName(B ,C).      
+capital(A ,B)  :-  populationTotal(B ,C)   ,  populationDensity(A ,D)   ,  C>D. 
+capital(A ,B)  :-  areaTotal(A ,C)   ,  areaTotal(B ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  parent(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  timeZone(B ,C)   ,  timeZone(D ,C)   ,  isPartOf(D ,A).
+capital(A ,B)  :-  areaLand(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  restingPlace(C ,A)   ,  leaderName(B ,D)   ,  C=D. 
+capital(A ,B)  :-  city(C ,B)   ,  training(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  restingPlace(C ,B)   ,  parent(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  manager(D ,C)   ,  ground(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  deathPlace(C ,D)   ,  isPartOf(B ,D).
+capital(A ,B)  :-  residence(C ,A)   ,  residence(D ,B)   ,  C=D. 
+capital(A ,B)  :-  capital(C ,B)   ,  nationality(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  deathPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  capital(C ,B)   ,  residence(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  isPartOf(C ,A)   ,  timeZone(C ,D)   ,  timeZone(B ,D).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  birthPlace(C ,A)   ,  deathPlace(C ,A).
+capital(A ,B)  :-  headquarter(C ,B)   ,  hubAirport(C ,D)   ,  location(D ,A).
+capital(A ,B)  :-  birthPlace(C ,B)   ,  managerClub(C ,D)   ,  ground(D ,A).
+capital(A ,B)  :-  place(C ,A)   ,  place(D ,B)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  relation(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  residence(C ,B)   ,  birthPlace(C ,A)   ,  deathPlace(C ,A).
+capital(A ,B)  :-  capital(C ,B)   ,  restingPlace(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  residence(D ,B)   ,  C=D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  predecessor(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  hometown(C ,B)   ,  associatedMusicalArtist(C ,D)   ,  hometown(D ,A).
+capital(A ,B)  :-  ground(C ,B)   ,  managerClub(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  ground(C ,B)   ,  team(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  isPartOf(B ,C)   ,  deathPlace(D ,C)   ,  deathPlace(D ,A).
+capital(A ,B)  :-  populationDensity(B ,C)   ,  areaTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  deathPlace(C ,B)   ,  primeMinister(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  populationDensity(B ,C)   ,  populationTotal(A ,D)   ,  C<D. 
+capital(A ,B)  :-  location(C ,B)   ,  starring(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,B)   ,  monarch(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  relation(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  country(B ,C)   ,  country(D ,C)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  hometown(C ,B)   ,  deathPlace(D ,A)   ,  C=D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  deathPlace(D ,B)   ,  C=D. 
+capital(A ,B)  :-  ground(C ,B)   ,  ground(C ,D)   ,  location(D ,A).
+capital(A ,B)  :-  foundingDate(A ,C)   ,  foundingDate(B ,D)   ,  C<D. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  primeMinister(C ,D)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  place(C ,A)   ,  commander(C ,D)   ,  deathPlace(D ,B).
+capital(A ,B)  :-  birthPlace(C ,A)   ,  child(D ,C)   ,  birthPlace(D ,B).
+capital(A ,B)  :-  restingPlace(C ,A)   ,  leaderName(B ,D)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,B)   ,  relative(C ,D)   ,  birthPlace(D ,A).
+capital(A ,B)  :-  restingPlace(C ,A)   ,  hometown(D ,B)   ,  C=D. 
+capital(A ,B)  :-  populationTotal(A ,C)   ,  populationUrban(B ,D)   ,  C>D. 
+capital(A ,B)  :-  headquarter(C ,A)   ,  targetAirport(C ,D)   ,  city(D ,B).
+capital(A ,B)  :-  residence(C ,A)   ,  deathPlace(D ,B)   ,  D=C. 
+capital(A ,B)  :-  birthPlace(C ,A)   ,  parent(D ,C)   ,  restingPlace(D ,B).
+capital(A ,B)  :-  deathPlace(C ,A)   ,  deathPlace(D ,B)   ,  C=D. 

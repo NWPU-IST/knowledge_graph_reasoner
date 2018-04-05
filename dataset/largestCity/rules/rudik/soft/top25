@@ -1,0 +1,25 @@
+1.00 capital(A ,B)  :-  deathPlace(C ,B)   ,  residence(D ,A)   ,  C=D.
+1.00 capital(A ,B)  :-  birthPlace(C ,A)   ,  deathPlace(C ,D)   ,  isPartOf(B ,D).
+1.00 capital(A ,B)  :-  place(C ,A)   ,  isPartOfMilitaryConflict(D ,C)   ,  place(D ,B).
+1.00 capital(A ,B)  :-  birthPlace(C ,A)   ,  predecessor(D ,C)   ,  deathPlace(D ,B).
+1.00 capital(A ,B)  :-  leaderName(B ,C)   ,  deathPlace(D ,A)   ,  C=D.
+1.00 capital(A ,B)  :-  birthPlace(C ,A)   ,  leader(D ,C)   ,  country(B ,D).
+1.00 capital(A ,B)  :-  areaTotal(B ,C)   ,  foundingYear(A ,D)   ,  C<D.
+1.00 capital(A ,B)  :-  deathPlace(C ,A)   ,  nationality(C ,D)   ,  country(B ,D).
+1.00 capital(A ,B)  :-  areaTotal(A ,C)   ,  populationTotal(B ,D)   ,  C>D.
+1.00 capital(A ,B)  :-  birthPlace(C ,B)   ,  hometown(D ,A)   ,  C=D.
+1.00 capital(A ,B)  :-  areaCode(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+1.00 capital(A ,B)  :-  residence(C ,A)   ,  restingPlace(D ,B)   ,  D=C.
+1.00 capital(A ,B)  :-  headquarter(C ,B)   ,  party(D ,C)   ,  residence(D ,A).
+1.00 capital(A ,B)  :-  deathPlace(C ,B)   ,  birthPlace(C ,A).
+1.00 capital(A ,B)  :-  birthPlace(C ,A)   ,  president(C ,D)   ,  birthPlace(D ,B).
+1.00 capital(A ,B)  :-  place(C ,A)   ,  battle(D ,C)   ,  deathPlace(D ,B).
+1.00 capital(A ,B)  :-  birthPlace(C ,B)   ,  monarch(D ,C)   ,  deathPlace(D ,A).
+1.00 capital(A ,B)  :-  populationTotal(B ,C)   ,  areaTotal(A ,D)   ,  C<D.
+1.00 capital(A ,B)  :-  ground(C ,B)   ,  ground(C ,A).
+1.00 capital(A ,B)  :-  birthPlace(C ,B)   ,  successor(C ,D)   ,  birthPlace(D ,A).
+1.00 capital(A ,B)  :-  populationDensity(A ,C)   ,  areaTotal(B ,D)   ,  C<D.
+1.00 capital(A ,B)  :-  birthPlace(C ,A)   ,  leader(D ,C)   ,  headquarter(D ,B).
+1.00 capital(A ,B)  :-  birthPlace(C ,A)   ,  successor(D ,C)   ,  deathPlace(D ,B).
+1.00 capital(A ,B)  :-  birthPlace(C ,A)   ,  residence(C ,D)   ,  isPartOf(B ,D).
+1.00 capital(A ,B)  :-  headquarter(C ,B)   ,  targetAirport(C ,D)   ,  location(D ,A).

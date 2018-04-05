@@ -36,7 +36,8 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
                         if ':' not in evidence[0] and ':' not in evidence[2]:
                             if '#' not in evidence[0] and '#' not in evidence[2]:
                                 if '&' not in evidence[0] and '&' not in evidence[2]:
-                                    item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
+                                    if '=' not in evidence[0] and '=' not in evidence[2]:
+                                        item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
                                     # if evidence[0] not in entity_set:
                                     #     entity_set.append(evidence[0])
                                     # if evidence[2] not in entity_set:

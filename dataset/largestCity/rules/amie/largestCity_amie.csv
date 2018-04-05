@@ -1,0 +1,28 @@
+1.00  largestCity(B ,F)  :-  deathPlace(A ,F)   ,  sportCountry(A ,B).
+1.00  largestCity(A ,B)  :-  region(B ,A)   ,  countySeat(A ,B).
+0.97  largestCity(A ,B)  :-  isPartOf(B ,A)   ,  countySeat(A ,B).
+0.97  largestCity(A ,B)  :-  countySeat(A ,B).
+0.70  largestCity(A ,B)  :-  countySeat(A ,B).
+0.50  largestCity(B ,F)  :-  birthPlace(A ,F)   ,  sportCountry(A ,B).
+0.46  largestCity(A ,B)  :-  capital(A ,B).
+0.35  largestCity(B ,F)  :-  placeOfBurial(A ,F)   ,  placeOfBurial(A ,B).
+0.28  largestCity(E ,B)  :-  premierePlace(A ,E)   ,  premierePlace(A ,B).
+0.20  largestCity(F ,B)  :-  billed(A ,F)   ,  billed(A ,B).
+0.19  largestCity(B ,F)  :-  headquarter(A ,F)   ,  jurisdiction(A ,B).
+0.19  largestCity(B ,F)  :-  location(A ,F)   ,  jurisdiction(A ,B).
+0.18  largestCity(F ,B)  :-  placeOfBurial(A ,F)   ,  placeOfBurial(A ,B).
+0.18  largestCity(F ,B)  :-  region(A ,F)   ,  municipality(A ,B).
+0.17  largestCity(B ,F)  :-  city(A ,F)   ,  mouthCountry(A ,B).
+0.14  largestCity(B ,F)  :-  deathPlace(A ,F)   ,  placeOfBurial(A ,B).
+0.13  largestCity(B ,F)  :-  headquarter(A ,F)   ,  nationalAffiliation(A ,B).
+0.13  largestCity(B ,F)  :-  assembly(A ,F)   ,  assembly(A ,B).
+0.12  largestCity(B ,F)  :-  billed(A ,F)   ,  billed(A ,B).
+0.11  largestCity(B ,F)  :-  birthPlace(A ,F)   ,  billed(A ,B).
+0.06  largestCity(E ,B)  :-  assembly(A ,E)   ,  assembly(A ,B).
+0.04  largestCity(B ,F)  :-  premierePlace(A ,F)   ,  premierePlace(A ,B).
+0.03  largestCity(F ,B)  :-  country(A ,F)   ,  garrison(A ,B).
+0.03  largestCity(A ,B)  :-  region(B ,A).
+0.02  largestCity(A ,B)  :-  isPartOf(B ,A).
+0.00  largestCity(F ,B)  :-  headquarter(A ,F)   ,  destination(A ,B).
+0.00  largestCity(A ,B)  :-  country(B ,A).
+0.00  largestCity(F ,B)  :-  deathPlace(A ,F)   ,  placeOfBurial(A ,B).

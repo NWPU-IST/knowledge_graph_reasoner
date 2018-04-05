@@ -4,11 +4,11 @@ import itertools
 import random
 
 
-def data_reader(predicate, folder_path):
+def data_reader(folder_path):
     data_1 = []
     data_2 = []
     true_data = []
-    with open(folder_path+"positives.csv", 'rb') as resultFile:
+    with open(folder_path+"inferred.csv", 'rb') as resultFile:
         inputs = csv.DictReader(resultFile)
         for inp in inputs:
             print inp
@@ -36,16 +36,17 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--test_predicate", default='sample_case')
     args = parser.parse_args()
     folder_path = 'dataset/'+args.test_predicate+'/input/'
-    data_1, data_2, true_data = data_reader(args.test_predicate, folder_path)
+    data_1, data_2, true_data = data_reader(folder_path)
     catesian_data = []
     false_data = []
     true_sample = []
     for element in itertools.product(data_1,data_2):
         catesian_data.append(element)
     for i in range(3):
-        sample = random.sample(catesian_data, 40)
+        i = i+3
+        sample = random.sample(catesian_data, 400)
         for sam in sample:
-            if sam not in true_data and len(false_data) < 20:
+            if sam not in true_data and len(false_data) < 199:
                 false_data.append(sam)
             else:
                 true_sample.append(sam)
