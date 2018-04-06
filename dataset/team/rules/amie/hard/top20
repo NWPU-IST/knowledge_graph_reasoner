@@ -1,0 +1,20 @@
+team(A ,B)  :-  formerTeam(A ,B).
+team(A ,B)  :-  formerTeam(A ,B).
+team(A ,B)  :-  formerTeam(A ,B)   ,  debutTeam(A ,B).
+team(A ,B)  :-  formerTeam(A ,B)   ,  debutTeam(A ,B).
+team(A ,B)  :-  debutTeam(A ,B).
+team(A ,B)  :-  debutTeam(A ,B).
+team(A ,B)  :-  draftTeam(A ,B).
+team(A ,B)  :-  draftTeam(A ,B).
+team(A ,B)  :-  managerClub(A ,B).
+team(A ,B)  :-  managerClub(A ,B).
+team(E ,A)  :-  league(E ,B)   ,  season(A ,B).
+team(E ,A)  :-  league(E ,B)   ,  season(A ,B).
+team(F ,B)  :-  league(A ,F)   ,  draftTeam(A ,B).
+team(F ,B)  :-  league(A ,F)   ,  draftTeam(A ,B).
+team(B ,A)  :-  manager(A ,B).
+team(B ,A)  :-  manager(A ,B).
+team(A ,F)  :-  team(B ,F)   ,  followingEvent(A ,B).
+team(A ,F)  :-  team(B ,F)   ,  followingEvent(A ,B).
+team(B ,A)  :-  chairman(A ,B).
+team(B ,A)  :-  chairman(A ,B).

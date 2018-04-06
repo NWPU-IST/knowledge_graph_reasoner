@@ -1,0 +1,37 @@
+0.99  author(A ,B)  :-  coverArtist(A ,B)   ,  illustrator(A ,B).
+0.97  author(A ,B)  :-  notableWork(B ,A).
+0.92  author(F ,A)  :-  previousWork(B ,F)   ,  notableWork(A ,B).
+0.91  author(B ,A)  :-  notableWork(A ,B).
+0.91  author(E ,A)  :-  subsequentWork(E ,B)   ,  notableWork(A ,B).
+0.86  author(E ,A)  :-  previousWork(E ,B)   ,  notableWork(A ,B).
+0.86  author(F ,A)  :-  subsequentWork(B ,F)   ,  notableWork(A ,B).
+0.85  author(A ,F)  :-  language(F ,B)   ,  originalLanguage(A ,B).
+0.82  author(A ,B)  :-  musicBy(A ,B)   ,  lyrics(A ,B).
+0.75  author(A ,B)  :-  producer(A ,B)   ,  creativeDirector(A ,B).
+0.65  author(A ,B)  :-  creator(A ,B)   ,  executiveProducer(A ,B).
+0.60  author(A ,B)  :-  creator(A ,B).
+0.60  author(E ,A)  :-  series(E ,B)   ,  notableWork(A ,B).
+0.43  author(A ,B)  :-  creator(A ,B)   ,  creativeDirector(A ,B).
+0.40  author(A ,B)  :-  lyrics(A ,B).
+0.37  author(A ,B)  :-  lyrics(A ,B).
+0.34  author(A ,B)  :-  creator(A ,B).
+0.32  author(A ,B)  :-  notableWork(B ,A)   ,  illustrator(A ,B).
+0.31  author(A ,B)  :-  executiveProducer(A ,B).
+0.25  author(A ,B)  :-  illustrator(A ,B).
+0.25  author(A ,B)  :-  illustrator(A ,B).
+0.25  author(F ,B)  :-  subsequentWork(A ,F)   ,  illustrator(A ,B).
+0.25  author(F ,B)  :-  previousWork(A ,F)   ,  illustrator(A ,B).
+0.23  author(A ,B)  :-  executiveProducer(A ,B).
+0.20  author(E ,B)  :-  previousWork(E ,A)   ,  illustrator(A ,B).
+0.19  author(E ,B)  :-  subsequentWork(E ,A)   ,  illustrator(A ,B).
+0.15  author(A ,B)  :-  presenter(A ,B).
+0.14  author(A ,B)  :-  musicBy(A ,B).
+0.13  author(A ,F)  :-  deathPlace(F ,B)   ,  premierePlace(A ,B).
+0.08  author(A ,B)  :-  coverArtist(A ,B).
+0.05  author(A ,F)  :-  birthPlace(F ,B)   ,  premierePlace(A ,B).
+0.05  author(A ,F)  :-  knownFor(F ,B)   ,  nonFictionSubject(A ,B).
+0.05  author(A ,B)  :-  creativeDirector(A ,B).
+0.04  author(A ,B)  :-  translator(A ,B).
+0.02  author(B ,F)  :-  creator(A ,F)   ,  lastAppearance(A ,B).
+0.01  author(A ,B)  :-  basedOn(A ,B).
+0.01  author(E ,B)  :-  nonFictionSubject(E ,A)   ,  crewMember(A ,B).

@@ -1,0 +1,20 @@
+0.57  team(A ,B)  :-  formerTeam(A ,B).
+0.57  team(A ,B)  :-  formerTeam(A ,B).
+0.48  team(A ,B)  :-  formerTeam(A ,B)   ,  debutTeam(A ,B).
+0.48  team(A ,B)  :-  formerTeam(A ,B)   ,  debutTeam(A ,B).
+0.34  team(A ,B)  :-  debutTeam(A ,B).
+0.34  team(A ,B)  :-  debutTeam(A ,B).
+0.25  team(A ,B)  :-  draftTeam(A ,B).
+0.25  team(A ,B)  :-  draftTeam(A ,B).
+0.18  team(A ,B)  :-  managerClub(A ,B).
+0.18  team(A ,B)  :-  managerClub(A ,B).
+0.09  team(E ,A)  :-  league(E ,B)   ,  season(A ,B).
+0.09  team(E ,A)  :-  league(E ,B)   ,  season(A ,B).
+0.02  team(F ,B)  :-  league(A ,F)   ,  draftTeam(A ,B).
+0.02  team(F ,B)  :-  league(A ,F)   ,  draftTeam(A ,B).
+0.00  team(B ,A)  :-  manager(A ,B).
+0.00  team(B ,A)  :-  manager(A ,B).
+0.00  team(A ,F)  :-  team(B ,F)   ,  followingEvent(A ,B).
+0.00  team(A ,F)  :-  team(B ,F)   ,  followingEvent(A ,B).
+0.00  team(B ,A)  :-  chairman(A ,B).
+0.00  team(B ,A)  :-  chairman(A ,B).
