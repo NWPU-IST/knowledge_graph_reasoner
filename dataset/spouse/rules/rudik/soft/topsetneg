@@ -1,0 +1,16 @@
+1 negspouse(A ,B)  :-  successor(B ,C)   ,  president(D ,C)   ,  successor(A ,D).
+1 negspouse(A ,B)  :-  successor(C ,A)   ,  primeMinister(C ,D)   ,  successor(B ,D).
+1 negspouse(A ,B)  :-  spouse(C ,B)   ,  child(C ,A)   ,  child(B ,A).
+1 negspouse(A ,B)  :-  almaMater(B ,C)   ,  country(C ,D)   ,  deathPlace(A ,D).
+1 negspouse(A ,B)  :-  title(A ,C)   ,  title(B ,C).
+1 negspouse(A ,B)  :-  successor(A ,B).
+1 negspouse(A ,B)  :-  predecessor(B ,C)   ,  office(C ,D)   ,  office(A ,D).
+1 negspouse(A ,B)  :-  successor(C ,B)   ,  almaMater(C ,D)   ,  almaMater(A ,D).
+1 negspouse(A ,B)  :-  office(B ,C)   ,  orderInOffice(D ,C)   ,  successor(D ,A).
+1 negspouse(A ,B)  :-  birthPlace(A ,C)   ,  region(B ,C).
+1 negspouse(A ,B)  :-  successor(C ,B)   ,  country(C ,D)   ,  deathPlace(A ,D).
+1 negspouse(A ,B)  :-  spouse(A ,C)   ,  child(C ,B)   ,  child(A ,B).
+1 negspouse(A ,B)  :-  parent(A ,B).
+1 negspouse(A ,B)  :-  spouse(C ,B)   ,  spouse(A ,C).
+1 negspouse(A ,B)  :-  spouse(A ,C)   ,  parent(B ,C).
+1 negspouse(A ,B)  :-  birthPlace(B ,C)   ,  birthPlace(A ,C)   ,  predecessor(A ,B).

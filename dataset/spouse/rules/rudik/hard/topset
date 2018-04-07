@@ -1,0 +1,5 @@
+spouse(A ,B)  :-  starring(C ,A)   ,  writer(C ,B).
+spouse(A ,B)  :-  spouse(B ,A).
+spouse(A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  predecessor(C ,A).
+spouse(A ,B)  :-  parent(C ,B)   ,  child(A ,C).
+spouse(A ,B)  :-  starring(C ,A)   ,  producer(C ,B).

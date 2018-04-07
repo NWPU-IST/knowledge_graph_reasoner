@@ -1,0 +1,6 @@
+1 spouse(A ,B)  :-  starring(C ,A)   ,  writer(C ,B).
+1 spouse(A ,B)  :-  spouse(B ,A).
+1 spouse(A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  predecessor(C ,A).
+1 spouse(A ,B)  :-  activeYearsStartYear(B ,C)   ,  activeYearsStartYear(A ,C)   ,  C>C.
+1 spouse(A ,B)  :-  parent(C ,B)   ,  child(A ,C).
+1 spouse(A ,B)  :-  starring(C ,A)   ,  producer(C ,B).
