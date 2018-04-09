@@ -138,7 +138,9 @@ def inference_map(sentence_id, data_source, resource_v, pos_neg):
     probs = re.findall("(\w+\(\'[\s\S].+)", f)
     probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
     probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
-    return probs, probs_test
+    query = pos_neg+data_source+'('+', '.join(resource_v)+') 1.0'
+    print [p for p in probs_test if p == query]
+    return probs, [p for p in probs_test if p == query]
 
 
 def write_query_domain(data_source, sentence_id,resource_v):

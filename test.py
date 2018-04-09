@@ -19,10 +19,16 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
     for t, triple in enumerate(triples_list):
         sentence_id = id_list[t]
         true_label = int(float(true_labels[t]))
-        if true_label != 0:
-            true_count += 1
+        if not pos_neg:
+            if true_label != 0:
+                true_count += 1
+            else:
+                false_count += 1
         else:
-            false_count += 1
+            if true_label == 0:
+                true_count += 1
+            else:
+                false_count += 1
         triple_check = triples_list[t]
         print sentence_id, triple_check, true_label, '\n'
 
@@ -33,15 +39,25 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
         #     prediction = 0
         # else:
         #     prediction = 1
-        if true_label == 1 and len(map) > 0:
-            true_pos += 1
-            prediction = 1
-            inferred.append({'sid':sentence_id,'class':1,'sub':triple_check[0],'obj':triple_check[1]})
-        elif true_label == 0 and len(map) == 0:
-            true_neg += 1
-            prediction = 1
+        if not pos_neg:
+            if true_label == 1 and len(map) > 0:
+                true_pos += 1
+                prediction = 1
+                inferred.append({'sid': sentence_id, 'class': 1,'sub': triple_check[0], 'obj': triple_check[1]})
+            elif true_label == 0 and len(map) == 0:
+                true_neg += 1
+                prediction = 1
+            else:
+                prediction = 0
         else:
-            prediction = 0
+            if true_label == 0 and len(map) > 0:
+                true_pos += 1
+                prediction = 1
+            elif true_label == 1 and len(map) == 0:
+                true_neg += 1
+                prediction = 1
+            else:
+                prediction = 0
         # print "==>",map, len(map), type(map)
         # sys.exit()
 

@@ -127,26 +127,30 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
 
 
 def stats_computer(true_count, true_pos, false_count, true_neg, data_source):
-    false_pos = true_count-true_pos
-    false_neg = false_count - true_neg
+    pre = 0
+    rec = 0
+    false_neg = true_count-true_pos
+    false_pos = false_count - true_neg
     tp = float(true_pos)/float(true_count)
     if false_count:
         tn = float(true_neg)/float(false_count)
     else:
         tn = 0
-    print "True Count:", true_count, "True Pos: ", true_pos, "=>", tp, "False Pos: ", false_pos
-    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Neg: ", false_neg
-    pre = float(true_pos) / float(true_count)
-    rec = float(true_pos) / float(true_pos + false_neg)
+    print "True Count:", true_count, "True Pos: ", true_pos, "=>", tp, "False Neg: ", false_neg
+    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Pos: ", false_pos
+    if true_pos + false_pos > 0:
+        pre = float(true_pos) / float(true_pos + false_pos)
+    if true_pos + false_neg >0:
+        rec = float(true_pos) / float(true_pos + false_neg)
     print "Precision: ", pre
     print "Recall: ", rec
     true_data_pos = str(round(tp,2)) + ' ('+str(true_pos)+'/'+str(true_count)+')'
-    false_data_pos = str(round(1-tp,2)) + ' (' + str(false_pos)+'/'+str(true_count)+')'
+    false_data_pos = str(round(1-tp,2)) + ' (' + str(false_neg)+'/'+str(true_count)+')'
     true_data_neg = str(round(tn,2))+ ' ('+str(true_neg)+'/'+str(false_count)+')'
-    false_data_neg = str(round(1-tn,2))+' ('+str(false_neg)+'/'+str(false_count)+')'
+    false_data_neg = str(round(1-tn,2))+' ('+str(false_pos)+'/'+str(false_count)+')'
     st = datetime.datetime.now()
-    output_stats = str(st) +' '+data_source +' top-' + str(top_k )+ ' & '+ true_data_pos+ ' & '+ false_data_pos+ ' & '+ \
-                   true_data_neg+ ' & '+ false_data_neg+ ' & '+ str(round(pre,2))+ ' & '+ str(round(rec,2))
+    output_stats = str(st) + ' ' + data_source + ' top-' + str(top_k) + ' & ' + true_data_pos + ' & ' + false_data_pos\
+                   + ' & ' + true_data_neg + ' & ' + false_data_neg + ' & ' + str(round(pre, 2))+ ' & '+ str(round(rec, 2))
     with open('output_all.txt', 'a') as the_file:
         the_file.write(str(output_stats)+'\n')
     print output_stats
