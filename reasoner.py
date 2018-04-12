@@ -189,6 +189,7 @@ def inference_prob_neg(sentence_id, data_source, resource_v):
     #     the_file.write('utf-8')
     return probs.split(";")
 
+
 def domain_generator(entity_set, sentence_id, data_source):
     domain_text_pos = data_source+'~'
     domain_text_neg = 'neg'+data_source+'~'
