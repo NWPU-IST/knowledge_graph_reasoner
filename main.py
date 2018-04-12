@@ -8,7 +8,7 @@ from resource_writer import update_resources
 import pprint
 from kb_query import distance_one_query, distance_two_query
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob, domain_generator,\
-    rule_evidence_writer
+    rule_evidence_writer, inference_prob_neg
 from ambiverse_api import ambiverse_entity_parser
 from config import top_k
 import datetime
@@ -109,21 +109,22 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         print rule_predicates
         print "Evidence Set:"
         evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-        # evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
-        #                                                 rule_predicates, rules)
-        # print "Writing Domain"
-        # domain_generator(entity_set, sentence_id, data_source)
+        evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
+                                                        rule_predicates, rules)
+        print "Writing Domain"
+        domain_generator(entity_set, sentence_id, data_source)
         # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
         answer_set, answer_all = '',''
         print answer_set, answer_all
         map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
         print map, map_all
-        # prob, label = inference_prob(sentence_id, data_source, resource_v)
-        prob, label = '',''
+        prob, label = inference_prob(sentence_id, data_source, resource_v)
+        prob_neg, label_neg = inference_prob_neg(sentence_id, data_source, resource_v)
+        # prob, label = '',''
         print prob, label
         # prob = ''
-        return answer_all, answer_set, map, map_all, prob, label
-    return '', '', '', '', '', ''
+        return answer_all, answer_set, map, map_all, prob, label, prob_neg, label_neg
+    return '', '', '', '', '', '','', ''
 
 
 def stats_computer(true_count, true_pos, false_count, true_neg, data_source):

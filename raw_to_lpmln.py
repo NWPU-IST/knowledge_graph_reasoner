@@ -13,7 +13,7 @@ def rule_parser_rudik(fname, predicate, pos_neg):
     for it, con in enumerate(content):
         relation = re.findall(r"\/([a-zA-Z]+\(.*?\))", con)
         compare = re.findall(r"([>=<]\(.*?\))", con)
-        for i,com in enumerate(compare):
+        for i, com in enumerate(compare):
             for c in comp:
                 if c in com:
                     com = com.replace(c+'(', "")
@@ -21,16 +21,16 @@ def rule_parser_rudik(fname, predicate, pos_neg):
                     com = com.replace(',', c)
             compare[i] = com
         relation += compare
-        for i,rel in enumerate(relation):
+        for i, rel in enumerate(relation):
             for r in rep.keys():
                 if r in rel:
                     rel = rel.replace(r, rep[r])
             relation[i] = rel
-        score = re.findall(r"\d.\d+", con)
-        print score
+        score = re.findall(r"\-?\d+.\d+$", con)
+        score = round(0.4 - float(score[0]),2)
         i = 0
         if score:
-            rule = str(score[0])+' '+pos_neg+predicate+"(A,B) :- "
+            rule = str(score)+' '+pos_neg+predicate+"(A,B) :- "
         else:
             rule = pos_neg + predicate + "(A,B) :- "
         for rel in relation:
@@ -40,7 +40,8 @@ def rule_parser_rudik(fname, predicate, pos_neg):
             else:
                 rule += ' , '
             i += 1
-        rule_list.append(rule)
+        if "C<C" not in rule and "C>C" not in rule:
+            rule_list.append(rule)
     return rule_list
 
 
@@ -90,11 +91,12 @@ def rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-t", "--test_predicate", default='sample_case')
+    parser.add_argument("-i", "--filename", default='')
     parser.add_argument("-r", "--rule_type", default='amie')
     parser.add_argument("-p", "--pos_neg", default='')
     args = parser.parse_args()
     folder_path = 'dataset/'+args.test_predicate+'/rules/'+args.rule_type+'/'
-    path = 'dataset/'+args.test_predicate+'/rules/'+args.rule_type+'/'+args.test_predicate+args.pos_neg+'.csv'
+    path = 'dataset/'+args.test_predicate+'/rules/'+args.rule_type+'/'+args.filename+'.csv'
     if args.rule_type=='amie':
         rule_list = rule_parser_amie(path, args.test_predicate)
     else:

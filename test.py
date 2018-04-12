@@ -14,7 +14,8 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
     true_pos = 0
     true_neg = 0
     rule_predicates, rules = get_rule_predicates(data_source)
-    lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'label', 'prediction','lpmln-prob', 'lpmln-map', 'clingo', 'prob_all',\
+    lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'lpmln_label','lpmln_neg_label', 'prediction',\
+                         'lpmln-prob','lpmln-prob-neg', 'lpmln-map', 'clingo', 'prob_all',\
                                  'clingo_all', 'map_all']]
     for t, triple in enumerate(triples_list):
         sentence_id = id_list[t]
@@ -32,8 +33,8 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
         triple_check = triples_list[t]
         print sentence_id, triple_check, true_label, '\n'
 
-        answer_all, answer_set, map, map_all, prob, label = lpmln_reasoning(triple_check, rule_predicates, sentence_id,\
-                                                                     data_source, rules, pos_neg)
+        answer_all, answer_set, map, map_all, prob, label, prob_neg, label_neg = lpmln_reasoning(triple_check,\
+                                                        rule_predicates, sentence_id, data_source, rules, pos_neg)
         # compare = float(true_label)-float(label)
         # if compare != 0:
         #     prediction = 0
@@ -61,7 +62,8 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
         # print "==>",map, len(map), type(map)
         # sys.exit()
 
-        lpmln_evaluation.append([sentence_id, true_label, triple_check,label,str(prediction), str(prob), str(map), str(answer_set), \
+        lpmln_evaluation.append([sentence_id, true_label, triple_check, label, label_neg, str(prediction), str(prob), \
+                                 str(prob_neg), str(map), str(answer_set), \
                                  str(answer_all), str(map_all)])
     stats_computer(true_count, true_pos, false_count, true_neg, data_source)
 

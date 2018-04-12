@@ -14,13 +14,13 @@ import time
 w = 0
 curr_sample = None
 sample_attempt = None
-max_num_iteration = 100
+max_num_iteration = 50
 isStableModelVar = False
 queries = []
 query_count = {}
 domain = []
 atoms2count = []
-timeout = time.time() + 60*3
+timeout = time.time() + 60*10
 
 
 def main(prg):
@@ -112,9 +112,11 @@ def main(prg):
     output = []
     label = 0
     for atom in query_count:
+        # print atom, ": ", prob
         try:
             atom_str = str(atom).encode('utf-8')
             if resource[0] in atom_str and resource[1] in atom_str:
+                print float(query_count[atom]), float(sample_count)
                 prob = float(query_count[atom])/float(sample_count)
                 print atom, ": ", prob
                 if prob > 0:
