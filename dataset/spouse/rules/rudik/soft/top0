@@ -1,0 +1,2 @@
+0.58  spouse(A ,B)  :-  spouse(B ,A).
+0.4  negspouse(A ,B)  :-  spouse(C ,B) , spouse(A ,D).

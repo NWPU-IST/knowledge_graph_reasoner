@@ -76,9 +76,9 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
                             if '#' not in evidence[0] and '#' not in evidence[2]:
                                 if '&' not in evidence[0] and '&' not in evidence[2]:
                                     item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
-                                    if evidence[0] not in entity_set:
+                                    if evidence[0] not in entity_set and " " not in evidence[0]:
                                         entity_set.append(evidence[0])
-                                    if evidence[2] not in entity_set:
+                                    if evidence[2] not in entity_set and " " not in evidence[2]:
                                         entity_set.append(evidence[2])
                 except:
                     pass
@@ -145,7 +145,7 @@ def inference_map(sentence_id, data_source, resource_v, pos_neg):
 
 def write_query_domain(data_source, sentence_id,resource_v):
     with open('lpmln-learning/code/query_domain.txt', 'w') as the_file:
-        the_file.write(data_source+'\n')
+        the_file.write('neg'+data_source+','+data_source+'\n')
         the_file.write(str(resource_v)+'\n')
         the_file.write("{1}{0}_domain.txt".format(sentence_id, evidence_path))
 
@@ -170,24 +170,24 @@ def inference_prob(sentence_id, data_source, resource_v):
     return probs.split(";")
 
 
-def inference_prob_neg(sentence_id, data_source, resource_v):
-    write_query_domain('neg'+data_source, sentence_id, resource_v)
-    print "LPMLN Probability Inference"
-    cmd = "lpmln2asp -i {1}{0}er_unique.txt".format(sentence_id, evidence_path)
-    print cmd
-    subprocess.call(cmd, shell=True)
-    try:
-        cmd1 = "clingo -q lpmln-learning/code/marginal-mhsampling.py out.txt"
-        print cmd1
-        subprocess.call(cmd1, shell=True)
-    except:
-        pass
-    text = open('lpmln-learning/code/lpmln_prob.txt', 'r')
-    probs = text.read()
-    text.close()
-    # with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
-    #     the_file.write('utf-8')
-    return probs.split(";")
+# def inference_prob_neg(sentence_id, data_source, resource_v):
+#     write_query_domain('neg'+data_source, sentence_id, resource_v)
+#     print "LPMLN Probability Inference"
+#     cmd = "lpmln2asp -i {1}{0}er_unique.txt".format(sentence_id, evidence_path)
+#     print cmd
+#     subprocess.call(cmd, shell=True)
+#     try:
+#         cmd1 = "clingo -q lpmln-learning/code/marginal-mhsampling.py out.txt"
+#         print cmd1
+#         subprocess.call(cmd1, shell=True)
+#     except:
+#         pass
+#     text = open('lpmln-learning/code/lpmln_prob.txt', 'r')
+#     probs = text.read()
+#     text.close()
+#     # with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
+#     #     the_file.write('utf-8')
+#     return probs.split(";")
 
 
 def domain_generator(entity_set, sentence_id, data_source):

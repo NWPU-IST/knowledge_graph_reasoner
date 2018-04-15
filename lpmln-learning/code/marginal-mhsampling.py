@@ -8,13 +8,15 @@ import copy
 import random
 import sympy
 import ast
+import sys
 import time
+import re
 
 
 w = 0
 curr_sample = None
 sample_attempt = None
-max_num_iteration = 50
+max_num_iteration = 5
 isStableModelVar = False
 queries = []
 query_count = {}
@@ -36,7 +38,9 @@ def main(prg):
 
     with open('lpmln-learning/code/query_domain.txt') as f:
         content = f.readlines()
-    queries = content[0]
+    queries = content[0].split(',')
+    queries = [query.rstrip() for query in queries]
+    print queries
     domain_filename = content[2]
     resource = ast.literal_eval(content[1])
     resource = ['"'+res+'"' for res in resource]
@@ -105,17 +109,21 @@ def main(prg):
                     prg.solve(sample_attempt, getSample)
                 sample_count += 1
                 break
-            if time.time() > timeout:
-                break
+        if time.time() > timeout:
+            print "timing out"
+            break
 
     # Compute new marginal probabilities
     output = []
     label = 0
     for atom in query_count:
-        # print atom, ": ", prob
         try:
             atom_str = str(atom).encode('utf-8')
-            if resource[0] in atom_str and resource[1] in atom_str:
+            # print atom_str
+            print atom_str
+            entities = re.findall(r'\".*?\"', atom_str)
+            # print resource[0], entities[0], resource[1] , entities[1]
+            if resource[0] == entities[0] and resource[1] == entities[1]:
                 print float(query_count[atom]), float(sample_count)
                 prob = float(query_count[atom])/float(sample_count)
                 print atom, ": ", prob

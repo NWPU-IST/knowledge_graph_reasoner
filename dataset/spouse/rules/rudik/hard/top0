@@ -1,0 +1,2 @@
+spouse(A ,B)  :-  spouse(B ,A).
+negspouse(A ,B)  :-  spouse(C ,B) , spouse(A ,D).
