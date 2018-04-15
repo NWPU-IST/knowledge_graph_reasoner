@@ -16,7 +16,7 @@ import re
 w = 0
 curr_sample = None
 sample_attempt = None
-max_num_iteration = 5
+max_num_iteration = 50
 isStableModelVar = False
 queries = []
 query_count = {}
