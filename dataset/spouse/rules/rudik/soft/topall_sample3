@@ -1,0 +1,100 @@
+0.58  spouse(A ,B)  :-  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(A ,C)   ,  predecessor(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  birthPlace(B ,C)   ,  nationality(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  deathPlace(B ,C)   ,  restingPlace(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsStartYear(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  religion(A ,C)   ,  religion(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  almaMater(A ,C)   ,  almaMater(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  child(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  child(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(A ,C)   ,  child(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(B ,C)   ,  successor(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  birthPlace(A ,C)   ,  nationality(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(B ,C)   ,  predecessor(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  birthYear(A ,C)   ,  birthYear(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  relative(C ,A)   ,  relative(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  birthPlace(B ,C)   ,  nationality(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  activeYearsStartYear(B ,C)   ,  activeYearsEndYear(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  starring(C ,A)   ,  starring(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(B ,C)   ,  child(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  party(A ,C)   ,  party(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  occupation(A ,C)   ,  occupation(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,A)   ,  child(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(A ,C)   ,  successor(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,A)   ,  predecessor(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  activeYearsEndYear(A ,C)   ,  activeYearsEndYear(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  successor(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  spouse(B ,C)   ,  spouse(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  restingPlace(A ,C)   ,  restingPlace(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsEndYear(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,A)   ,  successor(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  predecessor(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  deathPlace(A ,C)   ,  restingPlace(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  successor(C ,B)   ,  predecessor(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,A)   ,  child(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  child(A ,C)   ,  child(B ,C)   ,  parent(C ,B).
+0.4  spouse(A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  deathPlace(A ,C)   ,  deathPlace(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  birthPlace(A ,C)   ,  birthPlace(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,A)   ,  predecessor(C ,B)   ,  parent(C ,B).
+0.4  spouse(A ,B)  :-  successor(B ,C)   ,  predecessor(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,A)   ,  predecessor(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  predecessor(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  successor(A ,C).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(A ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  child(A ,C)   ,  child(B ,C)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  predecessor(C ,A).
+0.4  spouse(A ,B)  :-  spouse(A ,C)   ,  spouse(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  successor(A ,C)   ,  parent(C ,B)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  successor(A ,C)   ,  parent(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  parent(C ,A)   ,  child(B ,C)   ,  parent(C ,B).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  child(A ,C).
+0.4  spouse(A ,B)  :-  parent(C ,A)   ,  child(B ,C).
+0.4  spouse(A ,B)  :-  successor(A ,C)   ,  predecessor(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  predecessor(A ,C)   ,  successor(C ,A)   ,  spouse(B ,A).
+0.4  spouse(A ,B)  :-  starring(C ,B)   ,  writer(C ,A).
+0.4  spouse(A ,B)  :-  starring(C ,B)   ,  director(C ,A).
+0.4  spouse(A ,B)  :-  starring(C ,B)   ,  producer(C ,A).
+0.4  spouse(A ,B)  :-  birthYear(A ,C)   ,  birthYear(B ,C).
+0.4  spouse(A ,B)  :-  starring(C ,A)   ,  producer(C ,B).
+0.4  spouse(A ,B)  :-  predecessor(C ,B)   ,  spouse(D ,C)   ,  successor(A ,D).
+0.4  spouse(A ,B)  :-  predecessor(B ,C)   ,  spouse(D ,C)   ,  predecessor(A ,D).
+0.4  spouse(A ,B)  :-  predecessor(C ,A)   ,  spouse(C ,D)   ,  predecessor(D ,B).
+0.4  spouse(A ,B)  :-  predecessor(C ,B)   ,  spouse(D ,C)   ,  predecessor(D ,A).
+0.4  spouse(A ,B)  :-  successor(B ,C)   ,  spouse(C ,D)   ,  predecessor(D ,A).
+0.4  spouse(A ,B)  :-  predecessor(C ,A)   ,  spouse(D ,C)   ,  predecessor(D ,B).
+0.4  spouse(A ,B)  :-  predecessor(C ,B)   ,  spouse(C ,D)   ,  predecessor(D ,A).
+0.4  spouse(A ,B)  :-  successor(B ,C)   ,  spouse(D ,C)   ,  predecessor(D ,A).
+0.4  spouse(A ,B)  :-  predecessor(C ,A)   ,  spouse(C ,D)   ,  successor(B ,D).
+0.4  spouse(A ,B)  :-  predecessor(B ,C)   ,  spouse(C ,D)   ,  predecessor(A ,D).
+0.4  spouse(A ,B)  :-  predecessor(A ,C)   ,  spouse(D ,C)   ,  predecessor(B ,D).
+0.4  spouse(A ,B)  :-  successor(C ,B)   ,  spouse(D ,C)   ,  predecessor(A ,D).
+0.4  spouse(A ,B)  :-  successor(C ,B)   ,  spouse(D ,C)   ,  successor(D ,A).
+0.4  spouse(A ,B)  :-  parent(C ,B)   ,  predecessor(C ,A)   ,  successor(A ,C).
+0.4  spouse(A ,B)  :-  successor(C ,A)   ,  spouse(D ,C)   ,  predecessor(B ,D).
+0.4  spouse(A ,B)  :-  successor(C ,A)   ,  spouse(D ,C)   ,  successor(D ,B).
+0.4  spouse(A ,B)  :-  successor(C ,B)   ,  spouse(C ,D)   ,  successor(D ,A).
+0.4  spouse(A ,B)  :-  successor(A ,C)   ,  spouse(D ,C)   ,  predecessor(D ,B).
+0.4  negspouse(A ,B)  :-  president(C ,B)   ,  region(C ,D)   ,  birthPlace(A ,D).
+0.39  negspouse(A ,B)  :-  birthPlace(A ,C)   ,  country(D ,C)   ,  almaMater(B ,D).
+0.39  negspouse(A ,B)  :-  country(B ,C)   ,  country(D ,C)   ,  birthPlace(A ,D).
+0.4  negspouse(A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsEndYear(A ,C)   ,  parent(B ,A).
+0.39  negspouse(A ,B)  :-  successor(C ,B)   ,  president(A ,D)   ,  C=D.
+0.4  negspouse(A ,B)  :-  birthPlace(A ,C)   ,  region(D ,C)   ,  president(D ,B).
+0.4  negspouse(A ,B)  :-  predecessor(B ,C)   ,  predecessor(C ,D)   ,  successor(A ,D).
+0.4  negspouse(A ,B)  :-  successor(C ,A)   ,  successor(D ,C)   ,  predecessor(D ,B).
+0.39  negspouse(A ,B)  :-  successor(A ,C)   ,  deathPlace(C ,D)   ,  birthPlace(B ,D).
+0.4  negspouse(A ,B)  :-  successor(B ,C)   ,  successor(A ,C)   ,  predecessor(C ,A).
+0.4  negspouse(A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(D ,C)   ,  president(D ,B).
+0.4  negspouse(A ,B)  :-  activeYearsEndYear(B ,C)   ,  activeYearsEndYear(D ,C)   ,  parent(A ,D).
+0.4  negspouse(A ,B)  :-  successor(A ,B)   ,  activeYearsStartYear(B ,C)   ,  activeYearsEndYear(A ,C).
+0.4  negspouse(A ,B)  :-  successor(B ,A)   ,  deathPlace(B ,C)   ,  birthPlace(A ,C).
+0.4  negspouse(A ,B)  :-  deathPlace(B ,C)   ,  deathPlace(A ,C)   ,  predecessor(B ,A).
+0.4  negspouse(A ,B)  :-  spouse(A ,C)   ,  parent(B ,C).
+0.4  negspouse(A ,B)  :-  successor(C ,B)   ,  predecessor(C ,B)   ,  predecessor(B ,A).
+0.39  negspouse(A ,B)  :-  parent(B ,C)   ,  birthPlace(C ,D)   ,  birthPlace(A ,D).
+0.4  negspouse(A ,B)  :-  successor(B ,C)   ,  president(C ,D)   ,  successor(A ,D).
+0.39  negspouse(A ,B)  :-  successor(A ,C)   ,  president(B ,D)   ,  C=D.

@@ -119,20 +119,18 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
         print map, map_all
         prob, label = inference_prob(sentence_id, data_source, resource_v)
-        # prob_neg, label_neg = inference_prob_neg(sentence_id, data_source, resource_v)
         # prob, label = '',''
-        prob_neg, label_neg = '',''
         print prob, label
         # prob = ''
-        return answer_all, answer_set, map, map_all, prob, label, prob_neg, label_neg
+        return answer_all, answer_set, map, map_all, prob, label
     return '', '', '', '', '', '','', ''
 
 
-def stats_computer(true_count, true_pos, false_count, true_neg, data_source):
+def stats_computer(true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, false_pos):
     pre = 0
     rec = 0
-    false_neg = true_count-true_pos
-    false_pos = false_count - true_neg
+    # false_neg = true_count-true_pos
+    # false_pos = false_count - true_neg
     tp = float(true_pos)/float(true_count)
     if false_count:
         tn = float(true_neg)/float(false_count)
@@ -146,6 +144,8 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source):
         rec = float(true_pos) / float(true_pos + false_neg)
     print "Precision: ", pre
     print "Recall: ", rec
+    print "True Neutral: ", true_neutral
+    print "False Neutral: ", false_neutral
     true_data_pos = str(round(tp,2)) + ' ('+str(true_pos)+'/'+str(true_count)+')'
     false_data_pos = str(round(1-tp,2)) + ' (' + str(false_neg)+'/'+str(true_count)+')'
     true_data_neg = str(round(tn,2))+ ' ('+str(true_neg)+'/'+str(false_count)+')'
