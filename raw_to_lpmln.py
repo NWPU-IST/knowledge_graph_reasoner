@@ -30,7 +30,7 @@ def rule_parser_rudik(fname, predicate, pos_neg):
         score = round(0.4 - float(score[0]),2)
         i = 0
         if score:
-            rule = str(score)+' '+pos_neg+predicate+"(A,B) :- "
+            rule = str(score)+' '+pos_neg+predicate+"("+ str(it+1)+",A,B) :- "
         else:
             rule = pos_neg + predicate + "(A,B) :- "
         for rel in relation:

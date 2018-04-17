@@ -108,19 +108,28 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         print "Predicate Set:"
         print rule_predicates
         print "Evidence Set:"
-        evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-        evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
-                                                        rule_predicates, rules)
-        print "Writing Domain"
-        domain_generator(entity_set, sentence_id, data_source)
-        # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
-        answer_set, answer_all = '',''
-        print answer_set, answer_all
-        map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
-        print map, map_all
-        prob, label = inference_prob(sentence_id, data_source, resource_v)
-        # prob, label = '',''
-        print prob, label
+        map = True
+        if map:
+            evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
+            map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
+            print map
+            # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
+        else:
+            map_all, map = '',''
+            answer_set, answer_all = '', ''
+            print answer_set, answer_all
+
+        prob = False
+        if prob:
+            evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
+                                                            rule_predicates, rules)
+            print "Writing Domain"
+            domain_generator(entity_set, sentence_id, data_source)
+            prob, label = inference_prob(sentence_id, data_source, resource_v)
+            print prob, label
+        else:
+            prob, label = '',''
+
         # prob = ''
         return answer_all, answer_set, map, map_all, prob, label
     return '', '', '', '', '', '','', ''

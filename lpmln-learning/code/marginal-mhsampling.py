@@ -16,13 +16,13 @@ import re
 w = 0
 curr_sample = None
 sample_attempt = None
-max_num_iteration = 50
+max_num_iteration = 5
 isStableModelVar = False
 queries = []
 query_count = {}
 domain = []
 atoms2count = []
-timeout = time.time() + 60*10
+timeout = time.time() + 60*3
 
 
 def main(prg):
@@ -115,26 +115,39 @@ def main(prg):
 
     # Compute new marginal probabilities
     output = []
-    label = 0
+    compare_prob = [None] * 2
+    label = "Null"
     for atom in query_count:
         try:
             atom_str = str(atom).encode('utf-8')
-            # print atom_str
-            print atom_str
             entities = re.findall(r'\".*?\"', atom_str)
-            # print resource[0], entities[0], resource[1] , entities[1]
             if resource[0] == entities[0] and resource[1] == entities[1]:
-                print float(query_count[atom]), float(sample_count)
                 prob = float(query_count[atom])/float(sample_count)
                 print atom, ": ", prob
-                if prob > 0:
-                    label = 1
-                output.append(str(atom) + ": " + str(prob))
+                if 'neg' in atom_str:
+                    compare_prob[0] = prob
+                else:
+                    compare_prob[1] = prob
+                output.append(str(atom) + ": " + str(round(prob, 2)))
         except:
             pass
+    label = get_label(compare_prob)
     with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
         the_file.write(str(output).encode('utf-8'))
         the_file.write(';'+str(label))
+
+
+def get_label(compare_prob):
+    if None not in compare_prob:
+        if compare_prob[0] > compare_prob[1]:
+            label = -1
+        elif compare_prob[0] < compare_prob[1]:
+            label = 1
+        elif compare_prob[0] == compare_prob[1] and compare_prob[0]==0.0:
+            label = 0
+        else:
+            label = 'equal'
+    return label
 
 
 def getSample(model):

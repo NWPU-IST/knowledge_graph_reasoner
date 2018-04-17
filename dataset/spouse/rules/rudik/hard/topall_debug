@@ -1,0 +1,200 @@
+spouse(1 ,A ,B)  :-  spouse(B ,A).
+spouse(2 ,A ,B)  :-  parent(A ,C)   ,  predecessor(A ,C)   ,  spouse(B ,A).
+spouse(6 ,A ,B)  :-  birthPlace(B ,C)   ,  nationality(B ,C)   ,  spouse(B ,A).
+spouse(7 ,A ,B)  :-  deathPlace(B ,C)   ,  restingPlace(B ,C)   ,  spouse(B ,A).
+spouse(8 ,A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsStartYear(B ,C)   ,  spouse(B ,A).
+spouse(10 ,A ,B)  :-  religion(A ,C)   ,  religion(B ,C)   ,  spouse(B ,A).
+spouse(12 ,A ,B)  :-  almaMater(A ,C)   ,  almaMater(B ,C)   ,  spouse(B ,A).
+spouse(13 ,A ,B)  :-  parent(C ,B)   ,  child(B ,C)   ,  spouse(B ,A).
+spouse(14 ,A ,B)  :-  parent(C ,B)   ,  child(A ,C)   ,  spouse(B ,A).
+spouse(15 ,A ,B)  :-  parent(A ,C)   ,  child(C ,A)   ,  spouse(B ,A).
+spouse(16 ,A ,B)  :-  parent(B ,C)   ,  successor(C ,B)   ,  spouse(B ,A).
+spouse(18 ,A ,B)  :-  birthPlace(A ,C)   ,  nationality(A ,C)   ,  spouse(B ,A).
+spouse(20 ,A ,B)  :-  parent(B ,C)   ,  predecessor(B ,C)   ,  spouse(B ,A).
+spouse(24 ,A ,B)  :-  birthYear(A ,C)   ,  birthYear(B ,C)   ,  spouse(B ,A).
+spouse(25 ,A ,B)  :-  relative(C ,A)   ,  relative(C ,B)   ,  spouse(B ,A).
+spouse(26 ,A ,B)  :-  birthPlace(B ,C)   ,  nationality(A ,C)   ,  spouse(B ,A).
+spouse(28 ,A ,B)  :-  activeYearsStartYear(B ,C)   ,  activeYearsEndYear(B ,C)   ,  spouse(B ,A).
+spouse(29 ,A ,B)  :-  starring(C ,A)   ,  starring(C ,B)   ,  spouse(B ,A).
+spouse(30 ,A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(A ,C)   ,  spouse(B ,A).
+spouse(31 ,A ,B)  :-  parent(B ,C)   ,  child(C ,B)   ,  spouse(B ,A).
+spouse(32 ,A ,B)  :-  party(A ,C)   ,  party(B ,C)   ,  spouse(B ,A).
+spouse(33 ,A ,B)  :-  occupation(A ,C)   ,  occupation(B ,C)   ,  spouse(B ,A).
+spouse(34 ,A ,B)  :-  parent(C ,A)   ,  child(A ,C)   ,  spouse(B ,A).
+spouse(35 ,A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(B ,C)   ,  spouse(B ,A).
+spouse(36 ,A ,B)  :-  parent(A ,C)   ,  successor(C ,A)   ,  spouse(B ,A).
+spouse(37 ,A ,B)  :-  parent(C ,A)   ,  predecessor(C ,B)   ,  spouse(B ,A).
+spouse(38 ,A ,B)  :-  activeYearsEndYear(A ,C)   ,  activeYearsEndYear(B ,C)   ,  spouse(B ,A).
+spouse(39 ,A ,B)  :-  parent(C ,B)   ,  successor(B ,C)   ,  spouse(B ,A).
+spouse(40 ,A ,B)  :-  spouse(B ,C)   ,  spouse(C ,B)   ,  spouse(B ,A).
+spouse(41 ,A ,B)  :-  restingPlace(A ,C)   ,  restingPlace(B ,C)   ,  spouse(B ,A).
+spouse(42 ,A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsEndYear(A ,C)   ,  spouse(B ,A).
+spouse(43 ,A ,B)  :-  parent(C ,A)   ,  successor(B ,C)   ,  spouse(B ,A).
+spouse(44 ,A ,B)  :-  parent(C ,B)   ,  predecessor(C ,B)   ,  spouse(B ,A).
+spouse(45 ,A ,B)  :-  deathPlace(A ,C)   ,  restingPlace(A ,C)   ,  spouse(B ,A).
+spouse(46 ,A ,B)  :-  successor(C ,B)   ,  predecessor(B ,C)   ,  spouse(B ,A).
+spouse(47 ,A ,B)  :-  parent(C ,A)   ,  child(B ,C)   ,  spouse(B ,A).
+spouse(48 ,A ,B)  :-  child(A ,C)   ,  child(B ,C)   ,  parent(C ,B).
+spouse(49 ,A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(B ,C)   ,  spouse(B ,A).
+spouse(50 ,A ,B)  :-  deathPlace(A ,C)   ,  deathPlace(B ,C)   ,  spouse(B ,A).
+spouse(51 ,A ,B)  :-  birthPlace(A ,C)   ,  birthPlace(B ,C)   ,  spouse(B ,A).
+spouse(52 ,A ,B)  :-  parent(C ,A)   ,  predecessor(C ,B)   ,  parent(C ,B).
+spouse(53 ,A ,B)  :-  successor(B ,C)   ,  predecessor(C ,B)   ,  spouse(B ,A).
+spouse(54 ,A ,B)  :-  parent(C ,A)   ,  predecessor(C ,A)   ,  spouse(B ,A).
+spouse(55 ,A ,B)  :-  parent(C ,B)   ,  predecessor(C ,A)   ,  spouse(B ,A).
+spouse(56 ,A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  successor(A ,C).
+spouse(57 ,A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  spouse(B ,A).
+spouse(58 ,A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(A ,C)   ,  spouse(B ,A).
+spouse(59 ,A ,B)  :-  child(A ,C)   ,  child(B ,C)   ,  spouse(B ,A).
+spouse(60 ,A ,B)  :-  parent(C ,B)   ,  parent(C ,A)   ,  predecessor(C ,A).
+spouse(61 ,A ,B)  :-  spouse(A ,C)   ,  spouse(C ,A)   ,  spouse(B ,A).
+ spouse(A,B) :- spouse(1 ,A ,B).
+spouse(A,B) :- spouse(2 ,A ,B) .
+spouse(A,B) :- spouse(6 ,A ,B) .
+spouse(A,B) :- spouse(7 ,A ,B) .
+spouse(A,B) :- spouse(8 ,A ,B) .
+spouse(A,B) :- spouse(10 ,A ,B).
+spouse(A,B) :- spouse(12 ,A ,B).
+spouse(A,B) :- spouse(13 ,A ,B).
+spouse(A,B) :- spouse(14 ,A ,B).
+spouse(A,B) :- spouse(15 ,A ,B).
+spouse(A,B) :- spouse(16 ,A ,B).
+spouse(A,B) :- spouse(18 ,A ,B).
+spouse(A,B) :- spouse(20 ,A ,B).
+spouse(A,B) :- spouse(24 ,A ,B).
+spouse(A,B) :- spouse(25 ,A ,B).
+spouse(A,B) :- spouse(26 ,A ,B).
+spouse(A,B) :- spouse(28 ,A ,B).
+spouse(A,B) :- spouse(29 ,A ,B).
+spouse(A,B) :- spouse(30 ,A ,B).
+spouse(A,B) :- spouse(31 ,A ,B).
+spouse(A,B) :- spouse(32 ,A ,B).
+spouse(A,B) :- spouse(33 ,A ,B).
+spouse(A,B) :- spouse(34 ,A ,B).
+spouse(A,B) :- spouse(35 ,A ,B).
+spouse(A,B) :- spouse(36 ,A ,B).
+spouse(A,B) :- spouse(37 ,A ,B).
+spouse(A,B) :- spouse(38 ,A ,B).
+spouse(A,B) :- spouse(39 ,A ,B).
+spouse(A,B) :- spouse(40 ,A ,B).
+spouse(A,B) :- spouse(41 ,A ,B).
+spouse(A,B) :- spouse(42 ,A ,B).
+spouse(A,B) :- spouse(43 ,A ,B).
+spouse(A,B) :- spouse(44 ,A ,B).
+spouse(A,B) :- spouse(45 ,A ,B).
+spouse(A,B) :- spouse(46 ,A ,B).
+spouse(A,B) :- spouse(47 ,A ,B).
+spouse(A,B) :- spouse(48 ,A ,B).
+spouse(A,B) :- spouse(49 ,A ,B).
+spouse(A,B) :- spouse(50 ,A ,B).
+spouse(A,B) :- spouse(51 ,A ,B).
+spouse(A,B) :- spouse(52 ,A ,B).
+spouse(A,B) :- spouse(53 ,A ,B).
+spouse(A,B) :- spouse(54 ,A ,B).
+spouse(A,B) :- spouse(55 ,A ,B).
+spouse(A,B) :- spouse(56 ,A ,B).
+spouse(A,B) :- spouse(57 ,A ,B).
+spouse(A,B) :- spouse(58 ,A ,B).
+spouse(A,B) :- spouse(59 ,A ,B).
+spouse(A,B) :- spouse(60 ,A ,B).
+spouse(A,B) :- spouse(61 ,A ,B).
+negspouse(1 ,A ,B)  :-  president(C ,B)   ,  region(C ,D)   ,  birthPlace(A ,D).
+negspouse(2 ,A ,B)  :-  birthPlace(A ,C)   ,  country(D ,C)   ,  almaMater(B ,D).
+negspouse(3 ,A ,B)  :-  country(B ,C)   ,  country(D ,C)   ,  birthPlace(A ,D).
+negspouse(4 ,A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsEndYear(A ,C)   ,  parent(B ,A).
+negspouse(5 ,A ,B)  :-  successor(C ,B)   ,  president(A ,D)   ,  C=D.
+negspouse(6 ,A ,B)  :-  birthPlace(A ,C)   ,  region(D ,C)   ,  president(D ,B).
+negspouse(7 ,A ,B)  :-  predecessor(B ,C)   ,  predecessor(C ,D)   ,  successor(A ,D).
+negspouse(8 ,A ,B)  :-  successor(C ,A)   ,  successor(D ,C)   ,  predecessor(D ,B).
+negspouse(9 ,A ,B)  :-  successor(A ,C)   ,  deathPlace(C ,D)   ,  birthPlace(B ,D).
+negspouse(11 ,A ,B)  :-  successor(B ,C)   ,  successor(A ,C)   ,  predecessor(C ,A).
+negspouse(13 ,A ,B)  :-  birthPlace(A ,C)   ,  deathPlace(D ,C)   ,  president(D ,B).
+negspouse(14 ,A ,B)  :-  activeYearsEndYear(B ,C)   ,  activeYearsEndYear(D ,C)   ,  parent(A ,D).
+negspouse(15 ,A ,B)  :-  successor(A ,B)   ,  activeYearsStartYear(B ,C)   ,  activeYearsEndYear(A ,C).
+negspouse(16 ,A ,B)  :-  successor(B ,A)   ,  deathPlace(B ,C)   ,  birthPlace(A ,C).
+negspouse(17 ,A ,B)  :-  deathPlace(B ,C)   ,  deathPlace(A ,C)   ,  predecessor(B ,A).
+negspouse(18 ,A ,B)  :-  spouse(A ,C)   ,  parent(B ,C).
+negspouse(19 ,A ,B)  :-  successor(C ,B)   ,  predecessor(C ,B)   ,  predecessor(B ,A).
+negspouse(20 ,A ,B)  :-  parent(B ,C)   ,  birthPlace(C ,D)   ,  birthPlace(A ,D).
+negspouse(21 ,A ,B)  :-  successor(B ,C)   ,  president(C ,D)   ,  successor(A ,D).
+negspouse(22 ,A ,B)  :-  successor(A ,C)   ,  president(B ,D)   ,  C=D.
+negspouse(23 ,A ,B)  :-  successor(C ,B)   ,  predecessor(B ,C)   ,  successor(A ,B).
+negspouse(24 ,A ,B)  :-  president(C ,B)   ,  deathPlace(C ,D)   ,  birthPlace(A ,D).
+negspouse(25 ,A ,B)  :-  successor(B ,C)   ,  primeMinister(C ,D)   ,  successor(A ,D).
+negspouse(26 ,A ,B)  :-  commander(C ,A)   ,  place(C ,D)   ,  deathPlace(B ,D).
+negspouse(27 ,A ,B)  :-  president(B ,C)   ,  termPeriod(A ,D)   ,  D=C.
+negspouse(28 ,A ,B)  :-  predecessor(C ,A)   ,  successor(C ,D)   ,  successor(D ,B).
+negspouse(29 ,A ,B)  :-  successor(C ,B)   ,  predecessor(B ,C)   ,  parent(A ,B).
+negspouse(30 ,A ,B)  :-  successor(A ,C)   ,  president(B ,C).
+negspouse(31 ,A ,B)  :-  spouse(C ,B)   ,  successor(C ,D)   ,  spouse(D ,A).
+negspouse(32 ,A ,B)  :-  birthPlace(B ,C)   ,  deathPlace(B ,C)   ,  parent(A ,B).
+negspouse(33 ,A ,B)  :-  office(A ,C)   ,  office(B ,C)   ,  successor(B ,A).
+negspouse(34 ,A ,B)  :-  successor(B ,C)   ,  successor(C ,D)   ,  predecessor(A ,D).
+negspouse(35 ,A ,B)  :-  primeMinister(A ,C)   ,  birthPlace(C ,D)   ,  birthPlace(B ,D).
+negspouse(36 ,A ,B)  :-  birthPlace(A ,C)   ,  headquarter(D ,C)   ,  party(B ,D).
+negspouse(37 ,A ,B)  :-  successor(B ,C)   ,  predecessor(B ,C)   ,  successor(B ,A).
+negspouse(38 ,A ,B)  :-  spouse(B ,C)   ,  parent(A ,C).
+negspouse(39 ,A ,B)  :-  successor(A ,C)   ,  parent(C ,A)   ,  parent(B ,A).
+negspouse(40 ,A ,B)  :-  parent(C ,A)   ,  child(B ,D)   ,  C=D.
+negspouse(41 ,A ,B)  :-  predecessor(C ,B)   ,  predecessor(D ,C)   ,  successor(A ,D).
+negspouse(42 ,A ,B)  :-  child(C ,B)   ,  parent(D ,C)   ,  parent(D ,A).
+negspouse(43 ,A ,B)  :-  successor(A ,C)   ,  president(D ,C)   ,  successor(B ,D).
+negspouse(44 ,A ,B)  :-  successor(C ,B)   ,  predecessor(A ,C).
+negspouse(45 ,A ,B)  :-  successor(A ,C)   ,  primeMinister(D ,C)   ,  successor(B ,D).
+negspouse(47 ,A ,B)  :-  predecessor(A ,C)   ,  successor(C ,D)   ,  successor(B ,D).
+negspouse(48 ,A ,B)  :-  parent(C ,B)   ,  title(C ,D)   ,  title(A ,D).
+negspouse(49 ,A ,B)  :-  office(A ,C)   ,  office(B ,C).
+negspouse(50 ,A ,B)  :-  successor(C ,B)   ,  president(D ,C)   ,  successor(A ,D).
+negspouse(51 ,A ,B)  :-  commander(C ,A)   ,  commander(C ,D)   ,  successor(B ,D).
+negspouse(52 ,A ,B)  :-  president(A ,C)   ,  party(C ,D)   ,  party(B ,D).
+negspouse(53 ,A ,B)  :-  activeYearsStartYear(A ,C)   ,  activeYearsEndYear(B ,C).
+negspouse(A,B) :- negspouse(1 ,A ,B).
+ negspouse(A,B) :- negspouse(2 ,A ,B).
+ negspouse(A,B) :- negspouse(3 ,A ,B).
+negspouse(A,B) :- negspouse(4 ,A ,B).
+ negspouse(A,B) :- negspouse(5 ,A ,B).
+negspouse(A,B) :- negspouse(6 ,A ,B).
+negspouse(A,B) :- negspouse(7 ,A ,B).
+negspouse(A,B) :- negspouse(8 ,A ,B).
+ negspouse(A,B) :- negspouse(9 ,A ,B).
+negspouse(A,B) :- negspouse(11 ,A ,B).
+negspouse(A,B) :- negspouse(13 ,A ,B).
+negspouse(A,B) :- negspouse(14 ,A ,B).
+negspouse(A,B) :- negspouse(15 ,A ,B).
+negspouse(A,B) :- negspouse(16 ,A ,B).
+negspouse(A,B) :- negspouse(17 ,A ,B).
+negspouse(A,B) :- negspouse(18 ,A ,B).
+negspouse(A,B) :- negspouse(19 ,A ,B).
+ negspouse(A,B) :- negspouse(20 ,A ,B).
+negspouse(A,B) :- negspouse(21 ,A ,B).
+ negspouse(A,B) :- negspouse(22 ,A ,B).
+negspouse(A,B) :- negspouse(23 ,A ,B).
+negspouse(A,B) :- negspouse(24 ,A ,B).
+negspouse(A,B) :- negspouse(25 ,A ,B).
+ negspouse(A,B) :- negspouse(26 ,A ,B).
+ negspouse(A,B) :- negspouse(27 ,A ,B).
+negspouse(A,B) :- negspouse(28 ,A ,B).
+negspouse(A,B) :- negspouse(29 ,A ,B).
+negspouse(A,B) :- negspouse(30 ,A ,B).
+negspouse(A,B) :- negspouse(31 ,A ,B).
+negspouse(A,B) :- negspouse(32 ,A ,B).
+negspouse(A,B) :- negspouse(33 ,A ,B).
+negspouse(A,B) :- negspouse(34 ,A ,B).
+negspouse(A,B) :- negspouse(35 ,A ,B).
+negspouse(A,B) :- negspouse(36 ,A ,B).
+negspouse(A,B) :- negspouse(37 ,A ,B).
+negspouse(A,B) :- negspouse(38 ,A ,B).
+negspouse(A,B) :- negspouse(39 ,A ,B).
+negspouse(A,B) :- negspouse(40 ,A ,B).
+negspouse(A,B) :- negspouse(41 ,A ,B).
+negspouse(A,B) :- negspouse(42 ,A ,B).
+negspouse(A,B) :- negspouse(43 ,A ,B).
+negspouse(A,B) :- negspouse(44 ,A ,B).
+negspouse(A,B) :- negspouse(45 ,A ,B).
+negspouse(A,B) :- negspouse(47 ,A ,B).
+ negspouse(A,B) :- negspouse(48 ,A ,B).
+negspouse(A,B) :- negspouse(49 ,A ,B).
+negspouse(A,B) :- negspouse(50 ,A ,B).
+negspouse(A,B) :- negspouse(51 ,A ,B).
+ negspouse(A,B) :- negspouse(52 ,A ,B).
+ negspouse(A,B) :- negspouse(53 ,A ,B).
