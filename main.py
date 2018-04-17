@@ -114,6 +114,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
             print map
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
+            answer_set, answer_all = '', ''
         else:
             map_all, map = '',''
             answer_set, answer_all = '', ''
@@ -132,7 +133,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
 
         # prob = ''
         return answer_all, answer_set, map, map_all, prob, label
-    return '', '', '', '', '', '','', ''
+    return '', '', '', '', '', ''
 
 
 def stats_computer(true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, false_pos):
