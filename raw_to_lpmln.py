@@ -27,10 +27,11 @@ def rule_parser_rudik(fname, predicate, pos_neg):
                     rel = rel.replace(r, rep[r])
             relation[i] = rel
         score = re.findall(r"\-?\d+.\d+$", con)
-        score = round(0.4 - float(score[0]),2)
+        score = round(0.7 - float(score[0]), 2)
         i = 0
         if score:
-            rule = str(score)+' '+pos_neg+predicate+"("+ str(it+1)+",A,B) :- "
+            # rule = str(score)+' '+pos_neg+predicate+"("+ str(it+1)+",A,B) :- "
+            rule = str(score)+' '+pos_neg+predicate+"(A,B) :- "
         else:
             rule = pos_neg + predicate + "(A,B) :- "
         for rel in relation:
@@ -82,8 +83,8 @@ def rule_parser_amie(fname, predicate):
 
 
 def rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg):
-    with open(folder_path+predicate+"_"+rule_type+pos_neg+".csv", 'wb') as resultFile:
-        wr = csv.writer(resultFile,quoting = csv.QUOTE_NONE,escapechar=' ')
+    with open(folder_path+predicate+"_"+rule_type+pos_neg+"07.csv", 'wb') as resultFile:
+        wr = csv.writer(resultFile, quoting=csv.QUOTE_NONE, escapechar=' ')
         for rule in rule_list:
             wr.writerow([rule,])
 
@@ -97,7 +98,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     folder_path = 'dataset/'+args.test_predicate+'/rules/'+args.rule_type+'/'
     path = 'dataset/'+args.test_predicate+'/rules/'+args.rule_type+'/'+args.filename+'.csv'
-    if args.rule_type=='amie':
+    if args.rule_type == 'amie':
         rule_list = rule_parser_amie(path, args.test_predicate)
     else:
         rule_list = rule_parser_rudik(path, args.test_predicate, args.pos_neg)

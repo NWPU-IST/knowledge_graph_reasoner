@@ -16,13 +16,13 @@ import re
 w = 0
 curr_sample = None
 sample_attempt = None
-max_num_iteration = 5
+max_num_iteration = 50
 isStableModelVar = False
 queries = []
 query_count = {}
 domain = []
 atoms2count = []
-timeout = time.time() + 60*3
+
 
 
 def main(prg):
@@ -70,7 +70,7 @@ def main(prg):
     iter_count = 0
     random.seed()
 
-    sample_count = 1
+    sample_count = 0
 
     # Generate First Sampling by MAP inference
     prg.ground([('base', [])])
@@ -79,6 +79,7 @@ def main(prg):
 
     # Main Loop
     for _ in range(max_num_iteration):
+        timeout = time.time() + 60 * 3
         curr_weight = w
         # print 'Sample ',sample_count,': ',curr_sample
         # print 'Weight: ' + str(w)
@@ -89,9 +90,10 @@ def main(prg):
         # Generate next sample by randomly flipping atoms
         i = 0
         while True:
-            time.sleep(.00001)
+            time.sleep(.000001)
             i+=1
-            print i, timeout - time.time()
+            break_time = timeout - time.time()
+            print i, break_time
             sample_attempt = []
             for r in curr_sample:
                 sample_attempt.append(r)
@@ -109,7 +111,10 @@ def main(prg):
                     prg.solve(sample_attempt, getSample)
                 sample_count += 1
                 break
-        if time.time() > timeout:
+            if break_time < 0:
+                print "timing out"
+                break
+        if break_time < 0:
             print "timing out"
             break
 
