@@ -63,17 +63,17 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
         #     else:
         #         prediction = 0
 
-        if true_label == 1 and label == 1:
+        if true_label == 1 and label == '1':
             true_pos += 1
-        elif true_label == 0 and label == -1:
+        elif true_label == 0 and label == '-1':
             true_neg += 1
-        elif true_label == 1 and label == -1:
+        elif true_label == 1 and label == '-1':
             false_neg += 1
-        elif true_label == 0 and label == 1:
+        elif true_label == 0 and label == '1':
             false_pos += 1
-        elif true_label == 1 and (label == 'equal' or label == 0):
+        elif true_label == 1 and (label == 'equal' or label == '0'):
             true_neutral += 1
-        elif true_label == 0 and (label == 'equal' or label == 0):
+        elif true_label == 0 and (label == 'equal' or label == '0'):
             false_neutral += 1
 
         lpmln_evaluation.append([sentence_id, true_label, triple_check, label, str(prob), str(map), str(answer_set), \
