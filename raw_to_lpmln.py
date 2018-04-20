@@ -1,7 +1,47 @@
+# -*- coding: utf-8 -*-
+
 import argparse
 import sys
 import re
 import csv
+import sparql
+from config import sparql_dbpedia
+
+prefix = "select count(*) where {"
+suffix = "}"
+ontology = " <http://dbpedia.org/ontology/"
+sparql_endpoint = sparql_dbpedia
+
+
+def get_confidence_rudik(head_query, query):
+    numerator_query = prefix + head_query + query + suffix
+    denominator_query = prefix + query + suffix
+    print numerator_query
+    print denominator_query
+    try:
+        result = sparql.query(sparql_endpoint, numerator_query)
+        numerator_value = [sparql.unpack_row(row_result) for row_result in result][0][0]
+    except:
+        numerator_value = 0
+    try:
+        result = sparql.query(sparql_endpoint, denominator_query)
+        denominator_value = [sparql.unpack_row(row_result) for row_result in result][0][0]
+    except:
+        denominator_value = 1
+    confidence = float(numerator_value)/float(denominator_value)
+    return confidence
+
+
+def get_rudik_query(relations, predicate):
+    head_query = "?subject " + ontology + predicate + "> ?object . \n"
+    query = ''
+    for relation in relations:
+        predicate = re.findall(r"(.*?)\(", relation)
+        var = re.findall(r"\((.*)\)", relation)
+        if var:
+            vars = var[0].split(",")
+            query += " ?"+vars[0] + ontology + predicate[0] + "> ?"+vars[1] + ". \n"
+    return head_query, query
 
 
 def rule_parser_rudik(fname, predicate, pos_neg):
@@ -11,6 +51,7 @@ def rule_parser_rudik(fname, predicate, pos_neg):
     rep = {"subject":"A", "object":"B", "v0":"C", "v1":"D"}
     comp = ["<",">","="]
     for it, con in enumerate(content):
+        print it,con
         relation = re.findall(r"\/([a-zA-Z]+\(.*?\))", con)
         compare = re.findall(r"([>=<]\(.*?\))", con)
         for i, com in enumerate(compare):
@@ -21,13 +62,16 @@ def rule_parser_rudik(fname, predicate, pos_neg):
                     com = com.replace(',', c)
             compare[i] = com
         relation += compare
+        head_query, query = get_rudik_query(relation, predicate)
+        score = get_confidence_rudik(head_query,query)
+        print score
         for i, rel in enumerate(relation):
             for r in rep.keys():
                 if r in rel:
                     rel = rel.replace(r, rep[r])
             relation[i] = rel
-        score = re.findall(r"\-?\d+.\d+$", con)
-        score = round(0.7 - float(score[0]), 2)
+        # score = re.findall(r"\-?\d+.\d+$", con)
+        # score = round(0.7 - float(score[0]), 2)
         i = 0
         if score:
             # rule = str(score)+' '+pos_neg+predicate+"("+ str(it+1)+",A,B) :- "
@@ -83,7 +127,7 @@ def rule_parser_amie(fname, predicate):
 
 
 def rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg):
-    with open(folder_path+predicate+"_"+rule_type+pos_neg+"sampled.csv", 'wb') as resultFile:
+    with open(folder_path+predicate+"_"+rule_type+pos_neg+"conf.csv", 'wb') as resultFile:
         wr = csv.writer(resultFile, quoting=csv.QUOTE_NONE, escapechar=' ')
         for rule in rule_list:
             wr.writerow([rule,])
