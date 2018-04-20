@@ -2,14 +2,12 @@
 
 import sparql
 from config import sparql_dbpedia
+import argparse
+import csv
+import sys
 
 sparql_endpoint = sparql_dbpedia
 suffix = "} ORDER BY RAND() LIMIT 1000"
-
-
-subject = 'Work'
-object = 'Person'
-relation = 'director'
 
 
 def get_query(subject, object, relation):
@@ -35,18 +33,20 @@ def get_examples(query):
     try:
         result = sparql.query(sparql_endpoint, query)
         examples = [sparql.unpack_row(row_result) for row_result in result]
+        examples = [map(lambda x:x.split('/')[-1].encode('utf-8'), vals) for vals in examples]
     except:
         examples = []
     if examples:
         size = len(examples)
-        train_size = 0.8 * size
+        train_size = size / 5
         return examples[:train_size], examples[train_size:]
     return [], []
 
 
 def write_examples(folder_path, file_name, examples):
-    pass
-
+    with open(folder_path+file_name+".csv", 'wb') as resultFile:
+        wr = csv.writer(resultFile,quotechar='"')
+        wr.writerows(examples)
 
 
 if __name__ == "__main__":
@@ -57,11 +57,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
     folder_path = 'dataset/'+args.test_predicate+'/input/'
 
-    positive_train, positive_test = get_examples(positive_query)
+    positive_query, negative_query = get_query(args.subject, args.object,args.test_predicate)
 
-    negative_train, negative_test = get_examples(negative_query)
+    positive_test, positive_train = get_examples(positive_query)
+    positive_test = [pos_test +[1] for pos_test in positive_test]
 
-    file_name = 'dataset/'+args.test_predicate+'/input/'+args.rule_type+'/'+args.filename+'.csv'
+    negative_test, negative_train = get_examples(negative_query)
 
-    write_examples(folder_path, file_name, examples)
+    negative_test = [neg_test +[0] for neg_test in negative_test]
+
+    file_names = {'positive_examples':positive_train, 'negative_examples': negative_train, 'test':positive_test+negative_test}
+    for file_name,examples in file_names.iteritems():
+        print "writing", file_name
+        write_examples(folder_path, file_name, examples)
 

@@ -1,0 +1,219 @@
+http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(subject,v1),0.00226
+http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/activeYearsStartYear(v0,v1) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v1),0.00602
+http://dbpedia.org/ontology/deathDate(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/deathDate(subject,v1),3.92627
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/child(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/starring(v0,subject) & !=(v0,v1) & http://dbpedia.org/ontology/starring(v1,object),0.01880
+http://dbpedia.org/ontology/occupation(subject,v0) & !=(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),10.34850
+http://dbpedia.org/ontology/imdbId(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(subject,v1),0.00827
+http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/successor(v1,subject),0.00301
+http://dbpedia.org/ontology/relative(v0,subject) & !=(v0,v1) & http://dbpedia.org/ontology/parent(v1,object),0.00677
+http://dbpedia.org/ontology/occupation(subject,v0) & !=(v0,v1) & http://dbpedia.org/ontology/deathPlace(object,v1),0.03233
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v0),0.00000
+http://dbpedia.org/ontology/birthYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1),0.01880
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v0),0.00000
+http://dbpedia.org/ontology/birthYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1),0.01504
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/parent(v0,subject),0.00000
+http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/country(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.01203
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/writer(v0,subject) & !=(v1,v0) & http://dbpedia.org/ontology/occupation(object,v1),0.00902
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(subject,v1),0.01880
+http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & >(v0,v0) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0),0.00000
+http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/predecessor(v1,object),0.00150
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/successor(v0,subject) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/successor(v1,object),0.00301
+http://dbpedia.org/ontology/starring(v0,subject) & http://dbpedia.org/ontology/country(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.00677
+http://dbpedia.org/ontology/producer(v0,subject) & !=(v0,v1) & http://dbpedia.org/ontology/starring(v1,object),0.00977
+http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(v1,subject),0.00150
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/nationality(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/starring(v0,subject) & !=(v1,v0) & http://dbpedia.org/ontology/starring(v1,object),0.01880
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/predecessor(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/starring(v0,object) & !=(v0,v1) & http://dbpedia.org/ontology/writer(v1,subject),0.00752
+http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/successor(v1,subject),0.00301
+http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0),0.00451
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/predecessor(v0,subject),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & !=(v0,v1) & http://dbpedia.org/ontology/starring(v1,subject),0.00902
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/nationality(object,v0),0.00451
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1),0.02256
+http://dbpedia.org/ontology/starring(v0,object) & !=(v0,v1) & http://dbpedia.org/ontology/starring(v1,subject),0.01880
+http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(v1,subject),0.00075
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(v1,object),0.00150
+http://dbpedia.org/ontology/successor(v0,subject) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(object,v1),0.00226
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/writer(v0,subject) & !=(v1,v0) & http://dbpedia.org/ontology/starring(v1,object),0.00752
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(v1,object),0.00150
+http://dbpedia.org/ontology/nationality(subject,v0) & http://dbpedia.org/ontology/country(v1,v0) & http://dbpedia.org/ontology/birthPlace(object,v1),11.40000
+http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/imdbId(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(subject,v1),0.00677
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0),0.00451
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/producer(v0,subject) & !=(v1,v0) & http://dbpedia.org/ontology/starring(v1,object),0.00977
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & >(v0,v0) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0),0.00000
+http://dbpedia.org/ontology/birthDate(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthDate(subject,v1),0.05263
+http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/successor(subject,v1),0.00150
+http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/predecessor(v1,subject),0.00075
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/predecessor(v1,object),0.00150
+http://dbpedia.org/ontology/birthYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1),0.01805
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/largestCity(v1,v0) & http://dbpedia.org/ontology/birthPlace(object,v1),0.00301
+http://dbpedia.org/ontology/spouse(subject,v0) & http://dbpedia.org/ontology/spouse(v0,subject) & http://dbpedia.org/ontology/spouse(object,subject),0.00075
+http://dbpedia.org/ontology/occupation(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/nationality(subject,v1),0.00902
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(subject,v1),0.07143
+http://dbpedia.org/ontology/writer(v0,subject) & !=(v0,v1) & http://dbpedia.org/ontology/starring(v1,object),0.00752
+http://dbpedia.org/ontology/relative(v0,subject) & http://dbpedia.org/ontology/relative(v0,object),0.00752
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1),0.07143
+http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & <(v0,v0) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0),0.00000
+http://dbpedia.org/ontology/deathYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(subject,v1),0.01504
+http://dbpedia.org/ontology/birthPlace(subject,v0) & !=(v0,v1) & http://dbpedia.org/ontology/deathPlace(object,v1),0.05714
+http://dbpedia.org/ontology/birthPlace(subject,v0) & !=(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.05489
+http://dbpedia.org/ontology/starring(v0,subject) & http://dbpedia.org/ontology/producer(v0,object),-0.00100
+http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/predecessor(subject,v1),0.00226
+http://dbpedia.org/ontology/predecessor(subject,v0) & http://dbpedia.org/ontology/successor(v0,subject) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/occupation(subject,v0) & http://dbpedia.org/ontology/occupation(object,v0),0.30000
+http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1),0.00827
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/predecessor(v0,subject),0.00376
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/child(subject,v0),-0.00050
+http://dbpedia.org/ontology/religion(subject,v0) & http://dbpedia.org/ontology/religion(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00075
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/imdbId(object,v1),0.00827
+http://dbpedia.org/ontology/birthYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathYear(subject,v1),0.01429
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/child(object,v0),0.00000
+http://dbpedia.org/ontology/child(subject,v0) & http://dbpedia.org/ontology/child(object,v0),0.00000
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/successor(object,v0),0.00376
+http://dbpedia.org/ontology/deathPlace(object,v0) & !=(v1,v0) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.05714
+http://dbpedia.org/ontology/birthDate(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathDate(subject,v1),0.05639
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v1),0.06992
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/successor(subject,v0),0.00602
+http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/successor(subject,v1),0.00150
+http://dbpedia.org/ontology/spouse(object,v0) & http://dbpedia.org/ontology/spouse(v0,object) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/starring(v0,subject) & http://dbpedia.org/ontology/starring(v0,object),0.00451
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/predecessor(v0,subject),0.00526
+http://dbpedia.org/ontology/occupation(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/occupation(subject,v1),0.03759
+http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/deathDate(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/deathDate(object,v1),0.05940
+http://dbpedia.org/ontology/birthDate(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/birthDate(object,v1),0.05263
+http://dbpedia.org/ontology/writer(v0,subject) & http://dbpedia.org/ontology/writer(v0,object),0.00376
+http://dbpedia.org/ontology/deathDate(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthDate(subject,v1),0.04737
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/nationality(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/restingPlace(subject,v0) & http://dbpedia.org/ontology/restingPlace(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/starring(v0,object) & !=(v1,v0) & http://dbpedia.org/ontology/producer(v1,subject),0.00977
+http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/successor(v1,subject),0.00226
+http://dbpedia.org/ontology/predecessor(subject,v0) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/successor(v1,object),0.00226
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/isPartOf(v1,v0) & http://dbpedia.org/ontology/deathPlace(object,v1),0.00526
+http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/successor(object,v1),0.00075
+http://dbpedia.org/ontology/deathYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/deathYear(object,v1),0.00526
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/birthYear(object,v0) & <(v0,v0),0.00000
+http://dbpedia.org/ontology/deathYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathYear(subject,v1),0.00526
+http://dbpedia.org/ontology/producer(v0,subject) & !=(v1,v0) & http://dbpedia.org/ontology/occupation(object,v1),0.01203
+http://dbpedia.org/ontology/almaMater(subject,v0) & http://dbpedia.org/ontology/almaMater(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/birthPlace(object,v0) & !=(v1,v0) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.05489
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/child(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & <(v0,v0) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0),-0.00250
+http://dbpedia.org/ontology/deathPlace(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.05714
+http://dbpedia.org/ontology/starring(v0,subject) & http://dbpedia.org/ontology/location(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.00526
+http://dbpedia.org/ontology/birthDate(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/birthDate(subject,v1),0.83805
+http://dbpedia.org/ontology/starring(v0,object) & http://dbpedia.org/ontology/country(v0,v1) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.00376
+http://dbpedia.org/ontology/occupation(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/writer(v1,subject),0.00902
+http://dbpedia.org/ontology/birthYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(subject,v1),0.01504
+http://dbpedia.org/ontology/parent(subject,v0) & http://dbpedia.org/ontology/child(v0,subject) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/starring(v0,object) & http://dbpedia.org/ontology/writer(v0,subject),-0.00050
+http://dbpedia.org/ontology/parent(object,v0) & http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/deathYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1),0.01429
+http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(subject,v1),0.00226
+http://dbpedia.org/ontology/deathPlace(object,v0) & !=(v1,v0) & http://dbpedia.org/ontology/occupation(subject,v1),0.03233
+http://dbpedia.org/ontology/birthPlace(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/deathPlace(subject,v1),0.06316
+http://dbpedia.org/ontology/nationality(subject,v0) & http://dbpedia.org/ontology/nationality(object,v0),0.00902
+http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1),0.06992
+http://dbpedia.org/ontology/starring(v0,subject) & http://dbpedia.org/ontology/writer(v0,object),0.00075
+http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/deathPlace(object,v0),0.06015
+http://dbpedia.org/ontology/birthYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v1),0.00827
+http://dbpedia.org/ontology/deathPlace(subject,v0) & !=(v1,v0) & http://dbpedia.org/ontology/birthPlace(object,v1),0.06316
+http://dbpedia.org/ontology/nationality(object,v0) & !=(v1,v0) & http://dbpedia.org/ontology/occupation(subject,v1),0.00752
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/successor(object,v1),0.00150
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/nationality(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/isPartOf(v1,v0) & http://dbpedia.org/ontology/birthPlace(object,v1),0.01504
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/parent(v0,subject),0.00000
+http://dbpedia.org/ontology/birthPlace(object,v0) & !=(v1,v0) & http://dbpedia.org/ontology/occupation(subject,v1),0.05188
+http://dbpedia.org/ontology/stateOfOrigin(object,v0) & http://dbpedia.org/ontology/country(v1,v0) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.00226
+http://dbpedia.org/ontology/starring(v0,object) & !=(v0,v1) & http://dbpedia.org/ontology/producer(v1,subject),0.00977
+http://dbpedia.org/ontology/parent(object,v0) & http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/successor(v1,subject),0.00226
+http://dbpedia.org/ontology/predecessor(subject,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/successor(v1,object),0.00226
+http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/successor(object,v1),0.00398
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/parent(v0,subject),0.00000
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/birthYear(object,v0) & >(v0,v0),0.00000
+http://dbpedia.org/ontology/occupation(subject,v0) & !=(v0,v1) & http://dbpedia.org/ontology/nationality(object,v1),0.00752
+http://dbpedia.org/ontology/birthYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsEndYear(object,v1),0.00977
+http://dbpedia.org/ontology/birthPlace(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.05489
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & >(v0,v0),0.00000
+http://dbpedia.org/ontology/nationality(object,v0) & http://dbpedia.org/ontology/country(v1,v0) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.01053
+http://dbpedia.org/ontology/child(subject,v0) & http://dbpedia.org/ontology/birthPlace(v0,v1) & http://dbpedia.org/ontology/deathPlace(object,v1),4.20000
+http://dbpedia.org/ontology/residence(subject,v0) & http://dbpedia.org/ontology/residence(object,v0),0.00150
+http://dbpedia.org/ontology/deathDate(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathDate(object,v1),0.05414
+http://dbpedia.org/ontology/birthYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/imdbId(object,v1),0.00677
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/relative(v0,subject) & http://dbpedia.org/ontology/relative(v0,object) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/producer(v0,object) & !=(v0,v1) & http://dbpedia.org/ontology/starring(v1,subject),0.01128
+http://dbpedia.org/ontology/deathPlace(subject,v0) & !=(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.06316
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/parent(v0,subject),-0.01050
+http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/restingPlace(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/birthPlace(subject,v0) & !=(v1,v0) & http://dbpedia.org/ontology/birthPlace(object,v1),0.05489
+http://dbpedia.org/ontology/birthDate(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthDate(object,v1),0.04962
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/isPartOf(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.01053
+http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/successor(v0,subject) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/successor(v1,object),0.21818
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/country(v1,v0) & http://dbpedia.org/ontology/deathPlace(subject,v1),0.01203
+http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/isPartOf(v0,v1) & http://dbpedia.org/ontology/deathPlace(subject,v1),6.59950
+http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/predecessor(v1,subject),0.00150
+http://dbpedia.org/ontology/occupation(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/deathPlace(subject,v1),0.02030
+http://dbpedia.org/ontology/deathDate(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathDate(subject,v1),0.05940
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/largestCity(v0,v1) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.01183
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(subject,v1),0.05564
+http://dbpedia.org/ontology/starring(v0,object) & http://dbpedia.org/ontology/producer(v0,subject),1.20000
+http://dbpedia.org/ontology/occupation(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/producer(v1,subject),0.01203
+http://dbpedia.org/ontology/deathDate(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthDate(object,v1),0.05639
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & <(v0,v0),0.00000
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/country(v0,v1) & http://dbpedia.org/ontology/nationality(subject,v1),0.01429
+http://dbpedia.org/ontology/birthYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/birthYear(subject,v1),0.01805
+http://dbpedia.org/ontology/starring(v0,object) & !=(v1,v0) & http://dbpedia.org/ontology/starring(v1,subject),0.01880
+http://dbpedia.org/ontology/nationality(subject,v0) & !=(v1,v0) & http://dbpedia.org/ontology/occupation(object,v1),3.60000
+http://dbpedia.org/ontology/predecessor(subject,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(object,v1),0.00226
+http://dbpedia.org/ontology/successor(v0,subject) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/predecessor(object,v1),0.00226
+http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/isPartOf(v0,v1) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.00526
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/parent(v0,object),0.00000
+http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(subject,v1),0.00977
+http://dbpedia.org/ontology/starring(v0,subject) & http://dbpedia.org/ontology/starring(v0,object) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/successor(subject,v1),0.00150
+http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/deathYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1),0.00752
+http://dbpedia.org/ontology/deathYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/deathYear(subject,v1),0.00602
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathYear(subject,v1),0.00752
+http://dbpedia.org/ontology/deathYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathYear(object,v1),0.00602
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/residence(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/parent(v0,subject),0.00000
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/occupation(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/starring(v1,subject),0.02481
+http://dbpedia.org/ontology/birthYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathYear(object,v1),0.01504
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/predecessor(v0,object),0.00376
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/isPartOf(v1,v0) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.01053
+http://dbpedia.org/ontology/spouse(object,subject) & http://dbpedia.org/ontology/child(object,v0) & http://dbpedia.org/ontology/child(subject,v0),0.00000
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/country(v1,v0) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.04436
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/successor(object,v1),0.00150
+http://dbpedia.org/ontology/predecessor(subject,v0) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/predecessor(object,v1),0.00226
+http://dbpedia.org/ontology/parent(object,v0) & http://dbpedia.org/ontology/child(v0,object) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/spouse(object,subject),-0.25812
+http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/spouse(v1,v0) & http://dbpedia.org/ontology/predecessor(subject,v1),0.00226
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/birthPlace(object,v0),0.06466
+http://dbpedia.org/ontology/party(subject,v0) & http://dbpedia.org/ontology/party(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/successor(subject,v1),0.08571
+http://dbpedia.org/ontology/birthDate(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathDate(object,v1),0.04737
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsEndYear(object,v1),0.05564
+http://dbpedia.org/ontology/birthYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(subject,v1),0.02256
+http://dbpedia.org/ontology/occupation(subject,v0) & http://dbpedia.org/ontology/occupation(object,v0) & http://dbpedia.org/ontology/spouse(object,subject),0.00000
+http://dbpedia.org/ontology/occupation(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.04662
