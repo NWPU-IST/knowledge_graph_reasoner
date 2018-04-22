@@ -1,0 +1,5 @@
+0.08375  negspouse(A ,B)  :-  successor(C ,B) ,  president(A ,D) ,  !C=D.
+0.0175  negspouse(A ,B)  :-  country(B ,C) ,  country(D ,C) ,  birthPlace(A ,D).
+0.01  negspouse(A ,B)  :-  predecessor(C ,B) ,  leader(D ,C) ,  birthPlace(A ,D).
+0.0275  negspouse(A ,B)  :-  successor(C ,A) ,  successor(D ,C) ,  predecessor(D ,B).
+0.06375  negspouse(A ,B)  :-  successor(A ,C) ,  deathPlace(C ,D) ,  birthPlace(B ,D).

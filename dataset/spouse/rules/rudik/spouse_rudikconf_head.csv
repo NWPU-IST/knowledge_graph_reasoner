@@ -1,0 +1,5 @@
+0.015  spouse(A ,B)  :-  predecessor(B ,C)   ,  spouse(C ,D)   ,  predecessor(A ,D).
+0.01375  spouse(A ,B)  :-  predecessor(C ,B)   ,  activeYearsStartYear(C ,D)   ,  activeYearsEndYear(A ,D).
+0.3375  spouse(A ,B)  :-  deathDate(B ,C)   ,  deathDate(A ,D)   ,  C>D.
+0.04375  spouse(A ,B)  :-  parent(C ,A)   ,  child(A ,C)   ,  spouse(B ,A).
+0.05625  spouse(A ,B)  :-  starring(C ,A)   ,  starring(D ,B)   ,  C=D.

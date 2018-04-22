@@ -1,0 +1,5 @@
+http://dbpedia.org/ontology/successor(v0,object) & !=(v0,v1) & http://dbpedia.org/ontology/president(subject,v1),0.01225
+http://dbpedia.org/ontology/country(object,v0) & http://dbpedia.org/ontology/country(v1,v0) & http://dbpedia.org/ontology/birthPlace(subject,v1),0.00350
+http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/leader(v1,v0) & http://dbpedia.org/ontology/birthPlace(subject,v1),-0.00226
+http://dbpedia.org/ontology/successor(v0,subject) & http://dbpedia.org/ontology/successor(v1,v0) & http://dbpedia.org/ontology/predecessor(v1,object),0.00262
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/deathPlace(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.00788
