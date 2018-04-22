@@ -1,3 +1,4 @@
+http://dbpedia.org/ontology/spouse(object,subject),-0.25812
 http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/spouse(v0,v1) & http://dbpedia.org/ontology/predecessor(subject,v1),0.00226
 http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/activeYearsStartYear(v0,v1) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v1),0.00602
 http://dbpedia.org/ontology/deathDate(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/deathDate(subject,v1),3.92627

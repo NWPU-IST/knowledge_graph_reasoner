@@ -198,3 +198,4 @@ negspouse(A,B) :- negspouse(50 ,A ,B).
 negspouse(A,B) :- negspouse(51 ,A ,B).
  negspouse(A,B) :- negspouse(52 ,A ,B).
  negspouse(A,B) :- negspouse(53 ,A ,B).
+:- spouse(A,B), negspouse(A,B).
