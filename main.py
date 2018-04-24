@@ -68,7 +68,6 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
             for triple_v in triples_v:
                 resource_v = [resource.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
         print resource_v
-
         answer_all, answer_set, map, map_all, prob, label = lpmln_reasoning(resource_v, rule_predicates, sentence_id,\
                                                                      data_source, rules, pos_neg)
         if not pos_neg:
@@ -101,14 +100,13 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
     evidence = []
     for entity in resource_v:
         print entity
-        evidence = distance_one_query(entity, evidence)
-        evidence = distance_two_query(entity, evidence)
-    # print evidence
+        evidence = distance_one_query(entity.decode('utf-8'), evidence)
+        evidence = distance_two_query(entity.decode('utf-8'), evidence)
     if evidence:
         print "Predicate Set:"
         print rule_predicates
         print "Evidence Set:"
-        map = True
+        map = False
         if map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
@@ -120,7 +118,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             answer_set, answer_all = '', ''
             print answer_set, answer_all
 
-        prob = False
+        prob = True
         if prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules)
@@ -141,7 +139,10 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source, tru
     rec = 0
     # false_neg = true_count-true_pos
     # false_pos = false_count - true_neg
-    tp = float(true_pos)/float(true_count)
+    if true_count:
+        tp = float(true_pos)/float(true_count)
+    else:
+        tp = 0
     if false_count:
         tn = float(true_neg)/float(false_count)
     else:
@@ -162,7 +163,7 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source, tru
     false_data_neg = str(round(1-tn,2))+' ('+str(false_pos)+'/'+str(false_count)+')'
     st = datetime.datetime.now()
     output_stats = str(st) + ' ' + data_source + ' top-' + str(top_k) + ' & ' + true_data_pos + ' & ' + false_data_pos\
-                   + ' & ' + true_data_neg + ' & ' + false_data_neg + ' & ' + str(round(pre, 2))+ ' & '+ str(round(rec, 2))
+                   + ' & ' + true_data_neg + ' & ' + false_data_neg + ' & ' + str(round(pre, 2)) + ' & ' + str(round(rec, 2))
     with open('output_all.txt', 'a') as the_file:
         the_file.write(str(output_stats)+'\n')
     print output_stats

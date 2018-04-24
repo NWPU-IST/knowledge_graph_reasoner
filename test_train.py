@@ -60,7 +60,7 @@ if __name__ == "__main__":
     positive_query, negative_query = get_query(args.subject, args.object,args.test_predicate)
 
     positive_test, positive_train = get_examples(positive_query)
-    positive_test = [pos_test +[1] for pos_test in positive_test]
+    positive_test = [[i+1]+pos_test +[1] for i,pos_test in enumerate(positive_test)]
 
     negative_test, negative_train = get_examples(negative_query)
 

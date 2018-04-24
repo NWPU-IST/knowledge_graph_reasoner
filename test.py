@@ -7,7 +7,7 @@ import sys
 
 
 def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
-    print row
+    # print row
     inferred = []
     true_count = 0
     false_count = 0
@@ -16,6 +16,7 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
     false_neg, false_pos = 0, 0
     true_neutral, false_neutral = 0, 0
     rule_predicates, rules = get_rule_predicates(data_source)
+    print rule_predicates
     lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'lpmln_label',\
                          'lpmln-prob', 'lpmln-map', 'clingo', 'prob_all',\
                                  'clingo_all', 'map_all']]
@@ -40,7 +41,6 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
 
         triple_check = triples_list[t]
         print sentence_id, triple_check, true_label, '\n'
-
         answer_all, answer_set, map, map_all, prob, label = lpmln_reasoning(triple_check,\
                                                         rule_predicates, sentence_id, data_source, rules, pos_neg)
         # if not pos_neg:
@@ -103,6 +103,6 @@ if __name__ == "__main__":
                 triples_list.append([row.get('sub').split(":")[1], row.get('obj').split(":")[1]])
             true_labels.append(row.get('class'))
             id_list.append(row.get('sid'))
-        print triples_list
+        # print triples_list
         # sys.exit()
         query_test(triples_list, id_list, true_labels, args.test_predicate, args.input, args.pos_neg)

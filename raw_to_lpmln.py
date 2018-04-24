@@ -149,7 +149,7 @@ def rule_parser_amie(fname, predicate):
 
 
 def rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg):
-    with open(folder_path+predicate+"_"+rule_type+pos_neg+"conf.csv", 'wb') as resultFile:
+    with open(folder_path+predicate+"_"+rule_type+pos_neg+"_set_conf.csv", 'wb') as resultFile:
         wr = csv.writer(resultFile, quoting=csv.QUOTE_NONE, escapechar=' ')
         for rule in rule_list:
             wr.writerow([rule,])
