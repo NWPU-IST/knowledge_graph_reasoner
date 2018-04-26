@@ -18,9 +18,11 @@ def distance_one_query(id1, distance_one):
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
+        print query
     except:
         result = sparql.query(sparql_endpoint, query_date)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
+        print query_date
     if q1_values:
         for vals in q1_values:
             vals_0 = vals[0].split('/')[-1]
@@ -34,12 +36,16 @@ def distance_one_query(id1, distance_one):
 
 
 def distance_two_query(entity, distance_two):
-    query = ' SELECT distinct ?p ?id2 ?p1 ?id3 WHERE { <http://dbpedia.org/resource/' + \
-            entity + '> ?p ?id2 .  ?id2 ?p1 ?id3 . FILTER (!regex(str(?p1), \
-                "owl","i")) .}'
+    query = ' SELECT distinct ?p ?id2 ?p1 ?id3 WHERE { <http://dbpedia.org/resource/' + entity + '> ?p ?id2 . ?id2 ?p1 \
+    ?id3 . FILTER (!regex(str(?p1), "owl","i")) . FILTER (!regex(str(?p1),"type","i")) . \
+    FILTER (!regex(str(?p1),"comment","i")) . FILTER (!regex(str(?p1),"seeAlso","i")) . \
+    FILTER (!regex(str(?p1),"label","i")) . FILTER (!regex(str(?p1),"caption","i")) . \
+    FILTER (!regex(str(?p1),"homepage","i")) . FILTER (!regex(str(?p1),"name","i")). \
+    FILTER (!regex(str(?p1),"color","i")) .}'
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
+        print query
     except:
         q1_values = []
     if q1_values:

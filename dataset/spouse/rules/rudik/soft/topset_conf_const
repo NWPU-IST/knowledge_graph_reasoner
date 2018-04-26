@@ -22,4 +22,9 @@
 0.0325  negspouse(A ,B)  :-  successor(B ,A) ,  orderInOffice(B ,C) ,  C=C.
 0.02875  negspouse(A ,B)  :-  spouse(B ,C) ,  child(C ,A).
 0.0175  negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(B ,C) ,  predecessor(A ,B).
+0.01125  spouse(A ,B)  :-  starring(C ,B) ,  writer(C ,A).
+0.58875  spouse(A ,B)  :-  spouse(B ,A).
+0.12625  spouse(A ,B)  :-  parent(C ,B) ,  parent(C ,A).
+0.04  spouse(A ,B)  :-  parent(C ,B) ,  child(A ,C).
+0.0125  spouse(A ,B)  :-  starring(C ,A) ,  producer(C ,B).
 :- spouse(A,B), negspouse(A,B).

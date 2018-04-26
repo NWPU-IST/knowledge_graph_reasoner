@@ -102,11 +102,13 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         print entity
         evidence = distance_one_query(entity.decode('utf-8'), evidence)
         evidence = distance_two_query(entity.decode('utf-8'), evidence)
+    # print evidence
     if evidence:
         print "Predicate Set:"
         print rule_predicates
         print "Evidence Set:"
         map = False
+        # sys.exit()
         if map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)

@@ -79,7 +79,7 @@ def main(prg):
 
     # Main Loop
     for _ in range(max_num_iteration):
-        timeout = time.time() + 60 * 3
+        timeout = time.time() + 60 * 2
         curr_weight = w
         # print 'Sample ',sample_count,': ',curr_sample
         # print 'Weight: ' + str(w)
@@ -90,7 +90,7 @@ def main(prg):
         # Generate next sample by randomly flipping atoms
         i = 0
         while True:
-            time.sleep(.000001)
+            time.sleep(.0000001)
             i+=1
             break_time = timeout - time.time()
             print i, break_time
@@ -148,10 +148,12 @@ def get_label(compare_prob):
             label = -1
         elif compare_prob[0] < compare_prob[1]:
             label = 1
-        elif compare_prob[0] == compare_prob[1] and compare_prob[0]==0.0:
+        elif compare_prob[0] == compare_prob[1] and compare_prob[0] == 0.0:
             label = 0
         else:
             label = 'equal'
+    else:
+        label = 'None'
     return label
 
 
