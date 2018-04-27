@@ -1,0 +1,4 @@
+0.17  negspouse(A ,B)  :-  parent(A ,B).
+0.58875  spouse(A ,B)  :-  spouse(B ,A).
+spouse("b","a").
+parent("c","a").

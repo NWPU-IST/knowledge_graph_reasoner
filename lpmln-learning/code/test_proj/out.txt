@@ -1,0 +1,8 @@
+unsat(0,"0.170000",A ,B) :-  parent(A ,B),not negspouse(A ,B) .
+negspouse(A ,B) :-  parent(A ,B), not unsat(0,"0.170000",A ,B).
+:~unsat(0,"0.170000",A ,B). [170@0,0,A ,B]
+unsat(1,"0.588750",A,A ,B,B ) :-  spouse(B ,A),not spouse(A ,B) .
+spouse(A ,B) :-  spouse(B ,A), not unsat(1,"0.588750",A,A ,B,B ).
+:~unsat(1,"0.588750",A,A ,B,B ). [588@0,1,A,A ,B,B ]
+spouse("b","a").
+parent("c","a").

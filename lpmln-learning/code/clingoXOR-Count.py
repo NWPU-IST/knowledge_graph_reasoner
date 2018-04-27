@@ -96,5 +96,5 @@ def main(prg):
 
 #end.
 
-%%
+
 #const s=0.

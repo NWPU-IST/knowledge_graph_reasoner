@@ -174,6 +174,26 @@ def inference_prob(sentence_id, data_source, resource_v):
     return probs.split(";")
 
 
+def inference_prob_mcsat(sentence_id, data_source, resource_v):
+    write_query_domain(data_source, sentence_id, resource_v)
+    print "LPMLN Probability MC-SAT Inference"
+    cmd = "lpmln2asp -i {1}{0}er_unique.txt".format(sentence_id, evidence_path)
+    print cmd
+    subprocess.call(cmd, shell=True)
+    try:
+        cmd1 = "clingo -q lpmln-learning/code/marginal-mhsampling.py out.txt"
+        print cmd1
+        subprocess.call(cmd1, shell=True)
+    except:
+        pass
+    text = open('lpmln-learning/code/lpmln_prob.txt', 'r')
+    probs = text.read()
+    text.close()
+    # with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
+    #     the_file.write('utf-8')
+    return probs.split(";")
+
+
 def domain_generator(entity_set, sentence_id, data_source):
     domain_text_pos = data_source+'~'
     domain_text_neg = 'neg'+data_source+'~'

@@ -7,6 +7,7 @@ import sympy
 import sys
 import subprocess
 
+
 class gringoFun:
 	def __init__(self, atom_name, atom_args):
 		self.name = atom_name
@@ -35,8 +36,8 @@ class gringoFun:
 numExecutionXorCount = 10
 max_num_iteration = 100
 tmp_sat_const_file = 'sat_const.lp'
-#SMSample_script = 'code/XOR-countncheck.py'
-SMSample_script = 'code/clingoXOR-Count.py'
+SMSample_script = 'code/XOR-countncheck.py'
+# SMSample_script = 'code/clingoXOR-Count.py'
 
 #program_filename = 'out.txt'
 
@@ -48,6 +49,7 @@ query_count = {}
 domain = []
 atoms2count = []
 M = []
+
 
 def getSampleFromText(txt):
 	global whole_model
@@ -73,10 +75,11 @@ def findUnsatRules(atoms):
 	for atom in atoms:
 		if atom.name.startswith('unsat'):
 			weight = float(atom.args[1])
-			print 'weight', weight
+			# print 'weight', weight
 			r = random.random()
 			if r < 1 - sympy.exp(weight):
 				M.append(atom)
+
 
 def processSample(atoms):
 	global domain
@@ -95,20 +98,39 @@ def processSample(atoms):
 			sample_attempt.append((r, True))
 			if r in query_count:
 				atoms2count.append(r)
-				print r, ' is satisfied'
+				# print r, ' is satisfied'
 		else:
 			sample_attempt.append((r, False))
 
 
+def read_input():
+	with open('lpmln-learning/code/query_domain.txt') as f:
+		content = f.readlines()
+	queries = content[0].split(',')
+	queries = [query.rstrip() for query in queries]
+	print queries
+	domain_filename = content[2]
+	resource = ast.literal_eval(content[1])
+	resource = ['"'+res+'"' for res in resource]
+	return queries, domain_filename, resource
+
+
 # Main
 program_filename = sys.argv[1]
+
+# program_filename = '../../out.txt'
+
 queries = sys.argv[2].split(',')
 domain_filename = sys.argv[3]
+
+# queries, domain_filename, resource = read_input()
+
 domain_file = open(domain_filename, 'r')
+
 for line in domain_file:
 	if len(line) <= 2:
 		continue
-	parts = line.split(' ')
+	parts = line.split('~')
 	instances = parts[1].split('&')
 	for inst in instances:
 		domain.append(gringoFun(parts[0], [eval(arg) for arg in inst.split(';')]))
@@ -134,7 +156,7 @@ try:
 	out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
 except Exception, e:
 	out = str(e.output)
-print out
+# print out
 if getSampleFromText(out):
 	processSample(whole_model)
 else:
@@ -144,8 +166,8 @@ else:
 for _ in range(max_num_iteration):
 	sample_count += 1
 	curr_sample = sample_attempt
-	print 'Sample ', sample_count, curr_sample
-	print 'M', M
+	# print 'Sample ', sample_count, curr_sample
+	# print 'M', M
 	for atom in atoms2count:
 		query_count[atom] += 1
 	# Create file with satisfaction constraints
@@ -173,7 +195,7 @@ for _ in range(max_num_iteration):
 		if 'Answer: 1' in out:
 			break
 	# Extract sample from output
-	print out
+	# print out
 	if getSampleFromText(out):
 		processSample(whole_model)
 	else:

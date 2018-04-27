@@ -26,6 +26,8 @@ def get_query(subject, object, relation):
 
     positive_query = prefix + " ?subject ?targetRelation ?object.   " \
                               "FILTER (?targetRelation = <http://dbpedia.org/ontology/"+relation+">) " + suffix
+    print positive_query
+    print negative_query
     return positive_query, negative_query
 
 
@@ -64,7 +66,7 @@ if __name__ == "__main__":
 
     negative_test, negative_train = get_examples(negative_query)
 
-    negative_test = [neg_test +[0] for neg_test in negative_test]
+    negative_test = [[i+201]+neg_test +[0] for i,neg_test in enumerate(negative_test)]
 
     file_names = {'positive_examples':positive_train, 'negative_examples': negative_train, 'test':positive_test+negative_test}
     for file_name,examples in file_names.iteritems():

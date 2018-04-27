@@ -24,7 +24,6 @@ domain = []
 atoms2count = []
 
 
-
 def main(prg):
     global w
     global curr_sample

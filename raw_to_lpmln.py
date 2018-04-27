@@ -72,7 +72,7 @@ def rule_parser_rudik(fname, predicate, pos_neg, examples):
         content = f.readlines()
     for it, con in enumerate(content):
         print it,con
-        sys.exit()
+        # sys.exit()
         relation = re.findall(r"\/([a-zA-Z]+\(.*?\))", con)
         compare = re.findall(r"([!>=<!]+?\(.*?\))", con)
         print relation+compare
