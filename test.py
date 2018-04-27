@@ -16,7 +16,6 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
     false_neg, false_pos = 0, 0
     true_neutral, false_neutral = 0, 0
     rule_predicates, rules = get_rule_predicates(data_source)
-    print rule_predicates
     lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'lpmln_label',\
                          'lpmln-prob', 'lpmln-map', 'clingo', 'prob_all',\
                                  'clingo_all', 'map_all']]
@@ -41,40 +40,43 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
 
         triple_check = triples_list[t]
         print sentence_id, triple_check, true_label, '\n'
-        answer_all, answer_set, map, map_all, prob, label = lpmln_reasoning(triple_check,\
+        answer_all, answer_set, map, map_all, prob, label, map, prob = lpmln_reasoning(triple_check,\
                                                         rule_predicates, sentence_id, data_source, rules, pos_neg)
-        # if not pos_neg:
-        #     if true_label == 1 and len(map) > 0:
-        #         true_pos += 1
-        #         prediction = 1
-        #         inferred.append({'sid': sentence_id, 'class': 1,'sub': triple_check[0], 'obj': triple_check[1]})
-        #     elif true_label == 0 and len(map) == 0:
-        #         true_neg += 1
-        #         prediction = 1
-        #     else:
-        #         prediction = 0
-        # else:
-        #     if true_label == 0 and len(map) > 0:
-        #         true_pos += 1
-        #         prediction = 1
-        #     elif true_label == 1 and len(map) == 0:
-        #         true_neg += 1
-        #         prediction = 1
-        #     else:
-        #         prediction = 0
+        if map:
+            if not pos_neg:
+                if true_label == 1 and len(map) > 0:
+                    true_pos += 1
+                    prediction = 1
+                    inferred.append({'sid': sentence_id, 'class': 1,'sub': triple_check[0], 'obj': triple_check[1]})
+                elif true_label == 0 and len(map) == 0:
+                    true_neg += 1
+                    prediction = 1
+                else:
+                    prediction = 0
+            else:
+                if true_label == 0 and len(map) > 0:
+                    true_pos += 1
+                    prediction = 1
+                elif true_label == 1 and len(map) == 0:
+                    true_neg += 1
+                    prediction = 1
+                else:
+                    prediction = 0
 
-        if true_label == 1 and label == '1':
-            true_pos += 1
-        elif true_label == 0 and label == '-1':
-            true_neg += 1
-        elif true_label == 1 and label == '-1':
-            false_neg += 1
-        elif true_label == 0 and label == '1':
-            false_pos += 1
-        elif true_label == 1 and (label == 'equal' or label == '0'):
-            true_neutral += 1
-        elif true_label == 0 and (label == 'equal' or label == '0'):
-            false_neutral += 1
+
+        if prob:
+            if true_label == 1 and label == '1':
+                true_pos += 1
+            elif true_label == 0 and label == '-1':
+                true_neg += 1
+            elif true_label == 1 and label == '-1':
+                false_neg += 1
+            elif true_label == 0 and label == '1':
+                false_pos += 1
+            elif true_label == 1 and (label == 'equal' or label == '0'):
+                true_neutral += 1
+            elif true_label == 0 and (label == 'equal' or label == '0'):
+                false_neutral += 1
 
         lpmln_evaluation.append([sentence_id, true_label, triple_check, label, str(prob), str(map), str(answer_set), \
                                  str(answer_all), str(map_all)])

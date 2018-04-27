@@ -107,12 +107,11 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         print "Predicate Set:"
         print rule_predicates
         print "Evidence Set:"
-        map = False
-        # sys.exit()
+        map = True
         if map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
-            print map
+            print map, map_all
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
             answer_set, answer_all = '', ''
         else:
@@ -120,7 +119,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             answer_set, answer_all = '', ''
             print answer_set, answer_all
 
-        prob = True
+        prob = False
         if prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules)
@@ -132,7 +131,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             prob, label = '',''
 
         # prob = ''
-        return answer_all, answer_set, map, map_all, prob, label
+        return answer_all, answer_set, map, map_all, prob, label, map, prob
     return '', '', '', '', '', ''
 
 

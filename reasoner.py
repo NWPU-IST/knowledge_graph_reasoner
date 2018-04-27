@@ -128,22 +128,21 @@ def clingo_map(sentence_id, data_source, resource_v):
 def inference_map(sentence_id, data_source, resource_v, pos_neg):
     resource_v = ["'" + res + "'" for res in resource_v]
     print "LPMLN MAP Inference"
-    cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -q {3} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+    cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -q {3},neg{3} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                         data_source + '/', top_k, rule_mining, pos_neg+data_source, sentence_id, evidence_path)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
     f = text.read()
     text.close()
-    # probs = re.findall("(\w+\(\'[\s\S].+)", f)
-    probs = re.findall("\w+\(\d+[\s\S].+", f)
-    # print probs
-    # sys.exit()
+    # print f
+    probs = re.findall("(\w+\(\'[\s\S].+)", f)
+    # probs = re.findall("\w+\(\d+[\s\S].+", f)
     probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
     probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
-    # query = pos_neg+data_source+'('+', '.join(resource_v)+') 1.0'
-    # print [p for p in probs_test if p == query]
-    # return probs, [p for p in probs_test if p == query]
+    query = [pos_neg+data_source+'('+', '.join(resource_v)+') 1.0',data_source+'('+', '.join(resource_v)+') 1.0']
+    print [p for p in probs_test if p in query]
+    return probs, [p for p in probs_test if p in query]
     return probs, probs_test
 
 
