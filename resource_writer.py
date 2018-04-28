@@ -5,12 +5,13 @@ from config import top_k, rule_mining
 import csv
 
 
+
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
     if isinstance(obj, datetime):
         serial = obj.isoformat()
         return serial
-    raise TypeError ("Type not serializable")
+    raise TypeError("Type not serializable")
 
 
 def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source,\
@@ -30,8 +31,9 @@ def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resour
             json.dump(ambiverse_resources, fp, default=json_serial)
 
     if lpmln_evaluation:
-        with open('dataset/' + data_source + '/output/top' + str(top_k)+'_' + rule_mining + '_' +input, 'wb') \
-                as csvfile:
+        st = datetime.now()
+        with open('dataset/' + data_source + '/output/top' + str(top_k)+'_' + rule_mining + '_'+str(st) + '-' + input,\
+                  'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)
 

@@ -8,7 +8,7 @@ from resource_writer import update_resources
 import pprint
 from kb_query import distance_one_query, distance_two_query
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob, domain_generator,\
-    rule_evidence_writer
+    rule_evidence_writer, inference_prob_mcsat
 from ambiverse_api import ambiverse_entity_parser
 from config import top_k
 import datetime
@@ -68,7 +68,7 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
             for triple_v in triples_v:
                 resource_v = [resource.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
         print resource_v
-        answer_all, answer_set, map, map_all, prob, label = lpmln_reasoning(resource_v, rule_predicates, sentence_id,\
+        answer_all, answer_set, map, map_all, prob, label_prob = lpmln_reasoning(resource_v, rule_predicates, sentence_id,\
                                                                      data_source, rules, pos_neg)
         if not pos_neg:
             if true_label == 'T' and len(map) > 0:
@@ -98,44 +98,47 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
 
 def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, pos_neg):
     evidence = []
+    resource_v = [entity.decode('utf-8') for entity in resource_v]
     for entity in resource_v:
         print entity
-        evidence = distance_one_query(entity.decode('utf-8'), evidence)
-        evidence = distance_two_query(entity.decode('utf-8'), evidence)
+        evidence = distance_one_query(entity, evidence)
+        evidence = distance_two_query(entity, evidence)
     # print evidence
     if evidence:
-        print "Predicate Set:"
-        print rule_predicates
+        # print "Predicate Set:"
+        # print rule_predicates
         print "Evidence Set:"
-        map = True
-        if map:
+        query_map = False
+        if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-            map_all, map = inference_map(sentence_id, data_source, resource_v, pos_neg)
-            print map, map_all
+            map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
+            print map, map_all, label_map
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
             answer_set, answer_all = '', ''
         else:
-            map_all, map = '',''
+            map_all, map, label_map = '', '', ''
             answer_set, answer_all = '', ''
             print answer_set, answer_all
 
-        prob = False
-        if prob:
+        query_prob = True
+        if query_prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules)
             print "Writing Domain"
             domain_generator(entity_set, sentence_id, data_source)
-            prob, label = inference_prob(sentence_id, data_source, resource_v)
-            print prob, label
+            # prob, label_prob = inference_prob(sentence_id, data_source, resource_v)
+            prob, label_prob = inference_prob_mcsat(sentence_id, data_source, resource_v)
+            print prob, label_prob
+            sys.exit()
         else:
-            prob, label = '',''
+            prob, label_prob = '',''
 
-        # prob = ''
-        return answer_all, answer_set, map, map_all, prob, label, map, prob
-    return '', '', '', '', '', ''
+        return answer_all, answer_set, map, map_all, prob, label_prob, label_map, query_prob, query_map
+    return '', '', '', '', '', '','', query_prob, query_map
 
 
-def stats_computer(true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, false_pos):
+def stats_computer(true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, \
+                   false_pos, true_none, false_none):
     pre = 0
     rec = 0
     # false_neg = true_count-true_pos
@@ -152,12 +155,14 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source, tru
     print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Pos: ", false_pos
     if true_pos + false_pos > 0:
         pre = float(true_pos) / float(true_pos + false_pos)
-    if true_pos + false_neg >0:
+    if true_pos + false_neg > 0:
         rec = float(true_pos) / float(true_pos + false_neg)
     print "Precision: ", pre
     print "Recall: ", rec
     print "True Neutral: ", true_neutral
     print "False Neutral: ", false_neutral
+    print "True None: ", true_none
+    print "False None: ", false_none
     true_data_pos = str(round(tp,2)) + ' ('+str(true_pos)+'/'+str(true_count)+')'
     false_data_pos = str(round(1-tp,2)) + ' (' + str(false_neg)+'/'+str(true_count)+')'
     true_data_neg = str(round(tn,2))+ ' ('+str(true_neg)+'/'+str(false_count)+')'

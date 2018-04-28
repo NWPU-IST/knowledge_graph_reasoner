@@ -6,6 +6,7 @@ import random
 import sympy
 import sys
 import subprocess
+import ast
 
 
 class gringoFun:
@@ -36,7 +37,7 @@ class gringoFun:
 numExecutionXorCount = 10
 max_num_iteration = 100
 tmp_sat_const_file = 'sat_const.lp'
-SMSample_script = 'code/XOR-countncheck.py'
+SMSample_script = 'lpmln-learn/code/XOR-countncheck.py'
 # SMSample_script = 'code/clingoXOR-Count.py'
 
 #program_filename = 'out.txt'
@@ -62,8 +63,11 @@ def getSampleFromText(txt):
 	answers = answers.lstrip(' ').lstrip('\n').lstrip('\r')
 	atoms = answers.split(' ')
 	for atom in atoms:
+		print str(atom), "---"
 		atom_name = atom.split('(')[0]
+		print atom_name
 		args = atom.split('(')[1].replace('\r', '').replace('\n', '').rstrip(')')
+		print args
 		whole_model.append(gringoFun(atom_name, [eval(arg) for arg in args.split(',')]))
 	#print whole_model
 	return True
@@ -119,12 +123,13 @@ def read_input():
 program_filename = sys.argv[1]
 
 # program_filename = '../../out.txt'
+#
+# queries = sys.argv[2].split(',')
+# domain_filename = sys.argv[3]
 
-queries = sys.argv[2].split(',')
-domain_filename = sys.argv[3]
+queries, domain_filename, resource = read_input()
 
-# queries, domain_filename, resource = read_input()
-
+print queries, domain_filename, resource, program_filename
 domain_file = open(domain_filename, 'r')
 
 for line in domain_file:
@@ -156,7 +161,7 @@ try:
 	out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
 except Exception, e:
 	out = str(e.output)
-# print out
+
 if getSampleFromText(out):
 	processSample(whole_model)
 else:
@@ -202,6 +207,42 @@ for _ in range(max_num_iteration):
 		processSample(whole_model)
 		print 'Could not find stable models. Using current sample as next sample.'
 
+
+def get_label(compare_prob):
+    if None not in compare_prob:
+        if compare_prob[0] > compare_prob[1]:
+            label = -1
+        elif compare_prob[0] < compare_prob[1]:
+            label = 1
+        elif compare_prob[0] == compare_prob[1] and compare_prob[0] == 0.0:
+            label = 0
+        else:
+            label = 'equal'
+    else:
+        label = 'None'
+    return label
+
+
 # Compute new marginal probabilities
 for atom in query_count:
-	print atom, ": ", float(query_count[atom])/float(sample_count)
+	# print atom, ": ", float(query_count[atom])/float(sample_count)
+	try:
+		atom_str = str(atom).encode('utf-8')
+		entities = re.findall(r'\".*?\"', atom_str)
+		if resource[0] == entities[0] and resource[1] == entities[1]:
+			prob = float(query_count[atom]) / float(sample_count)
+			print atom, ": ", prob
+			if 'neg' in atom_str:
+				compare_prob[0] = prob
+			else:
+				compare_prob[1] = prob
+			output.append(str(atom) + ": " + str(round(prob, 2)))
+	except:
+		pass
+
+label = get_label(compare_prob)
+with open('lpmln-learning/code/lpmln_prob_mc.txt', 'w') as the_file:
+	the_file.write(str(output).encode('utf-8'))
+	the_file.write(';' + str(label))
+
+

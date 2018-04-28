@@ -8,6 +8,7 @@ import subprocess
 from itertools import product
 
 
+
 def get_rule_predicates(data_source):
     global evidence_path
     evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/' + rule_mining + '/' + "top" + str(
@@ -75,11 +76,12 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
                         if ':' not in evidence[0] and ':' not in evidence[2]:
                             if '#' not in evidence[0] and '#' not in evidence[2]:
                                 if '&' not in evidence[0] and '&' not in evidence[2]:
-                                    item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
-                                    if evidence[0] not in entity_set and " " not in evidence[0]:
-                                        entity_set.append(evidence[0])
-                                    if evidence[2] not in entity_set and " " not in evidence[2]:
-                                        entity_set.append(evidence[2])
+                                    if ' ' not in evidence[0] and ' ' not in evidence[2]:
+                                        item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
+                                        if evidence[0] not in entity_set and " " not in evidence[0]:
+                                            entity_set.append(evidence[0])
+                                        if evidence[2] not in entity_set and " " not in evidence[2]:
+                                            entity_set.append(evidence[2])
                 except:
                     pass
 
@@ -140,10 +142,20 @@ def inference_map(sentence_id, data_source, resource_v, pos_neg):
     # probs = re.findall("\w+\(\d+[\s\S].+", f)
     probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
     probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
-    query = [pos_neg+data_source+'('+', '.join(resource_v)+') 1.0',data_source+'('+', '.join(resource_v)+') 1.0']
-    print [p for p in probs_test if p in query]
-    return probs, [p for p in probs_test if p in query]
-    return probs, probs_test
+    query = ['neg'+data_source+'('+', '.join(resource_v)+') 1.0', data_source+'('+', '.join(resource_v)+') 1.0']
+    map_output = [p for p in probs_test if p in query]
+    if map_output:
+        if len(map_output) == 1:
+            if 'neg' not in map_output[0]:
+                label = "1"
+            else:
+                label = "-1"
+        else:
+            label = "0"
+    else:
+        label = "None"
+    print label
+    return probs, map_output, label
 
 
 def write_query_domain(data_source, sentence_id,resource_v):
@@ -178,13 +190,16 @@ def inference_prob_mcsat(sentence_id, data_source, resource_v):
     print "LPMLN Probability MC-SAT Inference"
     cmd = "lpmln2asp -i {1}{0}er_unique.txt".format(sentence_id, evidence_path)
     print cmd
-    subprocess.call(cmd, shell=True)
+    FNULL = open(os.devnull, 'w')
+    subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+
     try:
-        cmd1 = "clingo -q lpmln-learning/code/marginal-mhsampling.py out.txt"
+        cmd1 = "python lpmln-learning/code/marginal-mcsat.py out.txt"
         print cmd1
-        subprocess.call(cmd1, shell=True)
+        subprocess.call(cmd1, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
     except:
-        pass
+        print "here"
+        sys.exit()
     text = open('lpmln-learning/code/lpmln_prob.txt', 'r')
     probs = text.read()
     text.close()
