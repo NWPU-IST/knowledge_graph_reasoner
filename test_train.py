@@ -7,7 +7,8 @@ import csv
 import sys
 
 sparql_endpoint = sparql_dbpedia
-suffix = "} ORDER BY RAND() LIMIT 1000"
+training_size = 10000
+suffix = "} ORDER BY RAND() LIMIT "+str(training_size)
 
 
 def get_query(subject, object, relation):
@@ -40,13 +41,14 @@ def get_examples(query):
         examples = []
     if examples:
         size = len(examples)
-        train_size = size / 5
-        return examples[:train_size], examples[train_size:]
+        # train_size = size / 5
+        return examples[:200], examples[200:]
+        # return [], examples
     return [], []
 
 
 def write_examples(folder_path, file_name, examples):
-    with open(folder_path+file_name+".csv", 'wb') as resultFile:
+    with open(folder_path+file_name+"_"+str(training_size)+".csv", 'wb') as resultFile:
         wr = csv.writer(resultFile,quotechar='"')
         wr.writerows(examples)
 
@@ -66,7 +68,7 @@ if __name__ == "__main__":
 
     negative_test, negative_train = get_examples(negative_query)
 
-    negative_test = [[i+201]+neg_test +[0] for i,neg_test in enumerate(negative_test)]
+    negative_test = [[i+201]+neg_test + [0] for i,neg_test in enumerate(negative_test)]
 
     file_names = {'positive_examples':positive_train, 'negative_examples': negative_train, 'test':positive_test+negative_test}
     for file_name,examples in file_names.iteritems():

@@ -63,5 +63,4 @@ def main(prg):
     prg.solve()
 
 #end.
-%%
 #const s=0.
