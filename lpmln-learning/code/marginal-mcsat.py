@@ -8,6 +8,7 @@ import sys
 import subprocess
 import ast
 import re
+import time
 
 
 class gringoFun:
@@ -36,7 +37,7 @@ class gringoFun:
 
 
 numExecutionXorCount = 10
-max_num_iteration = 100
+max_num_iteration = 25
 tmp_sat_const_file = 'sat_const.lp'
 SMSample_script = 'lpmln-learning/code/XOR-countncheck.py'
 # SMSample_script = 'code/clingoXOR-Count.py'
@@ -98,6 +99,8 @@ def processSample(atoms):
 	findUnsatRules(atoms)
 
 	# Do specific things with the sample: counting atom occurence
+	count = 0
+	print len(domain)
 	for r in domain:
 		if r in atoms:
 			sample_attempt.append((r, True))
@@ -106,6 +109,7 @@ def processSample(atoms):
 				# print r, ' is satisfied'
 		else:
 			sample_attempt.append((r, False))
+
 
 
 def read_input():
@@ -162,6 +166,7 @@ try:
 	out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
 except Exception, e:
 	out = str(e.output)
+	time.sleep(.0000001)
 
 if getSampleFromText(out):
 	processSample(whole_model)
@@ -170,10 +175,13 @@ else:
 	sys.exit()
 
 for _ in range(max_num_iteration):
+	print "here"
 	sample_count += 1
+	print "sample count", sample_count
 	curr_sample = sample_attempt
-	# print 'Sample ', sample_count, curr_sample
-	# print 'M', M
+	time.sleep(.0000001)
+	print 'Sample ', sample_count, curr_sample
+	print 'M', M
 	for atom in atoms2count:
 		query_count[atom] += 1
 	# Create file with satisfaction constraints
@@ -193,11 +201,13 @@ for _ in range(max_num_iteration):
 	cmd = 'clingo5 ' + SMSample_script +  ' -c s=0 ' + program_filename + ' ' + tmp_sat_const_file + ' 1'
 	out = ''
 	for _ in range(numExecutionXorCount):
+		time.sleep(.0000001)
 		try:
 			out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
 		except Exception, e:
 			out = str(e.output)
-		#print out
+			time.sleep(.0000001)
+		print out,"out-------"
 		if 'Answer: 1' in out:
 			break
 	# Extract sample from output
@@ -230,7 +240,7 @@ compare_prob = [None] * 2
 for atom in query_count:
 	# print atom, ": ", float(query_count[atom])/float(sample_count)
 	# try:
-	atom_str = str(atom).encode('utf-8')
+	atom_str = str(atom).decode('utf-8')
 	entities = re.findall(r'\((.+?)\)$', atom_str)
 	query_pair = ','.join(resource)
 	if query_pair == entities[0]:
