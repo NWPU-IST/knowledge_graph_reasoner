@@ -65,13 +65,11 @@ def getSampleFromText(txt):
 	for atom in atoms:
 		atom_name = atom.split('(')[0]
 		args = re.findall('\((.+?)\)$', atom)[0]
-		print args
-		a = [eval(arg) for arg in args.split(',')]
-		print a
-		sys.exit()
+		digit = re.findall('(\d+),',args)
+		a = digit+[eval(arg) for arg in re.findall('\".+?\"',args)]
 		# args = ','.join(arguments)
 		# args = atom.split('(')[1].replace('\r', '').replace('\n', '').rstrip(')')
-		whole_model.append(gringoFun(atom_name, [eval(arg) for arg in args.split(',')]))
+		whole_model.append(gringoFun(atom_name, a))
 	#print whole_model
 	return True
 
@@ -118,7 +116,7 @@ def read_input():
 	print queries
 	domain_filename = content[2]
 	resource = ast.literal_eval(content[1])
-	resource = ['"'+res+'"' for res in resource]
+	resource = [res for res in resource]
 	return queries, domain_filename, resource
 
 
@@ -227,25 +225,29 @@ def get_label(compare_prob):
 
 
 # Compute new marginal probabilities
+output = []
+compare_prob = [None] * 2
 for atom in query_count:
-	print atom, ": ", float(query_count[atom])/float(sample_count)
-	try:
-		atom_str = str(atom).encode('utf-8')
-		entities = re.findall(r'\".*?\"', atom_str)
-		if resource[0] == entities[0] and resource[1] == entities[1]:
-			prob = float(query_count[atom]) / float(sample_count)
-			print atom, ": ", prob
-			if 'neg' in atom_str:
-				compare_prob[0] = prob
-			else:
-				compare_prob[1] = prob
-			output.append(str(atom) + ": " + str(round(prob, 2)))
-	except:
-		pass
+	# print atom, ": ", float(query_count[atom])/float(sample_count)
+	# try:
+	atom_str = str(atom).encode('utf-8')
+	entities = re.findall(r'\((.+?)\)$', atom_str)
+	query_pair = ','.join(resource)
+	if query_pair == entities[0]:
+		print atom_str
+		prob = float(query_count[atom]) / float(sample_count)
+		print atom, ": ", prob
+		if 'neg' in atom_str:
+			compare_prob[0] = prob
+		else:
+			compare_prob[1] = prob
+		output.append(str(atom) + ": " + str(round(prob, 2)))
+	# except:
+	# 	pass
 
-# label = get_label(compare_prob)
-# with open('lpmln-learning/code/lpmln_prob_mc.txt', 'w') as the_file:
-# 	the_file.write(str(output).encode('utf-8'))
-# 	the_file.write(';' + str(label))
+label = get_label(compare_prob)
+with open('lpmln-learning/code/lpmln_prob_mc.txt', 'w') as the_file:
+	the_file.write(str(output).encode('utf-8'))
+	the_file.write(';' + str(label))
 
 

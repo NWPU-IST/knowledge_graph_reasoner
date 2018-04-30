@@ -198,9 +198,8 @@ def inference_prob_mcsat(sentence_id, data_source, resource_v):
         print cmd1
         subprocess.call(cmd1, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
     except:
-        print "here"
-        sys.exit()
-    text = open('lpmln-learning/code/lpmln_prob.txt', 'r')
+        pass
+    text = open('lpmln-learning/code/lpmln_prob_mc.txt', 'r')
     probs = text.read()
     text.close()
     # with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:

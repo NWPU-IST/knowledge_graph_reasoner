@@ -129,7 +129,6 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             # prob, label_prob = inference_prob(sentence_id, data_source, resource_v)
             prob, label_prob = inference_prob_mcsat(sentence_id, data_source, resource_v)
             print prob, label_prob
-            sys.exit()
         else:
             prob, label_prob = '',''
 
