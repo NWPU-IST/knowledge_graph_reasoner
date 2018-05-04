@@ -60,10 +60,13 @@ def getSampleFromText(txt):
 		return False
 	whole_model = []
 	answers = txt.split('Answer: 1')[1]
+	print "========",answers,"========="
 	answers = answers.split('Optimization:')[0]
 	answers = answers.lstrip(' ').lstrip('\n').lstrip('\r')
+	print answers,"++++++++++++"
 	atoms = answers.split(' ')
 	for atom in atoms:
+		print atom,"---"
 		atom_name = atom.split('(')[0]
 		args = re.findall('\((.+?)\)$', atom)[0]
 		digit = re.findall('(\d+),',args)
@@ -109,6 +112,22 @@ def processSample(atoms):
 				# print r, ' is satisfied'
 		else:
 			sample_attempt.append((r, False))
+
+	# atoms = []
+	# domain = []
+	# query_count = []
+	# sample_attempt = []
+	# atoms2count = []
+    #
+	# def parse_domain(r):
+	# 	if r in atoms:
+	# 		sample_attempt.append((r, True))
+	# 		if r in query_count:
+	# 			atoms2count.append(r)
+	# 		else:
+	# 			sample_attempt.append((r, False))
+    #
+	# [parse_domain(r) for r in domain]
 
 
 
@@ -238,7 +257,7 @@ def get_label(compare_prob):
 output = []
 compare_prob = [None] * 2
 for atom in query_count:
-	# print atom, ": ", float(query_count[atom])/float(sample_count)
+	print atom, ": ", float(query_count[atom])/float(sample_count)
 	# try:
 	atom_str = str(atom).decode('utf-8')
 	entities = re.findall(r'\((.+?)\)$', atom_str)

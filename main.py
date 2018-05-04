@@ -8,7 +8,7 @@ from resource_writer import update_resources
 import pprint
 from kb_query import distance_one_query, distance_two_query
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob, domain_generator,\
-    rule_evidence_writer, inference_prob_mcsat
+    rule_evidence_writer, inference_prob_mcsat, inference_map_weight
 from ambiverse_api import ambiverse_entity_parser
 from config import top_k
 import datetime
@@ -108,10 +108,11 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         # print "Predicate Set:"
         # print rule_predicates
         print "Evidence Set:"
-        query_map = False
+        query_map = True
         if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-            map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
+            # map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
+            map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v, pos_neg)
             print map, map_all, label_map
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
             answer_set, answer_all = '', ''
@@ -120,7 +121,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             answer_set, answer_all = '', ''
             print answer_set, answer_all
 
-        query_prob = True
+        query_prob = False
         if query_prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules)

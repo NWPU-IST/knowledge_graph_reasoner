@@ -46,6 +46,11 @@ def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
                 false_none += 1
             elif true_label == 1 and label_map == 'None':
                 true_none += 1
+            elif true_label == 0 and label_map == '0':
+                false_neutral += 1
+            elif true_label == 1 and label_map == '0':
+                true_neutral += 1
+
 
         if query_prob:
             if true_label == 1 and label_prob == '1':

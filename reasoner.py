@@ -158,6 +158,44 @@ def inference_map(sentence_id, data_source, resource_v, pos_neg):
     return probs, map_output, label
 
 
+def inference_map_weight(sentence_id, data_source, resource_v, pos_neg):
+    resource_v = ['"' + res + '"' for res in resource_v]
+    print "LPMLN MAP Inference"
+    cmd = "lpmln2asp -i {0}rules/{2}/soft/top{1} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+                                        data_source + '/', top_k, rule_mining, pos_neg+data_source, sentence_id, evidence_path)
+    print cmd
+    FNULL = open(os.devnull, 'w')
+    subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+    text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
+    f = text.read()
+    text.close()
+    probs = re.findall("\d+?\n(\w+\(.*\))", f)
+    answer_set = probs[-1]
+    if answer_set:
+        answer_set = answer_set.split(' ')
+        # probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
+        # probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
+        query = ['neg'+data_source+'('+','.join(resource_v)+')', data_source+'('+','.join(resource_v)+')']
+        for p in answer_set:
+            print p , query
+        map_output = [p for p in answer_set if p in query]
+        print "output",map_output
+    else:
+        map_output = []
+    if map_output:
+        if len(map_output) == 1:
+            if 'neg' not in map_output[0]:
+                label = "1"
+            else:
+                label = "-1"
+        else:
+            label = "0"
+    else:
+        label = "None"
+    print label
+    return probs, map_output, label
+
+
 def write_query_domain(data_source, sentence_id,resource_v):
     with open('lpmln-learning/code/query_domain.txt', 'w') as the_file:
         the_file.write('neg'+data_source+','+data_source+'\n')
