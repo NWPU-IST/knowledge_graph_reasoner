@@ -7,7 +7,6 @@ import sys
 
 
 def query_test(triples_list, id_list, true_labels, data_source, input, pos_neg):
-    # print row
     inferred = []
     true_count = 0
     false_count = 0

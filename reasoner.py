@@ -38,7 +38,8 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
                             if '#' not in evidence[0] and '#' not in evidence[2]:
                                 if '&' not in evidence[0] and '&' not in evidence[2]:
                                     if '=' not in evidence[0] and '=' not in evidence[2]:
-                                        item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
+                                        if ' ' not in evidence[0] and ' ' not in evidence[2]:
+                                            item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
                                     # if evidence[0] not in entity_set:
                                     #     entity_set.append(evidence[0])
                                     # if evidence[2] not in entity_set:
@@ -50,7 +51,8 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
             if '*' not in i:
                 try:
                     # print i
-                    csvfile.write(i+'\n')
+                    csvfile.write(i.encode('utf-8') + '\n')
+                    # csvfile.write(i+'\n')
                 except:
                     pass
     with open(evidence_path + str(sentence_id) + '_.txt', 'r') as f, \
@@ -170,16 +172,15 @@ def inference_map_weight(sentence_id, data_source, resource_v, pos_neg):
     f = text.read()
     text.close()
     probs = re.findall("\d+?\n(\w+\(.*\))", f)
-    answer_set = probs[-1]
-    if answer_set:
+    if probs:
+        answer_set = probs[-1]
         answer_set = answer_set.split(' ')
+        print answer_set
         # probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
         # probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
         query = ['neg'+data_source+'('+','.join(resource_v)+')', data_source+'('+','.join(resource_v)+')']
-        for p in answer_set:
-            print p , query
-        map_output = [p for p in answer_set if p in query]
-        print "output",map_output
+        print query
+        map_output = [p for p in answer_set if p.decode('utf-8') in query]
     else:
         map_output = []
     if map_output:

@@ -111,9 +111,10 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         query_map = True
         if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-            # map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
-            map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v, pos_neg)
-            print map, map_all, label_map
+            # print evidence_set, entity_set
+            map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
+            # map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v, pos_neg)
+            print map, label_map
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
             answer_set, answer_all = '', ''
         else:
