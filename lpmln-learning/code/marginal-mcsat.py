@@ -59,23 +59,25 @@ def getSampleFromText(txt):
 	if 'UNSATISFIABLE' in txt:
 		return False
 	whole_model = []
-	answers = txt.split('Answer: 1')[1]
-	print "========",answers,"========="
-	answers = answers.split('Optimization:')[0]
-	answers = answers.lstrip(' ').lstrip('\n').lstrip('\r')
-	print answers,"++++++++++++"
-	atoms = answers.split(' ')
-	for atom in atoms:
-		print atom,"---"
-		atom_name = atom.split('(')[0]
-		args = re.findall('\((.+?)\)$', atom)[0]
-		digit = re.findall('(\d+),',args)
-		a = digit+[eval(arg) for arg in re.findall('\".+?\"',args)]
-		# args = ','.join(arguments)
-		# args = atom.split('(')[1].replace('\r', '').replace('\n', '').rstrip(')')
-		whole_model.append(gringoFun(atom_name, a))
-	#print whole_model
-	return True
+	probs = re.findall("\d+?\n(\w+\(.*\))", txt)
+	if probs:
+		answers = probs[0]
+	# answers = txt.split('Answer: 1')[1]
+	# print "========",answers,"========="
+	# answers = answers.split('Optimization:')[0]
+	# answers = answers.lstrip(' ').lstrip('\n').lstrip('\r')
+	# print answers,"++++++++++++"
+		atoms = answers.split(' ')
+		for atom in atoms:
+			atom_name = atom.split('(')[0]
+			args = re.findall('\((.+?)\)$', atom)[0]
+			digit = re.findall('(\d+),',args)
+			a = digit+[eval(arg) for arg in re.findall('\".+?\"',args)]
+			# args = ','.join(arguments)
+			# args = atom.split('(')[1].replace('\r', '').replace('\n', '').rstrip(')')
+			whole_model.append(gringoFun(atom_name, a))
+		return True
+	return False
 
 
 def findUnsatRules(atoms):
@@ -153,7 +155,7 @@ program_filename = sys.argv[1]
 
 queries, domain_filename, resource = read_input()
 
-print queries, domain_filename, resource, program_filename
+# print queries, domain_filename, resource, program_filename
 domain_file = open(domain_filename, 'r')
 
 for line in domain_file:
@@ -167,8 +169,8 @@ for line in domain_file:
 		for inst in instances:
 			query_count[gringoFun(parts[0], [eval(arg) for arg in inst.split(';')])] = 0
 
-print 'domain', domain
-print 'query atoms', query_count.keys()
+# print 'domain', domain
+# print 'query atoms', query_count.keys()
 
 iter_count = 0
 random.seed()
@@ -181,6 +183,7 @@ whole_model = None
 #prg.ground([('base', [])])
 #prg.solve([], getSample)
 cmd = 'clingo ' + program_filename + ' 1'
+print cmd
 try:
 	out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
 except Exception, e:
@@ -194,13 +197,12 @@ else:
 	sys.exit()
 
 for _ in range(max_num_iteration):
-	print "here"
 	sample_count += 1
-	print "sample count", sample_count
+	# print "sample count", sample_count
 	curr_sample = sample_attempt
 	time.sleep(.0000001)
-	print 'Sample ', sample_count, curr_sample
-	print 'M', M
+	# print 'Sample ', sample_count, curr_sample
+	# print 'M', M
 	for atom in atoms2count:
 		query_count[atom] += 1
 	# Create file with satisfaction constraints
@@ -218,6 +220,8 @@ for _ in range(max_num_iteration):
 
 	# Generate next sample
 	cmd = 'clingo5 ' + SMSample_script +  ' -c s=0 ' + program_filename + ' ' + tmp_sat_const_file + ' 1'
+	print cmd
+	# sys.exit()
 	out = ''
 	for _ in range(numExecutionXorCount):
 		time.sleep(.0000001)
@@ -238,6 +242,7 @@ for _ in range(max_num_iteration):
 		print 'Could not find stable models. Using current sample as next sample.'
 
 
+
 def get_label(compare_prob):
     if None not in compare_prob:
         if compare_prob[0] > compare_prob[1]:
@@ -256,8 +261,10 @@ def get_label(compare_prob):
 # Compute new marginal probabilities
 output = []
 compare_prob = [None] * 2
+# print query_count
+sys.exit()
 for atom in query_count:
-	print atom, ": ", float(query_count[atom])/float(sample_count)
+	# print atom, ": ", float(query_count[atom])/float(sample_count)
 	# try:
 	atom_str = str(atom).decode('utf-8')
 	entities = re.findall(r'\((.+?)\)$', atom_str)

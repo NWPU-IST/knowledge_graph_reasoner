@@ -129,40 +129,55 @@ def clingo_map(sentence_id, data_source, resource_v):
     return probs, probs_test
 
 
+def get_label(f, data_source, resource_v):
+    probs, map_output = [], []
+    if 'UNSATISFIABLE' in f:
+        label = "UNSAT"
+    else:
+        probs = re.findall("\d+?\n(\w+\(.*\))", f)
+        if probs:
+            answer_set = probs[-1]
+            answer_set = answer_set.split(' ')
+            # probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
+            # probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
+            query = ['neg'+data_source+'('+','.join(resource_v)+')', data_source+'('+','.join(resource_v)+')']
+            map_output = [p for p in answer_set if p.decode('utf-8') in query]
+        else:
+            map_output = []
+
+        if map_output:
+            if len(map_output) == 1:
+                if 'neg' not in map_output[0]:
+                    label = "1"
+                else:
+                    label = "-1"
+            else:
+                label = "0"
+        else:
+            label = "None"
+    print label
+    return probs, map_output, label
+
+
+
+
 def inference_map(sentence_id, data_source, resource_v, pos_neg):
-    resource_v = ["'" + res + "'" for res in resource_v]
-    print "LPMLN MAP Inference"
-    cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -q {3},neg{3} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+    print resource_v
+    resource_v = ['"' + res + '"' for res in resource_v]
+    cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                         data_source + '/', top_k, rule_mining, pos_neg+data_source, sentence_id, evidence_path)
     print cmd
-    subprocess.call(cmd, shell=True)
+    FNULL = open(os.devnull, 'w')
+    subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
     f = text.read()
     text.close()
-    # print f
-    probs = re.findall("(\w+\(\'[\s\S].+)", f)
-    # probs = re.findall("\w+\(\d+[\s\S].+", f)
-    probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
-    query = ['neg'+data_source+'('+', '.join(resource_v)+') 1.0', data_source+'('+', '.join(resource_v)+') 1.0']
-    map_output = [p for p in probs_test if p in query]
-    if map_output:
-        if len(map_output) == 1:
-            if 'neg' not in map_output[0]:
-                label = "1"
-            else:
-                label = "-1"
-        else:
-            label = "0"
-    else:
-        label = "None"
-    print label
+    probs, map_output, label = get_label(f, data_source, resource_v)
     return probs, map_output, label
 
 
 def inference_map_weight(sentence_id, data_source, resource_v, pos_neg):
     resource_v = ['"' + res + '"' for res in resource_v]
-    print "LPMLN MAP Inference"
     cmd = "lpmln2asp -i {0}rules/{2}/soft/top{1} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                         data_source + '/', top_k, rule_mining, pos_neg+data_source, sentence_id, evidence_path)
     print cmd
@@ -171,29 +186,7 @@ def inference_map_weight(sentence_id, data_source, resource_v, pos_neg):
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
     f = text.read()
     text.close()
-    probs = re.findall("\d+?\n(\w+\(.*\))", f)
-    if probs:
-        answer_set = probs[-1]
-        answer_set = answer_set.split(' ')
-        print answer_set
-        # probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-        # probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and pos_neg+data_source in p]
-        query = ['neg'+data_source+'('+','.join(resource_v)+')', data_source+'('+','.join(resource_v)+')']
-        print query
-        map_output = [p for p in answer_set if p.decode('utf-8') in query]
-    else:
-        map_output = []
-    if map_output:
-        if len(map_output) == 1:
-            if 'neg' not in map_output[0]:
-                label = "1"
-            else:
-                label = "-1"
-        else:
-            label = "0"
-    else:
-        label = "None"
-    print label
+    probs, map_output, label = get_label(f, data_source, resource_v)
     return probs, map_output, label
 
 

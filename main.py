@@ -10,7 +10,7 @@ from kb_query import distance_one_query, distance_two_query
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob, domain_generator,\
     rule_evidence_writer, inference_prob_mcsat, inference_map_weight
 from ambiverse_api import ambiverse_entity_parser
-from config import top_k
+from config import top_k, method
 import datetime
 
 
@@ -108,12 +108,12 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         # print "Predicate Set:"
         # print rule_predicates
         print "Evidence Set:"
-        query_map = True
+        query_map = False
         if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
-            map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
-            # map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v, pos_neg)
+            # map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
+            map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v, pos_neg)
             print map, label_map
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
             answer_set, answer_all = '', ''
@@ -122,7 +122,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             answer_set, answer_all = '', ''
             print answer_set, answer_all
 
-        query_prob = False
+        query_prob = True
         if query_prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules)
@@ -139,7 +139,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
 
 
 def stats_computer(true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, \
-                   false_pos, true_none, false_none):
+                   false_pos, true_none, false_none,true_unsat,false_unsat):
     pre = 0
     rec = 0
     # false_neg = true_count-true_pos
@@ -152,23 +152,42 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source, tru
         tn = float(true_neg)/float(false_count)
     else:
         tn = 0
+    print method, top_k, 'output'
     print "True Count:", true_count, "True Pos: ", true_pos, "=>", tp, "False Neg: ", false_neg
     print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Pos: ", false_pos
     if true_pos + false_pos > 0:
         pre = float(true_pos) / float(true_pos + false_pos)
     if true_pos + false_neg > 0:
         rec = float(true_pos) / float(true_pos + false_neg)
+
     print "Precision: ", pre
     print "Recall: ", rec
     print "True Neutral: ", true_neutral
     print "False Neutral: ", false_neutral
     print "True None: ", true_none
     print "False None: ", false_none
+    print "True UNSAT: ", true_unsat
+    print "False UNSAT: ", false_unsat
+    st = datetime.datetime.now()
+    with open(method+'_'+top_k+'_output.txt','a') as file:
+        file.write(str(st))
+        file.write("-------------------------------"+'\n')
+        file.write("True Neutral: " + str(true_neutral) + '\n')
+        file.write("False Neutral: " + str(false_neutral) + '\n')
+        file.write("True None: " + str(true_none) + '\n')
+        file.write("False None: " + str(false_none) + '\n')
+        file.write("True UNSAT: " + str(true_unsat) + '\n')
+        file.write("False UNSAT: " + str(false_unsat) + '\n')
+        file.write("True Count:" + str(true_count) + " True Pos: " + str(true_pos) + " False Neg: " + \
+                   str(false_neg) + '\n')
+        file.write("False Count: " + str(false_count) + " True Neg: " + str(true_neg) + " False Pos: " +\
+                   str(false_pos) + '\n')
+        file.write("-------------------------------")
     true_data_pos = str(round(tp,2)) + ' ('+str(true_pos)+'/'+str(true_count)+')'
     false_data_pos = str(round(1-tp,2)) + ' (' + str(false_neg)+'/'+str(true_count)+')'
     true_data_neg = str(round(tn,2))+ ' ('+str(true_neg)+'/'+str(false_count)+')'
     false_data_neg = str(round(1-tn,2))+' ('+str(false_pos)+'/'+str(false_count)+')'
-    st = datetime.datetime.now()
+
     output_stats = str(st) + ' ' + data_source + ' top-' + str(top_k) + ' & ' + true_data_pos + ' & ' + false_data_pos\
                    + ' & ' + true_data_neg + ' & ' + false_data_neg + ' & ' + str(round(pre, 2)) + ' & ' + str(round(rec, 2))
     with open('output_all.txt', 'a') as the_file:
