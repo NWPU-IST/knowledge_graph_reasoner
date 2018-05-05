@@ -41,20 +41,21 @@ class Propagator:
         #print self.__states
 
     def check(self, control):
-        state = self.__states[control.thread_id]
-        for id, xor in state.items():
-            nogood     = []
-            constraint = xor[0][0]
-            parity     = xor[0][1]
+        if self.__states:
+            state = self.__states[control.thread_id]
+            for id, xor in state.items():
+                nogood     = []
+                constraint = xor[0][0]
+                parity     = xor[0][1]
 
-            for literal in constraint:
-                if control.assignment.is_true(literal):
-                    nogood.append(literal)
-                else:
-                    nogood.append(-literal)
-            if len([x for x in nogood if x > 0]) % 2 != parity:
-                if not control.add_nogood(nogood) or not control.propagate():
-                    return
+                for literal in constraint:
+                    if control.assignment.is_true(literal):
+                        nogood.append(literal)
+                    else:
+                        nogood.append(-literal)
+                if len([x for x in nogood if x > 0]) % 2 != parity:
+                    if not control.add_nogood(nogood) or not control.propagate():
+                        return
 
 def main(prg):
     s = prg.get_const("s")

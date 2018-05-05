@@ -262,7 +262,7 @@ def get_label(compare_prob):
 output = []
 compare_prob = [None] * 2
 # print query_count
-sys.exit()
+# sys.exit()
 for atom in query_count:
 	# print atom, ": ", float(query_count[atom])/float(sample_count)
 	# try:
