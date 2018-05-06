@@ -105,7 +105,6 @@ def processSample(atoms):
 
 	# Do specific things with the sample: counting atom occurence
 	count = 0
-	print len(domain)
 	for r in domain:
 		if r in atoms:
 			sample_attempt.append((r, True))
@@ -138,7 +137,7 @@ def read_input():
 		content = f.readlines()
 	queries = content[0].split(',')
 	queries = [query.rstrip() for query in queries]
-	print queries
+	# print queries
 	domain_filename = content[2]
 	resource = ast.literal_eval(content[1])
 	resource = [res for res in resource]
@@ -220,7 +219,7 @@ for _ in range(max_num_iteration):
 
 	# Generate next sample
 	cmd = 'clingo5 ' + SMSample_script +  ' -c s=0 ' + program_filename + ' ' + tmp_sat_const_file + ' 1'
-	print cmd
+	# print cmd
 	# sys.exit()
 	out = ''
 	for _ in range(numExecutionXorCount):
@@ -230,7 +229,6 @@ for _ in range(max_num_iteration):
 		except Exception, e:
 			out = str(e.output)
 			time.sleep(.0000001)
-		print out,"out-------"
 		if 'Answer: 1' in out:
 			break
 	# Extract sample from output
@@ -270,7 +268,6 @@ for atom in query_count:
 	entities = re.findall(r'\((.+?)\)$', atom_str)
 	query_pair = ','.join(resource)
 	if query_pair == entities[0]:
-		print atom_str
 		prob = float(query_count[atom]) / float(sample_count)
 		print atom, ": ", prob
 		if 'neg' in atom_str:

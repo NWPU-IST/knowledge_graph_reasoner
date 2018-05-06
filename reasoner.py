@@ -228,8 +228,10 @@ def inference_prob_mcsat(sentence_id, data_source, resource_v):
     try:
         cmd1 = "python lpmln-learning/code/marginal-mcsat.py out.txt"
         print cmd1
-        subprocess.call(cmd1, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+        # subprocess.call(cmd1, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+        subprocess.call(cmd1, shell=True)
     except:
+        print "here you go"
         pass
     text = open('lpmln-learning/code/lpmln_prob_mc.txt', 'r')
     probs = text.read()
