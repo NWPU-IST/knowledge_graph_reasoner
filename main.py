@@ -112,9 +112,12 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
-            # map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
-            map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v, pos_neg)
-            print map, label_map
+            if evidence_set:
+                # map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
+                map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v, pos_neg)
+                print map, label_map
+            else:
+                map_all, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD'
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
             answer_set, answer_all = '', ''
         else:
@@ -127,10 +130,13 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules)
             print "Writing Domain"
-            domain_generator(entity_set, sentence_id, data_source)
-            # prob, label_prob = inference_prob(sentence_id, data_source, resource_v)
-            prob, label_prob = inference_prob_mcsat(sentence_id, data_source, resource_v)
-            print prob, label_prob
+            if evidence_set:
+                domain_generator(entity_set, sentence_id, data_source)
+                # prob, label_prob = inference_prob(sentence_id, data_source, resource_v)
+                prob, label_prob = inference_prob_mcsat(sentence_id, data_source, resource_v)
+                print prob, label_prob
+            else:
+                prob, label_prob = 'NO_EVD', 'NO_EVD'
         else:
             prob, label_prob = '',''
 
@@ -139,7 +145,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
 
 
 def stats_computer(true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, \
-                   false_pos, true_none, false_none,true_unsat,false_unsat):
+                   false_pos, true_none, false_none,true_unsat,false_unsat, true_no_evd, false_no_evd):
     pre = 0
     rec = 0
     # false_neg = true_count-true_pos
@@ -168,6 +174,8 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source, tru
     print "False None: ", false_none
     print "True UNSAT: ", true_unsat
     print "False UNSAT: ", false_unsat
+    print "True NO EVD: ", true_no_evd
+    print "False NO EVD: ", false_no_evd
     st = datetime.datetime.now()
     with open(method+'_'+top_k+'_output.txt','a') as file:
         file.write(str(st))
@@ -178,6 +186,8 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source, tru
         file.write("False None: " + str(false_none) + '\n')
         file.write("True UNSAT: " + str(true_unsat) + '\n')
         file.write("False UNSAT: " + str(false_unsat) + '\n')
+        file.write("True NO EVD: " + str(true_no_evd) + '\n')
+        file.write("False NO EVD: " + str(false_no_evd) + '\n')
         file.write("True Count:" + str(true_count) + " True Pos: " + str(true_pos) + " False Neg: " + \
                    str(false_neg) + '\n')
         file.write("False Count: " + str(false_count) + " True Neg: " + str(true_neg) + " False Pos: " +\

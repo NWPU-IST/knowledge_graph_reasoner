@@ -93,7 +93,7 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
         for i in item_set:
             if '*' not in i:
                 try:
-                    csvfile.write(i+'\n')
+                    csvfile.write(i.encode('utf-8')+'\n')
                 except:
                     pass
     with open(evidence_path + str(sentence_id) + '_er.txt', 'r') as f, \
@@ -244,14 +244,6 @@ def inference_prob_mcsat(sentence_id, data_source, resource_v):
 def domain_generator(entity_set, sentence_id, data_source):
     domain_text_pos = data_source+'~'
     domain_text_neg = 'neg'+data_source+'~'
-    # domain_text = ''
-    # count = 0
-    # for entity1 in entity_set:
-    #     for entity2 in entity_set:
-    #         count += 1
-    #         domain_text += '"' + entity1 + '"' + ';' + '"' + entity2 + '"'
-    #         if count < (len(entity_set)*len(entity_set)):
-    #             domain_text += '&'
     domain_text = "&".join('"%s";"%s"' % pair for pair in product(entity_set, repeat=2))
     if domain_text:
         with open(evidence_path + str(sentence_id) + "_domain.txt", "w") as text_file:

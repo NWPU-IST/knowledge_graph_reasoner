@@ -37,7 +37,7 @@ class gringoFun:
 
 
 numExecutionXorCount = 10
-max_num_iteration = 25
+max_num_iteration = 20
 tmp_sat_const_file = 'sat_const.lp'
 SMSample_script = 'lpmln-learning/code/XOR-countncheck.py'
 # SMSample_script = 'code/clingoXOR-Count.py'
