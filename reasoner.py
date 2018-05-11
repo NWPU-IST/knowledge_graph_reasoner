@@ -25,41 +25,41 @@ def get_rule_predicates(data_source):
 def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates):
     item_set = OrderedSet()
     entity_set = []
-    print rule_predicates
+    # print rule_predicates
     for evidence in evidences:
         # print evidence[1]
         if evidence[1] in rule_predicates or top_k == 0:
-            print evidence
             if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == data_source:
                 pass
             elif evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] in ["keyPerson","capital"]:
                 pass
             else:
-                print evidence
-                # try:
-                if '"' not in evidence[0] and '"' not in evidence[2]:
-                    if ':' not in evidence[0] and ':' not in evidence[2]:
-                        if '#' not in evidence[0] and '#' not in evidence[2]:
-                            if '&' not in evidence[0] and '&' not in evidence[2]:
-                                if '=' not in evidence[0] and '=' not in evidence[2]:
-                                    if ' ' not in evidence[0] and ' ' not in evidence[2]:
-                                        print evidence[0],evidence[2]
-                                        if evidence[0].isdigit():
-                                            entity_1 = evidence[0]
-                                        else:
-                                            entity_1 = '"'+evidence[0]+'"'
-                                        if evidence[2].isdigit():
-                                            entity_2 = evidence[2]
-                                        else:
-                                            entity_2 = '"'+evidence[2]+'"'
-                                        item_set.add(evidence[1] + '(' + entity_1 + ',' + entity_2 + ').')
-                # except:
-                #     pass
+                try:
+                    if '"' not in evidence[0] and '"' not in evidence[2]:
+                        if ':' not in evidence[0] and ':' not in evidence[2]:
+                            if '#' not in evidence[0] and '#' not in evidence[2]:
+                                if '&' not in evidence[0] and '&' not in evidence[2]:
+                                    if '=' not in evidence[0] and '=' not in evidence[2]:
+                                        if ' ' not in evidence[0] and ' ' not in evidence[2]:
+                                            if evidence[0].replace('.','').isdigit():
+                                                entity_1 = evidence[0]
+                                                if '.' in entity_1:
+                                                    entity_1 = entity_1.split('.')[0]
+                                            else:
+                                                entity_1 = '"'+evidence[0]+'"'
+                                            if evidence[2].replace('.','').isdigit():
+                                                entity_2 = evidence[2]
+                                                if '.' in entity_2:
+                                                    entity_2 = entity_2.split('.')[0]
+                                            else:
+                                                entity_2 = '"'+evidence[2]+'"'
+                                            item_set.add(evidence[1] + '(' + entity_1 + ',' + entity_2 + ').')
+                except:
+                    pass
         else:
             pass
             # print "here"
-    print item_set
-    sys.exit()
+    # print item_set
     with open(evidence_path + str(sentence_id) + '_.txt', 'wb') as csvfile:
         for i in item_set:
             if '*' not in i:

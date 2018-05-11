@@ -103,7 +103,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         print entity
         evidence = distance_one_query(entity, evidence)
         evidence = distance_two_query(entity, evidence)
-    # print evidence
+    # print len(evidence)
     if evidence:
         # print "Predicate Set:"
         # print rule_predicates
@@ -113,8 +113,8 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
             if evidence_set:
-                # map_all, map, label_map = inference_map(sentence_id, data_source, resource_v)
-                map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v)
+                map_all, map, label_map = inference_map(sentence_id, data_source, resource_v)
+                # map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v)
                 print map, label_map
             else:
                 map_all, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD'
@@ -165,9 +165,6 @@ def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_
         pre = float(true_pos) / float(true_pos + false_pos)
     if true_pos + false_neg > 0:
         rec = float(true_pos) / float(true_pos + false_neg)
-
-    print "Precision: ", pre
-    print "Recall: ", rec
     print "True Neutral: ", true_neutral
     print "False Neutral: ", false_neutral
     print "True None: ", true_none

@@ -1,0 +1,4 @@
+0.0429591836735  author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.0490816326531  author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0138775510204  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.128469387755  author(A ,B)  :-  author(C ,B) ,  subsequentWork(A ,C).

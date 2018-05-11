@@ -1,3 +1,4 @@
+:-  negauthor(A ,B), author(A ,B).
 author(A ,B)  :-  author(C ,B) ,  type(C ,D) ,  type(A ,D).
 author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
 author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.

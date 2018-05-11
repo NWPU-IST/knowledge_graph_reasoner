@@ -18,11 +18,11 @@ def distance_one_query(id1, distance_one):
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
-        print query
+        # print query
     except:
         result = sparql.query(sparql_endpoint, query_date)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
-        print query_date
+        # print query_date
     if q1_values:
         for vals in q1_values:
             vals_0 = vals[0].split('/')[-1]
