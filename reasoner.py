@@ -41,18 +41,8 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
                                 if '&' not in evidence[0] and '&' not in evidence[2]:
                                     if '=' not in evidence[0] and '=' not in evidence[2]:
                                         if ' ' not in evidence[0] and ' ' not in evidence[2]:
-                                            if evidence[0].replace('.','').isdigit():
-                                                entity_1 = evidence[0]
-                                                if '.' in entity_1:
-                                                    entity_1 = entity_1.split('.')[0]
-                                            else:
-                                                entity_1 = '"'+evidence[0]+'"'
-                                            if evidence[2].replace('.','').isdigit():
-                                                entity_2 = evidence[2]
-                                                if '.' in entity_2:
-                                                    entity_2 = entity_2.split('.')[0]
-                                            else:
-                                                entity_2 = '"'+evidence[2]+'"'
+                                            entity_1 = '"'+evidence[0]+'"'
+                                            entity_2 = '"'+evidence[2]+'"'
                                             item_set.add(evidence[1] + '(' + entity_1 + ',' + entity_2 + ').')
                 except:
                     pass
