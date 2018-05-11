@@ -168,7 +168,7 @@ if __name__ == "__main__":
         train_examples = 'positive_'
     else:
         train_examples = 'negative_'
-    with open('dataset/'+args.test_predicate+'/input/'+train_examples+'examples.csv', 'rb') as csvfile:
+    with open('dataset/'+args.test_predicate+'/input/'+train_examples+'examples_10000.csv', 'rb') as csvfile:
         example_reader = csv.reader(csvfile)
         examples = list(example_reader)
     if args.rule_type == 'amie':

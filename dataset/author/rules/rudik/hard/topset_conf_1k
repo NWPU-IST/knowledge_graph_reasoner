@@ -1,0 +1,19 @@
+author(A ,B)  :-  author(C ,B) ,  type(C ,D) ,  type(A ,D).
+author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  author(C ,B) ,  publisher(C ,D) ,  publisher(A ,D).
+author(A ,B)  :-  subsequentWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+author(A ,B)  :-  author(C ,B) ,  numberOfPages(C ,D) ,  numberOfPages(A ,D).
+author(A ,B)  :-  genre(B ,C) ,  literaryGenre(D ,C) ,  previousWork(A ,D).
+author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
+negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,A).
+negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+negauthor(A ,B)  :-  producer(C ,B) ,  previousWork(A ,C).
+negauthor(A ,B)  :-  previousWork(C ,A) ,  genre(C ,D) ,  genre(B ,D).
+negauthor(A ,B)  :-  producer(A ,C) ,  deathPlace(C ,D) ,  birthPlace(B ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+negauthor(A ,B)  :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B).
+:-  negauthor(A ,B), author(A ,B).

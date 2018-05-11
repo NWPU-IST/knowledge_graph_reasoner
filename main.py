@@ -96,7 +96,7 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
 
-def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, pos_neg):
+def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules):
     evidence = []
     resource_v = [entity.decode('utf-8') for entity in resource_v]
     for entity in resource_v:
@@ -108,13 +108,13 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         # print "Predicate Set:"
         # print rule_predicates
         print "Evidence Set:"
-        query_map = False
+        query_map = True
         if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
             if evidence_set:
-                # map_all, map, label_map = inference_map(sentence_id, data_source, resource_v, pos_neg)
-                map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v, pos_neg)
+                # map_all, map, label_map = inference_map(sentence_id, data_source, resource_v)
+                map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v)
                 print map, label_map
             else:
                 map_all, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD'
@@ -125,7 +125,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             answer_set, answer_all = '', ''
             print answer_set, answer_all
 
-        query_prob = True
+        query_prob = False
         if query_prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules)
@@ -144,7 +144,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
     return '', '', '', '', '', '','', query_prob, query_map
 
 
-def stats_computer(true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, \
+def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, \
                    false_pos, true_none, false_none,true_unsat,false_unsat, true_no_evd, false_no_evd):
     pre = 0
     rec = 0
@@ -176,8 +176,12 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source, tru
     print "False UNSAT: ", false_unsat
     print "True NO EVD: ", true_no_evd
     print "False NO EVD: ", false_no_evd
+    print "True NO EVD+None: ", true_no_evd+true_none
+    print "False NO EVD+None: ", false_no_evd+false_none
+
     st = datetime.datetime.now()
-    with open(method+'_'+top_k+'_output.txt','a') as file:
+    print "Execution Time: ", (st-init_time).total_seconds()
+    with open('dataset/' + data_source + '/output_stats/' +method+'_'+top_k+'_output.txt','a') as file:
         file.write(str(st))
         file.write("-------------------------------"+'\n')
         file.write("True Neutral: " + str(true_neutral) + '\n')
@@ -192,17 +196,18 @@ def stats_computer(true_count, true_pos, false_count, true_neg, data_source, tru
                    str(false_neg) + '\n')
         file.write("False Count: " + str(false_count) + " True Neg: " + str(true_neg) + " False Pos: " +\
                    str(false_pos) + '\n')
-        file.write("-------------------------------")
-    true_data_pos = str(round(tp,2)) + ' ('+str(true_pos)+'/'+str(true_count)+')'
-    false_data_pos = str(round(1-tp,2)) + ' (' + str(false_neg)+'/'+str(true_count)+')'
-    true_data_neg = str(round(tn,2))+ ' ('+str(true_neg)+'/'+str(false_count)+')'
-    false_data_neg = str(round(1-tn,2))+' ('+str(false_pos)+'/'+str(false_count)+')'
+        file.write("Execution Time: "+ str((st-init_time).total_seconds()))
+        file.write('\n'+"-------------------------------")
+    # true_data_pos = str(round(tp,2)) + ' ('+str(true_pos)+'/'+str(true_count)+')'
+    # false_data_pos = str(round(1-tp,2)) + ' (' + str(false_neg)+'/'+str(true_count)+')'
+    # true_data_neg = str(round(tn,2))+ ' ('+str(true_neg)+'/'+str(false_count)+')'
+    # false_data_neg = str(round(1-tn,2))+' ('+str(false_pos)+'/'+str(false_count)+')'
 
-    output_stats = str(st) + ' ' + data_source + ' top-' + str(top_k) + ' & ' + true_data_pos + ' & ' + false_data_pos\
-                   + ' & ' + true_data_neg + ' & ' + false_data_neg + ' & ' + str(round(pre, 2)) + ' & ' + str(round(rec, 2))
-    with open('output_all.txt', 'a') as the_file:
-        the_file.write(str(output_stats)+'\n')
-    print output_stats
+    # output_stats = str(st) + ' ' + data_source + ' top-' + str(top_k) + ' & ' + true_data_pos + ' & ' + false_data_pos\
+    #                + ' & ' + true_data_neg + ' & ' + false_data_neg + ' & ' + str(round(pre, 2)) + ' & ' + str(round(rec, 2))
+    # with open('output_all.txt', 'a') as the_file:
+    #     the_file.write(str(output_stats)+'\n')
+    # print output_stats
 
 
 if __name__ == "__main__":

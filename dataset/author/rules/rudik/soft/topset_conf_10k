@@ -1,0 +1,14 @@
+0.0429591836735  author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.0490816326531  author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0138775510204  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.128469387755  author(A ,B)  :-  author(C ,B) ,  subsequentWork(A ,C).
+0.0220408163265  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,A) ,  subsequentWork(A ,C).
+0.0213265306122  negauthor(A ,B)  :-  subsequentWork(A ,C) ,  previousWork(D ,C) ,  writer(D ,B).
+0.0314285714286  negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+0.382857142857  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.312755102041  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0184693877551  negauthor(A ,B)  :-  genre(A ,C) ,  stylisticOrigin(C ,D) ,  genre(B ,D).
+0.0819387755102  negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+0.0192857142857  negauthor(A ,B)  :-  subsequentWork(C ,A) ,  subsequentWork(D ,C) ,  writer(D ,B).
+0.00897959183673  negauthor(A ,B)  :-  previousWork(C ,A) ,  album(C ,D) ,  producer(D ,B).
+0.0105102040816  negauthor(A ,B)  :-  subsequentWork(A ,C) ,  album(C ,D) ,  producer(D ,B).

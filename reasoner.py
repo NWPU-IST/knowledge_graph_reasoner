@@ -25,27 +25,41 @@ def get_rule_predicates(data_source):
 def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates):
     item_set = OrderedSet()
     entity_set = []
+    print rule_predicates
     for evidence in evidences:
+        # print evidence[1]
         if evidence[1] in rule_predicates or top_k == 0:
+            print evidence
             if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == data_source:
                 pass
             elif evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] in ["keyPerson","capital"]:
                 pass
             else:
-                try:
-                    if '"' not in evidence[0] and '"' not in evidence[2]:
-                        if ':' not in evidence[0] and ':' not in evidence[2]:
-                            if '#' not in evidence[0] and '#' not in evidence[2]:
-                                if '&' not in evidence[0] and '&' not in evidence[2]:
-                                    if '=' not in evidence[0] and '=' not in evidence[2]:
-                                        if ' ' not in evidence[0] and ' ' not in evidence[2]:
-                                            item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
-                                    # if evidence[0] not in entity_set:
-                                    #     entity_set.append(evidence[0])
-                                    # if evidence[2] not in entity_set:
-                                    #     entity_set.append(evidence[2])
-                except:
-                    pass
+                print evidence
+                # try:
+                if '"' not in evidence[0] and '"' not in evidence[2]:
+                    if ':' not in evidence[0] and ':' not in evidence[2]:
+                        if '#' not in evidence[0] and '#' not in evidence[2]:
+                            if '&' not in evidence[0] and '&' not in evidence[2]:
+                                if '=' not in evidence[0] and '=' not in evidence[2]:
+                                    if ' ' not in evidence[0] and ' ' not in evidence[2]:
+                                        print evidence[0],evidence[2]
+                                        if evidence[0].isdigit():
+                                            entity_1 = evidence[0]
+                                        else:
+                                            entity_1 = '"'+evidence[0]+'"'
+                                        if evidence[2].isdigit():
+                                            entity_2 = evidence[2]
+                                        else:
+                                            entity_2 = '"'+evidence[2]+'"'
+                                        item_set.add(evidence[1] + '(' + entity_1 + ',' + entity_2 + ').')
+                # except:
+                #     pass
+        else:
+            pass
+            # print "here"
+    print item_set
+    sys.exit()
     with open(evidence_path + str(sentence_id) + '_.txt', 'wb') as csvfile:
         for i in item_set:
             if '*' not in i:
@@ -161,11 +175,11 @@ def get_label(f, data_source, resource_v):
 
 
 
-def inference_map(sentence_id, data_source, resource_v, pos_neg):
+def inference_map(sentence_id, data_source, resource_v):
     print resource_v
     resource_v = ['"' + res + '"' for res in resource_v]
     cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-                                        data_source + '/', top_k, rule_mining, pos_neg+data_source, sentence_id, evidence_path)
+                                        data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
     print cmd
     FNULL = open(os.devnull, 'w')
     subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
@@ -176,10 +190,10 @@ def inference_map(sentence_id, data_source, resource_v, pos_neg):
     return probs, map_output, label
 
 
-def inference_map_weight(sentence_id, data_source, resource_v, pos_neg):
+def inference_map_weight(sentence_id, data_source, resource_v):
     resource_v = ['"' + res + '"' for res in resource_v]
     cmd = "lpmln2asp -i {0}rules/{2}/soft/top{1} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-                                        data_source + '/', top_k, rule_mining, pos_neg+data_source, sentence_id, evidence_path)
+                                        data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
     print cmd
     FNULL = open(os.devnull, 'w')
     subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)

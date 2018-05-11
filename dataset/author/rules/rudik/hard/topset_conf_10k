@@ -1,0 +1,14 @@
+author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  author(C ,B) ,  subsequentWork(A ,C).
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,A) ,  subsequentWork(A ,C).
+negauthor(A ,B)  :-  subsequentWork(A ,C) ,  previousWork(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negauthor(A ,B)  :-  genre(A ,C) ,  stylisticOrigin(C ,D) ,  genre(B ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+negauthor(A ,B)  :-  subsequentWork(C ,A) ,  subsequentWork(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  previousWork(C ,A) ,  album(C ,D) ,  producer(D ,B).
+negauthor(A ,B)  :-  subsequentWork(A ,C) ,  album(C ,D) ,  producer(D ,B).
