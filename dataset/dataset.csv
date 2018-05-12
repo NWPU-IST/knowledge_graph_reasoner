@@ -1,0 +1,10 @@
+subject,predicate,object
+Person,birthPlace,Location
+Country,capital,City
+Person,child,Person
+Work,director,Person
+Organisation,headquarter,City
+Organisation,keyPerson,Person
+Country,largestCity,City
+Person,parent,Person
+Person,team,Organisation
