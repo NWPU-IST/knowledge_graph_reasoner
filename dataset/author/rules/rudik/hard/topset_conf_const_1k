@@ -16,4 +16,5 @@ negauthor(A ,B)  :-  producer(C ,B) ,  previousWork(A ,C).
 negauthor(A ,B)  :-  previousWork(C ,A) ,  genre(C ,D) ,  genre(B ,D).
 negauthor(A ,B)  :-  producer(A ,C) ,  deathPlace(C ,D) ,  birthPlace(B ,D).
 negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
-negauthor(A ,B)  :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B).s
+negauthor(A ,B)  :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B).
+:-  negauthor(A ,B), author(A ,B).

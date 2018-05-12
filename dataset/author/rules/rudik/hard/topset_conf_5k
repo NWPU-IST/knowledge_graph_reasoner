@@ -1,0 +1,13 @@
+author(A ,B)  :-  author(A ,B).
+author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  author(C ,B) ,  subsequentWork(A ,C).
+author(A ,B)  :-  previousWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,A).
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,D) ,  subsequentWork(A ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+negauthor(A ,B)  :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B).

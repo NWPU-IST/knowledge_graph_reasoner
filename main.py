@@ -113,8 +113,10 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
             if evidence_set:
-                map_all, map, label_map = inference_map(sentence_id, data_source, resource_v)
-                # map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v)
+                if method=='map_hard':
+                    map_all, map, label_map = inference_map(sentence_id, data_source, resource_v)
+                else:
+                    map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v)
                 print map, label_map
             else:
                 map_all, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD'

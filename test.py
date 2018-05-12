@@ -22,8 +22,11 @@ def query_test(triples_list, id_list, true_labels, data_source, input, init_time
     lpmln_evaluation = [['sentence_id', 'true_label', 'sentence', 'lpmln_label',\
                          'lpmln-prob', 'lpmln-map','map_label', 'clingo', 'prob_all',\
                                  'clingo_all', 'map_all']]
+    # error_list_author_const_soft = ['255','343','361']
     for t, triple in enumerate(triples_list):
         sentence_id = id_list[t]
+        # if sentence_id in error_list:
+        #     continue
         print true_labels[t]
         true_label = int(float(true_labels[t]))
 

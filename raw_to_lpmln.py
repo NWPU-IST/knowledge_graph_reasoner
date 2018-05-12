@@ -13,6 +13,7 @@ ontology = " <http://dbpedia.org/ontology/"
 sparql_endpoint = sparql_dbpedia
 query_dict = {'?subject': 0,'?object': 1}
 comp = ["<",">","=","!="]
+data_size = '5k'
 rep = {"subject": "A", "object": "B", "v0": "C", "v1": "D"}
 
 
@@ -149,7 +150,7 @@ def rule_parser_amie(fname, predicate):
 
 
 def rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg):
-    with open(folder_path+predicate+"_"+rule_type+pos_neg+"_set_conf_10000.csv", 'wb') as resultFile:
+    with open(folder_path+predicate+"_"+rule_type+pos_neg+"_set_conf_"+data_size+".csv", 'wb') as resultFile:
         wr = csv.writer(resultFile, quoting=csv.QUOTE_NONE, escapechar=' ')
         for rule in rule_list:
             wr.writerow([rule,])
@@ -168,7 +169,8 @@ if __name__ == "__main__":
         train_examples = 'positive_'
     else:
         train_examples = 'negative_'
-    with open('dataset/'+args.test_predicate+'/input/'+train_examples+'examples_10000.csv', 'rb') as csvfile:
+    print 'dataset/'+args.test_predicate+'/input/'+train_examples+'examples_'+data_size+'.csv'
+    with open('dataset/'+args.test_predicate+'/input/'+train_examples+'examples_'+data_size+'.csv', 'rb') as csvfile:
         example_reader = csv.reader(csvfile)
         examples = list(example_reader)
     if args.rule_type == 'amie':

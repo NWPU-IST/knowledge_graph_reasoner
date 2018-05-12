@@ -1,0 +1,5 @@
+http://dbpedia.org/ontology/author(subject,object)
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1)
+http://dbpedia.org/ontology/birthYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/Work/runtime(subject,v1)
+http://dbpedia.org/ontology/author(v0,object) & http://dbpedia.org/ontology/subsequentWork(subject,v0)
+http://dbpedia.org/ontology/previousWork(subject,v0) & http://dbpedia.org/ontology/literaryGenre(v0,v1) & http://dbpedia.org/ontology/genre(object,v1)

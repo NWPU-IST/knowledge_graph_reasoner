@@ -1,0 +1,36 @@
+negspouse(A ,B)  :-  spouse(C ,A) ,  parent(B ,C).
+negspouse(A,B):- activeYearsStartYear(A,C),activeYearsEndYear(D,C),parent(D,B).
+negspouse(A ,B)  :-  successor(C ,A) ,  president(C ,D) ,  predecessor(B ,D).
+negspouse(A ,B)  :-  predecessor(C ,B) ,  primeMinister(D ,C) ,  successor(D ,A).
+negspouse(A ,B)  :-  primeMinister(A ,C) ,  successor(C ,D) ,  successor(D ,B).
+negspouse(A ,B)  :-  spouse(A ,C) ,  child(C ,B).
+negspouse(A ,B)  :-  spouse(C ,B) ,  child(C ,A).
+negspouse(A ,B)  :-  birthPlace(B ,C) ,  birthPlace(A ,C) ,  successor(B ,A).
+negspouse(A ,B)  :-  predecessor(B ,C) , restingPlace(C ,D),  birthPlace(A ,D).
+negspouse(A ,B)  :-  successor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(A ,C).
+negspouse(A ,B)  :-  parent(A ,B).
+negspouse(A ,B)  :-  successor(C ,B) ,  president(A ,C).
+negspouse(A ,B)  :-  successor(C ,B) ,  president(D ,C) ,  predecessor(A ,D).
+negspouse(A ,B)  :-  successor(C ,B) ,  primeMinister(D ,C) ,  successor(D ,A).
+negspouse(A ,B)  :-  parent(B ,A) ,  parent(B ,C) ,  spouse(A ,C).
+negspouse(A ,B)  :-  title(A ,C) ,  title(B ,C).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  leader(C ,D) ,  successor(B ,D).
+negspouse(A ,B)  :-  successor(B ,C) ,  primeMinister(D ,C) ,  successor(A ,D).
+negspouse(A ,B)  :-  successor(C ,B) ,  primeMinister(C ,D) ,  successor(A ,D).
+negspouse(A ,B)  :-  child(B ,C) ,  relative(A ,C).
+negspouse(A ,B)  :-  spouse(C ,B) ,  parent(A ,C).
+negspouse(A ,B)  :-  spouse(B ,C) ,  child(C ,A).
+negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(B ,C) ,  predecessor(A ,B).
+negspouse(A ,B)  :-  spouse(C ,B) ,  child(C ,A) ,  child(B ,A).
+negspouse(A ,B)  :-  parent(B ,A).
+negspouse(A ,B)  :-  title(A ,C) ,  title(B ,C).
+negspouse(A ,B)  :-  child(A ,B) ,  child(C ,B) ,  spouse(A ,C).
+negspouse(A ,B)  :-  successor(B ,A) ,  birthPlace(B ,C) ,  deathPlace(A ,C).
+negspouse(A ,B)  :-  parent(A ,B).
+negspouse(A ,B)  :-  successor(B ,A) ,  deathPlace(B ,C) ,  birthPlace(A ,C).
+negspouse(A ,B)  :-  predecessor(C ,A) ,  primeMinister(C ,D) ,  successor(D ,B).
+negspouse(A ,B)  :-  spouse(C ,B) ,  successor(D ,C) ,  spouse(A ,D).
+spouse(A ,B)  :-  parent(C ,A) ,  successor(B ,C) ,  parent(C ,B).
+spouse(A ,B)  :-  spouse(B ,A).
+spouse(A ,B)  :-  parent(C ,A) ,  predecessor(C ,B) ,  parent(C ,B).
+:- spouse(A ,B), negspouse(A ,B).

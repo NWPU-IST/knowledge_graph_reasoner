@@ -1,0 +1,18 @@
+0.0120  negspouse(A ,B)  :-  predecessor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(A ,C).
+0.0233  negspouse(A ,B)  :-  successor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(B ,C).
+0.01  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(B ,C) ,  predecessor(B ,A).
+0.0079  negspouse(A ,B)  :-  orderInOffice(B ,C) ,  office(D ,C) ,  successor(A ,D).
+0.0197  negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(B ,C) ,  successor(B ,A).
+0.0122  negspouse(A ,B)  :-  successor(C ,B) ,  predecessor(A ,C).
+0.0166  negspouse(A ,B)  :-  successor(B ,A) ,  spouse(C ,B) ,  parent(A ,C).
+0.0920  negspouse(A ,B)  :-  parent(B ,A).
+0.0110  negspouse(A ,B)  :-  spouse(C ,B) ,  child(C ,A) ,  parent(A ,C).
+0.0310  negspouse(A ,B)  :-  successor(B ,A) ,  orderInOffice(B ,C) ,  C=C.
+0.1502  negspouse(A ,B)  :-  parent(A ,B).
+0.0189  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(B ,A).
+0.0093  negspouse(A ,B)  :-  birthPlace(B ,C) ,  birthPlace(A ,C) ,  child(A ,B).
+0.0231  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(A ,B).
+0.0810  negspouse(A ,B)  :-  spouse(A ,C) ,  parent(B ,C).
+0.5768  spouse(A ,B)  :-  spouse(B ,A).
+0.0175  spouse(A ,B)  :-  parent(C ,B) ,  parent(C ,A) ,  predecessor(C ,A).
+0.015  spouse(A ,B)  :-  parent(C ,A) ,  predecessor(C ,B) ,  parent(C ,B).

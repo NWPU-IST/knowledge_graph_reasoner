@@ -1,0 +1,19 @@
+negspouse(A ,B)  :-  predecessor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(A ,C).
+negspouse(A ,B)  :-  successor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(B ,C).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(B ,C) ,  predecessor(B ,A).
+negspouse(A ,B)  :-  orderInOffice(B ,C) ,  office(D ,C) ,  successor(A ,D).
+negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(B ,C) ,  successor(B ,A).
+negspouse(A ,B)  :-  successor(C ,B) ,  predecessor(A ,C).
+negspouse(A ,B)  :-  successor(B ,A) ,  spouse(C ,B) ,  parent(A ,C).
+negspouse(A ,B)  :-  parent(B ,A).
+negspouse(A ,B)  :-  spouse(C ,B) ,  child(C ,A) ,  parent(A ,C).
+negspouse(A ,B)  :-  successor(B ,A) ,  orderInOffice(B ,C) ,  C=C.
+negspouse(A ,B)  :-  parent(A ,B).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(B ,A).
+negspouse(A ,B)  :-  birthPlace(B ,C) ,  birthPlace(A ,C) ,  child(A ,B).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(A ,B).
+negspouse(A ,B)  :-  spouse(A ,C) ,  parent(B ,C).
+spouse(A ,B)  :-  spouse(B ,A).
+spouse(A ,B)  :-  parent(C ,B) ,  parent(C ,A) ,  predecessor(C ,A).
+spouse(A ,B)  :-  parent(C ,A) ,  predecessor(C ,B) ,  parent(C ,B).
+:- spouse(A ,B), negspouse(A ,B).

@@ -7,7 +7,8 @@ import csv
 import sys
 
 sparql_endpoint = sparql_dbpedia
-training_size = 10000
+training_size = 5000
+data_size = '5k'
 suffix = "} ORDER BY RAND() LIMIT "+str(training_size)
 
 
@@ -48,7 +49,7 @@ def get_examples(query):
 
 
 def write_examples(folder_path, file_name, examples):
-    with open(folder_path+file_name+"_"+str(training_size)+".csv", 'wb') as resultFile:
+    with open(folder_path+file_name+"_"+data_size+".csv", 'wb') as resultFile:
         wr = csv.writer(resultFile,quotechar='"')
         wr.writerows(examples)
 

@@ -1,0 +1,3 @@
+0.576875  spouse(A ,B)  :-  spouse(B ,A).
+0.0175  spouse(A ,B)  :-  parent(C ,B) ,  parent(C ,A) ,  predecessor(C ,A).
+0.015  spouse(A ,B)  :-  parent(C ,A) ,  predecessor(C ,B) ,  parent(C ,B).
