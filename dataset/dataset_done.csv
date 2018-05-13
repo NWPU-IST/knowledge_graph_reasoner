@@ -1,0 +1,7 @@
+Person,birthPlace,Location
+Person,child,Person
+Work,director,Person
+Person,parent,Person
+Person,team,Organisation
+Organisation,headquarter,Location
+
