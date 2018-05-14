@@ -5,7 +5,6 @@ from config import top_k, rule_mining, method
 import csv
 
 
-
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
     if isinstance(obj, datetime):
@@ -15,7 +14,7 @@ def json_serial(obj):
 
 
 def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source,\
-                     input, inferred):
+                     input, const,data_size):
     if triple_flag:
         print "Updating Relation Triples"
         if path.isfile('dataset/' + data_source + '/input/triples_raw.json'):
@@ -32,14 +31,6 @@ def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resour
 
     if lpmln_evaluation:
         st = datetime.now()
-        with open('dataset/' + data_source + '/output/top' + str(top_k)+'_' + rule_mining + '_'+str(st) + '_' + method\
-                  + '_' + input , 'wb') as csvfile:
+        with open('dataset/' + data_source + '/output/top_set_' + const +'_' + rule_mining + '_'+str(st)+'_'+data_size, 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)
-
-    if inferred:
-        keys = inferred[0].keys()
-        with open('dataset/' + data_source + '/input/inferred.csv', 'wb') as output_file:
-            dict_writer = csv.DictWriter(output_file, keys)
-            dict_writer.writeheader()
-            dict_writer.writerows(inferred)

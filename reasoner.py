@@ -8,12 +8,10 @@ import subprocess
 from itertools import product
 
 
-
-def get_rule_predicates(data_source):
+def get_rule_predicates(data_source, data_size, const):
     global evidence_path
-    evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/' + rule_mining + '/' + "top" + str(
-        top_k) + '/'
-    text = open('dataset/' + data_source + '/rules/' + rule_mining + '/'+ rule_type + '/' + "top" + str(top_k), 'r')
+    evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/' + rule_mining + '/' + "topset_conf_"+ const + data_size + '/'
+    text = open('dataset/' + data_source + '/rules/' + rule_mining + '/' + rule_type + '/' + "topset_conf_" + data_size, 'r')
     f = text.read()
     text.close()
     probs = re.findall("(\w+\()", f)
@@ -160,7 +158,7 @@ def get_label(f, data_source, resource_v):
         else:
             label = "None"
     print label
-    return probs, map_output, label
+    return map_output, label
 
 
 
@@ -176,8 +174,8 @@ def inference_map(sentence_id, data_source, resource_v):
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
     f = text.read()
     text.close()
-    probs, map_output, label = get_label(f, data_source, resource_v)
-    return probs, map_output, label
+    map_output, label = get_label(f, data_source, resource_v)
+    return map_output, label
 
 
 def inference_map_weight(sentence_id, data_source, resource_v):
@@ -190,8 +188,8 @@ def inference_map_weight(sentence_id, data_source, resource_v):
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
     f = text.read()
     text.close()
-    probs, map_output, label = get_label(f, data_source, resource_v)
-    return probs, map_output, label
+    map_output, label = get_label(f, data_source, resource_v)
+    return map_output, label
 
 
 def write_query_domain(data_source, sentence_id,resource_v):

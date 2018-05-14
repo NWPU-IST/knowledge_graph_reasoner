@@ -1,0 +1,6 @@
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1)
+http://dbpedia.org/ontology/writer(subject,object) & http://dbpedia.org/ontology/director(v0,object) & http://dbpedia.org/ontology/creator(v0,object)
+http://dbpedia.org/ontology/producer(v0,object) & http://dbpedia.org/ontology/channel(v0,v1) & http://dbpedia.org/ontology/network(subject,v1)
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1)
+http://dbpedia.org/ontology/creator(subject,v0) & http://dbpedia.org/ontology/writer(v1,v0) & http://dbpedia.org/ontology/director(v1,object)
+http://dbpedia.org/ontology/runtime(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/imdbId(object,v1)

@@ -1,0 +1,12 @@
+0.305510204082  child(A ,B)  :-  parent(B ,A).
+0.197959183673  child(A ,B)  :-  spouse(A ,C) ,  child(C ,B).
+:-  child(A ,  B) ,  negchild(B ,  A).
+0.0504081632653  negchild(A ,B)  :-  successor(B ,C) ,  president(D ,C) ,  successor(A ,D).
+0.0130612244898  negchild(A ,B)  :-  successor(A ,B) ,  successor(C ,B) ,  successor(C ,A).
+0.0636734693878  negchild(A ,B)  :-  birthYear(A ,C) ,  birthYear(B ,D) ,  C>D.
+0.0204081632653  negchild(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  predecessor(A ,B).
+0.0270408163265  negchild(A ,B)  :-  successor(B ,C) ,  president(A ,C).
+0.00918367346939  negchild(A ,B)  :-  relative(A ,B) ,  parent(B ,C) ,  relative(A ,C).
+0.02  negchild(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(B ,A).
+0.0229591836735  negchild(A ,B)  :-  successor(C ,A) ,  president(C ,D) ,  successor(B ,D).
+0.0142857142857  negchild(A ,B)  :-  predecessor(C ,B) ,  president(D ,C) ,  successor(D ,A).

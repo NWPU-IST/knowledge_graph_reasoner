@@ -13,7 +13,6 @@ ontology = " <http://dbpedia.org/ontology/"
 sparql_endpoint = sparql_dbpedia
 query_dict = {'?subject': 0,'?object': 1}
 comp = ["<",">","=","!="]
-data_size = '5k'
 rep = {"subject": "A", "object": "B", "v0": "C", "v1": "D"}
 
 
@@ -68,7 +67,8 @@ def get_rudik_query(relations, predicate):
 
 
 def rule_parser_rudik(fname, predicate, pos_neg, examples):
-    rule_list = []
+    soft_rule_list = []
+    hard_rule_list = []
     with open(fname) as f:
         content = f.readlines()
     for it, con in enumerate(content):
@@ -98,7 +98,11 @@ def rule_parser_rudik(fname, predicate, pos_neg, examples):
         i = 0
         # if score:
             # rule = str(score)+' '+pos_neg+predicate+"("+ str(it+1)+",A,B) :- "
-        rule = str(score)+' '+pos_neg+predicate+"(A,B) :- "
+        # rule = str(score)+' '+pos_neg+predicate+"(A,B) :- "
+        if pos_neg=='pos':
+            rule = predicate+"(A,B) :- "
+        else:
+            rule = pos_neg+predicate+"(A,B) :- "
         # else:
         #     rule = pos_neg + predicate + "(A,B) :- "
         for rel in relation:
@@ -109,8 +113,10 @@ def rule_parser_rudik(fname, predicate, pos_neg, examples):
                 rule += ', '
             i += 1
         if "C<C" not in rule and "C>C" not in rule:
-            rule_list.append(rule)
-    return rule_list
+            soft_rule_list.append(str(score)+' '+rule)
+            hard_rule_list.append(rule)
+    # print soft_rule_list, hard_rule_list
+    return soft_rule_list, hard_rule_list
 
 
 def rule_parser_amie(fname, predicate):
@@ -149,32 +155,78 @@ def rule_parser_amie(fname, predicate):
     return rule_list
 
 
-def rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg):
-    with open(folder_path+predicate+"_"+rule_type+pos_neg+"_set_conf_"+data_size+".csv", 'wb') as resultFile:
+def soft_rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg, k):
+    with open(folder_path+"soft/topset_conf_"+k, 'ab') as resultFile:
         wr = csv.writer(resultFile, quoting=csv.QUOTE_NONE, escapechar=' ')
         for rule in rule_list:
             wr.writerow([rule,])
 
 
+def soft_rule_writer_constraint(rule_list, predicate, rule_type, folder_path, pos_neg, k, constraint_rule):
+    with open(folder_path+"soft/topset_conf_const_"+k, 'ab') as resultFile:
+        wr = csv.writer(resultFile, quoting=csv.QUOTE_NONE, escapechar=' ')
+        for rule in rule_list:
+            wr.writerow([rule,])
+        if pos_neg=='pos':
+            wr.writerow([constraint_rule, ])
+
+
+def hard_rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg, k):
+    with open(folder_path+"hard/topset_conf_"+k, 'ab') as resultFile:
+        wr = csv.writer(resultFile, quoting=csv.QUOTE_NONE, escapechar=' ')
+        for rule in rule_list:
+            wr.writerow([rule,])
+
+
+def hard_rule_writer_constraint(rule_list, predicate, rule_type, folder_path, pos_neg, k, constraint_rule):
+    with open(folder_path+"hard/topset_conf_const_"+k, 'ab') as resultFile:
+        wr = csv.writer(resultFile, quoting=csv.QUOTE_NONE, escapechar=' ')
+        for rule in rule_list:
+            wr.writerow([rule,])
+        if pos_neg =='pos':
+            wr.writerow([constraint_rule, ])
+
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-t", "--test_predicate", default='sample_case')
-    parser.add_argument("-i", "--filename", default='')
-    parser.add_argument("-r", "--rule_type", default='amie')
-    parser.add_argument("-p", "--pos_neg", default='')
-    args = parser.parse_args()
-    folder_path = 'dataset/'+args.test_predicate+'/rules/'+args.rule_type+'/'
-    path = 'dataset/'+args.test_predicate+'/rules/'+args.rule_type+'/'+args.filename+'.csv'
-    if not args.pos_neg:
-        train_examples = 'positive_'
-    else:
-        train_examples = 'negative_'
-    print 'dataset/'+args.test_predicate+'/input/'+train_examples+'examples_'+data_size+'.csv'
-    with open('dataset/'+args.test_predicate+'/input/'+train_examples+'examples_'+data_size+'.csv', 'rb') as csvfile:
-        example_reader = csv.reader(csvfile)
-        examples = list(example_reader)
-    if args.rule_type == 'amie':
-        rule_list = rule_parser_amie(path, args.test_predicate)
-    else:
-        rule_list = rule_parser_rudik(path, args.test_predicate, args.pos_neg,examples)
-    rule_writer(rule_list, args.test_predicate,args.rule_type, folder_path, args.pos_neg)
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("-t", "--test_predicate", default='sample_case')
+    # parser.add_argument("-i", "--filename", default='')
+    # parser.add_argument("-r", "--rule_type", default='amie')
+    # parser.add_argument("-p", "--pos_neg", default='')
+    # args = parser.parse_args()
+    data_size = {'1k':1000, '5k':5000, '10k':10000}
+    rule_set = ['pos', 'neg']
+    # positive_query, negative_query = get_query(args.subject, args.object,args.test_predicate)
+    rule_type = 'rudik'
+    with open('dataset/dataset_lpmln.csv','rb')as datainput:
+        reader = csv.DictReader(datainput)
+        for row in reader:
+            subject = row.get('subject')
+            test_predicate = row.get('predicate')
+            object = row.get('object')
+            print "----------------------"
+            print subject, test_predicate, object
+            print "----------------------"
+            folder_path = 'dataset/' + test_predicate + '/rules/' + rule_type + '/'
+            for k, v in data_size.iteritems():
+                print "query for",k,v
+                for pos_neg in rule_set:
+                    filename = test_predicate + '_' + pos_neg + '_' + k
+                    path = 'dataset/'+test_predicate+'/rules/'+rule_type+'/'+filename+'.csv'
+                    if pos_neg=='pos':
+                        train_examples = 'positive_'
+                    else:
+                        train_examples = 'negative_'
+                    print 'dataset/'+test_predicate+'/input/'+train_examples+'examples_'+k+'.csv'
+                    with open('dataset/'+test_predicate+'/input/'+train_examples+'examples_'+k+'.csv', 'rb') as csvfile:
+                        example_reader = csv.reader(csvfile)
+                        examples = list(example_reader)
+                    if rule_type == 'amie':
+                        rule_list = rule_parser_amie(path, test_predicate)
+                    else:
+                        soft_rule_list, hard_rule_list = rule_parser_rudik(path, test_predicate, pos_neg,examples)
+                    constraint_rule = ':- '+test_predicate+'(A, B), neg'+test_predicate+'(B, A).'
+                    soft_rule_writer(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k)
+                    soft_rule_writer_constraint(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k, constraint_rule)
+                    hard_rule_writer(hard_rule_list, test_predicate,rule_type, folder_path, pos_neg, k)
+                    hard_rule_writer_constraint(hard_rule_list, test_predicate,rule_type, folder_path, pos_neg, k, constraint_rule)

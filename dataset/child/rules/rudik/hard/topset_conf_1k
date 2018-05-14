@@ -1,0 +1,41 @@
+child(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(A ,C) ,  relation(B ,A).
+child(A ,B)  :-  parent(B ,A).
+child(A ,B)  :-  child(A ,C) ,  parent(C ,D) ,  child(D ,B).
+child(A ,B)  :-  spouse(A ,C) ,  child(C ,B).
+negchild(A ,B)  :-  primeMinister(A ,C) ,  orderInOffice(C ,D) ,  office(B ,D).
+negchild(A ,B)  :-  successor(A ,C) ,  activeYearsStartDate(C ,D) ,  activeYearsStartDate(B ,D).
+negchild(A ,B)  :-  predecessor(B ,C) ,  nationality(C ,D) ,  birthPlace(A ,D).
+negchild(A ,B)  :-  commander(C ,B) ,  country(C ,D) ,  birthPlace(A ,D).
+negchild(A ,B)  :-  restingPlace(B ,C) ,  birthPlace(D ,C) ,  successor(A ,D).
+negchild(A ,B)  :-  successor(C ,A) ,  successor(D ,C) ,  predecessor(D ,B).
+negchild(A ,B)  :-  deathPlace(A ,C) ,  restingPlace(D ,C) ,  successor(D ,B).
+negchild(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  spouse(A ,B).
+negchild(A ,B)  :-  predecessor(A ,C) ,  president(D ,C) ,  predecessor(B ,D).
+negchild(A ,B)  :-  activeYearsEndDate(A ,C) ,  activeYearsEndDate(D ,C) ,  termPeriod(B ,D).
+negchild(A ,B)  :-  termPeriod(B ,C) ,  office(C ,D) ,  orderInOffice(A ,D).
+negchild(A ,B)  :-  child(A ,C) ,  parent(C ,A) ,  spouse(A ,B).
+negchild(A ,B)  :-  parent(B ,C) ,  parent(A ,C).
+negchild(A ,B)  :-  successor(A ,B) ,  activeYearsStartDate(B ,C) ,  C=C.
+negchild(A ,B)  :-  successor(C ,B) ,  president(D ,C) ,  predecessor(A ,D).
+negchild(A ,B)  :-  successor(B ,C) ,  president(C ,D) ,  successor(A ,D).
+negchild(A ,B)  :-  successor(C ,B) ,  president(D ,C) ,  successor(A ,D).
+negchild(A ,B)  :-  successor(C ,B) ,  primeMinister(D ,C) ,  successor(D ,A).
+negchild(A ,B)  :-  successor(B ,C) ,  birthPlace(C ,D) ,  nationality(A ,D).
+negchild(A ,B)  :-  successor(B ,A).
+negchild(A ,B)  :-  successor(B ,C) ,  orderInOffice(C ,D) ,  office(A ,D).
+negchild(A ,B)  :-  predecessor(A ,B).
+negchild(A ,B)  :-  president(B ,C) ,  deathPlace(C ,D) ,  birthPlace(A ,D).
+negchild(A ,B)  :-  relative(A ,B).
+negchild(A ,B)  :-  birthPlace(A ,C) ,  leader(C ,D) ,  successor(B ,D).
+negchild(A ,B)  :-  predecessor(A ,C) ,  otherParty(C ,D) ,  party(B ,D).
+negchild(A ,B)  :-  almaMater(B ,C) ,  almaMater(D ,C) ,  president(A ,D).
+negchild(A ,B)  :-  spouse(A ,B) ,  child(B ,C) ,  child(A ,C).
+negchild(A ,B)  :-  knownFor(C ,B) ,  deathPlace(C ,D) ,  birthPlace(A ,D).
+negchild(A ,B)  :-  child(C ,A) ,  parent(B ,C) ,  relative(B ,A).
+negchild(A ,B)  :-  predecessor(C ,A) ,  orderInOffice(C ,D) ,  office(B ,D).
+negchild(A ,B)  :-  region(B ,C) ,  birthPlace(D ,C) ,  successor(A ,D).
+negchild(A ,B)  :-  president(C ,B) ,  residence(C ,D) ,  birthPlace(A ,D).
+negchild(A ,B)  :-  orderInOffice(B ,C) ,  orderInOffice(D ,C) ,  predecessor(D ,A).
+negchild(A ,B)  :-  successor(B ,C) ,  predecessor(D ,C) ,  predecessor(D ,A).
+negchild(A ,B)  :-  parent(C ,B) ,  parent(C ,A).
+negchild(A ,B)  :-  child(C ,B) ,  parent(B ,C) ,  parent(A ,B).

@@ -113,19 +113,13 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
             if evidence_set:
-                if method=='map_hard':
-                    map_all, map, label_map = inference_map(sentence_id, data_source, resource_v)
-                else:
-                    map_all, map, label_map = inference_map_weight(sentence_id, data_source, resource_v)
-                print map, label_map
+                map, label_map = inference_map(sentence_id, data_source, resource_v)
+                map_wt, label_map_wt = inference_map_weight(sentence_id, data_source, resource_v)
             else:
-                map_all, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD'
+                map_wt, label_map_wt, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD', 'NO_EVD'
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
-            answer_set, answer_all = '', ''
         else:
-            map_all, map, label_map = '', '', ''
-            answer_set, answer_all = '', ''
-            print answer_set, answer_all
+            map_wt, label_map_wt, map, label_map = '', '', '', ''
 
         query_prob = False
         if query_prob:
@@ -142,12 +136,14 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         else:
             prob, label_prob = '',''
 
-        return answer_all, answer_set, map, map_all, prob, label_prob, label_map, query_prob, query_map
-    return '', '', '', '', '', '','', query_prob, query_map
+        return map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map
+    return '', '', '', '', '','', query_prob, query_map
 
 
 def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, \
-                   false_pos, true_none, false_none,true_unsat,false_unsat, true_no_evd, false_no_evd):
+                   false_pos, true_none, false_none,true_unsat,false_unsat, true_no_evd, false_no_evd, true_neutral_wt,\
+                   false_neutral_wt, false_neg_wt, false_pos_wt, true_none_wt, false_none_wt, \
+                   true_unsat_wt,false_unsat_wt, true_no_evd_wt, false_no_evd_wt, true_pos_wt, true_neg_wt, const, data_size):
     pre = 0
     rec = 0
     # false_neg = true_count-true_pos
@@ -162,25 +158,63 @@ def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_
         tn = 0
     print method, top_k, 'output'
     print "True Count:", true_count, "True Pos: ", true_pos, "=>", tp, "False Neg: ", false_neg
-    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Pos: ", false_pos
     if true_pos + false_pos > 0:
         pre = float(true_pos) / float(true_pos + false_pos)
     if true_pos + false_neg > 0:
         rec = float(true_pos) / float(true_pos + false_neg)
+
     print "True Neutral: ", true_neutral
-    print "False Neutral: ", false_neutral
-    print "True None: ", true_none
-    print "False None: ", false_none
     print "True UNSAT: ", true_unsat
-    print "False UNSAT: ", false_unsat
-    print "True NO EVD: ", true_no_evd
-    print "False NO EVD: ", false_no_evd
     print "True NO EVD+None: ", true_no_evd+true_none
+    print "True None: ", true_none
+    print "True NO EVD: ", true_no_evd
+
+    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Pos: ", false_pos
+    print "False Neutral: ", false_neutral
+    print "False UNSAT: ", false_unsat
     print "False NO EVD+None: ", false_no_evd+false_none
+    print "False None: ", false_none
+    print "False NO EVD: ", false_no_evd
+
+    print "----------------------------"
+
+    print "True Count:", true_count, "True Pos_wt: ", true_pos_wt, "=>", tp, "False Neg_wt: ", false_neg_wt
+    print "True Neutral_wt: ", true_neutral_wt
+    print "True UNSAT_wt: ", true_unsat_wt
+    print "True NO EVD+None_wt: ", true_no_evd+true_none_wt
+    print "True None_wt: ", true_none_wt
+    print "True NO EVD_wt: ", true_no_evd_wt
+    
+    print "False Count_wt: ", false_count, "True Neg_wt: ", true_neg_wt, "=>", tn, "False Pos_wt: ", false_pos_wt
+    print "False Neutral_wt: ", false_neutral_wt
+    print "False UNSAT_wt: ", false_unsat_wt
+    print "False NO EVD+None_wt: ", false_no_evd+false_none_wt
+    print "False None_wt: ", false_none_wt
+    print "False NO EVD_wt: ", false_no_evd_wt
 
     st = datetime.datetime.now()
     print "Execution Time: ", (st-init_time).total_seconds()
-    with open('dataset/' + data_source + '/output_stats/' +method+'_'+top_k+'_output.txt','a') as file:
+    with open('dataset/' + data_source + '/output_stats/'+const+'_'+data_size+'_output.txt','a') as file:
+        file.write(str(st))
+        file.write("-------------------------------"+'\n')
+        file.write("True Neutral: " + str(true_neutral) + '\n')
+        file.write("False Neutral: " + str(false_neutral) + '\n')
+        file.write("True None: " + str(true_none) + '\n')
+        file.write("False None: " + str(false_none) + '\n')
+        file.write("True UNSAT: " + str(true_unsat) + '\n')
+        file.write("False UNSAT: " + str(false_unsat) + '\n')
+        file.write("True NO EVD: " + str(true_no_evd) + '\n')
+        file.write("False NO EVD: " + str(false_no_evd) + '\n')
+        file.write("True Count:" + str(true_count) + " True Pos: " + str(true_pos) + " False Neg: " + \
+                   str(false_neg) + '\n')
+        file.write("False Count: " + str(false_count) + " True Neg: " + str(true_neg) + " False Pos: " +\
+                   str(false_pos) + '\n')
+        file.write("Execution Time: "+ str((st-init_time).total_seconds()))
+        file.write('\n'+"-------------------------------")
+
+    st_1 = datetime.datetime.now()
+    print "Execution Time: ", (st_1-st).total_seconds()
+    with open('dataset/' + data_source + '/output_stats/' +const+'_'+data_size+'_output.txt','a') as file:
         file.write(str(st))
         file.write("-------------------------------"+'\n')
         file.write("True Neutral: " + str(true_neutral) + '\n')

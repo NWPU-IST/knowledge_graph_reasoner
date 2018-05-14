@@ -1,0 +1,4 @@
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/relation(object,subject)
+http://dbpedia.org/ontology/parent(object,subject)
+http://dbpedia.org/ontology/child(subject,v0) & http://dbpedia.org/ontology/parent(v0,v1) & http://dbpedia.org/ontology/child(v1,object)
+http://dbpedia.org/ontology/spouse(subject,v0) & http://dbpedia.org/ontology/child(v0,object)

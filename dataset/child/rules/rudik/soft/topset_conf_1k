@@ -1,0 +1,41 @@
+0.00875  child(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(A ,C) ,  relation(B ,A).
+0.2875  child(A ,B)  :-  parent(B ,A).
+0.3825  child(A ,B)  :-  child(A ,C) ,  parent(C ,D) ,  child(D ,B).
+0.19875  child(A ,B)  :-  spouse(A ,C) ,  child(C ,B).
+0.0175  negchild(A ,B)  :-  primeMinister(A ,C) ,  orderInOffice(C ,D) ,  office(B ,D).
+0.03  negchild(A ,B)  :-  successor(A ,C) ,  activeYearsStartDate(C ,D) ,  activeYearsStartDate(B ,D).
+0.01375  negchild(A ,B)  :-  predecessor(B ,C) ,  nationality(C ,D) ,  birthPlace(A ,D).
+0.02625  negchild(A ,B)  :-  commander(C ,B) ,  country(C ,D) ,  birthPlace(A ,D).
+0.015  negchild(A ,B)  :-  restingPlace(B ,C) ,  birthPlace(D ,C) ,  successor(A ,D).
+0.0475  negchild(A ,B)  :-  successor(C ,A) ,  successor(D ,C) ,  predecessor(D ,B).
+0.02125  negchild(A ,B)  :-  deathPlace(A ,C) ,  restingPlace(D ,C) ,  successor(D ,B).
+0.01125  negchild(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  spouse(A ,B).
+0.0275  negchild(A ,B)  :-  predecessor(A ,C) ,  president(D ,C) ,  predecessor(B ,D).
+0.01  negchild(A ,B)  :-  activeYearsEndDate(A ,C) ,  activeYearsEndDate(D ,C) ,  termPeriod(B ,D).
+0.0125  negchild(A ,B)  :-  termPeriod(B ,C) ,  office(C ,D) ,  orderInOffice(A ,D).
+0.02625  negchild(A ,B)  :-  child(A ,C) ,  parent(C ,A) ,  spouse(A ,B).
+0.0175  negchild(A ,B)  :-  parent(B ,C) ,  parent(A ,C).
+0.02375  negchild(A ,B)  :-  successor(A ,B) ,  activeYearsStartDate(B ,C) ,  C=C.
+0.04375  negchild(A ,B)  :-  successor(C ,B) ,  president(D ,C) ,  predecessor(A ,D).
+0.03625  negchild(A ,B)  :-  successor(B ,C) ,  president(C ,D) ,  successor(A ,D).
+0.045  negchild(A ,B)  :-  successor(C ,B) ,  president(D ,C) ,  successor(A ,D).
+0.04375  negchild(A ,B)  :-  successor(C ,B) ,  primeMinister(D ,C) ,  successor(D ,A).
+0.01375  negchild(A ,B)  :-  successor(B ,C) ,  birthPlace(C ,D) ,  nationality(A ,D).
+0.09  negchild(A ,B)  :-  successor(B ,A).
+0.0175  negchild(A ,B)  :-  successor(B ,C) ,  orderInOffice(C ,D) ,  office(A ,D).
+0.09875  negchild(A ,B)  :-  predecessor(A ,B).
+0.01625  negchild(A ,B)  :-  president(B ,C) ,  deathPlace(C ,D) ,  birthPlace(A ,D).
+0.08625  negchild(A ,B)  :-  relative(A ,B).
+0.0175  negchild(A ,B)  :-  birthPlace(A ,C) ,  leader(C ,D) ,  successor(B ,D).
+0.01125  negchild(A ,B)  :-  predecessor(A ,C) ,  otherParty(C ,D) ,  party(B ,D).
+0.1075  negchild(A ,B)  :-  almaMater(B ,C) ,  almaMater(D ,C) ,  president(A ,D).
+0.04  negchild(A ,B)  :-  spouse(A ,B) ,  child(B ,C) ,  child(A ,C).
+0.03  negchild(A ,B)  :-  knownFor(C ,B) ,  deathPlace(C ,D) ,  birthPlace(A ,D).
+0.0125  negchild(A ,B)  :-  child(C ,A) ,  parent(B ,C) ,  relative(B ,A).
+0.0125  negchild(A ,B)  :-  predecessor(C ,A) ,  orderInOffice(C ,D) ,  office(B ,D).
+0.02  negchild(A ,B)  :-  region(B ,C) ,  birthPlace(D ,C) ,  successor(A ,D).
+0.05875  negchild(A ,B)  :-  president(C ,B) ,  residence(C ,D) ,  birthPlace(A ,D).
+0.035  negchild(A ,B)  :-  orderInOffice(B ,C) ,  orderInOffice(D ,C) ,  predecessor(D ,A).
+0.0975  negchild(A ,B)  :-  successor(B ,C) ,  predecessor(D ,C) ,  predecessor(D ,A).
+0.02625  negchild(A ,B)  :-  parent(C ,B) ,  parent(C ,A).
+0.0175  negchild(A ,B)  :-  child(C ,B) ,  parent(B ,C) ,  parent(A ,B).
