@@ -192,16 +192,17 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--test_predicate", default='sample_case')
     parser.add_argument("-s", "--sampling", default=True)
     args = parser.parse_args()
-    data_sizes = ['1k', '5k', '10k']
+    # data_sizes = ['1k', '5k', '10k']
     start_time = datetime.datetime.now()
 
-    # data_sizes = ['1k']
+    data_sizes = ['1k']
     constraint = ['const_','']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const
             print"++++++++++++++++"
             init_time = datetime.datetime.now()
+
             with open('dataset/' + args.test_predicate + '/input/test_' + data_size + '.csv') as f:
                 reader = csv.DictReader(f)
                 triples_list = []
