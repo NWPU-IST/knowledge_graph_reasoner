@@ -1,0 +1,9 @@
+director(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+director(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+director(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negdirector(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+negdirector(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negdirector(A ,B)  :-  animator(A ,B) ,  director(C ,B) ,  series(A ,C).
+negdirector(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C>D.
+negdirector(A ,B)  :-  producer(C ,B) ,  basedOn(C ,D) ,  executiveProducer(A ,D).
+negdirector(A ,B)  :-  runtime(A ,C) ,  imdbId(B ,D) ,  C>D.

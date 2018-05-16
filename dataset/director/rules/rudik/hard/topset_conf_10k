@@ -1,0 +1,8 @@
+director(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+director(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+director(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+director(A ,B)  :-  runtime(A ,C) ,  imdbId(B ,D) ,  C>D.
+negdirector(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+negdirector(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+negdirector(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negdirector(A ,B)  :-  runtime(A ,C) ,  imdbId(B ,D) ,  C>D.

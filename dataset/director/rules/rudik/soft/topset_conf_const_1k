@@ -1,0 +1,10 @@
+0.34875  director(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.015  director(A ,B)  :-  writer(A ,B) ,  editing(A ,B).
+0.45625  director(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+:-  director(A ,  B) ,  negdirector(B ,  A).
+0.46  negdirector(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.01125  negdirector(A ,B)  :-  writer(A ,B) ,  director(C ,B) ,  creator(C ,B).
+0.02625  negdirector(A ,B)  :-  producer(C ,B) ,  channel(C ,D) ,  network(A ,D).
+0.505  negdirector(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+0.0225  negdirector(A ,B)  :-  creator(A ,C) ,  writer(D ,C) ,  director(D ,B).
+0.0  negdirector(A ,B)  :-  runtime(A ,C) ,  imdbId(B ,D) ,  C>D.

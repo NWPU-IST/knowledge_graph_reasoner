@@ -145,6 +145,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
                        true_neutral_wt, false_neutral_wt, false_neg_wt, false_pos_wt, true_none_wt, false_none_wt, \
                        true_unsat_wt, false_unsat_wt, true_no_evd_wt, false_no_evd_wt, true_pos_wt, true_neg_wt, const,
                        data_size)
+        lpmln_type = 'map'
         lpmln_evaluation = lpmln_evaluation_map
 
     if query_prob:
@@ -152,17 +153,18 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
                         'true_neutral': true_neutral, 'false_neutral': false_neutral,
                         'true_none': true_none + true_no_evd, \
                         'false_none': false_none + false_no_evd, 'true_unsat': true_unsat, 'false_unsat': false_unsat}
+        lpmln_type = 'mc_sat'
         lpmln_evaluation = lpmln_evaluation_mcsat
 
     update_resources(triple_flag=False, ambiverse_flag=False, file_triples=False, ambiverse_resources=False, \
                      lpmln_evaluation=lpmln_evaluation, data_source=data_source, input=input,\
-                     const=const,data_size=data_size)
+                     const=const,data_size=data_size,lpmln_type=lpmln_type)
     return results_hard, results_soft
 
 
 def write_stats(data_source,data_size,const,results_hard,results_soft, start_time):
     end_time = datetime.datetime.now()
-    with open('dataset/' + data_source + '/output_stats/'+data_size+'_'+const+'_'+str(end_time)+'_output.csv','a') as file:
+    with open('dataset/' + data_source + '/output_stats/summary_'+data_size+'_'+const+'_'+str(end_time)+'_output.csv','a') as file:
         file.write('True Examples , Hard Rules , Weighted Rules , False Examples , Hard Rules , Weighted Rules' +'\n')
         file.write('True Positives ,'+ str(results_hard.get('true_pos',0))+ '/200 ,'+ str(results_soft.get('true_pos',0))\
                    + '/200 ,True Negatives,'+str(results_hard.get('true_neg',0))+'/200, '+ \
@@ -192,10 +194,10 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--test_predicate", default='sample_case')
     parser.add_argument("-s", "--sampling", default=True)
     args = parser.parse_args()
-    # data_sizes = ['1k', '5k', '10k']
+    data_sizes = ['1k', '5k', '10k']
     start_time = datetime.datetime.now()
 
-    data_sizes = ['1k']
+    # data_sizes = ['1k']
     constraint = ['const_','']
     for data_size in data_sizes:
         for const in constraint:

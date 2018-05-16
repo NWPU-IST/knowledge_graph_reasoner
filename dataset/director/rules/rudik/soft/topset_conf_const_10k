@@ -1,0 +1,9 @@
+0.349285714286  director(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.474387755102  director(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+0.260612244898  director(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0  director(A ,B)  :-  runtime(A ,C) ,  imdbId(B ,D) ,  C>D.
+:-  director(A ,  B) ,  negdirector(B ,  A).
+0.460204081633  negdirector(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.512755102041  negdirector(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+0.298979591837  negdirector(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0  negdirector(A ,B)  :-  runtime(A ,C) ,  imdbId(B ,D) ,  C>D.

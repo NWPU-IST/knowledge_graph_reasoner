@@ -108,7 +108,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         # print "Predicate Set:"
         # print rule_predicates
         print "Evidence Set:"
-        query_map = False
+        query_map = True
         if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
@@ -121,7 +121,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         else:
             map_wt, label_map_wt, map, label_map = '', '', '', ''
 
-        query_prob = True
+        query_prob = False
         if query_prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules)

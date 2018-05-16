@@ -14,7 +14,7 @@ def json_serial(obj):
 
 
 def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source,\
-                     input, const,data_size):
+                     input, const,data_size,lpmln_type):
     if triple_flag:
         print "Updating Relation Triples"
         if path.isfile('dataset/' + data_source + '/input/triples_raw.json'):
@@ -31,6 +31,6 @@ def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resour
 
     if lpmln_evaluation:
         st = datetime.now()
-        with open('dataset/' + data_source + '/output/top_set_' + const +'_' + rule_mining + '_'+str(st)+'_'+data_size, 'wb') as csvfile:
+        with open('dataset/' + data_source + '/output/top_set_' + const +'_' + rule_mining + '_'+str(st)+'_'+data_size+'_'+lpmln_type, 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)

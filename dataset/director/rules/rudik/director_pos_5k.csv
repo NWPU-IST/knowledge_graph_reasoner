@@ -1,0 +1,3 @@
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1)
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1)
+http://dbpedia.org/ontology/deathYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/Work/runtime(subject,v1)
