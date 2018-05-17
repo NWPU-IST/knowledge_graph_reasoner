@@ -215,18 +215,18 @@ def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_
     with open('dataset/' + data_source + '/output_stats/' +const+'_'+data_size+'_output.txt','a') as file:
         file.write(str(st))
         file.write("-------------------------------"+'\n')
-        file.write("True Neutral: " + str(true_neutral) + '\n')
-        file.write("False Neutral: " + str(false_neutral) + '\n')
-        file.write("True None: " + str(true_none) + '\n')
-        file.write("False None: " + str(false_none) + '\n')
-        file.write("True UNSAT: " + str(true_unsat) + '\n')
-        file.write("False UNSAT: " + str(false_unsat) + '\n')
-        file.write("True NO EVD: " + str(true_no_evd) + '\n')
-        file.write("False NO EVD: " + str(false_no_evd) + '\n')
-        file.write("True Count:" + str(true_count) + " True Pos: " + str(true_pos) + " False Neg: " + \
-                   str(false_neg) + '\n')
-        file.write("False Count: " + str(false_count) + " True Neg: " + str(true_neg) + " False Pos: " +\
-                   str(false_pos) + '\n')
+        file.write("True Neutral_wt: " + str(true_neutral_wt) + '\n')
+        file.write("False Neutral_wt: " + str(false_neutral_wt) + '\n')
+        file.write("True None_wt: " + str(true_none_wt) + '\n')
+        file.write("False None_wt: " + str(false_none_wt) + '\n')
+        file.write("True UNSAT_wt: " + str(true_unsat_wt) + '\n')
+        file.write("False UNSAT_wt: " + str(false_unsat_wt) + '\n')
+        file.write("True NO EVD_wt: " + str(true_no_evd_wt) + '\n')
+        file.write("False NO EVD+wt: " + str(false_no_evd_wt) + '\n')
+        file.write("True Count:" + str(true_count) + " True Pos_wt: " + str(true_pos_wt) + " False Neg_wt: " + \
+                   str(false_neg_wt) + '\n')
+        file.write("False Count: " + str(false_count) + " True Neg_wt: " + str(true_neg_wt) + " False_Pos: " + \
+                   str(false_pos_wt) + '\n')
         file.write("Execution Time: "+ str((st-init_time).total_seconds()))
         file.write('\n'+"-------------------------------")
     # true_data_pos = str(round(tp,2)) + ' ('+str(true_pos)+'/'+str(true_count)+')'

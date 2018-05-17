@@ -1,0 +1,40 @@
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/parent(subject,object),0.00000
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/primeMinister(v0,v1) & http://dbpedia.org/ontology/predecessor(object,v1),0.00000
+http://dbpedia.org/ontology/predecessor(subject,object) & http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0),0.00000
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v0) & http://dbpedia.org/ontology/parent(object,subject),0.00000
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/parent(object,subject),0.00000
+http://dbpedia.org/ontology/successor(object,subject) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v0),0.00000
+http://dbpedia.org/ontology/successor(object,subject) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v0),0.00000
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/parent(object,subject),0.00000
+http://dbpedia.org/ontology/successor(object,subject) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & >(v0,v0),0.00000
+http://dbpedia.org/ontology/successor(object,subject) & http://dbpedia.org/ontology/spouse(v0,object) & http://dbpedia.org/ontology/parent(subject,v0),0.00000
+http://dbpedia.org/ontology/successor(object,subject) & http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & <(v0,v0),-0.00162
+http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/president(subject,v0),-0.00341
+http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/restingPlace(object,v0) & http://dbpedia.org/ontology/parent(subject,object),0.00000
+http://dbpedia.org/ontology/parent(subject,object),-0.06932
+http://dbpedia.org/ontology/successor(subject,object) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v0),0.00000
+http://dbpedia.org/ontology/successor(subject,object) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v0),0.00000
+http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/parent(object,subject),0.00000
+http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/parent(subject,object),0.00000
+http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/parent(object,v0) & http://dbpedia.org/ontology/parent(subject,object),0.00000
+http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/president(subject,v0),-0.00502
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/parent(subject,object),0.00000
+http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/parent(object,subject),0.00000
+http://dbpedia.org/ontology/title(subject,v0) & http://dbpedia.org/ontology/title(object,v0),0.00000
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/parent(object,subject),0.00000
+http://dbpedia.org/ontology/child(subject,object) & http://dbpedia.org/ontology/child(v0,object) & http://dbpedia.org/ontology/spouse(subject,v0),-0.00511
+http://dbpedia.org/ontology/relative(subject,object),-0.00234
+http://dbpedia.org/ontology/spouse(v0,object) & http://dbpedia.org/ontology/successor(v1,v0) & http://dbpedia.org/ontology/spouse(subject,v1),-0.00103
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/parent(subject,object),0.00000
+http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/primeMinister(v1,v0) & http://dbpedia.org/ontology/successor(subject,v1),-0.00622
+http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/successor(object,subject),-0.00451
+http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/successor(subject,v0),-0.00179
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/deathPlace(object,v0) & http://dbpedia.org/ontology/parent(object,subject),0.00000
+http://dbpedia.org/ontology/spouse(subject,v0) & http://dbpedia.org/ontology/parent(object,v0) & http://dbpedia.org/ontology/child(v0,object),0.00000
+http://dbpedia.org/ontology/parent(object,subject),-0.03483
+http://dbpedia.org/ontology/successor(v0,object) & http://dbpedia.org/ontology/predecessor(object,v0) & http://dbpedia.org/ontology/parent(subject,object),0.00000
+http://dbpedia.org/ontology/predecessor(v0,subject) & http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/successor(object,subject),0.00000
+http://dbpedia.org/ontology/successor(subject,v0) & http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/successor(object,subject),0.00000
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v0) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v0),-0.00451
+http://dbpedia.org/ontology/birthPlace(subject,v0) & http://dbpedia.org/ontology/deathPlace(subject,v0) & http://dbpedia.org/ontology/successor(object,subject),-0.00230
+http://dbpedia.org/ontology/predecessor(subject,object) & http://dbpedia.org/ontology/spouse(object,v0) & http://dbpedia.org/ontology/parent(subject,v0),0.00000
