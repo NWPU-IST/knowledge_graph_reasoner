@@ -1,4 +1,4 @@
-from config import rule_mining, rule_type, top_k, dbpedia
+from config import dbpedia
 import sys
 import re
 from ordered_set import OrderedSet
@@ -10,7 +10,7 @@ from itertools import product
 
 def get_rule_predicates(data_source, data_size, const):
     global evidence_path
-    evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/' + rule_mining + '/' + "topset_conf_"+ const + data_size + '/'
+    evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/rudik/topset_conf_' + const + data_size + '/'
     text = open('dataset/' + data_source + '/rules/' + rule_mining + '/' + rule_type + '/' + "topset_conf_" + data_size, 'r')
     f = text.read()
     text.close()
@@ -161,14 +161,13 @@ def get_label(f, data_source, resource_v):
     return map_output, label
 
 
-
-
-def inference_map(sentence_id, data_source, resource_v):
+def inference_map(sentence_id, data_source, resource_v, data_size, const):
     print resource_v
     resource_v = ['"' + res + '"' for res in resource_v]
-    cmd = "lpmln2asp -i {0}rules/{2}/hard/top{1} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-                                        data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
+    cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2}k -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+                                        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
     print cmd
+    sys.exit()
     FNULL = open(os.devnull, 'w')
     subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
@@ -178,10 +177,10 @@ def inference_map(sentence_id, data_source, resource_v):
     return map_output, label
 
 
-def inference_map_weight(sentence_id, data_source, resource_v):
+def inference_map_weight(sentence_id, data_source, resource_v, data_size, const):
     resource_v = ['"' + res + '"' for res in resource_v]
-    cmd = "lpmln2asp -i {0}rules/{2}/soft/top{1} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-                                        data_source + '/', top_k, rule_mining, data_source, sentence_id, evidence_path)
+    cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2}k -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+                                        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
     print cmd
     FNULL = open(os.devnull, 'w')
     subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)

@@ -49,7 +49,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
         triple_check = triples_list[t]
         print sentence_id, triple_check, true_label, '\n'
         map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map = lpmln_reasoning(triple_check,\
-                                                        rule_predicates, sentence_id, data_source, rules)
+                                                        rule_predicates, sentence_id, data_source, rules, data_size, const)
         if query_map:
             if true_label == 1 and label_map == '1':
                 true_pos += 1

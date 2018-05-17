@@ -10,7 +10,6 @@ from kb_query import distance_one_query, distance_two_query
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob, domain_generator,\
     rule_evidence_writer, inference_prob_mcsat, inference_map_weight
 from ambiverse_api import ambiverse_entity_parser
-from config import top_k, method
 import datetime
 
 
@@ -96,7 +95,7 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
 
-def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules):
+def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, data_size, const):
     evidence = []
     resource_v = [entity.decode('utf-8') for entity in resource_v]
     for entity in resource_v:
@@ -113,8 +112,8 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
             if evidence_set:
-                map, label_map = inference_map(sentence_id, data_source, resource_v)
-                map_wt, label_map_wt = inference_map_weight(sentence_id, data_source, resource_v)
+                map, label_map = inference_map(sentence_id, data_source, resource_v, data_size, const)
+                map_wt, label_map_wt = inference_map_weight(sentence_id, data_source, resource_v, data_size, const)
             else:
                 map_wt, label_map_wt, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD', 'NO_EVD'
             # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
@@ -156,7 +155,6 @@ def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_
         tn = float(true_neg)/float(false_count)
     else:
         tn = 0
-    print method, top_k, 'output'
     print "True Count:", true_count, "True Pos: ", true_pos, "=>", tp, "False Neg: ", false_neg
     if true_pos + false_pos > 0:
         pre = float(true_pos) / float(true_pos + false_pos)

@@ -1,7 +1,7 @@
 import json
 from os import remove, path
 from datetime import datetime
-from config import top_k, rule_mining, method
+from config import rule_mining
 import csv
 
 
