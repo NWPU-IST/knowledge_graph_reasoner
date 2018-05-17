@@ -194,7 +194,8 @@ if __name__ == "__main__":
     # parser.add_argument("-r", "--rule_type", default='amie')
     # parser.add_argument("-p", "--pos_neg", default='')
     # args = parser.parse_args()
-    data_size = {'1k':1000, '5k':5000, '10k':10000}
+    # data_size = {'1k':1000, '5k':5000, '10k':10000}
+    data_size = {'05k':5000}
     rule_set = ['pos', 'neg']
     # positive_query, negative_query = get_query(args.subject, args.object,args.test_predicate)
     rule_type = 'rudik'

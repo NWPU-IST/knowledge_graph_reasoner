@@ -63,10 +63,11 @@ if __name__ == "__main__":
     # parser.add_argument("-o", "--object", default='Person')
     # args = parser.parse_args()
     # folder_path = 'dataset/'+args.test_predicate+'/input/'
-    data_size = {'1k':1000, '5k':5000, '10k':10000}
+    # data_size = {'1k':1000, '5k':5000, '10k':10000}
+    data_size = {'05k': 5000}
     # positive_query, negative_query = get_query(args.subject, args.object,args.test_predicate)
 
-    with open('dataset/dataset.csv','rb')as datainput:
+    with open('dataset/dataset_lpmln.csv','rb')as datainput:
         reader = csv.DictReader(datainput)
         for row in reader:
             subject = row.get('subject')

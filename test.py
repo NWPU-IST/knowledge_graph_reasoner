@@ -101,9 +101,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
             elif true_label == 0 and label_map_wt == 'NO_EVD':
                 false_no_evd_wt += 1
             lpmln_evaluation_map.append(
-                [sentence_id, true_label, triple_check,str(label_prob), str(prob)])
-
-
+                [sentence_id, true_label, triple_check, str(label_map), str(label_map_wt), str(map), str(map_wt)])
 
         if query_prob:
             if true_label == 1 and label_prob == '1':
@@ -126,8 +124,9 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
                 true_no_evd += 1
             elif true_label == 0 and label_prob == 'NO_EVD':
                 false_no_evd += 1
-            lpmln_evaluation_mcsat.append(
-                [sentence_id, true_label, triple_check, str(label_map), str(label_map_wt), str(map), str(map_wt)])
+            lpmln_evaluation_mcsat.append([sentence_id, true_label, triple_check,str(label_prob), str(prob)])
+
+
 
     if query_map:
         results_hard = {'true_pos': true_pos, 'true_neg': true_neg, 'false_neg': false_neg, 'false_pos': false_pos, \
@@ -159,33 +158,56 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
     update_resources(triple_flag=False, ambiverse_flag=False, file_triples=False, ambiverse_resources=False, \
                      lpmln_evaluation=lpmln_evaluation, data_source=data_source, input=input,\
                      const=const,data_size=data_size,lpmln_type=lpmln_type)
-    return results_hard, results_soft
+    return results_hard, results_soft, results_mcsat
 
 
-def write_stats(data_source,data_size,const,results_hard,results_soft, start_time):
+def write_stats(data_source, data_size, const, results_hard, results_soft, result_mcsat, start_time):
     end_time = datetime.datetime.now()
-    with open('dataset/' + data_source + '/output_stats/summary_'+data_size+'_'+const+'_'+str(end_time)+'_output.csv','a') as file:
-        file.write('True Examples , Hard Rules , Weighted Rules , False Examples , Hard Rules , Weighted Rules' +'\n')
-        file.write('True Positives ,'+ str(results_hard.get('true_pos',0))+ '/200 ,'+ str(results_soft.get('true_pos',0))\
-                   + '/200 ,True Negatives,'+str(results_hard.get('true_neg',0))+'/200, '+ \
-                   str(results_soft.get('true_neg',0))+'/200'+ '\n')
-        file.write(
-            'False Negatives ,' + str(results_hard.get('false_neg', 0)) + '/200 ,' + str(results_soft.get('false_neg', 0)) \
-            + '/200 ,False Positives,' + str(results_hard.get('false_pos', 0)) + '/200, ' + \
-            str(results_soft.get('false_pos', 0)) + '/200' + '\n')
-        file.write(
-            'Neutral ,' + str(results_hard.get('true_neutral', 0)) + '/200 ,' + str(results_soft.get('true_neutral', 0)) \
-            + '/200 ,Neutral,' + str(results_hard.get('false_neutral', 0)) + '/200, ' + \
-            str(results_soft.get('false_neutral', 0)) + '/200' + '\n')
-        file.write(
-            'None ,' + str(results_hard.get('true_none', 0)) + '/200 ,' + str(results_soft.get('true_none', 0)) \
-            + '/200 ,None,' + str(results_hard.get('false_none', 0)) + '/200, ' + \
-            str(results_soft.get('false_none', 0)) + '/200' + '\n')
-        file.write(
-            'UNSATISFIABLE ,' + str(results_hard.get('true_unsat', 0)) + '/200 ,' + str(results_soft.get('true_unsat', 0)) \
-            + '/200 ,UNSATISFIABLE,' + str(results_hard.get('false_unsat', 0)) + '/200, ' + \
-            str(results_soft.get('false_unsat', 0)) + '/200' + '\n')
-        file.write("Execution Time, "+ str((end_time-start_time).total_seconds()))
+    if result_mcsat:
+        with open('dataset/' + data_source + '/output_stats/summary_'+data_size+'_'+const+'_'+str(end_time)+'_output.csv','a') as file:
+            file.write('True Examples , Weighted Rules , False Examples , Weighted Rules' +'\n')
+            file.write('True Positives ,' + str(result_mcsat.get('true_pos',0))\
+                       + '/200 ,True Negatives,' + \
+                       str(result_mcsat.get('true_neg',0))+'/200'+ '\n')
+            file.write(
+                'False Negatives ,' + str(result_mcsat.get('false_neg', 0)) \
+                + '/200 ,False Positives,' + '/200, ' + \
+                str(result_mcsat.get('false_pos', 0)) + '/200' + '\n')
+            file.write(
+                'Neutral ,' + str(result_mcsat.get('true_neutral', 0)) \
+                + '/200 ,Neutral,' + '/200, ' + \
+                str(result_mcsat.get('false_neutral', 0)) + '/200' + '\n')
+            file.write(
+                'None ,' + str(result_mcsat.get('true_none', 0)) \
+                + '/200 ,None,' + str(result_mcsat.get('false_none', 0)) + '/200' + '\n')
+            file.write(
+                'UNSATISFIABLE ,' + str(result_mcsat.get('true_unsat', 0)) \
+                + '/200 ,UNSATISFIABLE,' + str(result_mcsat.get('false_unsat', 0)) + '/200' + '\n')
+            file.write("Execution Time, "+ str((end_time-start_time).total_seconds()))
+
+    else:
+        with open('dataset/' + data_source + '/output_stats/summary_'+data_size+'_'+const+'_'+str(end_time)+'_output.csv','a') as file:
+            file.write('True Examples , Hard Rules , Weighted Rules , False Examples , Hard Rules , Weighted Rules' +'\n')
+            file.write('True Positives ,'+ str(results_hard.get('true_pos',0))+ '/200 ,'+ str(results_soft.get('true_pos',0))\
+                       + '/200 ,True Negatives,'+str(results_hard.get('true_neg',0))+'/200, '+ \
+                       str(results_soft.get('true_neg',0))+'/200'+ '\n')
+            file.write(
+                'False Negatives ,' + str(results_hard.get('false_neg', 0)) + '/200 ,' + str(results_soft.get('false_neg', 0)) \
+                + '/200 ,False Positives,' + str(results_hard.get('false_pos', 0)) + '/200, ' + \
+                str(results_soft.get('false_pos', 0)) + '/200' + '\n')
+            file.write(
+                'Neutral ,' + str(results_hard.get('true_neutral', 0)) + '/200 ,' + str(results_soft.get('true_neutral', 0)) \
+                + '/200 ,Neutral,' + str(results_hard.get('false_neutral', 0)) + '/200, ' + \
+                str(results_soft.get('false_neutral', 0)) + '/200' + '\n')
+            file.write(
+                'None ,' + str(results_hard.get('true_none', 0)) + '/200 ,' + str(results_soft.get('true_none', 0)) \
+                + '/200 ,None,' + str(results_hard.get('false_none', 0)) + '/200, ' + \
+                str(results_soft.get('false_none', 0)) + '/200' + '\n')
+            file.write(
+                'UNSATISFIABLE ,' + str(results_hard.get('true_unsat', 0)) + '/200 ,' + str(results_soft.get('true_unsat', 0)) \
+                + '/200 ,UNSATISFIABLE,' + str(results_hard.get('false_unsat', 0)) + '/200, ' + \
+                str(results_soft.get('false_unsat', 0)) + '/200' + '\n')
+            file.write("Execution Time, "+ str((end_time-start_time).total_seconds()))
 
 
 if __name__ == "__main__":
@@ -194,18 +216,20 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--test_predicate", default='sample_case')
     parser.add_argument("-s", "--sampling", default=True)
     args = parser.parse_args()
-    data_sizes = ['1k', '5k', '10k']
+    # data_sizes = ['1k', '5k', '10k']
     start_time = datetime.datetime.now()
 
-    # data_sizes = ['1k']
+    data_sizes = ['0k']
     constraint = ['const_','']
+    # constraint = ['const_']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const
             print"++++++++++++++++"
             init_time = datetime.datetime.now()
-
-            with open('dataset/' + args.test_predicate + '/input/test_' + data_size + '.csv') as f:
+            input_file = 'dataset/' + args.test_predicate + '/input/test_' + data_size + '.csv'
+            # input_file = 'dataset/' + args.test_predicate + '/input/test_sample' + '.csv'
+            with open(input_file) as f:
                 reader = csv.DictReader(f)
                 triples_list = []
                 id_list = []
@@ -217,6 +241,6 @@ if __name__ == "__main__":
                         triples_list.append([row.get('sub').split(":")[1], row.get('obj').split(":")[1]])
                     true_labels.append(row.get('class'))
                     id_list.append(row.get('sid'))
-                results_hard, results_soft = query_test(triples_list, id_list, true_labels, args.test_predicate, \
+                results_hard, results_soft, results_mcsat = query_test(triples_list, id_list, true_labels, args.test_predicate, \
                                                         data_size, init_time, const)
-            write_stats(args.test_predicate,data_size,const,results_hard,results_soft, start_time)
+            write_stats(args.test_predicate,data_size,const,results_hard,results_soft,results_mcsat, start_time)
