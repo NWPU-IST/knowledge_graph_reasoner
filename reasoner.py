@@ -1,4 +1,4 @@
-from config import dbpedia
+from config import dbpedia, rule_mining
 import sys
 import re
 from ordered_set import OrderedSet
@@ -11,7 +11,7 @@ from itertools import product
 def get_rule_predicates(data_source, data_size, const):
     global evidence_path
     evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/rudik/topset_conf_' + const + data_size + '/'
-    text = open('dataset/' + data_source + '/rules/' + rule_mining + '/' + rule_type + '/' + "topset_conf_" + data_size, 'r')
+    text = open('dataset/' + data_source + '/rules/' + rule_mining + '/hard/' + "topset_conf_" + data_size, 'r')
     f = text.read()
     text.close()
     probs = re.findall("(\w+\()", f)
@@ -26,7 +26,7 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
     # print rule_predicates
     for evidence in evidences:
         # print evidence[1]
-        if evidence[1] in rule_predicates or top_k == 0:
+        if evidence[1] in rule_predicates:
             if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == data_source:
                 pass
             elif evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] in ["keyPerson","capital"]:
@@ -164,10 +164,9 @@ def get_label(f, data_source, resource_v):
 def inference_map(sentence_id, data_source, resource_v, data_size, const):
     print resource_v
     resource_v = ['"' + res + '"' for res in resource_v]
-    cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2}k -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+    cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                         data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
     print cmd
-    sys.exit()
     FNULL = open(os.devnull, 'w')
     subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
@@ -179,7 +178,7 @@ def inference_map(sentence_id, data_source, resource_v, data_size, const):
 
 def inference_map_weight(sentence_id, data_source, resource_v, data_size, const):
     resource_v = ['"' + res + '"' for res in resource_v]
-    cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2}k -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+    cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                         data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
     print cmd
     FNULL = open(os.devnull, 'w')

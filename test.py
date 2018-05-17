@@ -136,8 +136,8 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
         results_soft = {'true_pos': true_pos_wt, 'true_neg': true_neg_wt, 'false_neg': false_neg_wt,
                         'false_pos': false_pos_wt, \
                         'true_neutral': true_neutral_wt, 'false_neutral': false_neutral_wt,
-                        'true_none': true_none + true_no_evd_wt, \
-                        'false_none': false_none + false_no_evd_wt, 'true_unsat': true_unsat_wt,
+                        'true_none': true_none_wt + true_no_evd_wt, \
+                        'false_none': false_none_wt + false_no_evd_wt, 'true_unsat': true_unsat_wt,
                         'false_unsat': false_unsat_wt}
         stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, \
                        false_neg, false_pos, true_none, false_none, true_unsat, false_unsat, true_no_evd, false_no_evd, \
