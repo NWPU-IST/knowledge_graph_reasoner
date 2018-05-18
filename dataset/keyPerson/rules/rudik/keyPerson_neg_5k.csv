@@ -1,0 +1,4 @@
+http://dbpedia.org/ontology/numberOfEmployees(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1)
+http://dbpedia.org/ontology/numberOfEmployees(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1)
+http://dbpedia.org/ontology/foundedBy(subject,object) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v0)
+http://dbpedia.org/ontology/foundedBy(subject,object) & http://dbpedia.org/ontology/birthYear(object,v0) & <(v0,v0)

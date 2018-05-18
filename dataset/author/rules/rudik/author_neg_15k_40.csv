@@ -1,0 +1,40 @@
+http://dbpedia.org/ontology/subsequentWork(subject,v0) & http://dbpedia.org/ontology/previousWork(v1,v0) & http://dbpedia.org/ontology/writer(v1,object),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/subsequentWork(v1,v0) & http://dbpedia.org/ontology/previousWork(v1,subject),0.00015
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/subsequentWork(v1,v0) & http://dbpedia.org/ontology/subsequentWork(subject,v1),0.00015
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/previousWork(v0,subject),-0.00116
+http://dbpedia.org/ontology/deathYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/runtime(subject,v1),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/genre(v0,v1) & http://dbpedia.org/ontology/genre(subject,v1),-0.00459
+http://dbpedia.org/ontology/runtime(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsEndYear(object,v1),0.00000
+http://dbpedia.org/ontology/deathYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/Work/runtime(subject,v1),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/subsequentWork(v0,v1) & http://dbpedia.org/ontology/subsequentWork(v1,subject),0.00000
+http://dbpedia.org/ontology/previousWork(v0,subject) & http://dbpedia.org/ontology/subsequentWork(v0,v1) & http://dbpedia.org/ontology/writer(v1,object),0.00015
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/runtime(subject,v1),0.00000
+http://dbpedia.org/ontology/birthYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/runtime(subject,v1),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/previousWork(subject,v0),0.00015
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1),-0.11849
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/previousWork(subject,v0) & http://dbpedia.org/ontology/subsequentWork(v0,subject),0.00000
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/activeYearsEndYear(object,v1),0.00000
+http://dbpedia.org/ontology/previousWork(subject,v0) & http://dbpedia.org/ontology/previousWork(v0,v1) & http://dbpedia.org/ontology/writer(v1,object),0.00000
+http://dbpedia.org/ontology/birthYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/Work/runtime(subject,v1),-0.02815
+http://dbpedia.org/ontology/subsequentWork(v0,subject) & http://dbpedia.org/ontology/previousWork(v0,v1) & http://dbpedia.org/ontology/writer(v1,object),0.00000
+http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/Work/runtime(subject,v1),0.00000
+http://dbpedia.org/ontology/runtime(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/deathYear(object,v1),0.00000
+http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/runtime(subject,v1),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/subsequentWork(v0,v1) & http://dbpedia.org/ontology/previousWork(subject,v1),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/format(v0,v1) & http://dbpedia.org/ontology/format(subject,v1),-0.00021
+http://dbpedia.org/ontology/previousWork(v0,subject) & http://dbpedia.org/ontology/previousWork(v1,v0) & http://dbpedia.org/ontology/writer(v1,object),0.00000
+http://dbpedia.org/ontology/runtime(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1),0.00000
+http://dbpedia.org/ontology/subsequentWork(v0,subject) & http://dbpedia.org/ontology/subsequentWork(v1,v0) & http://dbpedia.org/ontology/writer(v1,object),0.00000
+http://dbpedia.org/ontology/genre(subject,v0) & http://dbpedia.org/ontology/genre(v1,v0) & http://dbpedia.org/ontology/writer(v1,object),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/previousWork(v1,v0) & http://dbpedia.org/ontology/subsequentWork(v1,subject),0.00000
+http://dbpedia.org/ontology/runtime(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/subsequentWork(subject,v0) & http://dbpedia.org/ontology/previousWork(v0,subject),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/previousWork(v1,v0) & http://dbpedia.org/ontology/previousWork(subject,v1),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/previousWork(v0,v1) & http://dbpedia.org/ontology/subsequentWork(subject,v1),-0.00034
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/previousWork(v0,v1) & http://dbpedia.org/ontology/previousWork(v1,subject),0.00000
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/Work/runtime(subject,v1),0.00000
+http://dbpedia.org/ontology/Work/runtime(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathYear(object,v1),0.00000
+http://dbpedia.org/ontology/format(subject,v0) & http://dbpedia.org/ontology/format(v1,v0) & http://dbpedia.org/ontology/writer(v1,object),0.00000
+http://dbpedia.org/ontology/writer(v0,object) & http://dbpedia.org/ontology/subsequentWork(v0,subject),-0.00021
+http://dbpedia.org/ontology/previousWork(subject,v0) & http://dbpedia.org/ontology/subsequentWork(v1,v0) & http://dbpedia.org/ontology/writer(v1,object),-0.00390

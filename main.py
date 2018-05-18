@@ -95,19 +95,19 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
 
-def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, data_size, const):
+def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const):
     evidence = []
     resource_v = [entity.decode('utf-8') for entity in resource_v]
     for entity in resource_v:
-        print entity
+        # print entity
         evidence = distance_one_query(entity, evidence)
         evidence = distance_two_query(entity, evidence)
     # print len(evidence)
     if evidence:
         # print "Predicate Set:"
         # print rule_predicates
-        print "Evidence Set:"
-        query_map = True
+        # print "Evidence Set:"
+        query_map = False
         if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
@@ -120,16 +120,16 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         else:
             map_wt, label_map_wt, map, label_map = '', '', '', ''
 
-        query_prob = False
+        query_prob = True
         if query_prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
-                                                            rule_predicates, rules)
-            print "Writing Domain"
+                                                            rule_predicates, rules, rules_const)
+            # print "Writing Domain"
             if evidence_set:
                 domain_generator(entity_set, sentence_id, data_source)
                 # prob, label_prob = inference_prob(sentence_id, data_source, resource_v)
                 prob, label_prob = inference_prob_mcsat(sentence_id, data_source, resource_v)
-                print prob, label_prob
+                # print prob, label_prob
             else:
                 prob, label_prob = 'NO_EVD', 'NO_EVD'
         else:

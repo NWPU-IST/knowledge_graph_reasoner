@@ -1,4 +1,4 @@
-from config import dbpedia, rule_mining
+from config import dbpedia, rule_mining, logger
 import sys
 import re
 from ordered_set import OrderedSet
@@ -11,13 +11,16 @@ from itertools import product
 def get_rule_predicates(data_source, data_size, const):
     global evidence_path
     evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/rudik/topset_conf_' + const + data_size + '/'
-    text = open('dataset/' + data_source + '/rules/' + rule_mining + '/hard/' + "topset_conf_" + data_size, 'r')
+    text = open('dataset/' + data_source + '/rules/' + rule_mining + '/soft/' + "topset_conf_" + data_size, 'r')
     f = text.read()
     text.close()
+    text_const = open('dataset/' + data_source + '/rules/' + rule_mining + '/soft/' + "topset_conf_const_" + data_size, 'r')
+    f_const = text_const.read()
+    text_const.close()
     probs = re.findall("(\w+\()", f)
     probs = list(set(probs))
     predicates = [p.replace('(', '') for p in probs]
-    return predicates, f
+    return predicates, f, f_const
 
 
 def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates):
@@ -65,11 +68,11 @@ def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predic
     return item_set, entity_set
 
 
-def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates, rules):
+def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates, rules, rules_const):
     item_set = OrderedSet()
     entity_set = []
     for evidence in evidences:
-        if evidence[1] in rule_predicates or top_k==0:
+        if evidence[1] in rule_predicates:
             if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == data_source:
                 pass
             elif evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] in ["keyPerson","capital"]:
@@ -90,7 +93,10 @@ def rule_evidence_writer(evidences, sentence_id, data_source, resource_v, rule_p
                     pass
 
     with open(evidence_path + str(sentence_id) + '_er.txt', 'wb') as csvfile:
-        csvfile.writelines(rules)
+        if 'const' in evidence_path:
+            csvfile.writelines(rules_const)
+        else:
+            csvfile.writelines(rules)
         csvfile.write('\n')
         for i in item_set:
             if '*' not in i:
@@ -219,15 +225,15 @@ def inference_prob(sentence_id, data_source, resource_v):
 
 def inference_prob_mcsat(sentence_id, data_source, resource_v):
     write_query_domain(data_source, sentence_id, resource_v)
-    print "LPMLN Probability MC-SAT Inference"
+    # print "LPMLN Probability MC-SAT Inference"
     cmd = "lpmln2asp -i {1}{0}er_unique.txt".format(sentence_id, evidence_path)
-    print cmd
+    logger.info(cmd)
     FNULL = open(os.devnull, 'w')
     subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
 
     try:
         cmd1 = "python lpmln-learning/code/marginal-mcsat.py out.txt"
-        print cmd1
+        # print cmd1
         # subprocess.call(cmd1, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
         subprocess.call(cmd1, shell=True)
     except:

@@ -1,0 +1,60 @@
+0.0  author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C>D.
+0.0154166666667  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0997916666667  author(A ,B)  :-  author(C ,B) ,  previousWork(C ,D) ,  subsequentWork(A ,D).
+0.132708333333  author(A ,B)  :-  author(C ,B) ,  subsequentWork(A ,C).
+0.02625  author(A ,B)  :-  genre(B ,C) ,  literaryGenre(D ,C) ,  previousWork(A ,D).
+0.0  author(A ,B)  :-  activeYearsStartYear(B ,C) ,  runtime(A ,D) ,  C<D.
+0.0  author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C<D.
+0.0  author(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C>D.
+0.0402083333333  author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.0139583333333  author(A ,B)  :-  runtime(A ,C) ,  activeYearsEndYear(B ,D) ,  C<D.
+0.0479166666667  author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0872916666667  author(A ,B)  :-  author(C ,B) ,  subsequentWork(D ,C) ,  subsequentWork(A ,D).
+0.0139583333333  author(A ,B)  :-  activeYearsEndYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0872916666667  author(A ,B)  :-  subsequentWork(A ,C) ,  subsequentWork(C ,D) ,  author(D ,B).
+0.02625  author(A ,B)  :-  subsequentWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+0.0479166666667  author(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+0.0402083333333  author(A ,B)  :-  activeYearsStartYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0154166666667  author(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C<D.
+0.02625  author(A ,B)  :-  genre(B ,C) ,  literaryGenre(D ,C) ,  subsequentWork(A ,D).
+0.02625  author(A ,B)  :-  previousWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+0.0235416666667  negauthor(A ,B)  :-  subsequentWork(A ,C) ,  previousWork(D ,C) ,  writer(D ,B).
+0.0202083333333  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(D ,C) ,  previousWork(D ,A).
+0.02125  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(D ,C) ,  subsequentWork(A ,D).
+0.0210416666667  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,A).
+0.0  negauthor(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C<D.
+0.0810416666667  negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+0.0  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsEndYear(B ,D) ,  C>D.
+0.122916666667  negauthor(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0216666666667  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,D) ,  subsequentWork(D ,A).
+0.0202083333333  negauthor(A ,B)  :-  previousWork(C ,A) ,  subsequentWork(C ,D) ,  writer(D ,B).
+0.0  negauthor(A ,B)  :-  activeYearsStartYear(B ,C) ,  runtime(A ,D) ,  C<D.
+0.0  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C<D.
+0.0266666666667  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(A ,C).
+0.387083333333  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.023125  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(A ,C) ,  subsequentWork(C ,A).
+0.143333333333  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsEndYear(B ,D) ,  C<D.
+0.0225  negauthor(A ,B)  :-  previousWork(A ,C) ,  previousWork(C ,D) ,  writer(D ,B).
+0.317291666667  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.02375  negauthor(A ,B)  :-  subsequentWork(C ,A) ,  previousWork(C ,D) ,  writer(D ,B).
+0.143333333333  negauthor(A ,B)  :-  activeYearsEndYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0  negauthor(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C>D.
+0.0  negauthor(A ,B)  :-  activeYearsEndYear(B ,C) ,  runtime(A ,D) ,  C<D.
+0.024375  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,D) ,  previousWork(A ,D).
+0.0272916666667  negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+0.0204166666667  negauthor(A ,B)  :-  previousWork(C ,A) ,  previousWork(D ,C) ,  writer(D ,B).
+0.0  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C>D.
+0.0216666666667  negauthor(A ,B)  :-  subsequentWork(C ,A) ,  subsequentWork(D ,C) ,  writer(D ,B).
+0.0810416666667  negauthor(A ,B)  :-  genre(A ,C) ,  genre(D ,C) ,  writer(D ,B).
+0.02375  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(D ,C) ,  subsequentWork(D ,A).
+0.0  negauthor(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C>D.
+0.019375  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(A ,C) ,  previousWork(C ,A).
+0.0225  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(D ,C) ,  previousWork(A ,D).
+0.0235416666667  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,D) ,  subsequentWork(A ,D).
+0.317291666667  negauthor(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+0.0204166666667  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,D) ,  previousWork(D ,A).
+0.387083333333  negauthor(A ,B)  :-  activeYearsStartYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.122916666667  negauthor(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C<D.
+0.0272916666667  negauthor(A ,B)  :-  format(A ,C) ,  format(D ,C) ,  writer(D ,B).
+0.026875  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+0.024375  negauthor(A ,B)  :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B).

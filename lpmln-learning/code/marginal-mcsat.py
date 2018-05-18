@@ -182,7 +182,7 @@ whole_model = None
 #prg.ground([('base', [])])
 #prg.solve([], getSample)
 cmd = 'clingo ' + program_filename + ' 1'
-print cmd
+# print cmd
 try:
 	out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
 except Exception, e:
@@ -237,6 +237,7 @@ for _ in range(max_num_iteration):
 		processSample(whole_model)
 	else:
 		processSample(whole_model)
+		print domain_filename
 		print 'Could not find stable models. Using current sample as next sample.'
 
 
@@ -269,7 +270,7 @@ for atom in query_count:
 	query_pair = ','.join(resource)
 	if query_pair == entities[0]:
 		prob = float(query_count[atom]) / float(sample_count)
-		print atom, ": ", prob
+		# print atom, ": ", prob
 		if 'neg' in atom_str:
 			compare_prob[0] = prob
 		else:

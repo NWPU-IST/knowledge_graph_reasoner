@@ -1,0 +1,51 @@
+0.0604166666667  spouse(A ,B)  :-  successor(C ,B) ,  predecessor(B ,C) ,  spouse(B ,A).
+0.0172916666667  spouse(A ,B)  :-  parent(B ,C) ,  child(C ,B) ,  spouse(B ,A).
+0.576875  spouse(A ,B)  :-  spouse(B ,A).
+0.0175  spouse(A ,B)  :-  parent(C ,B) ,  parent(C ,A) ,  predecessor(C ,A).
+0.015  spouse(A ,B)  :-  parent(C ,A) ,  predecessor(C ,B) ,  parent(C ,B).
+0.044375  spouse(A ,B)  :-  parent(C ,A) ,  child(A ,C) ,  spouse(B ,A).
+0.00916666666667  spouse(A ,B)  :-  birthPlace(B ,C) ,  nationality(B ,C) ,  spouse(B ,A).
+0.0522916666667  spouse(A ,B)  :-  starring(C ,A) ,  starring(C ,B) ,  spouse(B ,A).
+0.0135416666667  spouse(A ,B)  :-  religion(A ,C) ,  religion(B ,C) ,  spouse(B ,A).
+0.06375  spouse(A ,B)  :-  successor(B ,C) ,  predecessor(C ,B) ,  spouse(B ,A).
+0.040625  spouse(A ,B)  :-  parent(C ,B) ,  child(B ,C) ,  spouse(B ,A).
+0.05875  spouse(A ,B)  :-  child(A ,C) ,  child(B ,C) ,  spouse(B ,A).
+0.0139583333333  spouse(A ,B)  :-  occupation(A ,C) ,  occupation(B ,C) ,  spouse(B ,A).
+0.0135416666667  spouse(A ,B)  :-  deathPlace(A ,C) ,  restingPlace(A ,C) ,  spouse(B ,A).
+0.0141666666667  spouse(A ,B)  :-  parent(C ,B) ,  successor(A ,C) ,  spouse(B ,A).
+0.0179166666667  spouse(A ,B)  :-  activeYearsEndYear(A ,C) ,  activeYearsEndYear(B ,C) ,  spouse(B ,A).
+0.0129166666667  spouse(A ,B)  :-  parent(C ,A) ,  successor(B ,C) ,  spouse(B ,A).
+:-  spouse(A ,  B) ,  negspouse(B ,  A).
+0.0341666666667  negspouse(A ,B)  :-  successor(A ,C) ,  predecessor(C ,A) ,  parent(A ,B).
+0.0120833333333  negspouse(A ,B)  :-  predecessor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(A ,C).
+0.044375  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(B ,C) ,  parent(A ,B).
+0.00791666666667  negspouse(A ,B)  :-  orderInOffice(B ,C) ,  office(D ,C) ,  successor(A ,D).
+0.0329166666667  negspouse(A ,B)  :-  successor(A ,C) ,  parent(C ,A) ,  parent(B ,A).
+0.0197916666667  negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(B ,C) ,  successor(B ,A).
+0.0122916666667  negspouse(A ,B)  :-  successor(C ,B) ,  predecessor(A ,C).
+0.0197916666667  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  parent(B ,A).
+0.00854166666667  negspouse(A ,B)  :-  restingPlace(B ,C) ,  restingPlace(A ,C) ,  parent(A ,B).
+0.0166666666667  negspouse(A ,B)  :-  successor(B ,A) ,  spouse(C ,B) ,  parent(A ,C).
+0.0110416666667  negspouse(A ,B)  :-  spouse(C ,B) ,  child(C ,A) ,  parent(A ,C).
+0.0102083333333  negspouse(A ,B)  :-  deathPlace(B ,C) ,  restingPlace(B ,C) ,  parent(A ,B).
+0.150208333333  negspouse(A ,B)  :-  parent(A ,B).
+0.0195833333333  negspouse(A ,B)  :-  successor(B ,A) ,  deathPlace(B ,C) ,  birthPlace(A ,C).
+0.009375  negspouse(A ,B)  :-  birthPlace(B ,C) ,  birthPlace(A ,C) ,  child(A ,B).
+0.023125  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(A ,B).
+0.0810416666667  negspouse(A ,B)  :-  spouse(A ,C) ,  parent(B ,C).
+0.0158333333333  negspouse(A ,B)  :-  deathPlace(B ,C) ,  deathPlace(A ,C) ,  parent(B ,A).
+0.053125  negspouse(A ,B)  :-  spouse(C ,B) ,  spouse(B ,C) ,  parent(B ,A).
+0.0247916666667  negspouse(A ,B)  :-  deathPlace(B ,C) ,  deathPlace(A ,C) ,  parent(A ,B).
+0.0220833333333  negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(A ,C) ,  parent(B ,A).
+0.0289583333333  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  parent(A ,B).
+0.0233333333333  negspouse(A ,B)  :-  successor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(B ,C).
+0.01  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(B ,C) ,  predecessor(B ,A).
+0.011875  negspouse(A ,B)  :-  spouse(C ,A) ,  child(C ,B) ,  parent(B ,C).
+0.025  negspouse(A ,B)  :-  successor(A ,C) ,  parent(C ,A) ,  parent(A ,B).
+0.0516666666667  negspouse(A ,B)  :-  predecessor(C ,B) ,  parent(C ,B) ,  parent(A ,B).
+0.0127083333333  negspouse(A ,B)  :-  spouse(A ,C) ,  parent(B ,C) ,  child(C ,B).
+0.0920833333333  negspouse(A ,B)  :-  parent(B ,A).
+0.0310416666667  negspouse(A ,B)  :-  successor(B ,A) ,  orderInOffice(B ,C) ,  C=C.
+0.00958333333333  negspouse(A ,B)  :-  birthPlace(A ,C) ,  restingPlace(B ,C) ,  parent(A ,B).
+0.0189583333333  negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(B ,A).
+0.0375  negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(B ,C) ,  parent(A ,B).

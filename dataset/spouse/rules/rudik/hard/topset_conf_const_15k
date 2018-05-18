@@ -1,0 +1,51 @@
+spouse(A ,B)  :-  successor(C ,B) ,  predecessor(B ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  parent(B ,C) ,  child(C ,B) ,  spouse(B ,A).
+spouse(A ,B)  :-  spouse(B ,A).
+spouse(A ,B)  :-  parent(C ,B) ,  parent(C ,A) ,  predecessor(C ,A).
+spouse(A ,B)  :-  parent(C ,A) ,  predecessor(C ,B) ,  parent(C ,B).
+spouse(A ,B)  :-  parent(C ,A) ,  child(A ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  birthPlace(B ,C) ,  nationality(B ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  starring(C ,A) ,  starring(C ,B) ,  spouse(B ,A).
+spouse(A ,B)  :-  religion(A ,C) ,  religion(B ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  successor(B ,C) ,  predecessor(C ,B) ,  spouse(B ,A).
+spouse(A ,B)  :-  parent(C ,B) ,  child(B ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  child(A ,C) ,  child(B ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  occupation(A ,C) ,  occupation(B ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  deathPlace(A ,C) ,  restingPlace(A ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  parent(C ,B) ,  successor(A ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  activeYearsEndYear(A ,C) ,  activeYearsEndYear(B ,C) ,  spouse(B ,A).
+spouse(A ,B)  :-  parent(C ,A) ,  successor(B ,C) ,  spouse(B ,A).
+:-  spouse(A ,  B) ,  negspouse(B ,  A).
+negspouse(A ,B)  :-  successor(A ,C) ,  predecessor(C ,A) ,  parent(A ,B).
+negspouse(A ,B)  :-  predecessor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(A ,C).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(B ,C) ,  parent(A ,B).
+negspouse(A ,B)  :-  orderInOffice(B ,C) ,  office(D ,C) ,  successor(A ,D).
+negspouse(A ,B)  :-  successor(A ,C) ,  parent(C ,A) ,  parent(B ,A).
+negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(B ,C) ,  successor(B ,A).
+negspouse(A ,B)  :-  successor(C ,B) ,  predecessor(A ,C).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  parent(B ,A).
+negspouse(A ,B)  :-  restingPlace(B ,C) ,  restingPlace(A ,C) ,  parent(A ,B).
+negspouse(A ,B)  :-  successor(B ,A) ,  spouse(C ,B) ,  parent(A ,C).
+negspouse(A ,B)  :-  spouse(C ,B) ,  child(C ,A) ,  parent(A ,C).
+negspouse(A ,B)  :-  deathPlace(B ,C) ,  restingPlace(B ,C) ,  parent(A ,B).
+negspouse(A ,B)  :-  parent(A ,B).
+negspouse(A ,B)  :-  successor(B ,A) ,  deathPlace(B ,C) ,  birthPlace(A ,C).
+negspouse(A ,B)  :-  birthPlace(B ,C) ,  birthPlace(A ,C) ,  child(A ,B).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(A ,B).
+negspouse(A ,B)  :-  spouse(A ,C) ,  parent(B ,C).
+negspouse(A ,B)  :-  deathPlace(B ,C) ,  deathPlace(A ,C) ,  parent(B ,A).
+negspouse(A ,B)  :-  spouse(C ,B) ,  spouse(B ,C) ,  parent(B ,A).
+negspouse(A ,B)  :-  deathPlace(B ,C) ,  deathPlace(A ,C) ,  parent(A ,B).
+negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(A ,C) ,  parent(B ,A).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  parent(A ,B).
+negspouse(A ,B)  :-  successor(A ,B) ,  birthPlace(B ,C) ,  deathPlace(B ,C).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(B ,C) ,  predecessor(B ,A).
+negspouse(A ,B)  :-  spouse(C ,A) ,  child(C ,B) ,  parent(B ,C).
+negspouse(A ,B)  :-  successor(A ,C) ,  parent(C ,A) ,  parent(A ,B).
+negspouse(A ,B)  :-  predecessor(C ,B) ,  parent(C ,B) ,  parent(A ,B).
+negspouse(A ,B)  :-  spouse(A ,C) ,  parent(B ,C) ,  child(C ,B).
+negspouse(A ,B)  :-  parent(B ,A).
+negspouse(A ,B)  :-  successor(B ,A) ,  orderInOffice(B ,C) ,  C=C.
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  restingPlace(B ,C) ,  parent(A ,B).
+negspouse(A ,B)  :-  birthPlace(A ,C) ,  deathPlace(A ,C) ,  successor(B ,A).
+negspouse(A ,B)  :-  birthPlace(B ,C) ,  deathPlace(B ,C) ,  parent(A ,B).

@@ -1,0 +1,60 @@
+author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C>D.
+author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  author(C ,B) ,  previousWork(C ,D) ,  subsequentWork(A ,D).
+author(A ,B)  :-  author(C ,B) ,  subsequentWork(A ,C).
+author(A ,B)  :-  genre(B ,C) ,  literaryGenre(D ,C) ,  previousWork(A ,D).
+author(A ,B)  :-  activeYearsStartYear(B ,C) ,  runtime(A ,D) ,  C<D.
+author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C<D.
+author(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C>D.
+author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+author(A ,B)  :-  runtime(A ,C) ,  activeYearsEndYear(B ,D) ,  C<D.
+author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  author(C ,B) ,  subsequentWork(D ,C) ,  subsequentWork(A ,D).
+author(A ,B)  :-  activeYearsEndYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  subsequentWork(A ,C) ,  subsequentWork(C ,D) ,  author(D ,B).
+author(A ,B)  :-  subsequentWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+author(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+author(A ,B)  :-  activeYearsStartYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C<D.
+author(A ,B)  :-  genre(B ,C) ,  literaryGenre(D ,C) ,  subsequentWork(A ,D).
+author(A ,B)  :-  previousWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+negauthor(A ,B)  :-  subsequentWork(A ,C) ,  previousWork(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(D ,C) ,  previousWork(D ,A).
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(D ,C) ,  subsequentWork(A ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,A).
+negauthor(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C<D.
+negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsEndYear(B ,D) ,  C>D.
+negauthor(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,D) ,  subsequentWork(D ,A).
+negauthor(A ,B)  :-  previousWork(C ,A) ,  subsequentWork(C ,D) ,  writer(D ,B).
+negauthor(A ,B)  :-  activeYearsStartYear(B ,C) ,  runtime(A ,D) ,  C<D.
+negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C<D.
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(A ,C).
+negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(A ,C) ,  subsequentWork(C ,A).
+negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsEndYear(B ,D) ,  C<D.
+negauthor(A ,B)  :-  previousWork(A ,C) ,  previousWork(C ,D) ,  writer(D ,B).
+negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negauthor(A ,B)  :-  subsequentWork(C ,A) ,  previousWork(C ,D) ,  writer(D ,B).
+negauthor(A ,B)  :-  activeYearsEndYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negauthor(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C>D.
+negauthor(A ,B)  :-  activeYearsEndYear(B ,C) ,  runtime(A ,D) ,  C<D.
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,D) ,  previousWork(A ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+negauthor(A ,B)  :-  previousWork(C ,A) ,  previousWork(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C>D.
+negauthor(A ,B)  :-  subsequentWork(C ,A) ,  subsequentWork(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  genre(A ,C) ,  genre(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(D ,C) ,  subsequentWork(D ,A).
+negauthor(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C>D.
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(A ,C) ,  previousWork(C ,A).
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(D ,C) ,  previousWork(A ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,D) ,  subsequentWork(A ,D).
+negauthor(A ,B)  :-  runtime(A ,C) ,  birthYear(B ,D) ,  C<D.
+negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,D) ,  previousWork(D ,A).
+negauthor(A ,B)  :-  activeYearsStartYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negauthor(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C<D.
+negauthor(A ,B)  :-  format(A ,C) ,  format(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+negauthor(A ,B)  :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B).

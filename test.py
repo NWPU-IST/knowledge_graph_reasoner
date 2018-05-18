@@ -7,6 +7,7 @@ import sys
 import datetime
 
 
+
 def query_test(triples_list, id_list, true_labels, data_source, data_size, init_time, const):
     results_hard = {}
     results_soft = {}
@@ -28,7 +29,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
     true_none_wt, false_none_wt = 0, 0
     true_unsat_wt, false_unsat_wt = 0, 0
     true_no_evd_wt, false_no_evd_wt = 0, 0
-    rule_predicates, rules = get_rule_predicates(data_source, data_size, const)
+    rule_predicates, rules, rules_const = get_rule_predicates(data_source, data_size, const)
     lpmln_evaluation_map = [['sentence_id', 'true_label', 'sentence', 'map_hard_label',\
                          'map_soft_label', 'map_hard_as','map_soft_as']]
     lpmln_evaluation_mcsat = [['sentence_id', 'true_label', 'sentence', 'mc_label', \
@@ -38,7 +39,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
         sentence_id = id_list[t]
         # if sentence_id in error_list:
         #     continue
-        print true_labels[t]
+        # print true_labels[t]
         true_label = int(float(true_labels[t]))
 
         if true_label == 1:
@@ -47,9 +48,9 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
             false_count += 1
 
         triple_check = triples_list[t]
-        print sentence_id, triple_check, true_label, '\n'
+        # print sentence_id, triple_check, true_label, '\n'
         map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map = lpmln_reasoning(triple_check,\
-                                                        rule_predicates, sentence_id, data_source, rules, data_size, const)
+                                    rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const)
         if query_map:
             if true_label == 1 and label_map == '1':
                 true_pos += 1
@@ -171,12 +172,10 @@ def write_stats(data_source, data_size, const, results_hard, results_soft, resul
                        str(result_mcsat.get('true_neg',0))+'/200'+ '\n')
             file.write(
                 'False Negatives ,' + str(result_mcsat.get('false_neg', 0)) \
-                + '/200 ,False Positives,' + '/200, ' + \
-                str(result_mcsat.get('false_pos', 0)) + '/200' + '\n')
+                + '/200 ,False Positives,' + str(result_mcsat.get('false_pos', 0)) + '/200' + '\n')
             file.write(
                 'Neutral ,' + str(result_mcsat.get('true_neutral', 0)) \
-                + '/200 ,Neutral,' + '/200, ' + \
-                str(result_mcsat.get('false_neutral', 0)) + '/200' + '\n')
+                + '/200 ,Neutral,' + str(result_mcsat.get('false_neutral', 0)) + '/200' + '\n')
             file.write(
                 'None ,' + str(result_mcsat.get('true_none', 0)) \
                 + '/200 ,None,' + str(result_mcsat.get('false_none', 0)) + '/200' + '\n')
@@ -219,9 +218,9 @@ if __name__ == "__main__":
     # data_sizes = ['1k', '5k', '10k']
     start_time = datetime.datetime.now()
 
-    data_sizes = ['0k']
-    constraint = ['const_','']
-    # constraint = ['const_']
+    data_sizes = ['5k']
+    # constraint = ['const_','']
+    constraint = ['const_']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const
