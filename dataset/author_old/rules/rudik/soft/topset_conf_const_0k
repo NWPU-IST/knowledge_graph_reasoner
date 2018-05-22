@@ -1,0 +1,30 @@
+0.042  author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.049  author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.013  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.128  author(A ,B)  :-  author(C ,B) ,  subsequentWork(A ,C).
+0.945  author(A ,B)  :-  author(A ,B).
+0.026  author(A ,B)  :-  previousWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+0.037  author(A ,B)  :-  author(C ,B) ,  type(C ,D) ,  type(A ,D).
+0.461  author(A ,B)  :-  author(C ,B) ,  publisher(C ,D) ,  publisher(A ,D).
+0.021  author(A ,B)  :-  subsequentWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+0.42   author(A ,B)  :-  author(C ,B) ,  numberOfPages(C ,D) ,  numberOfPages(A ,D).
+0.146  author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
+0.02   negauthor(A ,B)  :-  producer(C ,B) ,  previousWork(A ,C).
+0.018  negauthor(A ,B)  :-  previousWork(C ,A) ,  genre(C ,D) ,  genre(B ,D).
+0.017  negauthor(A ,B)  :-  producer(A ,C) ,  deathPlace(C ,D) ,  birthPlace(B ,D).
+0.027  negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+0.387  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.317  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.021  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,A).
+0.023  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,D) ,  subsequentWork(A ,D).
+0.081  negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+0.026  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+0.024  negauthor(A ,B)  :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B).
+0.022  negauthor(A ,B)  :-  writer(C ,B) ,  previousWork(C ,A) ,  subsequentWork(A ,C).
+0.021  negauthor(A ,B)  :-  subsequentWork(A ,C) ,  previousWork(D ,C) ,  writer(D ,B).
+0.031  negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+0.018  negauthor(A ,B)  :-  genre(A ,C) ,  stylisticOrigin(C ,D) ,  genre(B ,D).
+0.019  negauthor(A ,B)  :-  subsequentWork(C ,A) ,  subsequentWork(D ,C) ,  writer(D ,B).
+0.008  negauthor(A ,B)  :-  previousWork(C ,A) ,  album(C ,D) ,  producer(D ,B).
+0.010  negauthor(A ,B)  :-  subsequentWork(A ,C) ,  album(C ,D) ,  producer(D ,B).
+:- author(A,B), negauthor(A,B).

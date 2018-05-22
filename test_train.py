@@ -11,22 +11,22 @@ sparql_endpoint = sparql_dbpedia
 def get_query(subject, object, relation, v):
     suffix = "} ORDER BY RAND() LIMIT " + str(v)
     print "Executing negative candidate query selection"
-    prefix = "PREFIX dbp: <http://dbpedia.org/property/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " \
-             "PREFIX dbo: <http://dbpedia.org/ontology/> SELECT DISTINCT ?subject ?object  FROM <http://dbpedia.org> " \
-             "WHERE { ?object <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/"+object+">. " \
-             "?subject <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/"+subject+">. "
+    prefix = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> PREFIX dbp: <http://dbpedia.org/property/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " \
+             "SELECT DISTINCT ?subject ?object FROM <http://dbpedia.org> " \
+             "WHERE { ?object rdf:type dbpedia-owl:"+object+". " \
+             "?subject rdf:type dbpedia-owl:"+subject+". "
 
     negative_query = prefix + " {{?subject ?targetRelation ?realObject.} UNION  {?realSubject ?targetRelation ?object.}} " \
                               "?subject ?otherRelation ?object. " \
-                              "FILTER (?targetRelation = <http://dbpedia.org/ontology/"+relation+">) " \
-                              "FILTER (?otherRelation != <http://dbpedia.org/ontology/"+relation+">) " \
-                              "FILTER NOT EXISTS {?subject <http://dbpedia.org/ontology/"+relation+"> ?object.} " + suffix
+                              "FILTER (?targetRelation = dbpedia-owl:"+relation+") " \
+                              "FILTER (?otherRelation != dbpedia-owl:"+relation+") " \
+                              "FILTER NOT EXISTS {?subject dbpedia-owl:"+relation+" ?object.} " + suffix
     print negative_query
 
     print "Executing positive candidate query selection"
 
     positive_query = prefix + " ?subject ?targetRelation ?object.   " \
-                              "FILTER (?targetRelation = <http://dbpedia.org/ontology/"+relation+">) " + suffix
+                              "FILTER (?targetRelation = dbpedia-owl:"+relation+") " + suffix
     print positive_query
     return positive_query, negative_query
 
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     # args = parser.parse_args()
     # folder_path = 'dataset/'+args.test_predicate+'/input/'
     # data_size = {'1k':1000, '5k':5000, '10k':10000}
-    data_size = {'5k': 5000}
+    data_size = {'10k': 10000}
     # positive_query, negative_query = get_query(args.subject, args.object,args.test_predicate)
 
     with open('dataset/dataset_lpmln.csv','rb')as datainput:

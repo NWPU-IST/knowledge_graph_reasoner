@@ -159,13 +159,13 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
     update_resources(triple_flag=False, ambiverse_flag=False, file_triples=False, ambiverse_resources=False, \
                      lpmln_evaluation=lpmln_evaluation, data_source=data_source, input=input,\
                      const=const,data_size=data_size,lpmln_type=lpmln_type)
-    return results_hard, results_soft, results_mcsat
+    return results_hard, results_soft, results_mcsat, lpmln_type
 
 
-def write_stats(data_source, data_size, const, results_hard, results_soft, result_mcsat, start_time):
+def write_stats(data_source, data_size, const, results_hard, results_soft, result_mcsat, start_time, lpmln_type):
     end_time = datetime.datetime.now()
     if result_mcsat:
-        with open('dataset/' + data_source + '/output_stats/summary_'+data_size+'_'+const+'_'+str(end_time)+'_output.csv','a') as file:
+        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
             file.write('True Examples , Weighted Rules , False Examples , Weighted Rules' +'\n')
             file.write('True Positives ,' + str(result_mcsat.get('true_pos',0))\
                        + '/200 ,True Negatives,' + \
@@ -185,7 +185,7 @@ def write_stats(data_source, data_size, const, results_hard, results_soft, resul
             file.write("Execution Time, "+ str((end_time-start_time).total_seconds()))
 
     else:
-        with open('dataset/' + data_source + '/output_stats/summary_'+data_size+'_'+const+'_'+str(end_time)+'_output.csv','a') as file:
+        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
             file.write('True Examples , Hard Rules , Weighted Rules , False Examples , Hard Rules , Weighted Rules' +'\n')
             file.write('True Positives ,'+ str(results_hard.get('true_pos',0))+ '/200 ,'+ str(results_soft.get('true_pos',0))\
                        + '/200 ,True Negatives,'+str(results_hard.get('true_neg',0))+'/200, '+ \
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     # data_sizes = ['1k', '5k', '10k']
     start_time = datetime.datetime.now()
 
-    data_sizes = ['5k']
+    data_sizes = ['0k']
     # constraint = ['const_','']
     constraint = ['const_']
     for data_size in data_sizes:
@@ -240,6 +240,6 @@ if __name__ == "__main__":
                         triples_list.append([row.get('sub').split(":")[1], row.get('obj').split(":")[1]])
                     true_labels.append(row.get('class'))
                     id_list.append(row.get('sid'))
-                results_hard, results_soft, results_mcsat = query_test(triples_list, id_list, true_labels, args.test_predicate, \
+                results_hard, results_soft, results_mcsat,lpmln_type = query_test(triples_list, id_list, true_labels, args.test_predicate, \
                                                         data_size, init_time, const)
-            write_stats(args.test_predicate,data_size,const,results_hard,results_soft,results_mcsat, start_time)
+            write_stats(args.test_predicate,data_size,const,results_hard,results_soft,results_mcsat, start_time, lpmln_type)
