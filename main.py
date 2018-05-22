@@ -107,7 +107,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         # print "Predicate Set:"
         # print rule_predicates
         # print "Evidence Set:"
-        query_map = True
+        query_map = False
         if query_map:
             evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             # print evidence_set, entity_set
@@ -120,7 +120,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         else:
             map_wt, label_map_wt, map, label_map = '', '', '', ''
 
-        query_prob = False
+        query_prob = True
         if query_prob:
             evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules, rules_const)

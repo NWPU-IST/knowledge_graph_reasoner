@@ -1,0 +1,24 @@
+spouse(A ,B)  :-  starring(C ,B) ,  location(C ,D) ,  birthPlace(A ,D).
+spouse(A ,B)  :-  child(A ,C) ,  child(B ,C).
+spouse(A ,B)  :-  spouse(B ,A).
+spouse(A ,B)  :-  parent(C ,B) ,  parent(C ,A).
+spouse(A ,B)  :-  parent(C ,B) ,  child(A ,C).
+:-  spouse(A ,  B) ,  negspouse(B ,  A).
+negspouse(A ,B)  :-  successor(C ,A) ,  primeMinister(C ,D) ,  successor(B ,D).
+negspouse(A ,B)  :-  successor(A ,C) ,  primeMinister(C ,D) ,  successor(D ,B).
+negspouse(A ,B)  :-  president(C ,B) ,  region(C ,D) ,  birthPlace(A ,D).
+negspouse(A ,B)  :-  successor(B ,C) ,  successor(A ,C).
+negspouse(A ,B)  :-  office(B ,C) ,  orderInOffice(A ,C).
+negspouse(A ,B)  :-  relative(A ,B).
+negspouse(A ,B)  :-  office(A ,C) ,  office(B ,C) ,  predecessor(A ,B).
+negspouse(A ,B)  :-  spouse(A ,C) ,  child(C ,B).
+negspouse(A ,B)  :-  successor(B ,C) ,  president(A ,C).
+negspouse(A ,B)  :-  successor(C ,B) ,  otherParty(C ,D) ,  party(A ,D).
+negspouse(A ,B)  :-  spouse(C ,B) ,  spouse(C ,A).
+negspouse(A ,B)  :-  predecessor(C ,B) ,  country(C ,D) ,  birthPlace(A ,D).
+negspouse(A ,B)  :-  spouse(C ,B) ,  parent(A ,C).
+negspouse(A ,B)  :-  termPeriod(A ,C) ,  office(C ,D) ,  orderInOffice(B ,D).
+negspouse(A ,B)  :-  parent(A ,B).
+negspouse(A ,B)  :-  spouse(A ,C) ,  spouse(B ,C).
+negspouse(A ,B)  :-  successor(A ,B) ,  office(B ,C) ,  office(A ,C).
+negspouse(A ,B)  :-  spouse(A ,C) ,  parent(B ,C).

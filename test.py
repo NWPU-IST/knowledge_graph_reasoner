@@ -219,8 +219,8 @@ if __name__ == "__main__":
     start_time = datetime.datetime.now()
 
     data_sizes = ['0k']
-    # constraint = ['const_','']
-    constraint = ['const_']
+    constraint = ['const_','']
+    # constraint = ['const_']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const

@@ -1,0 +1,7 @@
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/successor(object,v0) & http://dbpedia.org/ontology/parent(v0,object)
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/successor(subject,v0)
+http://dbpedia.org/ontology/activeYearsStartYear(subject,v0) & <(v0,v0) & http://dbpedia.org/ontology/activeYearsStartYear(object,v0)
+http://dbpedia.org/ontology/birthYear(subject,v0) & <(v0,v0) & http://dbpedia.org/ontology/birthYear(object,v0)
+http://dbpedia.org/ontology/spouse(object,subject)
+http://dbpedia.org/ontology/parent(v0,object) & http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/predecessor(v0,subject)
+http://dbpedia.org/ontology/parent(v0,subject) & http://dbpedia.org/ontology/predecessor(v0,object) & http://dbpedia.org/ontology/parent(v0,object)
