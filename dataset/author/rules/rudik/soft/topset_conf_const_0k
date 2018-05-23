@@ -1,0 +1,30 @@
+0.03  author(A ,B)  :-  author(C ,B) ,  type(C ,D) ,  type(A ,D).
+0.0441836734694  author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.0505102040816  author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.461734693878  author(A ,B)  :-  author(C ,B) ,  publisher(C ,D) ,  publisher(A ,D).
+0.0237755102041  author(A ,B)  :-  subsequentWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+0.135408163265  author(A ,B)  :-  author(C ,B) ,  series(C ,D) ,  series(A ,D).
+0.127551020408  author(A ,B)  :-  author(C ,B) ,  previousWork(C ,A).
+0.0178571428571  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.135408163265  author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
+:-  author(A ,  B) ,  negauthor(B ,  A).
+0.379897959184  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.311734693878  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0205102040816  negauthor(A ,B)  :-  director(A ,B) ,  producer(C ,B) ,  creator(C ,B).
+0.0168367346939  negauthor(A ,B)  :-  author(C ,B) ,  basedOn(A ,C).
+0.019387755102  negauthor(A ,B)  :-  producer(C ,B) ,  previousWork(C ,D) ,  previousWork(D ,A).
+0.0777551020408  negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+0.123367346939  negauthor(A ,B)  :-  releaseDate(A ,C) ,  releaseDate(D ,C) ,  writer(D ,B).
+0.0121428571429  negauthor(A ,B)  :-  producer(C ,B) ,  series(C ,D) ,  series(A ,D).
+0.0386734693878  negauthor(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  writer(D ,B).
+0.0280612244898  negauthor(A ,B)  :-  creator(C ,B) ,  producer(C ,D) ,  director(A ,D).
+0.0180612244898  negauthor(A ,B)  :-  genre(B ,C) ,  genre(D ,C) ,  subsequentWork(D ,A).
+0.0275510204082  negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+0.0162244897959  negauthor(A ,B)  :-  genre(A ,C) ,  stylisticOrigin(D ,C) ,  genre(B ,D).
+0.0  negauthor(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C>D.
+0.0167346938776  negauthor(A ,B)  :-  previousWork(C ,A) ,  genre(C ,D) ,  genre(B ,D).
+0.0267346938776  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+0.0104081632653  negauthor(A ,B)  :-  genre(A ,C) ,  musicSubgenre(D ,C) ,  genre(B ,D).
+0.0219387755102  negauthor(A ,B)  :-  subsequentWork(C ,A) ,  previousWork(C ,D) ,  writer(D ,B).
+0.0214285714286  negauthor(A ,B)  :-  previousWork(C ,A) ,  subsequentWork(C ,D) ,  writer(D ,B).
+0.0107142857143  negauthor(A ,B)  :-  subsequentWork(C ,A) ,  album(C ,D) ,  producer(D ,B).

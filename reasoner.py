@@ -163,7 +163,9 @@ def get_label(f, data_source, resource_v):
                 label = "0"
         else:
             label = "None"
-    print label
+    # print label
+    logger.info(map_output)
+    logger.info(label)
     return map_output, label
 
 
@@ -172,8 +174,7 @@ def inference_map(sentence_id, data_source, resource_v, data_size, const):
     resource_v = ['"' + res + '"' for res in resource_v]
     cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                         data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
-    print cmd
-    sys.exit()
+    # print cmd
     logger.info(cmd)
     FNULL = open(os.devnull, 'w')
     subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
@@ -247,6 +248,7 @@ def inference_prob_mcsat(sentence_id, data_source, resource_v):
     text.close()
     # with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
     #     the_file.write('utf-8')
+    logger.info(probs)
     return probs.split(";")
 
 

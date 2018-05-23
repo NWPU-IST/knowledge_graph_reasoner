@@ -34,11 +34,11 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
                          'map_soft_label', 'map_hard_as','map_soft_as']]
     lpmln_evaluation_mcsat = [['sentence_id', 'true_label', 'sentence', 'mc_label', \
                              'mc_prob']]
-    # error_list_author_const_soft = ['255','343','361']
+    error_list = ['266']
     for t, triple in enumerate(triples_list):
         sentence_id = id_list[t]
-        # if sentence_id in error_list:
-        #     continue
+        if sentence_id in error_list and const:
+            continue
         # print true_labels[t]
         true_label = int(float(true_labels[t]))
 
@@ -113,13 +113,13 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
                 false_neg += 1
             elif true_label == 0 and label_prob == '1':
                 false_pos += 1
-            elif true_label == 1 and (label_prob == 'equal' or label_prob == '0'):
+            elif true_label == 1 and (label_prob == 'equal'):
                 true_neutral += 1
-            elif true_label == 0 and (label_prob == 'equal' or label_prob == '0'):
+            elif true_label == 0 and (label_prob == 'equal'):
                 false_neutral += 1
-            elif true_label == 0 and label_prob == 'None':
+            elif true_label == 0 and (label_prob == 'None' or label_prob == '0'):
                 false_none += 1
-            elif true_label == 1 and label_prob == 'None':
+            elif true_label == 1 and (label_prob == 'None' or label_prob == '0'):
                 true_none += 1
             elif true_label == 1 and label_prob == 'NO_EVD':
                 true_no_evd += 1
@@ -215,7 +215,7 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--test_predicate", default='sample_case')
     parser.add_argument("-s", "--sampling", default=True)
     args = parser.parse_args()
-    # data_sizes = ['1k', '5k', '10k']
+    # data_sizes = ['1k', '5k', '10k','0k']
     start_time = datetime.datetime.now()
 
     data_sizes = ['0k']

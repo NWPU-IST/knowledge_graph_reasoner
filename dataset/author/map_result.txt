@@ -1,0 +1,14 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_check_kb/out.txt dataset/author/evidence/local/rudik/topset_conf_0k/400_unique.txt 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_check_kb/out.txt ...
+Solving...
+Answer: 1
+author("How_to_Succeed_in_Business_Without_Really_Trying_(musical)","Jack_Weinstock") author("How_to_Succeed_in_Business_Without_Really_Trying_(musical)","Willie_Gilbert") author("How_to_Succeed_in_Business_Without_Really_Trying_(musical)","Abe_Burrows") basedOn("How_to_Succeed_in_Business_Without_Really_Trying_(musical)","How_to_Succeed_in_Business_Without_Really_Trying_(book)") activeYearsStartYear("Frank_Loesser","1936") birthYear("Abe_Burrows","1910") birthYear("Willie_Gilbert","1916") deathYear("Abe_Burrows","1985") deathYear("Jack_Weinstock","1969") deathYear("Willie_Gilbert","1980") genre("Frank_Loesser","Musical_theatre")
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s

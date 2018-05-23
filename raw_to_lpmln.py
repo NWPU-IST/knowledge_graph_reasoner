@@ -99,7 +99,7 @@ def rule_parser_rudik(fname, predicate, pos_neg, examples):
         # if score:
             # rule = str(score)+' '+pos_neg+predicate+"("+ str(it+1)+",A,B) :- "
         # rule = str(score)+' '+pos_neg+predicate+"(A,B) :- "
-        if pos_neg=='pos':
+        if pos_neg == 'pos':
             rule = predicate+"(A,B) :- "
         else:
             rule = pos_neg+predicate+"(A,B) :- "

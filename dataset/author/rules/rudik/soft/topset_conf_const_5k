@@ -1,0 +1,16 @@
+0.0442  author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.0512  author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.1304  author(A ,B)  :-  author(C ,B) ,  previousWork(C ,A).
+0.0172  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.139  author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
+:-  author(A ,  B) ,  negauthor(B ,  A).
+0.0256  negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+0.3728  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.3014  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0154  negauthor(A ,B)  :-  genre(A ,C) ,  stylisticOrigin(D ,C) ,  genre(B ,D).
+0.071  negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+0.0  negauthor(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C>D.
+0.119  negauthor(A ,B)  :-  releaseDate(A ,C) ,  releaseDate(D ,C) ,  writer(D ,B).
+0.0154  negauthor(A ,B)  :-  previousWork(C ,A) ,  genre(C ,D) ,  genre(B ,D).
+0.0246  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+0.0374  negauthor(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  writer(D ,B).
