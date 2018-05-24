@@ -1,0 +1,25 @@
+2018-05-22 12:05:18.407562-------------------------------
+True Neutral: 0
+False Neutral: 0
+True None: 44
+False None: 124
+True UNSAT: 1
+False UNSAT: 1
+True NO EVD: 20
+False NO EVD: 2
+True Count:200 True Pos: 134 False Neg: 1
+False Count: 200 True Neg: 72 False Pos: 1
+Execution Time: 149.957848
+-------------------------------2018-05-22 12:05:18.407562-------------------------------
+True Neutral_wt: 0
+False Neutral_wt: 0
+True None_wt: 44
+False None_wt: 125
+True UNSAT_wt: 0
+False UNSAT_wt: 0
+True NO EVD_wt: 20
+False NO EVD+wt: 2
+True Count:200 True Pos_wt: 135 False Neg_wt: 1
+False Count: 200 True Neg_wt: 72 False_Pos: 1
+Execution Time: 149.957848
+-------------------------------

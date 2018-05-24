@@ -1,0 +1,7 @@
+True Examples , constraint , no_constraint , False Examples , constraint , no_constraint
+True Positives ,25/200 ,81/200 ,True Negatives,10/200, 29/200
+False Negatives ,1/200 ,2/200 ,False Positives,0/200, 0/200
+Neutral ,0/200 ,0/200 ,Neutral,0/200, 0/200
+None ,108/200 ,108/200 ,None,103/200, 103/200
+UNSATISFIABLE ,66/200 ,0/200 ,UNSATISFIABLE,87/200, 0/200
+Execution Time, -219.587363

@@ -1,0 +1,7 @@
+True Examples , Hard Rules , Weighted Rules , False Examples , Hard Rules , Weighted Rules
+True Positives ,36/200 ,38/200 ,True Negatives,13/200, 49/200
+False Negatives ,1/200 ,5/200 ,False Positives,0/200, 0/200
+Neutral ,0/200 ,0/200 ,Neutral,0/200, 0/200
+None ,153/200 ,157/200 ,None,118/200, 150/200
+UNSATISFIABLE ,10/200 ,0/200 ,UNSATISFIABLE,68/200, 0/200
+Execution Time, 100.659635

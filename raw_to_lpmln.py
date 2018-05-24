@@ -72,7 +72,7 @@ def rule_parser_rudik(fname, predicate, pos_neg, examples):
     with open(fname) as f:
         content = f.readlines()
     for it, con in enumerate(content):
-        print it,con
+        print it, con
         # sys.exit()
         relation = re.findall(r"\/([a-zA-Z]+\(.*?\))", con)
         compare = re.findall(r"([!>=<!]+?\(.*?\))", con)
@@ -226,7 +226,7 @@ if __name__ == "__main__":
                         rule_list = rule_parser_amie(path, test_predicate)
                     else:
                         soft_rule_list, hard_rule_list = rule_parser_rudik(path, test_predicate, pos_neg,examples)
-                    constraint_rule = ':- '+test_predicate+'(A, B), neg'+test_predicate+'(B, A).'
+                    constraint_rule = ':- '+test_predicate+'(A,B), neg'+test_predicate+'(A,B).'
                     soft_rule_writer(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k)
                     soft_rule_writer_constraint(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k, constraint_rule)
                     hard_rule_writer(hard_rule_list, test_predicate,rule_type, folder_path, pos_neg, k)

@@ -4,7 +4,7 @@ author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
 author(A ,B)  :-  author(C ,B) ,  publisher(C ,D) ,  publisher(A ,D).
 author(A ,B)  :-  subsequentWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
 author(A ,B)  :-  author(C ,B) ,  series(C ,D) ,  series(A ,D).
-:-  author(A ,  B) ,  negauthor(B ,  A).
+:-  author(A ,B) ,  negauthor(A ,B).
 negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
 negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
 negauthor(A ,B)  :-  director(A ,B) ,  producer(C ,B) ,  creator(C ,B).

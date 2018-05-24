@@ -7,7 +7,7 @@
 0.127551020408  author(A ,B)  :-  author(C ,B) ,  previousWork(C ,A).
 0.0178571428571  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
 0.135408163265  author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
-:-  author(A ,  B) ,  negauthor(B ,  A).
+:-  author(A ,B) ,  negauthor(A ,B).
 0.379897959184  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
 0.311734693878  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
 0.0205102040816  negauthor(A ,B)  :-  director(A ,B) ,  producer(C ,B) ,  creator(C ,B).

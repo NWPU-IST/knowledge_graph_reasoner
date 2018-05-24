@@ -7,7 +7,6 @@ import sys
 import datetime
 
 
-
 def query_test(triples_list, id_list, true_labels, data_source, data_size, init_time, const):
     results_hard = {}
     results_soft = {}
@@ -34,12 +33,11 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
                          'map_soft_label', 'map_hard_as','map_soft_as']]
     lpmln_evaluation_mcsat = [['sentence_id', 'true_label', 'sentence', 'mc_label', \
                              'mc_prob']]
-    error_list = ['266']
+    # error_list = ['266']
     for t, triple in enumerate(triples_list):
         sentence_id = id_list[t]
-        if sentence_id in error_list and const:
-            continue
-        # print true_labels[t]
+        # if sentence_id in error_list and const:
+        #     continue
         true_label = int(float(true_labels[t]))
 
         if true_label == 1:

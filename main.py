@@ -96,37 +96,40 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
 
 
 def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const):
-    evidence = []
+    query_evidence = False
     resource_v = [entity.decode('utf-8') for entity in resource_v]
-    for entity in resource_v:
-        # print entity
-        evidence = distance_one_query(entity, evidence)
-        evidence = distance_two_query(entity, evidence)
-    # print len(evidence)
+    if query_evidence:
+        evidence = []
+        for entity in resource_v:
+            evidence = distance_one_query(entity, evidence)
+            evidence = distance_two_query(entity, evidence)
+    else:
+        evidence = True
+
     if evidence:
-        # print "Predicate Set:"
-        # print rule_predicates
-        # print "Evidence Set:"
         query_map = False
         if query_map:
-            evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
-            # print evidence_set, entity_set
+            if query_evidence:
+                evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
+            else:
+                evidence_set = True
             if evidence_set:
                 map, label_map = inference_map(sentence_id, data_source, resource_v, data_size, const)
                 map_wt, label_map_wt = inference_map_weight(sentence_id, data_source, resource_v, data_size, const)
             else:
                 map_wt, label_map_wt, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD', 'NO_EVD'
-            # answer_all, answer_set = clingo_map(sentence_id, data_source, resource_v)
         else:
             map_wt, label_map_wt, map, label_map = '', '', '', ''
 
         query_prob = True
         if query_prob:
-            evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
+            if query_evidence:
+                evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
                                                             rule_predicates, rules, rules_const)
-            # print "Writing Domain"
+            else:
+                evidence_set = True
             if evidence_set:
-                domain_generator(entity_set, sentence_id, data_source)
+                # domain_generator(entity_set, sentence_id, data_source)
                 # prob, label_prob = inference_prob(sentence_id, data_source, resource_v)
                 prob, label_prob = inference_prob_mcsat(sentence_id, data_source, resource_v)
                 # print prob, label_prob

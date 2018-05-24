@@ -3,7 +3,7 @@
 0.1304  author(A ,B)  :-  author(C ,B) ,  previousWork(C ,A).
 0.0172  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
 0.139  author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
-:-  author(A ,  B) ,  negauthor(B ,  A).
+:-  author(A ,B) ,  negauthor(A ,B).
 0.0256  negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
 0.3728  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
 0.3014  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.

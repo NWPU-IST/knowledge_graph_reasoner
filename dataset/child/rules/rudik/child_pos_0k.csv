@@ -1,0 +1,3 @@
+http://dbpedia.org/ontology/parent(object,subject)
+http://dbpedia.org/ontology/spouse(subject,v0) & http://dbpedia.org/ontology/child(v0,object)
+http://dbpedia.org/ontology/parent(object,v0) & http://dbpedia.org/ontology/parent(v1,v0) & http://dbpedia.org/ontology/child(subject,v1)
