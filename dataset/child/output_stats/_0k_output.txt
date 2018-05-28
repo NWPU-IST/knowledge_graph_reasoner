@@ -1,0 +1,49 @@
+2018-05-24 13:46:57.803109-------------------------------
+True Neutral: 1
+False Neutral: 0
+True None: 112
+False None: 91
+True UNSAT: 0
+False UNSAT: 0
+True NO EVD: 0
+False NO EVD: 1
+True Count:200 True Pos: 83 False Neg: 4
+False Count: 200 True Neg: 106 False Pos: 1
+Execution Time: 193.526229
+-------------------------------2018-05-24 13:46:57.803109-------------------------------
+True Neutral_wt: 1
+False Neutral_wt: 0
+True None_wt: 112
+False None_wt: 91
+True UNSAT_wt: 0
+False UNSAT_wt: 0
+True NO EVD_wt: 0
+False NO EVD+wt: 1
+True Count:200 True Pos_wt: 83 False Neg_wt: 4
+False Count: 200 True Neg_wt: 106 False_Pos: 1
+Execution Time: 193.526229
+-------------------------------2018-05-24 14:26:11.754118-------------------------------
+True Neutral: 1
+False Neutral: 0
+True None: 112
+False None: 93
+True UNSAT: 0
+False UNSAT: 0
+True NO EVD: 0
+False NO EVD: 0
+True Count:200 True Pos: 83 False Neg: 4
+False Count: 200 True Neg: 106 False Pos: 1
+Execution Time: 51.763024
+-------------------------------2018-05-24 14:26:11.754118-------------------------------
+True Neutral_wt: 1
+False Neutral_wt: 0
+True None_wt: 112
+False None_wt: 93
+True UNSAT_wt: 0
+False UNSAT_wt: 0
+True NO EVD_wt: 0
+False NO EVD+wt: 0
+True Count:200 True Pos_wt: 83 False Neg_wt: 4
+False Count: 200 True Neg_wt: 106 False_Pos: 1
+Execution Time: 51.763024
+-------------------------------

@@ -1,3 +1,4 @@
+import datetime
 from config import dbpedia, rule_mining, logger
 import sys
 import re
@@ -171,6 +172,7 @@ def get_label(f, data_source, resource_v):
 
 def inference_map(sentence_id, data_source, resource_v, data_size, const):
     # print resource_v
+    start_time = datetime.datetime.now()
     resource_v = ['"' + res + '"' for res in resource_v]
     cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                         data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
@@ -182,10 +184,12 @@ def inference_map(sentence_id, data_source, resource_v, data_size, const):
     f = text.read()
     text.close()
     map_output, label = get_label(f, data_source, resource_v)
-    return map_output, label
+    end_time = datetime.datetime.now()
+    return map_output, label, (end_time-start_time).total_seconds()
 
 
 def inference_map_weight(sentence_id, data_source, resource_v, data_size, const):
+    start_time = datetime.datetime.now()
     resource_v = ['"' + res + '"' for res in resource_v]
     cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
                                         data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
@@ -197,7 +201,8 @@ def inference_map_weight(sentence_id, data_source, resource_v, data_size, const)
     f = text.read()
     text.close()
     map_output, label = get_label(f, data_source, resource_v)
-    return map_output, label
+    end_time = datetime.datetime.now()
+    return map_output, label, (end_time-start_time).total_seconds()
 
 
 def write_query_domain(data_source, sentence_id,resource_v):

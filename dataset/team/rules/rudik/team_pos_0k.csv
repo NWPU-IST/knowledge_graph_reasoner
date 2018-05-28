@@ -1,0 +1,2 @@
+http://dbpedia.org/ontology/team(v0,object) & http://dbpedia.org/ontology/position(v0,v1) & http://dbpedia.org/ontology/position(subject,v1)
+http://dbpedia.org/ontology/Person/height(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/capacity(object,v1)

@@ -1,0 +1,5 @@
+0.5404  team(A ,B)  :-  team(C ,B) ,  position(C ,D) ,  position(A ,D).
+0.3144  team(A ,B)  :-  height(A ,C) ,  capacity(B ,D) ,  C<D.
+0.011  negteam(A ,B)  :-  locationCity(B ,C) ,  country(C ,D) ,  birthPlace(A ,D).
+0.0386  negteam(A ,B)  :-  capacity(B ,C) ,  height(A ,D) ,  C>D.
+0.3554  negteam(A ,B)  :-  team(C ,B) ,  position(C ,D) ,  position(A ,D).

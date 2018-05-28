@@ -95,8 +95,11 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
 
-def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const):
-    query_evidence = False
+def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const, total_asp, total_map):
+    query_evidence = True
+    query_prob = False
+    query_map = True
+
     resource_v = [entity.decode('utf-8') for entity in resource_v]
     if query_evidence:
         evidence = []
@@ -107,21 +110,21 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         evidence = True
 
     if evidence:
-        query_map = False
         if query_map:
             if query_evidence:
                 evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
             else:
                 evidence_set = True
             if evidence_set:
-                map, label_map = inference_map(sentence_id, data_source, resource_v, data_size, const)
-                map_wt, label_map_wt = inference_map_weight(sentence_id, data_source, resource_v, data_size, const)
+                map, label_map, asp_time = inference_map(sentence_id, data_source, resource_v, data_size, const)
+                map_wt, label_map_wt, map_time = inference_map_weight(sentence_id, data_source, resource_v, data_size, const)
+                total_asp += asp_time
+                total_map += map_time
             else:
                 map_wt, label_map_wt, map, label_map = 'NO_EVD', 'NO_EVD','NO_EVD', 'NO_EVD'
         else:
             map_wt, label_map_wt, map, label_map = '', '', '', ''
 
-        query_prob = True
         if query_prob:
             if query_evidence:
                 evidence_set, entity_set = rule_evidence_writer(evidence, sentence_id, data_source, resource_v, \
@@ -129,7 +132,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             else:
                 evidence_set = True
             if evidence_set:
-                # domain_generator(entity_set, sentence_id, data_source)
+                domain_generator(entity_set, sentence_id, data_source)
                 # prob, label_prob = inference_prob(sentence_id, data_source, resource_v)
                 prob, label_prob = inference_prob_mcsat(sentence_id, data_source, resource_v)
                 # print prob, label_prob
@@ -138,8 +141,8 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         else:
             prob, label_prob = '',''
 
-        return map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map
-    return '', '', '', '', '','', query_prob, query_map
+        return map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map, total_asp, total_map
+    return '', '', '', '', '','', query_prob, query_map, total_asp, total_map
 
 
 def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, \
@@ -164,34 +167,34 @@ def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_
     if true_pos + false_neg > 0:
         rec = float(true_pos) / float(true_pos + false_neg)
 
-    print "True Neutral: ", true_neutral
-    print "True UNSAT: ", true_unsat
-    print "True NO EVD+None: ", true_no_evd+true_none
-    print "True None: ", true_none
-    print "True NO EVD: ", true_no_evd
-
-    print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Pos: ", false_pos
-    print "False Neutral: ", false_neutral
-    print "False UNSAT: ", false_unsat
-    print "False NO EVD+None: ", false_no_evd+false_none
-    print "False None: ", false_none
-    print "False NO EVD: ", false_no_evd
-
-    print "----------------------------"
-
-    print "True Count:", true_count, "True Pos_wt: ", true_pos_wt, "=>", tp, "False Neg_wt: ", false_neg_wt
-    print "True Neutral_wt: ", true_neutral_wt
-    print "True UNSAT_wt: ", true_unsat_wt
-    print "True NO EVD+None_wt: ", true_no_evd+true_none_wt
-    print "True None_wt: ", true_none_wt
-    print "True NO EVD_wt: ", true_no_evd_wt
-    
-    print "False Count_wt: ", false_count, "True Neg_wt: ", true_neg_wt, "=>", tn, "False Pos_wt: ", false_pos_wt
-    print "False Neutral_wt: ", false_neutral_wt
-    print "False UNSAT_wt: ", false_unsat_wt
-    print "False NO EVD+None_wt: ", false_no_evd+false_none_wt
-    print "False None_wt: ", false_none_wt
-    print "False NO EVD_wt: ", false_no_evd_wt
+    # print "True Neutral: ", true_neutral
+    # print "True UNSAT: ", true_unsat
+    # print "True NO EVD+None: ", true_no_evd+true_none
+    # print "True None: ", true_none
+    # print "True NO EVD: ", true_no_evd
+    #
+    # print "False Count: ", false_count, "True Neg: ", true_neg, "=>", tn, "False Pos: ", false_pos
+    # print "False Neutral: ", false_neutral
+    # print "False UNSAT: ", false_unsat
+    # print "False NO EVD+None: ", false_no_evd+false_none
+    # print "False None: ", false_none
+    # print "False NO EVD: ", false_no_evd
+    #
+    # print "----------------------------"
+    #
+    # print "True Count:", true_count, "True Pos_wt: ", true_pos_wt, "=>", tp, "False Neg_wt: ", false_neg_wt
+    # print "True Neutral_wt: ", true_neutral_wt
+    # print "True UNSAT_wt: ", true_unsat_wt
+    # print "True NO EVD+None_wt: ", true_no_evd+true_none_wt
+    # print "True None_wt: ", true_none_wt
+    # print "True NO EVD_wt: ", true_no_evd_wt
+    #
+    # print "False Count_wt: ", false_count, "True Neg_wt: ", true_neg_wt, "=>", tn, "False Pos_wt: ", false_pos_wt
+    # print "False Neutral_wt: ", false_neutral_wt
+    # print "False UNSAT_wt: ", false_unsat_wt
+    # print "False NO EVD+None_wt: ", false_no_evd+false_none_wt
+    # print "False None_wt: ", false_none_wt
+    # print "False NO EVD_wt: ", false_no_evd_wt
 
     st = datetime.datetime.now()
     print "Execution Time: ", (st-init_time).total_seconds()

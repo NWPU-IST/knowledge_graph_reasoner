@@ -2,6 +2,7 @@
 0.570408163265  spouse(A ,B)  :-  spouse(B ,A).
 0.0166326530612  spouse(A ,B)  :-  parent(C ,B) ,  parent(C ,A) ,  predecessor(C ,A).
 :-  spouse(A ,  B) ,  negspouse(B ,  A).
+0.5 parent(A,B) :- child(B,A).
 0.0165306122449  negspouse(A ,B)  :-  spouse(C ,B) ,  child(C ,A) ,  child(B ,A).
 0.0204081632653  negspouse(A ,B)  :-  child(A ,B) ,  child(C ,B) ,  spouse(A ,C).
 0.0186734693878  negspouse(A ,B)  :-  predecessor(A ,B) ,  spouse(C ,B) ,  parent(A ,C).
