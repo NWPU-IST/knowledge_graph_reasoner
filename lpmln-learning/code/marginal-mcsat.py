@@ -181,7 +181,7 @@ whole_model = None
 #prg.conf.solve.models = 1
 #prg.ground([('base', [])])
 #prg.solve([], getSample)
-cmd = 'clingo ' + program_filename + ' 1'
+cmd = 'clingo ' + program_filename + '-t 4 1'
 # print cmd
 try:
 	out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
@@ -218,7 +218,7 @@ for _ in range(max_num_iteration):
 	sat_const.close()
 
 	# Generate next sample
-	cmd = 'clingo5 ' + SMSample_script +  ' -c s=0 ' + program_filename + ' ' + tmp_sat_const_file + ' 1'
+	cmd = 'clingo5 ' + SMSample_script +  ' -c s=0 -t 4' + program_filename + ' ' + tmp_sat_const_file + ' 1'
 	# print cmd
 	# sys.exit()
 	out = ''

@@ -97,8 +97,8 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
 
 def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const, total_asp, total_map):
     query_evidence = True
-    query_prob = False
-    query_map = True
+    query_prob = True
+    query_map = False
 
     resource_v = [entity.decode('utf-8') for entity in resource_v]
     if query_evidence:
@@ -134,15 +134,15 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
             if evidence_set:
                 domain_generator(entity_set, sentence_id, data_source)
                 # prob, label_prob = inference_prob(sentence_id, data_source, resource_v)
-                prob, label_prob = inference_prob_mcsat(sentence_id, data_source, resource_v)
+                prob, label_prob, total_mc = inference_prob_mcsat(sentence_id, data_source, resource_v)
                 # print prob, label_prob
             else:
                 prob, label_prob = 'NO_EVD', 'NO_EVD'
         else:
             prob, label_prob = '',''
 
-        return map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map, total_asp, total_map
-    return '', '', '', '', '','', query_prob, query_map, total_asp, total_map
+        return map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map, total_asp, total_map, total_mc
+    return '', '', '', '', '','', query_prob, query_map, total_asp, total_map, total_mc
 
 
 def stats_computer(init_time, true_count, true_pos, false_count, true_neg, data_source, true_neutral, false_neutral, false_neg, \

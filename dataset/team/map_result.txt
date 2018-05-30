@@ -1,12 +1,15 @@
-lpmln2cl
-Clingo executed with command:
-clingo /home/apradhan/proj/fact_check_kb/out.txt dataset/team/evidence/local/rudik/topset_conf_const_1k/19_unique.txt 
 clingo version 4.5.4
-Reading from ...me/apradhan/proj/fact_check_kb/out.txt ...
+Reading from out.txt ...
 Solving...
-UNSATISFIABLE
+Answer: 1
+birthPlace("Melvin_Sanders","Liberal,_Kansas") position("Melvin_Sanders","Shooting_guard") position("Melvin_Sanders","Small_forward") team("Melvin_Sanders","BC_Tsmoki-Minsk") team("Melvin_Sanders","Hacettepe_Üniversitesi_B.K.") team("Melvin_Sanders","Baloncesto_Málaga") team("Melvin_Sanders","CB_Valladolid") team("Melvin_Sanders","CB_Gran_Canaria") team("Melvin_Sanders","Basket_Barcellona") team("Melvin_Sanders","Menorca_Bàsquet") country("Liberal_High_School_(Kansas)","USA") team("BC_Tsmoki-Minsk","Tsmoki-Minsk") country("Seward_County_Community_College","United_States") country("Liberal,_Kansas","United_States") team("Melvin_Sanders__1","Dakota_Wizards") team("Melvin_Sanders__10","Élan_Béarnais_Pau-Orthez") team("Melvin_Sanders__2","Pallacanestro_Varese") team("Melvin_Sanders__3","Dakota_Wizards") team("Melvin_Sanders__4","BC_Oostende") team("Melvin_Sanders__5","San_Antonio_Spurs") team("Melvin_Sanders__6","Fayetteville_Patriots") team("Melvin_Sanders__7","San_Antonio_Spurs") team("Melvin_Sanders__8","Fayetteville_Patriots") team("Melvin_Sanders__9","San_Antonio_Spurs") country("Athens","Greece") country("Greek_A2_Basket_League","Greece") country("Greek_Basket_League","Greece") negteam("Melvin_Sanders","BC_Tsmoki-Minsk") negteam("Melvin_Sanders","Hacettepe_Üniversitesi_B.K.") negteam("Melvin_Sanders","Baloncesto_Málaga") negteam("Melvin_Sanders","CB_Valladolid") negteam("Melvin_Sanders","CB_Gran_Canaria") negteam("Melvin_Sanders","Basket_Barcellona") negteam("Melvin_Sanders","Menorca_Bàsquet")
+Optimization: 0
+OPTIMUM FOUND
 
-Models       : 0     
+Models       : 1     
+  Optimum    : yes
+Optimization : 0
 Calls        : 1
-Time         : 0.063s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.060s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s
+Threads      : 4        (Winner: 3)

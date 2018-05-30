@@ -174,8 +174,11 @@ def inference_map(sentence_id, data_source, resource_v, data_size, const):
     # print resource_v
     start_time = datetime.datetime.now()
     resource_v = ['"' + res + '"' for res in resource_v]
-    cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-                                        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
+    # cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+    #                                     data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
+    cmd = "clingo {0}rules/rudik/hard/topset_conf_{1}{2} {5}{4}_unique.txt -t 4 > {0}map_result.txt".format(
+        'dataset/' + \
+        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
     # print cmd
     logger.info(cmd)
     FNULL = open(os.devnull, 'w')
@@ -191,8 +194,14 @@ def inference_map(sentence_id, data_source, resource_v, data_size, const):
 def inference_map_weight(sentence_id, data_source, resource_v, data_size, const):
     start_time = datetime.datetime.now()
     resource_v = ['"' + res + '"' for res in resource_v]
-    cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-                                        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
+    cmd1 = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2}".format('dataset/'+data_source + '/', const, data_size)
+    subprocess.call(cmd1, shell=True)
+    logger.info(cmd1)
+    # cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+    #                                     data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
+    cmd = "clingo out.txt {5}{4}_unique.txt -t 4 > {0}map_result.txt".format(
+        'dataset/' + \
+        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
     # print cmd
     logger.info(cmd)
     FNULL = open(os.devnull, 'w')
@@ -233,6 +242,7 @@ def inference_prob(sentence_id, data_source, resource_v):
 
 
 def inference_prob_mcsat(sentence_id, data_source, resource_v):
+    start_time = datetime.datetime.now()
     write_query_domain(data_source, sentence_id, resource_v)
     # print "LPMLN Probability MC-SAT Inference"
     cmd = "lpmln2asp -i {1}{0}er_unique.txt".format(sentence_id, evidence_path)
@@ -254,7 +264,9 @@ def inference_prob_mcsat(sentence_id, data_source, resource_v):
     # with open('lpmln-learning/code/lpmln_prob.txt', 'w') as the_file:
     #     the_file.write('utf-8')
     logger.info(probs)
-    return probs.split(";")
+    prob, label_prob = probs.split(";")
+    end_time = datetime.datetime.now()
+    return prob, label_prob, (end_time-start_time).total_seconds()
 
 
 def domain_generator(entity_set, sentence_id, data_source):

@@ -28,17 +28,17 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
     true_none_wt, false_none_wt = 0, 0
     true_unsat_wt, false_unsat_wt = 0, 0
     true_no_evd_wt, false_no_evd_wt = 0, 0
-    total_asp, total_map = 0.0, 0.0
+    total_asp, total_map, total_mc = 0.0, 0.0, 0.0
     rule_predicates, rules, rules_const = get_rule_predicates(data_source, data_size, const)
     lpmln_evaluation_map = [['sentence_id', 'true_label', 'sentence', 'map_hard_label',\
                          'map_soft_label', 'map_hard_as','map_soft_as']]
     lpmln_evaluation_mcsat = [['sentence_id', 'true_label', 'sentence', 'mc_label', \
                              'mc_prob']]
-    error_list = ['19','34']
+    # error_list = ['19','34']
     for t, triple in enumerate(triples_list):
         sentence_id = id_list[t]
-        if sentence_id in error_list and const:
-            continue
+        # if sentence_id in error_list and const:
+        #     continue
         true_label = int(float(true_labels[t]))
 
         if true_label == 1:
@@ -48,7 +48,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
 
         triple_check = triples_list[t]
         # print sentence_id, triple_check, true_label, '\n'
-        map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map, total_asp, total_map = \
+        map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map, total_asp, total_map, total_mc = \
             lpmln_reasoning(triple_check, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, \
                             const, total_asp, total_map)
 
@@ -160,10 +160,11 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
     update_resources(triple_flag=False, ambiverse_flag=False, file_triples=False, ambiverse_resources=False, \
                      lpmln_evaluation=lpmln_evaluation, data_source=data_source, input=input,\
                      const=const,data_size=data_size,lpmln_type=lpmln_type)
-    return results_hard, results_soft, results_mcsat, lpmln_type
+    return results_hard, results_soft, results_mcsat, lpmln_type, total_asp, total_map, total_mc
 
 
-def write_stats(data_source, data_size, const, results_hard, results_soft, result_mcsat, start_time, lpmln_type, total_asp, total_map ):
+def write_stats(data_source, data_size, const, results_hard, results_soft, result_mcsat, start_time, lpmln_type,\
+                total_asp, total_map,total_mc):
     end_time = datetime.datetime.now()
     if result_mcsat:
         with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
@@ -183,7 +184,8 @@ def write_stats(data_source, data_size, const, results_hard, results_soft, resul
             file.write(
                 'UNSATISFIABLE ,' + str(result_mcsat.get('true_unsat', 0)) \
                 + '/200 ,UNSATISFIABLE,' + str(result_mcsat.get('false_unsat', 0)) + '/200' + '\n')
-            file.write("Execution Time, "+ str((end_time-start_time).total_seconds()))
+            file.write("Execution Time, "+ str((end_time-start_time).total_seconds())+'\n')
+            file.write("MC Time, " + str(total_mc))
 
     else:
         with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
@@ -207,8 +209,8 @@ def write_stats(data_source, data_size, const, results_hard, results_soft, resul
                 'UNSATISFIABLE ,' + str(results_hard.get('true_unsat', 0)) + '/200 ,' + str(results_soft.get('true_unsat', 0)) \
                 + '/200 ,UNSATISFIABLE,' + str(results_hard.get('false_unsat', 0)) + '/200, ' + \
                 str(results_soft.get('false_unsat', 0)) + '/200' + '\n')
-            file.write("Execution Time, "+ str((end_time-start_time).total_seconds()))
-            file.write("ASP Time, "+ str(total_asp))
+            file.write("Execution Time, "+ str((end_time-start_time).total_seconds())+ '\n')
+            file.write("ASP Time, "+ str(total_asp)+ '\n')
             file.write("MAP Time, "+ str(total_map))
 
 
@@ -221,9 +223,9 @@ if __name__ == "__main__":
     # data_sizes = ['1k', '5k', '10k','0k']
     start_time = datetime.datetime.now()
 
-    data_sizes = ['1k']
-    # constraint = ['const_','']
-    constraint = ['const_']
+    data_sizes = ['0k']
+    constraint = ['const_','']
+    # constraint = ['const_']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const
@@ -243,6 +245,7 @@ if __name__ == "__main__":
                         triples_list.append([row.get('sub').split(":")[1], row.get('obj').split(":")[1]])
                     true_labels.append(row.get('class'))
                     id_list.append(row.get('sid'))
-                results_hard, results_soft, results_mcsat,lpmln_type = query_test(triples_list, id_list, true_labels, args.test_predicate, \
-                                                        data_size, init_time, const)
-            write_stats(args.test_predicate,data_size,const,results_hard,results_soft,results_mcsat, start_time, lpmln_type)
+                results_hard, results_soft, results_mcsat,lpmln_type, total_asp, total_map, total_mc = \
+                    query_test(triples_list, id_list, true_labels, args.test_predicate, data_size, init_time, const)
+            write_stats(args.test_predicate,data_size,const,results_hard,results_soft,results_mcsat, init_time, \
+                        lpmln_type, total_asp, total_map,total_mc)
