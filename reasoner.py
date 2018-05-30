@@ -194,8 +194,9 @@ def inference_map(sentence_id, data_source, resource_v, data_size, const):
 def inference_map_weight(sentence_id, data_source, resource_v, data_size, const):
     start_time = datetime.datetime.now()
     resource_v = ['"' + res + '"' for res in resource_v]
+    FNULL = open(os.devnull, 'w')
     cmd1 = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2}".format('dataset/'+data_source + '/', const, data_size)
-    subprocess.call(cmd1, shell=True)
+    subprocess.call(cmd1, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
     logger.info(cmd1)
     # cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
     #                                     data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
@@ -204,13 +205,14 @@ def inference_map_weight(sentence_id, data_source, resource_v, data_size, const)
         data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
     # print cmd
     logger.info(cmd)
-    FNULL = open(os.devnull, 'w')
+
     subprocess.call(cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
     text = open('dataset/' + data_source + '/' + 'map_result.txt', 'r')
     f = text.read()
     text.close()
     map_output, label = get_label(f, data_source, resource_v)
     end_time = datetime.datetime.now()
+
     return map_output, label, (end_time-start_time).total_seconds()
 
 

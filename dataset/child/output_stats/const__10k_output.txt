@@ -46,4 +46,28 @@ False NO EVD+wt: 1
 True Count:200 True Pos_wt: 82 False Neg_wt: 1
 False Count: 200 True Neg_wt: 45 False_Pos: 1
 Execution Time: 171.381056
+-------------------------------2018-05-30 15:25:14.069887-------------------------------
+True Neutral: 0
+False Neutral: 0
+True None: 117
+False None: 142
+True UNSAT: 1
+False UNSAT: 13
+True NO EVD: 0
+False NO EVD: 1
+True Count:200 True Pos: 82 False Neg: 0
+False Count: 200 True Neg: 42 False Pos: 1
+Execution Time: 177.269025
+-------------------------------2018-05-30 15:25:14.069887-------------------------------
+True Neutral_wt: 0
+False Neutral_wt: 0
+True None_wt: 117
+False None_wt: 152
+True UNSAT_wt: 0
+False UNSAT_wt: 0
+True NO EVD_wt: 0
+False NO EVD+wt: 1
+True Count:200 True Pos_wt: 82 False Neg_wt: 1
+False Count: 200 True Neg_wt: 45 False_Pos: 1
+Execution Time: 177.269025
 -------------------------------

@@ -12,4 +12,4 @@ Optimization : 0
 Calls        : 1
 Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.000s
-Threads      : 4        (Winner: 3)
+Threads      : 4        (Winner: 0)
