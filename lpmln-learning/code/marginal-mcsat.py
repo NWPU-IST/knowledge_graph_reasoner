@@ -155,6 +155,7 @@ program_filename = sys.argv[1]
 queries, domain_filename, resource = read_input()
 
 # print queries, domain_filename, resource, program_filename
+
 domain_file = open(domain_filename, 'r')
 
 for line in domain_file:
@@ -181,7 +182,7 @@ whole_model = None
 #prg.conf.solve.models = 1
 #prg.ground([('base', [])])
 #prg.solve([], getSample)
-cmd = 'clingo ' + program_filename + '-t 4 1'
+cmd = 'clingo ' + program_filename + ' 1 -t 4'
 # print cmd
 try:
 	out = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
@@ -189,11 +190,13 @@ except Exception, e:
 	out = str(e.output)
 	time.sleep(.0000001)
 
+
 if getSampleFromText(out):
 	processSample(whole_model)
 else:
 	print 'Input program is unsatisfiable. Exit.'
 	sys.exit()
+
 
 for _ in range(max_num_iteration):
 	sample_count += 1
@@ -218,7 +221,7 @@ for _ in range(max_num_iteration):
 	sat_const.close()
 
 	# Generate next sample
-	cmd = 'clingo5 ' + SMSample_script +  ' -c s=0 -t 4' + program_filename + ' ' + tmp_sat_const_file + ' 1'
+	cmd = 'clingo5 ' + SMSample_script +  ' -c s=0 ' + program_filename + ' ' + tmp_sat_const_file + ' 1'
 	# print cmd
 	# sys.exit()
 	out = ''
