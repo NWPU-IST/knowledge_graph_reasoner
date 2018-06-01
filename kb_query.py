@@ -15,6 +15,7 @@ def distance_one_query(id1, distance_one):
     query_date = (' SELECT distinct ?p ?id2 WHERE { <http://dbpedia.org/resource/' + id1 + '> ?p ?id2\
      . ' + suffixes_dbpedia_0 + ' FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), \
      "abstract","i")) . FILTER (!regex(str(?pl), "Date","i")). FILTER (!regex(str(?pl), "Year","i"))}')
+    # print query
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -24,6 +25,7 @@ def distance_one_query(id1, distance_one):
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
         # print query_date
     if q1_values:
+        # print q1_values
         for vals in q1_values:
             vals_0 = vals[0].split('/')[-1]
             if vals_0 not in unwanted_predicates:

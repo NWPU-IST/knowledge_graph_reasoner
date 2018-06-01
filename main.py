@@ -97,10 +97,11 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
 
 def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const, total_asp, total_map, total_mc):
     query_evidence = True
-    query_prob = True
-    query_map = False
+    query_prob = False
+    query_map = True
 
     resource_v = [entity.decode('utf-8') for entity in resource_v]
+    # print resource_v
     if query_evidence:
         evidence = []
         for entity in resource_v:
@@ -110,6 +111,7 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         evidence = True
 
     if evidence:
+        # print evidence
         if query_map:
             if query_evidence:
                 evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)

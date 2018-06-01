@@ -1,0 +1,8 @@
+negauthor(A,B) :- director(A,B),producer(C,B),creator(C,B).
+negauthor(A,B) :- producer(C,B),previousWork(C,D),previousWork(D,A).
+negauthor(A,B) :- releaseDate(A,C),releaseDate(D,C),writer(D,B).
+negauthor(A,B) :- producer(C,B),series(C,D),series(A,D).
+negauthor(A,B) :- creator(C,B),producer(C,D),director(A,D).
+negauthor(A,B) :- subsequentWork(C,A),previousWork(C,D),writer(D,B).
+negauthor(A,B) :- previousWork(C,A),subsequentWork(C,D),writer(D,B).
+negauthor(A,B) :- subsequentWork(C,A),album(C,D),producer(D,B).

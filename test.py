@@ -36,6 +36,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
                              'mc_prob']]
     # error_list = ['19','34']
     for t, triple in enumerate(triples_list):
+        print t
         sentence_id = id_list[t]
         # if sentence_id in error_list and const:
         #     continue
@@ -224,14 +225,14 @@ if __name__ == "__main__":
     start_time = datetime.datetime.now()
 
     data_sizes = ['0k']
-    constraint = ['const_','']
-    # constraint = ['const_']
+    # constraint = ['const_','']
+    constraint = ['const_']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const
             print"++++++++++++++++"
             init_time = datetime.datetime.now()
-            input_file = 'dataset/' + args.test_predicate + '/input/test_' + data_size + '.csv'
+            input_file = 'dataset/' + args.test_predicate + '/input/neg_top100_' + data_size + '.csv'
             # input_file = 'dataset/' + args.test_predicate + '/input/test_sample' + '.csv'
             with open(input_file) as f:
                 reader = csv.DictReader(f)

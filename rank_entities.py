@@ -38,8 +38,8 @@ if __name__ == "__main__":
     folder_path = 'dataset/' + args.test_predicate + '/input/'
     with open('dataset/' + args.test_predicate + '/input/test_0k.csv', 'rb') as csvfile:
         reader = csv.DictReader(csvfile)
-        positive_triples = []
-        negative_triples = []
+        positive_triples = [['sid','sub','obj','class','score']]
+        negative_triples = [['sid','sub','obj','class','score']]
         for row in reader:
             entity_1 = row.get('sub').decode('utf-8')
             entity_2 = row.get('obj').decode('utf-8')
@@ -55,8 +55,8 @@ if __name__ == "__main__":
         positive_triples.sort(key=lambda x: x[4])
         negative_triples.sort(key=lambda x: x[4])
         # print positive_triples, negative_triples
-        write_test(positive_triples[:100],'pos_bot100',folder_path)
-        write_test(positive_triples[100:],'pos_top100',folder_path)
-        write_test(negative_triples[:100],'neg_bot100',folder_path)
-        write_test(negative_triples[100:],'neg_top100',folder_path)
+        write_test(positive_triples[:100],'pos_b100',folder_path)
+        write_test(positive_triples[100:],'pos_t100',folder_path)
+        write_test(negative_triples[:100],'neg_b100',folder_path)
+        write_test(negative_triples[100:],'neg_t100',folder_path)
 
