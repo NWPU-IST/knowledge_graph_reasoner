@@ -221,7 +221,7 @@ for _ in range(max_num_iteration):
 	sat_const.close()
 
 	# Generate next sample
-	cmd = 'clingo5 ' + SMSample_script +  ' -c s=0 ' + program_filename + ' ' + tmp_sat_const_file + ' 1'
+	cmd = 'clingo5 -t 4 ' + SMSample_script +  ' -c s=0 ' + program_filename + ' ' + tmp_sat_const_file + ' 1'
 	# print cmd
 	# sys.exit()
 	out = ''

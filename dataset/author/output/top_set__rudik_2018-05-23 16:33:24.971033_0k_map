@@ -1,0 +1,401 @@
+sentence_id,true_label,sentence,map_hard_label,map_soft_label,map_hard_as,map_soft_as
+1,1,"['The_Proud_Twins_(TV_series)', 'Gu_Long']",None,None,[],[]
+2,1,"['Tyson_(1995_film)', 'Jos\xc3\xa9_Torres']",None,None,[],[]
+3,1,"['Database_System_Concepts', 'Abraham_Silberschatz']",None,None,[],[]
+4,1,"['Prince_of_the_Blood_(novel)', 'Raymond_E._Feist']",1,1,"['author(""Prince_of_the_Blood_(novel)"",""Raymond_E._Feist"")']","['author(""Prince_of_the_Blood_(novel)"",""Raymond_E._Feist"")']"
+5,1,"['First_Person_Singular:_Pearson_\xe2\x80\x93_The_Memoirs_of_a_Prime_Minister', 'Munroe_Scott']",None,None,[],[]
+6,1,"['A_Painful_Case', 'James_Joyce']",1,1,"['author(""A_Painful_Case"",""James_Joyce"")']","['author(""A_Painful_Case"",""James_Joyce"")']"
+7,1,"['Hello_Sunshine_(book)', 'Ryan_Adams']",None,None,[],[]
+8,1,"['City_of_the_Beasts', 'Isabel_Allende']",1,1,"['author(""City_of_the_Beasts"",""Isabel_Allende"")']","['author(""City_of_the_Beasts"",""Isabel_Allende"")']"
+9,1,"['A_History_of_the_Mind', 'Nicholas_Humphrey']",None,None,[],[]
+10,1,"['Mermaid_Melody_Pichi_Pichi_Pitch', 'Michiko_Yokote']",None,None,[],[]
+11,1,"['3-2-1_Penguins!', 'Phil_Lollar']",0,0,"['author(""3-2-1_Penguins!"",""Phil_Lollar"")', 'negauthor(""3-2-1_Penguins!"",""Phil_Lollar"")']","['author(""3-2-1_Penguins!"",""Phil_Lollar"")', 'negauthor(""3-2-1_Penguins!"",""Phil_Lollar"")']"
+12,1,"['The_Dirtiest_Show_in_Town', 'Tom_Eyen']",None,None,[],[]
+13,1,"['Hollywood,_Interrupted', 'Andrew_Breitbart']",None,None,[],[]
+14,1,"['Operation_Chaos_(novel)', 'Poul_Anderson']",1,1,"['author(""Operation_Chaos_(novel)"",""Poul_Anderson"")']","['author(""Operation_Chaos_(novel)"",""Poul_Anderson"")']"
+15,1,"['Back_to_Life_(novel)', 'Wendy_Coakley-Thompson']",None,None,[],[]
+16,1,"['Saturday_Night_Fever_(musical)', 'Arlene_Phillips']",-1,-1,"['negauthor(""Saturday_Night_Fever_(musical)"",""Arlene_Phillips"")']","['negauthor(""Saturday_Night_Fever_(musical)"",""Arlene_Phillips"")']"
+17,1,"['On_Jungle_Trails', 'Ferrin_Fraser']",None,None,[],[]
+18,1,"['The_Foundations_of_Psychoanalysis', 'Adolf_Gr\xc3\xbcnbaum']",None,None,[],[]
+19,1,"['Safe_Haven_(novel)', 'Nicholas_Sparks']",None,None,[],[]
+20,1,"['The_Chosen_One_(Williams_novel)', 'Carol_Lynch_Williams']",None,None,[],[]
+21,1,"['Never_Call_Retreat:_Lee_and_Grant:_The_Final_Victory', 'William_R._Forstchen']",None,None,[],[]
+22,1,"['The_Old_Willis_Place', 'Mary_Downing_Hahn']",None,None,[],[]
+23,1,"['Flagellation_of_Christ_(Piero_della_Francesca)', 'Piero_della_Francesca']",None,None,[],[]
+24,1,"['The_Infernal_Desire_Machines_of_Doctor_Hoffman', 'Angela_Carter']",None,None,[],[]
+25,1,"['Resident_Evil_Zero__Resident_Evil:_Zero_Hour__1', 'S._D._Perry']",None,None,[],[]
+26,1,"[""The_Devil's_Wind"", 'Manohar_Malgonkar']",None,None,[],[]
+27,1,"['Ivanov_(play)', 'Anton_Chekhov']",None,None,[],[]
+28,1,"['Journey_to_the_Center_of_the_Earth_(TV_series)', 'Don_R._Christensen']",-1,-1,"['negauthor(""Journey_to_the_Center_of_the_Earth_(TV_series)"",""Don_R._Christensen"")']","['negauthor(""Journey_to_the_Center_of_the_Earth_(TV_series)"",""Don_R._Christensen"")']"
+29,1,"['Aristocrats_(TV_series)', 'Stella_Tillyard']",None,None,[],[]
+30,1,"['The_Isolinguals', 'L._Sprague_de_Camp']",None,None,[],[]
+31,1,"['Yume_no_Crayon_Oukoku__manga__1', 'Mine_Yoshizaki']",None,None,[],[]
+32,1,"['White_Brand', 'Youka_Nitta']",None,None,[],[]
+33,1,"['The_Tin_Can_Tree', 'Anne_Tyler']",None,None,[],[]
+34,1,"['Matter_(novel)', 'Iain_Banks']",1,1,"['author(""Matter_(novel)"",""Iain_Banks"")']","['author(""Matter_(novel)"",""Iain_Banks"")']"
+35,1,"['Wives_and_Daughters_(1999_miniseries)', 'Elizabeth_Gaskell']",None,None,[],[]
+36,1,"['The_World_Turned_Upside_Down_(anthology)', 'David_Drake']",None,None,[],[]
+37,1,"[""Rogue_State:_A_Guide_to_the_World's_Only_Superpower"", 'William_Blum']",None,None,[],[]
+38,1,"['Citizen_Khan', 'Anil_Gupta']",None,None,[],[]
+39,1,"[""Best:_His_Mother's_Son"", 'Terry_Cafolla']",None,None,[],[]
+40,1,"['La_vereda_del_destino', 'Horacio_L\xc3\xb3pez']",1,1,"['author(""La_vereda_del_destino"",""Horacio_L\xc3\xb3pez"")']","['author(""La_vereda_del_destino"",""Horacio_L\xc3\xb3pez"")']"
+41,1,"['Rabbit_Redux', 'John_Updike']",1,1,"['author(""Rabbit_Redux"",""John_Updike"")']","['author(""Rabbit_Redux"",""John_Updike"")']"
+42,1,"['Echopraxia_(novel)', 'Peter_Watts_(author)']",1,1,"['author(""Echopraxia_(novel)"",""Peter_Watts_(author)"")']","['author(""Echopraxia_(novel)"",""Peter_Watts_(author)"")']"
+43,1,"['The_Kiss_(Hayez)', 'Francesco_Hayez']",None,None,[],[]
+44,1,"['Dear_Secret_Santa', 'Peter_Sullivan_(screenwriter)']",None,None,[],[]
+45,1,"['Guinevere:_The_Legend_in_Autumn', 'Persia_Woolley']",None,None,[],[]
+46,1,"['Librsvg', 'Raph_Levien']",None,None,[],[]
+47,1,"['Hallmark_Hall_of_Fame', 'Gian_Carlo_Menotti']",0,0,"['author(""Hallmark_Hall_of_Fame"",""Gian_Carlo_Menotti"")', 'negauthor(""Hallmark_Hall_of_Fame"",""Gian_Carlo_Menotti"")']","['author(""Hallmark_Hall_of_Fame"",""Gian_Carlo_Menotti"")', 'negauthor(""Hallmark_Hall_of_Fame"",""Gian_Carlo_Menotti"")']"
+48,1,"['T35_Hosting', 'Alex_Melen']",None,None,[],[]
+49,1,"['The_Fast_Red_Road:_A_Plainsong', 'Stephen_Graham_Jones']",None,None,[],[]
+50,1,"['The_Basket_of_Apples', 'Paul_C\xc3\xa9zanne']",None,None,[],[]
+51,1,"['Nights_at_the_Circus', 'Angela_Carter']",None,None,[],[]
+52,1,"['The_Dark_Ages:_An_Age_of_Light', 'Waldemar_Januszczak']",None,None,[],[]
+53,1,"['Zooman_Sam', 'Lois_Lowry']",None,None,[],[]
+54,1,"['The_House_of_Hades', 'Rick_Riordan']",1,1,"['author(""The_House_of_Hades"",""Rick_Riordan"")']","['author(""The_House_of_Hades"",""Rick_Riordan"")']"
+55,1,"['Invisible_(Auster_novel)', 'Paul_Auster']",None,None,[],[]
+56,1,"['Mistress_(1987_film)', 'Joyce_Eliason']",0,0,"['author(""Mistress_(1987_film)"",""Joyce_Eliason"")', 'negauthor(""Mistress_(1987_film)"",""Joyce_Eliason"")']","['author(""Mistress_(1987_film)"",""Joyce_Eliason"")', 'negauthor(""Mistress_(1987_film)"",""Joyce_Eliason"")']"
+57,1,"[""The_World's_Greatest_Super_Friends"", 'Jerry_Siegel']",None,None,[],[]
+58,1,"['Ack-Ack_Macaque', 'Gareth_L._Powell']",None,None,[],[]
+59,1,"['Look_Back_in_Anger', 'John_Osborne']",None,None,[],[]
+60,1,"['The_Kite_Fighters', 'Linda_Sue_Park']",None,None,[],[]
+61,1,"['The_Oath_of_the_Vayuputras', 'Amish_Tripathi']",-1,-1,"['negauthor(""The_Oath_of_the_Vayuputras"",""Amish_Tripathi"")']","['negauthor(""The_Oath_of_the_Vayuputras"",""Amish_Tripathi"")']"
+62,1,"['Zen_and_the_Brain', 'James_H._Austin']",None,None,[],[]
+63,1,"['Ultra_Maniac', 'Wataru_Yoshizumi']",None,None,[],[]
+64,1,"['Armadillo_(novel)', 'William_Boyd_(writer)']",1,1,"['author(""Armadillo_(novel)"",""William_Boyd_(writer)"")']","['author(""Armadillo_(novel)"",""William_Boyd_(writer)"")']"
+65,1,"['The_Myth_of_the_Machine', 'Lewis_Mumford']",None,None,[],[]
+66,1,"['The_Unbeheaded_King', 'L._Sprague_de_Camp']",1,1,"['author(""The_Unbeheaded_King"",""L._Sprague_de_Camp"")']","['author(""The_Unbeheaded_King"",""L._Sprague_de_Camp"")']"
+67,1,"['Demontage', 'Justin_Richards']",None,None,[],[]
+68,1,"['Leptirica', 'Milovan_Gli\xc5\xa1i\xc4\x87']",None,None,[],[]
+69,1,"[""The_Year's_Best_Science_Fiction:_Twenty-Seventh_Annual_Collection"", 'Gardner_Dozois']",None,None,[],[]
+70,1,"['SD_Gundam_Force_Emaki_Musharetsuden', 'Masato_Ichishiki']",None,None,[],[]
+71,1,"['The_Vanished_People', 'Ion_Idriess']",None,None,[],[]
+72,1,"['Tuvstarr_is_still_sitting_there_wistfully_looking_into_the_water', 'John_Bauer_(illustrator)']",None,None,[],[]
+73,1,"[""The_Politician's_Husband"", 'Paula_Milne']",None,None,[],[]
+74,1,"['The_Book_of_Lies_(Crowley)', 'Aleister_Crowley']",None,None,[],[]
+75,1,"['Black_Garden', 'Thomas_de_Waal']",None,None,[],[]
+76,1,"['Traitor_(Star_Wars_novel)', 'Matthew_Stover']",1,1,"['author(""Traitor_(Star_Wars_novel)"",""Matthew_Stover"")']","['author(""Traitor_(Star_Wars_novel)"",""Matthew_Stover"")']"
+77,1,"['Dead_Romance', 'Lawrence_Miles']",None,None,[],[]
+78,1,"['Hito_Natsu_no_Kids_Game', 'Ken_Akamatsu']",1,1,"['author(""Hito_Natsu_no_Kids_Game"",""Ken_Akamatsu"")']","['author(""Hito_Natsu_no_Kids_Game"",""Ken_Akamatsu"")']"
+79,1,"['Sex_on_the_Moon', 'Ben_Mezrich']",1,1,"['author(""Sex_on_the_Moon"",""Ben_Mezrich"")']","['author(""Sex_on_the_Moon"",""Ben_Mezrich"")']"
+80,1,"['Tears_of_the_Giraffe', 'Alexander_McCall_Smith']",1,1,"['author(""Tears_of_the_Giraffe"",""Alexander_McCall_Smith"")']","['author(""Tears_of_the_Giraffe"",""Alexander_McCall_Smith"")']"
+81,1,"['A_Chorus_of_Disapproval_(play)', 'Alan_Ayckbourn']",None,None,[],[]
+82,1,"['Riders_in_the_Chariot', 'Patrick_White']",None,None,[],[]
+83,1,"['Riel_(film)', 'Roy_Moore']",None,None,[],[]
+84,1,"['Our_Moon_Has_Blood_Clots', 'Rahul_Pandita']",None,None,[],[]
+85,1,"['Turn_A_Gundam__manga__1', 'Akira_Yasuda']",None,None,[],[]
+86,1,"['First_on_the_Moon_(1970_book)', 'Michael_Collins_(astronaut)']",None,None,[],[]
+87,1,"['The_Exegesis_of_Philip_K._Dick', 'Philip_K._Dick']",None,None,[],[]
+88,1,"['The_Lady_in_the_Lake', 'Raymond_Chandler']",1,1,"['author(""The_Lady_in_the_Lake"",""Raymond_Chandler"")']","['author(""The_Lady_in_the_Lake"",""Raymond_Chandler"")']"
+89,1,"['The_Demi-Gods_and_Semi-Devils_(2013_TV_series)', 'Jin_Yong']",None,None,[],[]
+90,1,"['The_Everglades:_River_of_Grass', 'Marjory_Stoneman_Douglas']",None,None,[],[]
+91,1,"['The_Joke_(novel)', 'Milan_Kundera']",None,None,[],[]
+92,1,"['An_Afternoon_in_the_Woods', ""Flannery_O'Connor""]",None,None,[],[]
+93,1,"['Agap\xc4\x93_Agape', 'William_Gaddis']",None,None,[],[]
+94,1,"['The_House_in_Lordship_Lane', 'A._E._W._Mason']",1,1,"['author(""The_House_in_Lordship_Lane"",""A._E._W._Mason"")']","['author(""The_House_in_Lordship_Lane"",""A._E._W._Mason"")']"
+95,1,"['Memory_Prime', 'Judith_and_Garfield_Reeves-Stevens']",1,1,"['author(""Memory_Prime"",""Judith_and_Garfield_Reeves-Stevens"")']","['author(""Memory_Prime"",""Judith_and_Garfield_Reeves-Stevens"")']"
+96,1,"['Chanticleer_and_the_Fox_(book)', 'Barbara_Cooney']",None,None,[],[]
+97,1,"['The_Timeless_Land', 'Eleanor_Dark']",None,None,[],[]
+98,1,"['Coralie_Lansdowne_Says_No', 'Alex_Buzo']",None,None,[],[]
+99,1,"['The_Feast_of_Fools', 'John_David_Morley']",None,None,[],[]
+100,1,"['The_Final_Programme', 'Michael_Moorcock']",1,1,"['author(""The_Final_Programme"",""Michael_Moorcock"")']","['author(""The_Final_Programme"",""Michael_Moorcock"")']"
+101,1,"['Digimon_Next', 'Takeshi_Okano']",None,None,[],[]
+102,1,"['The_Good_Daughter_(novel)', 'Honey_Brown']",1,1,"['author(""The_Good_Daughter_(novel)"",""Honey_Brown"")']","['author(""The_Good_Daughter_(novel)"",""Honey_Brown"")']"
+103,1,"['The_Art_of_Fiction_(book)', 'David_Lodge_(author)']",None,None,[],[]
+104,1,"['Breaking_the_News_(painting)', 'John_Longstaff']",None,None,[],[]
+105,1,"['Jasper_Johns_(book)', 'Michael_Crichton']",1,1,"['author(""Jasper_Johns_(book)"",""Michael_Crichton"")']","['author(""Jasper_Johns_(book)"",""Michael_Crichton"")']"
+106,1,"['Dead_of_Winter_(Doctor_Who)', 'James_Goss_(producer)']",None,None,[],[]
+107,1,"['Stonehenge_Apocalypse', 'Brad_Abraham']",None,None,[],[]
+108,1,"['Hamilton_(musical)', 'Lin-Manuel_Miranda']",None,None,[],[]
+109,1,"[""Children's_Ward"", 'Paul_Abbott']",None,None,[],[]
+110,1,"['Second_Variety_(1989_collection)', 'Philip_K._Dick']",None,None,[],[]
+111,1,"[""There's_a_God_on_the_Mic"", 'Kool_Moe_Dee']",None,None,[],[]
+112,1,"['A_Wanted_Man', 'Lee_Child']",None,None,[],[]
+113,1,"['River_of_Stars', 'Guy_Gavriel_Kay']",None,None,[],[]
+114,1,"['Gertrude_and_Claudius', 'John_Updike']",None,None,[],[]
+115,1,"['Synthetic_Men_of_Mars', 'Edgar_Rice_Burroughs']",1,1,"['author(""Synthetic_Men_of_Mars"",""Edgar_Rice_Burroughs"")']","['author(""Synthetic_Men_of_Mars"",""Edgar_Rice_Burroughs"")']"
+116,1,"['A_History_of_the_Kerala_School_of_Hindu_Astronomy', 'K._V._Sarma']",None,None,[],[]
+117,1,"['Men_into_Space', 'James_Clavell']",None,None,[],[]
+118,1,"['Home_(Morrison_novel)', 'Toni_Morrison']",1,1,"['author(""Home_(Morrison_novel)"",""Toni_Morrison"")']","['author(""Home_(Morrison_novel)"",""Toni_Morrison"")']"
+119,1,"['Five_Patients', 'Michael_Crichton']",1,1,"['author(""Five_Patients"",""Michael_Crichton"")']","['author(""Five_Patients"",""Michael_Crichton"")']"
+120,1,"['The_Left_Hand_of_God_(book)', 'Michael_Lerner_(rabbi)']",None,None,[],[]
+121,1,"['Atalanta_Fugiens', 'Michael_Maier']",None,None,[],[]
+122,1,"['Goldsborough_(novel)', 'Stefan_Heym']",None,None,[],[]
+123,1,"['A_Night_Without_Stars', 'Peter_F._Hamilton']",1,1,"['author(""A_Night_Without_Stars"",""Peter_F._Hamilton"")']","['author(""A_Night_Without_Stars"",""Peter_F._Hamilton"")']"
+124,1,"['Flinx_in_Flux', 'Alan_Dean_Foster']",1,1,"['author(""Flinx_in_Flux"",""Alan_Dean_Foster"")']","['author(""Flinx_in_Flux"",""Alan_Dean_Foster"")']"
+125,1,"['The_Vicomte_of_Bragelonne:_Ten_Years_Later', 'Auguste_Maquet']",None,None,[],[]
+126,1,"['The_Skinner', 'Neal_Asher']",1,1,"['author(""The_Skinner"",""Neal_Asher"")']","['author(""The_Skinner"",""Neal_Asher"")']"
+127,1,"['Morella_(short_story)', 'Edgar_Allan_Poe']",None,None,[],[]
+128,1,"['Eho_Hamara_Jeevna', 'Dalip_Kaur_Tiwana']",None,None,[],[]
+129,1,"['River_Boy', 'Tim_Bowler']",None,None,[],[]
+130,1,"['No_Treason', 'Lysander_Spooner']",None,None,[],[]
+131,1,"['Wild_Blood_(novel)', 'Kate_Thompson_(author)']",None,None,[],[]
+132,1,"['Fortress_Besieged', 'Qian_Zhongshu']",None,None,[],[]
+133,1,"['Femme_au_miroir', 'Jean_Metzinger']",None,None,[],[]
+134,1,"['Orestes_(play)', 'Euripides']",None,None,[],[]
+135,1,"['Answered_Prayers:_The_Unfinished_Novel', 'Truman_Capote']",None,None,[],[]
+136,1,"['The_Kill_Order', 'James_Dashner']",1,1,"['author(""The_Kill_Order"",""James_Dashner"")']","['author(""The_Kill_Order"",""James_Dashner"")']"
+137,1,"[""Your_Money's_Worth"", 'Frederick_J._Schlink']",None,None,[],[]
+138,1,"['State_of_the_Union_(play)', 'Howard_Lindsay']",None,None,[],[]
+139,1,"['The_Big_Time', 'Fritz_Leiber']",None,None,[],[]
+140,1,"['Some_Doves_and_Pythons', 'Sumner_Locke_Elliott']",None,None,[],[]
+141,1,"['Reveries_of_a_Solitary_Walker', 'Jean-Jacques_Rousseau']",None,None,[],[]
+142,1,"['Handbook_of_Religion_and_Health', 'Michael_McCullough_(psychologist)']",None,None,[],[]
+143,1,"['Evolving_the_Alien', 'Ian_Stewart_(mathematician)']",None,None,[],[]
+144,1,"['A_Stir_of_Echoes', 'Richard_Matheson']",None,None,[],[]
+145,1,"[""The_Gryphon's_Skull"", 'Harry_Turtledove']",1,1,"['author(""The_Gryphon\'s_Skull"",""Harry_Turtledove"")']","['author(""The_Gryphon\'s_Skull"",""Harry_Turtledove"")']"
+146,1,"['The_Ambassador_(TV_series)', 'Hugh_Costello']",None,None,[],[]
+147,1,"['The_Great_American_Novel_(Roth)', 'Philip_Roth']",None,None,[],[]
+148,1,"['The_Music_Scene_(TV_series)', 'Richard_Schaal']",-1,-1,"['negauthor(""The_Music_Scene_(TV_series)"",""Richard_Schaal"")']","['negauthor(""The_Music_Scene_(TV_series)"",""Richard_Schaal"")']"
+149,1,"['The_Border_Legion', 'Zane_Grey']",None,None,[],[]
+150,1,"['Shark_(novel)', 'Will_Self']",None,None,[],[]
+151,1,"['A_Warlock_in_Whitby', 'Robin_Jarvis']",1,1,"['author(""A_Warlock_in_Whitby"",""Robin_Jarvis"")']","['author(""A_Warlock_in_Whitby"",""Robin_Jarvis"")']"
+152,1,"['Ask_Harriet', 'Peter_Murrieta']",None,None,[],[]
+153,1,"['Persians_and_I', 'Arman_Arian']",None,None,[],[]
+154,1,"['Ramachandran:_A_Retrospective', 'R._Siva_Kumar']",None,None,[],[]
+155,1,"['Manusher_Manchitra', 'Rudra_Mohammad_Shahidullah']",None,None,[],[]
+156,1,"['The_Beast_in_the_Cave', 'H._P._Lovecraft']",None,None,[],[]
+157,1,"['Extras_(novel)', 'Scott_Westerfeld']",None,None,[],[]
+158,1,"['The_Borrowers_Avenged', 'Mary_Norton_(author)']",1,1,"['author(""The_Borrowers_Avenged"",""Mary_Norton_(author)"")']","['author(""The_Borrowers_Avenged"",""Mary_Norton_(author)"")']"
+159,1,"['Citizen_Baines', 'Lydia_Woodward']",-1,-1,"['negauthor(""Citizen_Baines"",""Lydia_Woodward"")']","['negauthor(""Citizen_Baines"",""Lydia_Woodward"")']"
+160,1,"['Haunted_(Cabot_novel)', 'Meg_Cabot']",None,None,[],[]
+161,1,"['Land_Beyond_the_Map', 'Kenneth_Bulmer']",None,None,[],[]
+162,1,"['Hero_Found:_The_Greatest_POW_Escape_of_the_Vietnam_War', 'Bruce_Henderson_(author)']",None,None,[],[]
+163,1,"['The_Night_of_the_Phoenix', 'Nelson_DeMille']",1,1,"['author(""The_Night_of_the_Phoenix"",""Nelson_DeMille"")']","['author(""The_Night_of_the_Phoenix"",""Nelson_DeMille"")']"
+164,1,"['Women_of_Trachis', 'Sophocles']",None,None,[],[]
+165,1,"['The_Island_of_Thirty_Coffins', 'Maurice_Leblanc']",None,None,[],[]
+166,1,"['A_Gift_of_Dragons', 'Anne_McCaffrey']",1,1,"['author(""A_Gift_of_Dragons"",""Anne_McCaffrey"")']","['author(""A_Gift_of_Dragons"",""Anne_McCaffrey"")']"
+167,1,"['Hell_Hath_No_Fury_Like_a_Woman_Scorned', 'Tyler_Perry']",None,None,[],[]
+168,1,"['Tales_of_a_Fourth_Grade_Nothing', 'Judy_Blume']",1,1,"['author(""Tales_of_a_Fourth_Grade_Nothing"",""Judy_Blume"")']","['author(""Tales_of_a_Fourth_Grade_Nothing"",""Judy_Blume"")']"
+169,1,"['Death_of_a_Train', 'Freeman_Wills_Crofts']",1,1,"['author(""Death_of_a_Train"",""Freeman_Wills_Crofts"")']","['author(""Death_of_a_Train"",""Freeman_Wills_Crofts"")']"
+170,1,"['Leyendas_de_Guatemala', 'Miguel_\xc3\x81ngel_Asturias']",None,None,[],[]
+171,1,"['The_Human_Comedy_(musical)', 'William_Dumaresq']",None,None,[],[]
+172,1,"['A_Faint_Cold_Fear', 'Karin_Slaughter']",None,None,[],[]
+173,1,"['The_Fix_(book)', 'Damian_Thompson']",None,None,[],[]
+174,1,"['The_Tilted_Cross', 'Hal_Porter']",None,None,[],[]
+175,1,"['The_Flying_Sorcerers', 'Larry_Niven']",1,1,"['author(""The_Flying_Sorcerers"",""Larry_Niven"")']","['author(""The_Flying_Sorcerers"",""Larry_Niven"")']"
+176,1,"['Liliane_(novel)', 'Ntozake_Shange']",None,None,[],[]
+177,1,"['Night_of_Blood', 'Richard_A._Knaak']",None,None,[],[]
+178,1,"[""Isaac_Asimov's_Robot_City:_Refuge"", 'Rob_Chilson']",None,None,[],[]
+179,1,"['The_Showroom_Tales', 'Gong_Hanlin']",None,None,[],[]
+180,1,"[""Naples_'44"", 'Norman_Lewis_(author)']",None,None,[],[]
+181,1,"[""Sharpe's_Fury"", 'Bernard_Cornwell']",1,1,"['author(""Sharpe\'s_Fury"",""Bernard_Cornwell"")']","['author(""Sharpe\'s_Fury"",""Bernard_Cornwell"")']"
+182,1,"['Dungeons_&_Dragons_(1974)', 'Dave_Arneson']",None,None,[],[]
+183,1,"['The_Boy_Who_Cried_Werewolf_(2010_film)', 'Douglas_Sloan_(television_producer)']",None,None,[],[]
+184,1,"['Vue_de_toits_(Effet_de_neige)', 'Gustave_Caillebotte']",None,None,[],[]
+185,1,"['One_Bullet_Away', 'Nathaniel_Fick']",None,None,[],[]
+186,1,"['What_Is_This_Thing_Called_Science%3F', 'Alan_Chalmers']",None,None,[],[]
+187,1,"['Iceworld', 'Hal_Clement']",None,None,[],[]
+188,1,"[""The_Complete_Idiot's_Guide_to_Publishing_Science_Fiction"", 'Karl_Schroeder']",None,None,[],[]
+189,1,"['The_Romance_of_the_White_Hair_Maiden_(1995_TV_series)', 'Liang_Yusheng']",None,None,[],[]
+190,1,"['The_Charioteer_of_Delphi', 'Caroline_Lawrence']",1,1,"['author(""The_Charioteer_of_Delphi"",""Caroline_Lawrence"")']","['author(""The_Charioteer_of_Delphi"",""Caroline_Lawrence"")']"
+191,1,"['The_Butter_Battle_Book', 'Dr._Seuss']",1,1,"['author(""The_Butter_Battle_Book"",""Dr._Seuss"")']","['author(""The_Butter_Battle_Book"",""Dr._Seuss"")']"
+192,1,"['Soldiers_and_Sailors_Monument_(Delphi,_Indiana)', 'Bruno_Schmitz']",None,None,[],[]
+193,1,"[""Fox's_Feud"", 'Colin_Dann']",1,1,"['author(""Fox\'s_Feud"",""Colin_Dann"")']","['author(""Fox\'s_Feud"",""Colin_Dann"")']"
+194,1,"['Samurai_Jack', 'Jim_Smith_(animator)']",None,None,[],[]
+195,1,"['Question_(short_story)', 'Isaac_Asimov']",None,None,[],[]
+196,1,"['Flotsam_(David_Wiesner_book)', 'David_Wiesner']",1,1,"['author(""Flotsam_(David_Wiesner_book)"",""David_Wiesner"")']","['author(""Flotsam_(David_Wiesner_book)"",""David_Wiesner"")']"
+197,1,"['The_Victorian_Internet', 'Tom_Standage']",None,None,[],[]
+198,1,"['First_Daughter_Suite', 'Michael_John_LaChiusa']",None,None,[],[]
+199,1,"['Servant_of_the_Empire', 'Janny_Wurts']",0,0,"['author(""Servant_of_the_Empire"",""Janny_Wurts"")', 'negauthor(""Servant_of_the_Empire"",""Janny_Wurts"")']","['author(""Servant_of_the_Empire"",""Janny_Wurts"")', 'negauthor(""Servant_of_the_Empire"",""Janny_Wurts"")']"
+200,1,"['Enlightenment_(software)', 'Carsten_Haitzler']",None,None,[],[]
+201,0,"['Wyrms_(comics)', 'Orson_Scott_Card']",None,None,[],[]
+202,0,"['Melinda_and_Melinda', 'Woody_Allen']",None,None,[],[]
+203,0,"['Across_the_River_to_Motor_City', 'Michael_DeCarlo']",None,None,[],[]
+204,0,"['Cinderella_(musical)', 'Alice_Ghostley']",-1,-1,"['negauthor(""Cinderella_(musical)"",""Alice_Ghostley"")']","['negauthor(""Cinderella_(musical)"",""Alice_Ghostley"")']"
+205,0,"['Hallelujah,_Baby!', 'Adolph_Green']",None,None,[],[]
+206,0,"['Bells_of_Innocence', 'Chuck_Norris']",0,0,"['author(""Bells_of_Innocence"",""Chuck_Norris"")', 'negauthor(""Bells_of_Innocence"",""Chuck_Norris"")']","['author(""Bells_of_Innocence"",""Chuck_Norris"")', 'negauthor(""Bells_of_Innocence"",""Chuck_Norris"")']"
+207,0,"['Strait-Jacket', 'Robert_Bloch']",None,None,[],[]
+208,0,"['China_Gate_(1957_film)', 'Samuel_Fuller']",-1,-1,"['negauthor(""China_Gate_(1957_film)"",""Samuel_Fuller"")']","['negauthor(""China_Gate_(1957_film)"",""Samuel_Fuller"")']"
+209,0,"['2300_Jackson_Street_(song)', 'Janet_Jackson']",None,None,[],[]
+210,0,"[""Hey,_Good_Lookin'_(song)"", 'Jimmy_Buffett']",-1,-1,"['negauthor(""Hey,_Good_Lookin\'_(song)"",""Jimmy_Buffett"")']","['negauthor(""Hey,_Good_Lookin\'_(song)"",""Jimmy_Buffett"")']"
+211,0,"['The_Search_for_Roots', 'M._C._Escher']",None,None,[],[]
+212,0,"['Mister_Roberts_(TV_series)', 'Leslie_H._Martinson']",-1,-1,"['negauthor(""Mister_Roberts_(TV_series)"",""Leslie_H._Martinson"")']","['negauthor(""Mister_Roberts_(TV_series)"",""Leslie_H._Martinson"")']"
+213,0,"['List_of_The_Tonight_Show_Starring_Johnny_Carson_episodes_(1989)', 'Michael_Palin']",None,None,[],[]
+214,0,"['Heartbeat_(1993_film)', 'Danielle_Steel']",0,0,"['author(""Heartbeat_(1993_film)"",""Danielle_Steel"")', 'negauthor(""Heartbeat_(1993_film)"",""Danielle_Steel"")']","['author(""Heartbeat_(1993_film)"",""Danielle_Steel"")', 'negauthor(""Heartbeat_(1993_film)"",""Danielle_Steel"")']"
+215,0,"['Nestor_the_Long-Eared_Christmas_Donkey', 'Brenda_Vaccaro']",None,None,[],[]
+216,0,"['Barefoot_Gen_2', 'Keiji_Nakazawa']",-1,-1,"['negauthor(""Barefoot_Gen_2"",""Keiji_Nakazawa"")']","['negauthor(""Barefoot_Gen_2"",""Keiji_Nakazawa"")']"
+217,0,"['It_(miniseries)', 'Stephen_King']",0,0,"['author(""It_(miniseries)"",""Stephen_King"")', 'negauthor(""It_(miniseries)"",""Stephen_King"")']","['author(""It_(miniseries)"",""Stephen_King"")', 'negauthor(""It_(miniseries)"",""Stephen_King"")']"
+218,0,"['Pilot_(V)', 'Kenneth_Johnson_(producer)']",None,None,[],[]
+219,0,"['Batman_(1989_film_series)', 'Tim_Burton']",None,None,[],[]
+220,0,"['Watchmen:_Music_from_the_Motion_Picture', 'Bob_Dylan']",None,None,[],[]
+221,0,"['Boys_for_Pele', 'Tori_Amos']",None,None,[],[]
+222,0,"['Showtune_(musical)', 'Jerry_Herman']",None,None,[],[]
+223,0,"['Evangelion:_3.0_You_Can_(Not)_Redo', 'Hideaki_Anno']",None,None,[],[]
+224,0,"[""That's_My_Bush!"", 'Matt_Stone']",None,None,[],[]
+225,0,"['The_Best_Man_(1964_film)', 'Gore_Vidal']",0,0,"['author(""The_Best_Man_(1964_film)"",""Gore_Vidal"")', 'negauthor(""The_Best_Man_(1964_film)"",""Gore_Vidal"")']","['author(""The_Best_Man_(1964_film)"",""Gore_Vidal"")', 'negauthor(""The_Best_Man_(1964_film)"",""Gore_Vidal"")']"
+226,0,"['List_of_The_Tonight_Show_Starring_Johnny_Carson_episodes_(1974)', 'Steve_Martin']",None,None,[],[]
+227,0,"['Monsterpiece_Theater', 'David_Rudman']",None,None,[],[]
+228,0,"['Red_Prophet:_The_Tales_of_Alvin_Maker', 'Orson_Scott_Card']",None,None,[],[]
+229,0,"['Double_Act_(film)', 'Jacqueline_Wilson']",None,None,[],[]
+230,0,"['Greatest_Hits_(Mariah_Carey_album)', 'Stephen_Schwartz_(composer)']",0,0,"['author(""Greatest_Hits_(Mariah_Carey_album)"",""Stephen_Schwartz_(composer)"")', 'negauthor(""Greatest_Hits_(Mariah_Carey_album)"",""Stephen_Schwartz_(composer)"")']","['author(""Greatest_Hits_(Mariah_Carey_album)"",""Stephen_Schwartz_(composer)"")', 'negauthor(""Greatest_Hits_(Mariah_Carey_album)"",""Stephen_Schwartz_(composer)"")']"
+231,0,"['Prelude_to_Fame', 'Aldous_Huxley']",None,None,[],[]
+232,0,"['Around_the_World_with_Willy_Fog', 'Jules_Verne']",None,None,[],[]
+233,0,"['The_Coat_Hanger', 'Jennifer_Salt']",-1,-1,"['negauthor(""The_Coat_Hanger"",""Jennifer_Salt"")']","['negauthor(""The_Coat_Hanger"",""Jennifer_Salt"")']"
+234,0,"['Richard_the_Lion-Hearted_(1923_film)', 'Walter_Scott']",None,None,[],[]
+235,0,"['Younger_Than_Springtime', 'Oscar_Hammerstein_II']",None,None,[],[]
+236,0,"['Planetary_Report', 'Carl_Sagan']",None,None,[],[]
+237,0,"['Inferno_(1997_film)', 'Fred_Olen_Ray']",None,None,[],[]
+238,0,"['Sea_of_Souls', 'Suri_Krishnamma']",None,None,[],[]
+239,0,"['The_Stick_Up', 'Jeffrey_Bloom']",None,None,[],[]
+240,0,"['Tokumei_Sentai_Go-Busters', 'Katsuhiro_Suzuki_(actor)']",0,0,"['author(""Tokumei_Sentai_Go-Busters"",""Katsuhiro_Suzuki_(actor)"")', 'negauthor(""Tokumei_Sentai_Go-Busters"",""Katsuhiro_Suzuki_(actor)"")']","['author(""Tokumei_Sentai_Go-Busters"",""Katsuhiro_Suzuki_(actor)"")', 'negauthor(""Tokumei_Sentai_Go-Busters"",""Katsuhiro_Suzuki_(actor)"")']"
+241,0,"['Stations_of_the_Elevated', 'Charles_Mingus']",None,None,[],[]
+242,0,"['Knight_Rider_(2008_film)', 'David_Hasselhoff']",None,None,[],[]
+243,0,"['The_Brave_Archer_and_His_Mate', 'Jin_Yong']",0,0,"['author(""The_Brave_Archer_and_His_Mate"",""Jin_Yong"")', 'negauthor(""The_Brave_Archer_and_His_Mate"",""Jin_Yong"")']","['author(""The_Brave_Archer_and_His_Mate"",""Jin_Yong"")', 'negauthor(""The_Brave_Archer_and_His_Mate"",""Jin_Yong"")']"
+244,0,"['Rumors_(film)', 'Michael_Maltese']",-1,-1,"['negauthor(""Rumors_(film)"",""Michael_Maltese"")']","['negauthor(""Rumors_(film)"",""Michael_Maltese"")']"
+245,0,"['A_Walking_Tour_of_the_Shambles', 'Gahan_Wilson']",None,None,[],[]
+246,0,"['A_View_from_the_Gallery', 'Harlan_Ellison']",-1,-1,"['negauthor(""A_View_from_the_Gallery"",""Harlan_Ellison"")']","['negauthor(""A_View_from_the_Gallery"",""Harlan_Ellison"")']"
+247,0,"['Wild_Hearts', 'Nancy_McKeon']",None,None,[],[]
+248,0,"['Tonight_(Iggy_Pop_song)', 'Tina_Turner']",None,None,[],[]
+249,0,"['Things_to_Come', 'H._G._Wells']",None,None,[],[]
+250,0,"['Darling_Lili', 'Blake_Edwards']",0,0,"['author(""Darling_Lili"",""Blake_Edwards"")', 'negauthor(""Darling_Lili"",""Blake_Edwards"")']","['author(""Darling_Lili"",""Blake_Edwards"")', 'negauthor(""Darling_Lili"",""Blake_Edwards"")']"
+251,0,"['Clannad_(visual_novel)', 'Juri_Misaki']",None,None,[],[]
+252,0,"['Gimme_Shelter__Gimme_Shelter__1', 'Patti_Smith']",-1,-1,"['negauthor(""Gimme_Shelter__Gimme_Shelter__1"",""Patti_Smith"")']","['negauthor(""Gimme_Shelter__Gimme_Shelter__1"",""Patti_Smith"")']"
+253,0,"['The_Gambler_from_Natchez', 'Irving_Wallace']",None,None,[],[]
+254,0,"['Bastards_from_the_Bush,_A_Journey_with_Bob_Ellis_and_Les_Murray', 'Bob_Ellis']",None,None,[],[]
+255,0,"['Maximum_Overdrive', 'Stephen_King']",None,None,[],[]
+256,0,"['1990_(Daniel_Johnston_album)', 'John_Lennon']",None,None,[],[]
+257,0,"['Butt-Ugly_Martians', 'Mike_Young_(producer)']",0,0,"['author(""Butt-Ugly_Martians"",""Mike_Young_(producer)"")', 'negauthor(""Butt-Ugly_Martians"",""Mike_Young_(producer)"")']","['author(""Butt-Ugly_Martians"",""Mike_Young_(producer)"")', 'negauthor(""Butt-Ugly_Martians"",""Mike_Young_(producer)"")']"
+258,0,"['Soak_the_Rich', 'Charles_MacArthur']",-1,-1,"['negauthor(""Soak_the_Rich"",""Charles_MacArthur"")']","['negauthor(""Soak_the_Rich"",""Charles_MacArthur"")']"
+259,0,"['Masterjam', 'Robert_Christgau']",None,None,[],[]
+260,0,"['UC:_Undercover', 'Don_Winslow']",None,None,[],[]
+261,0,"['My_Fair_Lady_(film)', 'Alan_Jay_Lerner']",0,0,"['author(""My_Fair_Lady_(film)"",""Alan_Jay_Lerner"")', 'negauthor(""My_Fair_Lady_(film)"",""Alan_Jay_Lerner"")']","['author(""My_Fair_Lady_(film)"",""Alan_Jay_Lerner"")', 'negauthor(""My_Fair_Lady_(film)"",""Alan_Jay_Lerner"")']"
+262,0,"['Galactica_1980', 'Glen_A._Larson']",0,0,"['author(""Galactica_1980"",""Glen_A._Larson"")', 'negauthor(""Galactica_1980"",""Glen_A._Larson"")']","['author(""Galactica_1980"",""Glen_A._Larson"")', 'negauthor(""Galactica_1980"",""Glen_A._Larson"")']"
+263,0,"['Ashes_of_Time', 'Jin_Yong']",0,0,"['author(""Ashes_of_Time"",""Jin_Yong"")', 'negauthor(""Ashes_of_Time"",""Jin_Yong"")']","['author(""Ashes_of_Time"",""Jin_Yong"")', 'negauthor(""Ashes_of_Time"",""Jin_Yong"")']"
+264,0,"['The_Mirror_(The_Twilight_Zone)', 'Rod_Serling']",-1,-1,"['negauthor(""The_Mirror_(The_Twilight_Zone)"",""Rod_Serling"")']","['negauthor(""The_Mirror_(The_Twilight_Zone)"",""Rod_Serling"")']"
+265,0,"['Empire:_Original_Soundtrack_from_Season_1', 'Courtney_Love']",None,None,[],[]
+266,0,"['The_Best_of_1990\xe2\x80\x932000', 'Brian_Eno']",0,0,"['author(""The_Best_of_1990\xe2\x80\x932000"",""Brian_Eno"")', 'negauthor(""The_Best_of_1990\xe2\x80\x932000"",""Brian_Eno"")']","['author(""The_Best_of_1990\xe2\x80\x932000"",""Brian_Eno"")', 'negauthor(""The_Best_of_1990\xe2\x80\x932000"",""Brian_Eno"")']"
+267,0,"[""Here's_Where_I_Belong"", 'John_Steinbeck']",-1,-1,"['negauthor(""Here\'s_Where_I_Belong"",""John_Steinbeck"")']","['negauthor(""Here\'s_Where_I_Belong"",""John_Steinbeck"")']"
+268,0,"['Citizen_Soldier_(television_program)', 'Antony_Beevor']",None,None,[],[]
+269,0,"['The_Houston_Kid', 'Robert_Christgau']",None,None,[],[]
+270,0,"['I_Sing_the_Body_Electric_(The_Twilight_Zone)', 'Ray_Bradbury']",-1,-1,"['negauthor(""I_Sing_the_Body_Electric_(The_Twilight_Zone)"",""Ray_Bradbury"")']","['negauthor(""I_Sing_the_Body_Electric_(The_Twilight_Zone)"",""Ray_Bradbury"")']"
+271,0,"['Make_the_Grade', 'Lew_Schneider']",0,0,"['author(""Make_the_Grade"",""Lew_Schneider"")', 'negauthor(""Make_the_Grade"",""Lew_Schneider"")']","['author(""Make_the_Grade"",""Lew_Schneider"")', 'negauthor(""Make_the_Grade"",""Lew_Schneider"")']"
+272,0,"['Filthy_Rich_(1982_TV_series)', 'Bill_Persky']",None,None,[],[]
+273,0,"['The_Dub_Room_Special_(soundtrack)', 'Frank_Zappa']",-1,-1,"['negauthor(""The_Dub_Room_Special_(soundtrack)"",""Frank_Zappa"")']","['negauthor(""The_Dub_Room_Special_(soundtrack)"",""Frank_Zappa"")']"
+274,0,"['Head_Shots', 'Dawn_Prestwich']",-1,-1,"['negauthor(""Head_Shots"",""Dawn_Prestwich"")']","['negauthor(""Head_Shots"",""Dawn_Prestwich"")']"
+275,0,"['Mother_Machree', 'Rida_Johnson_Young']",None,None,[],[]
+276,0,"['Journey_to_the_Unknown', 'Robert_Bloch']",None,None,[],[]
+277,0,"['The_Dish', 'Santo_Cilauro']",0,0,"['author(""The_Dish"",""Santo_Cilauro"")', 'negauthor(""The_Dish"",""Santo_Cilauro"")']","['author(""The_Dish"",""Santo_Cilauro"")', 'negauthor(""The_Dish"",""Santo_Cilauro"")']"
+278,0,"['Eleven_(Tina_Arena_album)', 'Tina_Arena']",None,None,[],[]
+279,0,"['The_Merry_Wives_of_Windsor_(1918_film)', 'William_Shakespeare']",None,None,[],[]
+280,0,"['National_Velvet_(TV_series)', 'Frank_McDonald_(director)']",None,None,[],[]
+281,0,"['The_Legend_of_Valentino', 'Aaron_Spelling']",0,0,"['author(""The_Legend_of_Valentino"",""Aaron_Spelling"")', 'negauthor(""The_Legend_of_Valentino"",""Aaron_Spelling"")']","['author(""The_Legend_of_Valentino"",""Aaron_Spelling"")', 'negauthor(""The_Legend_of_Valentino"",""Aaron_Spelling"")']"
+282,0,"['Now_the_Day_Is_Over', 'Richard_Rodgers']",None,None,[],[]
+283,0,"['Run_Ronnie_Run!', 'David_Cross']",None,None,[],[]
+284,0,"['Alvin_and_the_Chipmunks:_Chipwrecked', 'Janice_Karman']",None,None,[],[]
+285,0,"['Fire_and_Ice:_The_Dragon_Chronicles', 'Evan_Jacobs']",None,None,[],[]
+286,0,"['Foundation_(M.O.P._album)', 'Robert_Christgau']",None,None,[],[]
+287,0,"['Darling_of_the_Day', 'Arnold_Bennett']",None,None,[],[]
+288,0,"['The_Beach_Boys:_Good_Vibrations_Tour', 'Lorne_Michaels']",None,None,[],[]
+289,0,"['Between_Two_Women_(1945_film)', 'Max_Brand']",None,None,[],[]
+290,0,"['Downton_Abbey', 'Matthew_Goode']",0,0,"['author(""Downton_Abbey"",""Matthew_Goode"")', 'negauthor(""Downton_Abbey"",""Matthew_Goode"")']","['author(""Downton_Abbey"",""Matthew_Goode"")', 'negauthor(""Downton_Abbey"",""Matthew_Goode"")']"
+291,0,"['Lulu_on_the_Bridge', 'Paul_Auster']",0,0,"['author(""Lulu_on_the_Bridge"",""Paul_Auster"")', 'negauthor(""Lulu_on_the_Bridge"",""Paul_Auster"")']","['author(""Lulu_on_the_Bridge"",""Paul_Auster"")', 'negauthor(""Lulu_on_the_Bridge"",""Paul_Auster"")']"
+292,0,"['Farewell_to_Space_Battleship_Yamato', 'Leiji_Matsumoto']",None,None,[],[]
+293,0,"['Book_of_Blood', 'Clive_Barker']",None,None,[],[]
+294,0,"['Would_You_Be_Happier%3F', 'Ryan_Adams']",-1,-1,"['negauthor(""Would_You_Be_Happier%3F"",""Ryan_Adams"")']","['negauthor(""Would_You_Be_Happier%3F"",""Ryan_Adams"")']"
+295,0,"['Little_Bo_Bleep', 'David_Cross']",None,None,[],[]
+296,0,"['The_Estate_Agents', 'Dan_Clark']",None,None,[],[]
+297,0,"['Solomon_Kane_(film)', 'Robert_E._Howard']",None,None,[],[]
+298,0,"['Eye_of_the_Spider', 'Klaus_Kinski']",-1,-1,"['negauthor(""Eye_of_the_Spider"",""Klaus_Kinski"")']","['negauthor(""Eye_of_the_Spider"",""Klaus_Kinski"")']"
+299,0,"['Anthuleni_Katha', 'K._Balachander']",0,0,"['author(""Anthuleni_Katha"",""K._Balachander"")', 'negauthor(""Anthuleni_Katha"",""K._Balachander"")']","['author(""Anthuleni_Katha"",""K._Balachander"")', 'negauthor(""Anthuleni_Katha"",""K._Balachander"")']"
+300,0,"['Beyond_Westworld', 'Michael_Crichton']",None,None,[],[]
+301,0,"['Saxophone_Colossus', 'Bertolt_Brecht']",-1,-1,"['negauthor(""Saxophone_Colossus"",""Bertolt_Brecht"")']","['negauthor(""Saxophone_Colossus"",""Bertolt_Brecht"")']"
+302,0,"['The_Sophisticated_Gents', 'Robert_Hooks']",None,None,[],[]
+303,0,"['Ravenswood_(TV_series)', 'I._Marlene_King']",None,None,[],[]
+304,0,"['The_Night_Flier_(film)', 'Stephen_King']",-1,-1,"['negauthor(""The_Night_Flier_(film)"",""Stephen_King"")']","['negauthor(""The_Night_Flier_(film)"",""Stephen_King"")']"
+305,0,"['The_Baskervilles', 'Rob_Brydon']",None,None,[],[]
+306,0,"['New_Traditionalists', 'Robert_Christgau']",None,None,[],[]
+307,0,"['Second_Thoughts_(TV_series)__Second_Thoughts__1', 'Gavin_Petrie']",-1,-1,"['negauthor(""Second_Thoughts_(TV_series)__Second_Thoughts__1"",""Gavin_Petrie"")']","['negauthor(""Second_Thoughts_(TV_series)__Second_Thoughts__1"",""Gavin_Petrie"")']"
+308,0,"['Spaghetti_Western_and_Meatballs', 'Brian_Posehn']",None,None,[],[]
+309,0,"['Sunrise_at_Campobello', 'Dore_Schary']",0,0,"['author(""Sunrise_at_Campobello"",""Dore_Schary"")', 'negauthor(""Sunrise_at_Campobello"",""Dore_Schary"")']","['author(""Sunrise_at_Campobello"",""Dore_Schary"")', 'negauthor(""Sunrise_at_Campobello"",""Dore_Schary"")']"
+310,0,"[""Sharpe's_Mission"", 'James_Laurenson']",None,None,[],[]
+311,0,"['The_Last_Party', 'Norman_Mailer']",None,None,[],[]
+312,0,"['Chupacabra:_Dark_Seas', 'Neal_Brown']",None,None,[],[]
+313,0,"['The_Hanna-Barbera_Hall_of_Fame:_Yabba_Dabba_Doo_II', 'Robert_Guenette']",None,None,[],[]
+314,0,"['Open_All_Hours', 'Roy_Clarke']",1,1,"['author(""Open_All_Hours"",""Roy_Clarke"")']","['author(""Open_All_Hours"",""Roy_Clarke"")']"
+315,0,"['Saint_Sinner_(film)', 'Mary_Mara']",None,None,[],[]
+316,0,"[""World's_Best_Science_Fiction:_1968"", 'Jack_Gaughan']",None,None,[],[]
+317,0,"['Shit_Hits_the_Fan', 'Eminem']",-1,-1,"['negauthor(""Shit_Hits_the_Fan"",""Eminem"")']","['negauthor(""Shit_Hits_the_Fan"",""Eminem"")']"
+318,0,"['Our_Day_Out', 'Willy_Russell']",None,None,[],[]
+319,0,"['Heaven_Must_Have_Sent_You', 'Berry_Gordy']",0,0,"['author(""Heaven_Must_Have_Sent_You"",""Berry_Gordy"")', 'negauthor(""Heaven_Must_Have_Sent_You"",""Berry_Gordy"")']","['author(""Heaven_Must_Have_Sent_You"",""Berry_Gordy"")', 'negauthor(""Heaven_Must_Have_Sent_You"",""Berry_Gordy"")']"
+320,0,"['Ferry_Cross_the_Mersey', 'Paul_McCartney']",None,None,[],[]
+321,0,"['Coraz\xc3\xb3n_salvaje_(1993_telenovela)', 'Caridad_Bravo_Adams']",0,0,"['author(""Coraz\xc3\xb3n_salvaje_(1993_telenovela)"",""Caridad_Bravo_Adams"")', 'negauthor(""Coraz\xc3\xb3n_salvaje_(1993_telenovela)"",""Caridad_Bravo_Adams"")']","['author(""Coraz\xc3\xb3n_salvaje_(1993_telenovela)"",""Caridad_Bravo_Adams"")', 'negauthor(""Coraz\xc3\xb3n_salvaje_(1993_telenovela)"",""Caridad_Bravo_Adams"")']"
+322,0,"['Iron_Road', ""Peter_O'Toole""]",0,0,"['author(""Iron_Road"",""Peter_O\'Toole"")', 'negauthor(""Iron_Road"",""Peter_O\'Toole"")']","['author(""Iron_Road"",""Peter_O\'Toole"")', 'negauthor(""Iron_Road"",""Peter_O\'Toole"")']"
+323,0,"['Women_Who_Play', 'Frederick_Lonsdale']",None,None,[],[]
+324,0,"[""You're_Beautiful_(TV_series)"", 'Lee_Hong-gi']",None,None,[],[]
+325,0,"['I_Whistle_a_Happy_Tune', 'Richard_Rodgers']",None,None,[],[]
+326,0,"['Princess_Knight__tv_series__1', 'Osamu_Tezuka']",None,None,[],[]
+327,0,"['Nightbreed', 'Clive_Barker']",None,None,[],[]
+328,0,"['The_Weight_of_Chains_2', 'Noam_Chomsky']",None,None,[],[]
+329,0,"['A_Man_Without_Honor', 'David_Benioff']",-1,-1,"['negauthor(""A_Man_Without_Honor"",""David_Benioff"")']","['negauthor(""A_Man_Without_Honor"",""David_Benioff"")']"
+330,0,"['Carnal_Knowledge', 'Jules_Feiffer']",None,None,[],[]
+331,0,"['A_Colbert_Christmas:_The_Greatest_Gift_of_All!', 'Willie_Nelson']",None,None,[],[]
+332,0,"['Eek!_The_Cat', 'Michael_Hirsh_(producer)']",None,None,[],[]
+333,0,"[""It's_a_Scandal!_It's_a_Outrage!"", 'Oscar_Hammerstein_II']",None,None,[],[]
+334,0,"['Various_Positions', 'Leonard_Cohen']",-1,-1,"['negauthor(""Various_Positions"",""Leonard_Cohen"")']","['negauthor(""Various_Positions"",""Leonard_Cohen"")']"
+335,0,"['Providence_(Avatar_Press)', 'Alan_Moore']",None,None,[],[]
+336,0,"['Daylight_Robbery_(TV_series)', 'John_Salthouse']",None,None,[],[]
+337,0,"['Puppet_Master_vs_Demonic_Toys', 'Corey_Feldman']",None,None,[],[]
+338,0,"['Moby_Presents:_Alien_Sex_Party', 'Paul_Yates']",None,None,[],[]
+339,0,"['The_Pager', 'David_Simon']",None,None,[],[]
+340,0,"['The_Romance_of_Book_and_Sword', 'Jin_Yong']",None,None,[],[]
+341,0,"['The_Trial_(1993_film)', 'Franz_Kafka']",0,0,"['author(""The_Trial_(1993_film)"",""Franz_Kafka"")', 'negauthor(""The_Trial_(1993_film)"",""Franz_Kafka"")']","['author(""The_Trial_(1993_film)"",""Franz_Kafka"")', 'negauthor(""The_Trial_(1993_film)"",""Franz_Kafka"")']"
+342,0,"['Forces_of_Nature_(TV_series)', 'Brian_Cox_(physicist)']",None,None,[],[]
+343,0,"[""Mangeuses_d'Hommes"", 'Marc_Sinden']",0,0,"['author(""Mangeuses_d\'Hommes"",""Marc_Sinden"")', 'negauthor(""Mangeuses_d\'Hommes"",""Marc_Sinden"")']","['author(""Mangeuses_d\'Hommes"",""Marc_Sinden"")', 'negauthor(""Mangeuses_d\'Hommes"",""Marc_Sinden"")']"
+344,0,"['Master_of_Adventure:_The_Worlds_of_Edgar_Rice_Burroughs', 'Frank_Frazetta']",None,None,[],[]
+345,0,"['Main_Course', 'Robert_Christgau']",None,None,[],[]
+346,0,"['Precious_Pupp', 'Joseph_Barbera']",-1,-1,"['negauthor(""Precious_Pupp"",""Joseph_Barbera"")']","['negauthor(""Precious_Pupp"",""Joseph_Barbera"")']"
+347,0,"['Lightning_Point', 'Jonathan_M._Shiff']",None,None,[],[]
+348,0,"['Priest_(1994_film)', 'Jimmy_McGovern']",None,None,[],[]
+349,0,"['Tomb_of_the_Unknown_Love', 'George_Martin']",None,None,[],[]
+350,0,"['The_Road_to_Freedom_(L._Ron_Hubbard_album)', 'L._Ron_Hubbard']",0,0,"['author(""The_Road_to_Freedom_(L._Ron_Hubbard_album)"",""L._Ron_Hubbard"")', 'negauthor(""The_Road_to_Freedom_(L._Ron_Hubbard_album)"",""L._Ron_Hubbard"")']","['author(""The_Road_to_Freedom_(L._Ron_Hubbard_album)"",""L._Ron_Hubbard"")', 'negauthor(""The_Road_to_Freedom_(L._Ron_Hubbard_album)"",""L._Ron_Hubbard"")']"
+351,0,"[""Michael_Jackson's_Ghosts"", 'Stephen_King']",None,None,[],[]
+352,0,"['The_Raven_(1935_film)', 'Edgar_Allan_Poe']",None,None,[],[]
+353,0,"['Toonpur_Ka_Super_Hero', 'Timothy_Harris_(writer)']",None,None,[],[]
+354,0,"['Glee:_The_Music,_Volume_3_Showstoppers', 'Claude-Michel_Sch\xc3\xb6nberg']",None,None,[],[]
+355,0,"['Ghost_Ghirls', 'Jack_Black']",0,0,"['author(""Ghost_Ghirls"",""Jack_Black"")', 'negauthor(""Ghost_Ghirls"",""Jack_Black"")']","['author(""Ghost_Ghirls"",""Jack_Black"")', 'negauthor(""Ghost_Ghirls"",""Jack_Black"")']"
+356,0,"['Broadcast_News_(film)', 'James_L._Brooks']",0,0,"['author(""Broadcast_News_(film)"",""James_L._Brooks"")', 'negauthor(""Broadcast_News_(film)"",""James_L._Brooks"")']","['author(""Broadcast_News_(film)"",""James_L._Brooks"")', 'negauthor(""Broadcast_News_(film)"",""James_L._Brooks"")']"
+357,0,"['Pie_in_the_Sky_(TV_series)', 'Malcolm_Sinclair']",None,None,[],[]
+358,0,"['Pareo_wa_Emerald', 'Yasushi_Akimoto']",-1,-1,"['negauthor(""Pareo_wa_Emerald"",""Yasushi_Akimoto"")']","['negauthor(""Pareo_wa_Emerald"",""Yasushi_Akimoto"")']"
+359,0,"['The_Jacket_(Seinfeld)', 'Larry_David']",-1,-1,"['negauthor(""The_Jacket_(Seinfeld)"",""Larry_David"")']","['negauthor(""The_Jacket_(Seinfeld)"",""Larry_David"")']"
+360,0,"['The_Ringer_(1928_film)', 'Edgar_Wallace']",-1,-1,"['negauthor(""The_Ringer_(1928_film)"",""Edgar_Wallace"")']","['negauthor(""The_Ringer_(1928_film)"",""Edgar_Wallace"")']"
+361,0,"['Muhte\xc5\x9fem_Y\xc3\xbczy\xc4\xb1l', 'Vahide_Per\xc3\xa7in']",0,0,"['author(""Muhte\xc5\x9fem_Y\xc3\xbczy\xc4\xb1l"",""Vahide_Per\xc3\xa7in"")', 'negauthor(""Muhte\xc5\x9fem_Y\xc3\xbczy\xc4\xb1l"",""Vahide_Per\xc3\xa7in"")']","['author(""Muhte\xc5\x9fem_Y\xc3\xbczy\xc4\xb1l"",""Vahide_Per\xc3\xa7in"")', 'negauthor(""Muhte\xc5\x9fem_Y\xc3\xbczy\xc4\xb1l"",""Vahide_Per\xc3\xa7in"")']"
+362,0,"['The_Ninja_Dragon', 'Go_Nagai']",None,None,[],[]
+363,0,"['Street_Kings', 'James_Ellroy']",None,None,[],[]
+364,0,"['The_Millionairess', 'George_Bernard_Shaw']",None,None,[],[]
+365,0,"['Death_to_the_Daleks', 'Terrance_Dicks']",None,None,[],[]
+366,0,"['Like_Family', 'J._Mack_Slaughter,_Jr.']",None,None,[],[]
+367,0,"['Giants_(Dizzy_Gillespie_album)', 'Dizzy_Gillespie']",-1,-1,"['negauthor(""Giants_(Dizzy_Gillespie_album)"",""Dizzy_Gillespie"")']","['negauthor(""Giants_(Dizzy_Gillespie_album)"",""Dizzy_Gillespie"")']"
+368,0,"['Michael_Strogoff', 'Jules_F\xc3\xa9rat']",None,None,[],[]
+369,0,"['The_Adventures_of_Gerard', 'Arthur_Conan_Doyle']",None,None,[],[]
+370,0,"['Super_Friends:_The_Legendary_Super_Powers_Show', 'Ray_Patterson_(animator)']",None,None,[],[]
+371,0,"['Muppet_Babies', 'Jim_Henson']",-1,-1,"['negauthor(""Muppet_Babies"",""Jim_Henson"")']","['negauthor(""Muppet_Babies"",""Jim_Henson"")']"
+372,0,"['1994_Baker_Street:_Sherlock_Holmes_Returns', 'Kenneth_Johnson_(producer)']",None,None,[],[]
+373,0,"['The_Day_After_Tomorrow_(TV_special)', 'Gerry_Anderson']",-1,-1,"['negauthor(""The_Day_After_Tomorrow_(TV_special)"",""Gerry_Anderson"")']","['negauthor(""The_Day_After_Tomorrow_(TV_special)"",""Gerry_Anderson"")']"
+374,0,"['Jamaica_Inn_(1983_TV_series)', 'Jane_Seymour_(actress)']",None,None,[],[]
+375,0,"['Captain_Video_and_His_Video_Rangers', 'Richard_Coogan']",0,0,"['author(""Captain_Video_and_His_Video_Rangers"",""Richard_Coogan"")', 'negauthor(""Captain_Video_and_His_Video_Rangers"",""Richard_Coogan"")']","['author(""Captain_Video_and_His_Video_Rangers"",""Richard_Coogan"")', 'negauthor(""Captain_Video_and_His_Video_Rangers"",""Richard_Coogan"")']"
+376,0,"['Beer_Barrel_Polecats', 'Moe_Howard']",0,0,"['author(""Beer_Barrel_Polecats"",""Moe_Howard"")', 'negauthor(""Beer_Barrel_Polecats"",""Moe_Howard"")']","['author(""Beer_Barrel_Polecats"",""Moe_Howard"")', 'negauthor(""Beer_Barrel_Polecats"",""Moe_Howard"")']"
+377,0,"['Kull_the_Conqueror', 'Robert_E._Howard']",None,None,[],[]
+378,0,"['The_Craic', 'Jimeoin']",None,None,[],[]
+379,0,"['Mr._Monk_Goes_to_the_Firehouse__Monk__1', 'Lee_Goldberg']",-1,-1,"['negauthor(""Mr._Monk_Goes_to_the_Firehouse__Monk__1"",""Lee_Goldberg"")']","['negauthor(""Mr._Monk_Goes_to_the_Firehouse__Monk__1"",""Lee_Goldberg"")']"
+380,0,"['Bel_Ami_(1955_film)', 'Guy_de_Maupassant']",None,None,[],[]
+381,0,"['Angels_of_Sin', 'Jean_Giraudoux']",None,None,[],[]
+382,0,"['The_Lady_in_the_Bottle', 'Sidney_Sheldon']",-1,-1,"['negauthor(""The_Lady_in_the_Bottle"",""Sidney_Sheldon"")']","['negauthor(""The_Lady_in_the_Bottle"",""Sidney_Sheldon"")']"
+383,0,"[""Bill_&_Ted's_Excellent_Comic_Book"", 'Evan_Dorkin']",None,None,[],[]
+384,0,"['Deep_Jwele_Jaai', 'Anil_Gupta']",None,None,[],[]
+385,0,"['Hellraiser', 'Clive_Barker']",None,None,[],[]
+386,0,"['Hallelujah,_Baby!', 'Adolph_Green']",None,None,[],[]
+387,0,"['Dreams_on_Spec', 'James_L._Brooks']",None,None,[],[]
+388,0,"['S.O.B._(film)', 'Blake_Edwards']",0,0,"['author(""S.O.B._(film)"",""Blake_Edwards"")', 'negauthor(""S.O.B._(film)"",""Blake_Edwards"")']","['author(""S.O.B._(film)"",""Blake_Edwards"")', 'negauthor(""S.O.B._(film)"",""Blake_Edwards"")']"
+389,0,"['Trial_by_Fire_(comics)', 'Scott_Ciencin']",None,None,[],[]
+390,0,"['Rasmus_p\xc3\xa5_luffen', 'Astrid_Lindgren']",0,0,"['author(""Rasmus_p\xc3\xa5_luffen"",""Astrid_Lindgren"")', 'negauthor(""Rasmus_p\xc3\xa5_luffen"",""Astrid_Lindgren"")']","['author(""Rasmus_p\xc3\xa5_luffen"",""Astrid_Lindgren"")', 'negauthor(""Rasmus_p\xc3\xa5_luffen"",""Astrid_Lindgren"")']"
+391,0,"['The_West_(film)', 'Gary_Sinise']",None,None,[],[]
+392,0,"['Pinky_and_the_Brain', 'Tom_Ruegger']",None,None,[],[]
+393,0,"['The_Revenge_of_Tarzan', 'Edgar_Rice_Burroughs']",None,None,[],[]
+394,0,"[""Don't_Lose_Your_Head"", 'Talbot_Rothwell']",None,None,[],[]
+395,0,"['Darna_(2009_TV_series)', 'Don_Michael_Perez']",None,None,[],[]
+396,0,"['Adventures_of_Superman_(TV_series)', 'Joe_Shuster']",None,None,[],[]
+397,0,"[""The_Butterfly's_Dream_(1994_film)"", 'Carlo_Crivelli']",None,None,[],[]
+398,0,"['X-Bomber', 'Go_Nagai']",0,0,"['author(""X-Bomber"",""Go_Nagai"")', 'negauthor(""X-Bomber"",""Go_Nagai"")']","['author(""X-Bomber"",""Go_Nagai"")', 'negauthor(""X-Bomber"",""Go_Nagai"")']"
+399,0,"['Victoria_(TV_series)', 'Martin_Phipps']",0,0,"['author(""Victoria_(TV_series)"",""Martin_Phipps"")', 'negauthor(""Victoria_(TV_series)"",""Martin_Phipps"")']","['author(""Victoria_(TV_series)"",""Martin_Phipps"")', 'negauthor(""Victoria_(TV_series)"",""Martin_Phipps"")']"
+400,0,"['How_to_Succeed_in_Business_Without_Really_Trying_(musical)', 'Frank_Loesser']",None,None,[],[]
