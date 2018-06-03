@@ -1,0 +1,55 @@
+unsat(1,"0.945208",A ,B) :-  author(A ,B),not author(A ,B) .
+author(A ,B) :-  author(A ,B), not unsat(1,"0.945208",A ,B).
+:~unsat(1,"0.945208",A ,B). [945@0,1,A ,B]
+unsat(2,"0.040208",A ,B,B ,C,D) :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D,not author(A ,B) .
+author(A ,B) :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D, not unsat(2,"0.040208",A ,B,B ,C,D).
+:~unsat(2,"0.040208",A ,B,B ,C,D). [40@0,2,A ,B,B ,C,D]
+unsat(3,"0.047917",A ,B,B ,C,D) :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D,not author(A ,B) .
+author(A ,B) :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D, not unsat(3,"0.047917",A ,B,B ,C,D).
+:~unsat(3,"0.047917",A ,B,B ,C,D). [47@0,3,A ,B,B ,C,D]
+unsat(4,"0.132708",A ,B,C,C ) :-  author(C ,B) ,  subsequentWork(A ,C),not author(A ,B) .
+author(A ,B) :-  author(C ,B) ,  subsequentWork(A ,C), not unsat(4,"0.132708",A ,B,C,C ).
+:~unsat(4,"0.132708",A ,B,C,C ). [132@0,4,A ,B,C,C ]
+unsat(5,"0.026250",A ,B,B ,C,C ,D) :-  previousWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D),not author(A ,B) .
+author(A ,B) :-  previousWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D), not unsat(5,"0.026250",A ,B,B ,C,C ,D).
+:~unsat(5,"0.026250",A ,B,B ,C,C ,D). [26@0,5,A ,B,B ,C,C ,D]
+unsat(6,"0.027292",A ,B,C ,D) :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D),not negauthor(A ,B) .
+negauthor(A ,B) :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D), not unsat(6,"0.027292",A ,B,C ,D).
+:~unsat(6,"0.027292",A ,B,C ,D). [27@0,6,A ,B,C ,D]
+unsat(7,"0.387083",A ,B,B ,C,D) :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D,not negauthor(A ,B) .
+negauthor(A ,B) :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D, not unsat(7,"0.387083",A ,B,B ,C,D).
+:~unsat(7,"0.387083",A ,B,B ,C,D). [387@0,7,A ,B,B ,C,D]
+unsat(8,"0.317292",A ,B,B ,C,D) :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D,not negauthor(A ,B) .
+negauthor(A ,B) :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D, not unsat(8,"0.317292",A ,B,B ,C,D).
+:~unsat(8,"0.317292",A ,B,B ,C,D). [317@0,8,A ,B,B ,C,D]
+unsat(9,"0.021042",A,A ,B,C ) :-  writer(C ,B) ,  previousWork(C ,A),not negauthor(A ,B) .
+negauthor(A ,B) :-  writer(C ,B) ,  previousWork(C ,A), not unsat(9,"0.021042",A,A ,B,C ).
+:~unsat(9,"0.021042",A,A ,B,C ). [21@0,9,A,A ,B,C ]
+unsat(10,"0.023542",A ,B,C ,D) :-  writer(C ,B) ,  previousWork(C ,D) ,  subsequentWork(A ,D),not negauthor(A ,B) .
+negauthor(A ,B) :-  writer(C ,B) ,  previousWork(C ,D) ,  subsequentWork(A ,D), not unsat(10,"0.023542",A ,B,C ,D).
+:~unsat(10,"0.023542",A ,B,C ,D). [23@0,10,A ,B,C ,D]
+unsat(11,"0.081042",A ,B,C ,D) :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D),not negauthor(A ,B) .
+negauthor(A ,B) :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D), not unsat(11,"0.081042",A ,B,C ,D).
+:~unsat(11,"0.081042",A ,B,C ,D). [81@0,11,A ,B,C ,D]
+unsat(12,"0.026875",A,A ,B,C ) :-  writer(C ,B) ,  subsequentWork(C ,A),not negauthor(A ,B) .
+negauthor(A ,B) :-  writer(C ,B) ,  subsequentWork(C ,A), not unsat(12,"0.026875",A,A ,B,C ).
+:~unsat(12,"0.026875",A,A ,B,C ). [26@0,12,A,A ,B,C ]
+unsat(13,"0.024375",A ,B,C,D ) :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B),not negauthor(A ,B) .
+negauthor(A ,B) :-  previousWork(A ,C) ,  subsequentWork(D ,C) ,  writer(D ,B), not unsat(13,"0.024375",A ,B,C,D ).
+:~unsat(13,"0.024375",A ,B,C,D ). [24@0,13,A ,B,C,D ]
+runtime("The_Dollmaker","150.0").
+author("The_Dollmaker","Harriette_Simpson_Arnow").
+author("The_Dollmaker","Hume_Cronyn").
+activeYearsStartYear("Daniel_Petrie","1949").
+activeYearsStartYear("Susan_Cooper","1964").
+activeYearsStartYear("Hume_Cronyn","1934").
+activeYearsStartYear("Jane_Fonda","1960").
+activeYearsStartYear("John_Rubinstein","1967").
+activeYearsStartYear("Bill_Finnegan","1950").
+birthYear("Daniel_Petrie","1920").
+birthYear("Paul_Lohmann","1926").
+birthYear("Hume_Cronyn","1911").
+birthYear("Jane_Fonda","1937").
+birthYear("John_Rubinstein","1946").
+birthYear("Bill_Finnegan","1928").
+genre("Susan_Cooper","Children's_literature").

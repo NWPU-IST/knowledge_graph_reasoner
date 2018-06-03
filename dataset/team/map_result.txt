@@ -2,14 +2,11 @@ clingo version 4.5.4
 Reading from out.txt ...
 Solving...
 Answer: 1
-birthPlace("Melvin_Sanders","Liberal,_Kansas") position("Melvin_Sanders","Shooting_guard") position("Melvin_Sanders","Small_forward") team("Melvin_Sanders","BC_Tsmoki-Minsk") team("Melvin_Sanders","Hacettepe_Üniversitesi_B.K.") team("Melvin_Sanders","Baloncesto_Málaga") team("Melvin_Sanders","CB_Valladolid") team("Melvin_Sanders","CB_Gran_Canaria") team("Melvin_Sanders","Basket_Barcellona") team("Melvin_Sanders","Menorca_Bàsquet") country("Liberal_High_School_(Kansas)","USA") team("BC_Tsmoki-Minsk","Tsmoki-Minsk") country("Seward_County_Community_College","United_States") country("Liberal,_Kansas","United_States") team("Melvin_Sanders__1","Dakota_Wizards") team("Melvin_Sanders__10","Élan_Béarnais_Pau-Orthez") team("Melvin_Sanders__2","Pallacanestro_Varese") team("Melvin_Sanders__3","Dakota_Wizards") team("Melvin_Sanders__4","BC_Oostende") team("Melvin_Sanders__5","San_Antonio_Spurs") team("Melvin_Sanders__6","Fayetteville_Patriots") team("Melvin_Sanders__7","San_Antonio_Spurs") team("Melvin_Sanders__8","Fayetteville_Patriots") team("Melvin_Sanders__9","San_Antonio_Spurs") country("Athens","Greece") country("Greek_A2_Basket_League","Greece") country("Greek_Basket_League","Greece") negteam("Melvin_Sanders","BC_Tsmoki-Minsk") negteam("Melvin_Sanders","Hacettepe_Üniversitesi_B.K.") negteam("Melvin_Sanders","Baloncesto_Málaga") negteam("Melvin_Sanders","CB_Valladolid") negteam("Melvin_Sanders","CB_Gran_Canaria") negteam("Melvin_Sanders","Basket_Barcellona") negteam("Melvin_Sanders","Menorca_Bàsquet")
-Optimization: 0
-OPTIMUM FOUND
+birthPlace("Martin_Lewis_Perl","New_York_City") birthPlace("Samuel_C._C._Ting","Ann_Arbor,_Michigan") birthPlace("Samuel_C._C._Ting","United_States") country("Columbia_University","U.S.") country("New_York_City","United_States") birthPlace("John_Henry_Coatsworth","New_York_City") birthPlace("John_Henry_Coatsworth","United_States") birthPlace("John_Henry_Coatsworth","New_York_(state)") birthPlace("Lee_Bollinger","Santa_Rosa,_California") country("Urban_area","India")
+SATISFIABLE
 
 Models       : 1     
-  Optimum    : yes
-Optimization : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.000s
-Threads      : 4        (Winner: 0)
+Threads      : 4        (Winner: 3)

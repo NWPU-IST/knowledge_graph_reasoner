@@ -6,6 +6,7 @@ from reasoner import get_rule_predicates
 import sys
 import datetime
 
+file_name = 'neg_b100_sum_'
 
 def query_test(triples_list, id_list, true_labels, data_source, data_size, init_time, const):
     results_hard = {}
@@ -35,6 +36,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
     lpmln_evaluation_mcsat = [['sentence_id', 'true_label', 'sentence', 'mc_label', \
                              'mc_prob']]
     # error_list = ['19','34']
+    print triples_list
     for t, triple in enumerate(triples_list):
         print t
         sentence_id = id_list[t]
@@ -53,6 +55,8 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
             lpmln_reasoning(triple_check, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, \
                             const, total_asp, total_map, total_mc)
 
+        print query_map
+        print "jere"
         if query_map:
             if true_label == 1 and label_map == '1':
                 true_pos += 1
@@ -194,6 +198,9 @@ def write_stats(data_source, data_size, const, results_hard, results_soft, resul
             file.write('True Positives ,'+ str(results_hard.get('true_pos',0))+ '/200 ,'+ str(results_soft.get('true_pos',0))\
                        + '/200 ,True Negatives,'+str(results_hard.get('true_neg',0))+'/200, '+ \
                        str(results_soft.get('true_neg',0))+'/200'+ '\n')
+            print('True Positives ,'+ str(results_hard.get('true_pos',0))+ '/200 ,'+ str(results_soft.get('true_pos',0))\
+                                           + '/200 ,True Negatives,'+str(results_hard.get('true_neg',0))+'/200, '+ \
+                                                                  str(results_soft.get('true_neg',0))+'/200'+ '\n')
             file.write(
                 'False Negatives ,' + str(results_hard.get('false_neg', 0)) + '/200 ,' + str(results_soft.get('false_neg', 0)) \
                 + '/200 ,False Positives,' + str(results_hard.get('false_pos', 0)) + '/200, ' + \
@@ -232,7 +239,7 @@ if __name__ == "__main__":
             print "query for",data_size, const
             print"++++++++++++++++"
             init_time = datetime.datetime.now()
-            input_file = 'dataset/' + args.test_predicate + '/input/neg_top100_' + data_size + '.csv'
+            input_file = 'dataset/' + args.test_predicate + '/input/'+file_name + data_size + '.csv'
             # input_file = 'dataset/' + args.test_predicate + '/input/test_sample' + '.csv'
             with open(input_file) as f:
                 reader = csv.DictReader(f)
@@ -248,5 +255,7 @@ if __name__ == "__main__":
                     id_list.append(row.get('sid'))
                 results_hard, results_soft, results_mcsat,lpmln_type, total_asp, total_map, total_mc = \
                     query_test(triples_list, id_list, true_labels, args.test_predicate, data_size, init_time, const)
+
+            const += file_name
             write_stats(args.test_predicate,data_size,const,results_hard,results_soft,results_mcsat, init_time, \
                         lpmln_type, total_asp, total_map,total_mc)

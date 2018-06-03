@@ -2,11 +2,14 @@ clingo version 4.5.4
 Reading from out.txt ...
 Solving...
 Answer: 1
-author("How_to_Succeed_in_Business_Without_Really_Trying_(musical)","Jack_Weinstock") author("How_to_Succeed_in_Business_Without_Really_Trying_(musical)","Willie_Gilbert") author("How_to_Succeed_in_Business_Without_Really_Trying_(musical)","Abe_Burrows") basedOn("How_to_Succeed_in_Business_Without_Really_Trying_(musical)","How_to_Succeed_in_Business_Without_Really_Trying_(book)") activeYearsStartYear("Frank_Loesser","1936") birthYear("Abe_Burrows","1910") birthYear("Willie_Gilbert","1916") deathYear("Abe_Burrows","1985") deathYear("Jack_Weinstock","1969") deathYear("Willie_Gilbert","1980") genre("Frank_Loesser","Musical_theatre")
-SATISFIABLE
+runtime("Precious_Pupp","6.0") director("Precious_Pupp","William_Hanna") director("Precious_Pupp","Joseph_Barbera") producer("Precious_Pupp","Joseph_Barbera") producer("Precious_Pupp","William_Hanna") runtime("Secret_Squirrel_Show","30.0") activeYearsStartYear("Janet_Waldo","1938") activeYearsStartYear("Joseph_Barbera","1932") activeYearsStartYear("Don_Messick","1941") activeYearsStartYear("William_Hanna","1930") activeYearsStartYear("Hoyt_Curtin","1957") birthYear("Janet_Waldo","1920") birthYear("Joseph_Barbera","1911") birthYear("Don_Messick","1926") birthYear("William_Hanna","1910") birthYear("Hoyt_Curtin","1922") deathYear("Janet_Waldo","2016") deathYear("Joseph_Barbera","2006") deathYear("Don_Messick","1997") deathYear("William_Hanna","2001") deathYear("Hoyt_Curtin","2000") author("Secret_Squirrel_Show","Dalton_Sandifer") author("Secret_Squirrel_Show","Tony_Benedict") director("Secret_Squirrel_Show","Joseph_Barbera") director("Secret_Squirrel_Show","William_Hanna") genre("Secret_Squirrel_Show","Animation") negauthor("Precious_Pupp","Janet_Waldo") negauthor("Precious_Pupp","Joseph_Barbera") negauthor("Precious_Pupp","Don_Messick") negauthor("Precious_Pupp","William_Hanna") negauthor("Precious_Pupp","Hoyt_Curtin") negauthor("Secret_Squirrel_Show","Janet_Waldo") negauthor("Secret_Squirrel_Show","Joseph_Barbera") negauthor("Secret_Squirrel_Show","Don_Messick") negauthor("Secret_Squirrel_Show","William_Hanna") negauthor("Secret_Squirrel_Show","Hoyt_Curtin")
+Optimization: 0
+OPTIMUM FOUND
 
 Models       : 1     
+  Optimum    : yes
+Optimization : 0
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.000s
-Threads      : 4        (Winner: 3)
+Time         : 0.017s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
+Threads      : 4        (Winner: 0)

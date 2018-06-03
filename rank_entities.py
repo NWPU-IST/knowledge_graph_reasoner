@@ -20,14 +20,15 @@ def get_rank(id,entity_1,entity_2,label):
     result_2 = sparql.query(sparql_endpoint, query_2)
     value_1 = [sparql.unpack_row(row_result) for row_result in result_1][0][0]
     value_2 = [sparql.unpack_row(row_result) for row_result in result_2][0][0]
-    score = (value_1+value_2)/2.0
+    score = (value_1+value_2)
     return [id,entity_1.encode('utf-8'),entity_2.encode('utf-8'),label,score]
 
 
 def write_test(triples,file_name,folder_path):
     print file_name+"_0k.csv"
-    with open(folder_path+file_name+"_0k.csv", 'wb') as resultFile:
+    with open(folder_path+file_name+"_sum_0k.csv", 'wb') as resultFile:
         wr = csv.writer(resultFile,quotechar='"')
+        triples = [['sid','sub','obj','class','score']] + triples
         wr.writerows(triples)
 
 
@@ -38,8 +39,8 @@ if __name__ == "__main__":
     folder_path = 'dataset/' + args.test_predicate + '/input/'
     with open('dataset/' + args.test_predicate + '/input/test_0k.csv', 'rb') as csvfile:
         reader = csv.DictReader(csvfile)
-        positive_triples = [['sid','sub','obj','class','score']]
-        negative_triples = [['sid','sub','obj','class','score']]
+        positive_triples = []
+        negative_triples = []
         for row in reader:
             entity_1 = row.get('sub').decode('utf-8')
             entity_2 = row.get('obj').decode('utf-8')
@@ -49,8 +50,8 @@ if __name__ == "__main__":
                 positive_triples.append(get_rank(id,entity_1,entity_2,label))
             else:
                 negative_triples.append(get_rank(id,entity_1,entity_2,label))
-        # print positive_triples
-        # print negative_triples
+        #print positive_triples
+        #print negative_triples
         print "sorting data"
         positive_triples.sort(key=lambda x: x[4])
         negative_triples.sort(key=lambda x: x[4])
