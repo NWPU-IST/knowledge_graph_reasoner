@@ -1,0 +1,37 @@
+0.000740994  author(A ,B)  :-  basedOn(A ,B).
+0.006486845  author(B ,F)  :-  creator(A ,F)   ,  lastAppearance(A ,B).
+0.000826493  author(A ,B)  :-  translator(A ,B).
+0.000256498  author(A ,B)  :-  creativeDirector(A ,B).
+0.015912898  author(A ,F)  :-  knownFor(F ,B)   ,  nonFictionSubject(A ,B).
+0.001293413  author(A ,F)  :-  birthPlace(F ,B)   ,  premierePlace(A ,B).
+0.006326949  author(A ,B)  :-  coverArtist(A ,B).
+0.003420892  author(A ,F)  :-  deathPlace(F ,B)   ,  premierePlace(A ,B).
+0.00501596  author(A ,B)  :-  musicBy(A ,B).
+0.002194482  author(A ,B)  :-  presenter(A ,B).
+0.010619663  author(E ,B)  :-  subsequentWork(E ,A)   ,  illustrator(A ,B).
+0.011883751  author(E ,B)  :-  previousWork(E ,A)   ,  illustrator(A ,B).
+0.011884405  author(A ,B)  :-  executiveProducer(A ,B).
+0.017433662  author(F ,B)  :-  previousWork(A ,F)   ,  illustrator(A ,B).
+0.017369093  author(F ,B)  :-  subsequentWork(A ,F)   ,  illustrator(A ,B).
+0.012910397  author(A ,B)  :-  illustrator(A ,B).
+0.236677116  author(A ,B)  :-  illustrator(A ,B).
+0.056842966  author(A ,B)  :-  executiveProducer(A ,B).
+0.023914412  author(A ,B)  :-  notableWork(B ,A)   ,  illustrator(A ,B).
+0.02245782  author(A ,B)  :-  creator(A ,B).
+0.013480392  author(A ,B)  :-  lyrics(A ,B).
+0.000958773  author(E ,B)  :-  nonFictionSubject(E ,A)   ,  crewMember(A ,B).
+0.359149582  author(A ,B)  :-  lyrics(A ,B).
+0.003807107  author(A ,B)  :-  creator(A ,B)   ,  creativeDirector(A ,B).
+0.086479903  author(E ,A)  :-  series(E ,B)   ,  notableWork(A ,B).
+0.035498694  author(A ,B)  :-  creator(A ,B).
+0.359137056  author(A ,B)  :-  creator(A ,B)   ,  executiveProducer(A ,B).
+0.009463722  author(A ,B)  :-  producer(A ,B)   ,  creativeDirector(A ,B).
+0.806818182  author(A ,B)  :-  musicBy(A ,B)   ,  lyrics(A ,B).
+0.012987013  author(A ,F)  :-  language(F ,B)   ,  originalLanguage(A ,B).
+0.032694764  author(F ,A)  :-  subsequentWork(B ,F)   ,  notableWork(A ,B).
+0.032709731  author(E ,A)  :-  previousWork(E ,B)   ,  notableWork(A ,B).
+0.022553098  author(E ,A)  :-  subsequentWork(E ,B)   ,  notableWork(A ,B).
+0.045286138  author(B ,A)  :-  notableWork(A ,B).
+0.021535701  author(F ,A)  :-  previousWork(B ,F)   ,  notableWork(A ,B).
+0.387372014  author(A ,B)  :-  notableWork(B ,A).
+0.45045045  author(A ,B)  :-  coverArtist(A ,B)   ,  illustrator(A ,B).

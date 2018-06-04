@@ -1,0 +1,65 @@
+0.000000188  child(A ,B)  :-  nationality(B ,F)   ,  birthPlace(A ,F).
+0.000000252  child(A ,B)  :-  nationality(A ,F)   ,  birthPlace(B ,F).
+0.000000369  child(A ,B)  :-  deathPlace(B ,F)   ,  birthPlace(A ,F).
+0.000000452  child(A ,B)  :-  nationality(B ,F)   ,  deathPlace(A ,F).
+0.000000538  child(A ,B)  :-  stateOfOrigin(A ,F)   ,  birthPlace(B ,F).
+0.000000431  child(A ,B)  :-  birthPlace(B ,F)   ,  birthPlace(A ,F).
+0.000000628  child(A ,B)  :-  occupation(B ,F)   ,  occupation(A ,F).
+0.000001776  child(A ,B)  :-  stateOfOrigin(B ,F)   ,  nationality(A ,F).
+0.000000971  child(A ,B)  :-  residence(B ,F)   ,  birthPlace(A ,F).
+0.00000091  child(A ,B)  :-  nationality(B ,F)   ,  nationality(A ,F).
+0.000001179  child(A ,B)  :-  deathPlace(A ,F)   ,  birthPlace(B ,F).
+0.000001745  child(A ,B)  :-  residence(A ,F)   ,  birthPlace(B ,F).
+0.000001956  child(A ,B)  :-  deathPlace(B ,F)   ,  deathPlace(A ,F).
+0.000001718  child(A ,B)  :-  stateOfOrigin(A ,F)   ,  nationality(B ,F).
+0.000003341  child(A ,B)  :-  party(B ,F)   ,  party(A ,F).
+0.000003353  child(A ,B)  :-  residence(B ,F)   ,  deathPlace(A ,F).
+0.000006065  child(A ,B)  :-  stateOfOrigin(B ,F)   ,  stateOfOrigin(A ,F).
+0.000008747  child(A ,B)  :-  religion(B ,F)   ,  religion(A ,F).
+0.000012414  child(A ,B)  :-  almaMater(B ,F)   ,  almaMater(A ,F).
+0.00001892  child(A ,B)  :-  residence(B ,F)   ,  residence(A ,F).
+0.000092355  child(A ,B)  :-  starring(E ,B)   ,  starring(E ,A).
+0.007500636  child(E ,A)  :-  child(E ,B)   ,  child(A ,B).
+0.000168508  child(A ,B)  :-  series(B ,F)   ,  series(A ,F).
+0.000285007  child(A ,B)  :-  creator(B ,F)   ,  creator(A ,F).
+0.007671653  child(A ,B)  :-  relative(A ,B).
+0.013169671  child(B ,A)  :-  child(A ,B).
+0.081977472  child(E ,B)  :-  child(A ,E)   ,  child(A ,B).
+0.013355593  child(A ,F)  :-  child(B ,F)   ,  child(A ,B).
+0.029433737  child(A ,B)  :-  relative(B ,F)   ,  relative(A ,F).
+0.017757211  child(A ,B)  :-  relation(E ,B)   ,  relation(E ,A).
+0.008199174  child(A ,B)  :-  firstAppearance(B ,F)   ,  firstAppearance(A ,F).
+0.009863516  child(A ,B)  :-  lastAppearance(B ,F)   ,  lastAppearance(A ,F).
+0.006161797  child(A ,B)  :-  spouse(A ,B).
+0.053805774  child(E ,A)  :-  relative(E ,B)   ,  child(A ,B).
+0.0301732  child(A ,B)  :-  relative(E ,B)   ,  relative(E ,A).
+0.042490119  child(A ,B)  :-  relative(A ,F)   ,  relative(F ,B).
+0.04743083  child(A ,B)  :-  relative(B ,F)   ,  relative(F ,A).
+0.052464526  child(A ,B)  :-  relative(B ,A).
+0.003581804  child(A ,B)  :-  successor(A ,B).
+0.145640074  child(A ,B)  :-  spouse(F ,A)   ,  relative(B ,F).
+0.310208127  child(E ,B)  :-  spouse(E ,A)   ,  child(A ,B).
+0.122093023  child(A ,B)  :-  spouse(A ,F)   ,  relative(B ,F).
+0.035928909  child(B ,A)  :-  relative(A ,B).
+0.152985075  child(A ,B)  :-  spouse(F ,A)   ,  relation(B ,F).
+0.034778161  child(B ,A)  :-  relation(A ,B).
+0.259722222  child(A ,B)  :-  relative(B ,F)   ,  parent(F ,A).
+0.062015504  child(A ,B)  :-  relation(B ,A).
+0.051795174  child(A ,B)  :-  spouse(F ,A)   ,  parent(B ,F).
+0.194726166  child(A ,B)  :-  spouse(A ,F)   ,  relation(B ,F).
+0.233195021  child(A ,B)  :-  relative(E ,B)   ,  parent(E ,A).
+0.202247191  child(A ,B)  :-  relation(E ,B)   ,  parent(E ,A).
+0.253061224  child(A ,F)  :-  relation(B ,F)   ,  child(A ,B).
+0.314009662  child(E ,A)  :-  lastAppearance(E ,B)   ,  lastAppearance(A ,B).
+0.474074074  child(A ,F)  :-  lastAppearance(F ,B)   ,  lastAppearance(A ,B).
+0.28708134  child(A ,F)  :-  relative(B ,F)   ,  child(A ,B).
+0.5679893  child(F ,B)  :-  spouse(A ,F)   ,  child(A ,B).
+0.236671001  child(A ,E)  :-  relation(E ,B)   ,  child(A ,B).
+0.006993985  child(A ,B)  :-  predecessor(B ,A).
+0.311538462  child(A ,E)  :-  relative(E ,B)   ,  child(A ,B).
+0.008824844  child(A ,B)  :-  successor(A ,B)   ,  predecessor(B ,A).
+0.06706668  child(A ,B)  :-  spouse(A ,F)   ,  parent(B ,F).
+0.113432836  child(A ,B)  :-  parent(B ,A).
+0.050364078  child(A ,B)  :-  predecessor(B ,A)   ,  parent(B ,A).
+0.213783404  child(B ,A)  :-  parent(A ,B).
+0.06345733  child(A ,B)  :-  successor(A ,B)   ,  parent(B ,A).

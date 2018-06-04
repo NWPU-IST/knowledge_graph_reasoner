@@ -1,0 +1,5 @@
+spouse(A,B) :- spouse(B,A).
+spouse(A,C) :- child(A,B) , parent(B,C) .
+spouse(A,C) :- child(A,B) , child(C,B).
+spouse(C,A) :- placeOfBurial(A,B) , restingPlace(C,B) .
+spouse(A,C) :- child(A,B), relation(B,C) .

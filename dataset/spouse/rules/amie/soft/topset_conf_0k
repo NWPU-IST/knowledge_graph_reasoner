@@ -1,0 +1,17 @@
+0.002882131  spouse(A ,B)  :-  relative(A ,B).
+0.006161797  spouse(A ,B)  :-  child(A ,B).
+0.00016302  spouse(E ,A)  :-  birthPlace(E ,B)   ,  placeOfBurial(A ,B).
+0.001093222  spouse(B ,A)  :-  partner(A ,B).
+0.000516762  spouse(E ,A)  :-  deathPlace(E ,B)   ,  placeOfBurial(A ,B).
+0.145640074  spouse(F ,A)  :-  relative(B ,F)   ,  child(A ,B).
+0.310208127  spouse(E ,A)  :-  child(E ,B)   ,  child(A ,B).
+0.122093023  spouse(A ,F)  :-  relative(B ,F)   ,  child(A ,B).
+0.152985075  spouse(F ,A)  :-  relation(B ,F)   ,  child(A ,B).
+0.051795174  spouse(F ,A)  :-  parent(B ,F)   ,  child(A ,B).
+0.194726166  spouse(A ,F)  :-  relation(B ,F)   ,  child(A ,B).
+0.00283197  spouse(E ,A)  :-  restingPlace(E ,B)   ,  placeOfBurial(A ,B).
+0.5679893  spouse(A ,F)  :-  child(F ,B)   ,  child(A ,B).
+0.336956522  spouse(E ,A)  :-  lastAppearance(E ,B)   ,  lastAppearance(A ,B).
+0.06706668  spouse(A ,F)  :-  parent(B ,F)   ,  child(A ,B).
+0.540540541  spouse(A ,F)  :-  lastAppearance(F ,B)   ,  lastAppearance(A ,B).
+0.522858279  spouse(B ,A)  :-  spouse(A ,B).

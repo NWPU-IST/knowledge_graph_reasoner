@@ -1,0 +1,10 @@
+0.000101265  team(B ,A)  :-  chairman(A ,B).
+0.000002954  team(A ,F)  :-  team(B ,F)   ,  followingEvent(A ,B).
+0.001812509  team(B ,A)  :-  manager(A ,B).
+0.010443107  team(F ,B)  :-  league(A ,F)   ,  draftTeam(A ,B).
+0.063252241  team(E ,A)  :-  league(E ,B)   ,  season(A ,B).
+0.014556474  team(A ,B)  :-  managerClub(A ,B).
+0.000967782  team(A ,B)  :-  draftTeam(A ,B).
+0.002004784  team(A ,B)  :-  debutTeam(A ,B).
+0.038227566  team(A ,B)  :-  formerTeam(A ,B)   ,  debutTeam(A ,B).
+0.035610549  team(A ,B)  :-  formerTeam(A ,B).

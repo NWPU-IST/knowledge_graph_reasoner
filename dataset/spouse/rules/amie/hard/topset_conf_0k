@@ -1,0 +1,17 @@
+spouse(A ,B)  :-  relative(A ,B).
+spouse(A ,B)  :-  child(A ,B).
+spouse(E ,A)  :-  birthPlace(E ,B)   ,  placeOfBurial(A ,B).
+spouse(B ,A)  :-  partner(A ,B).
+spouse(E ,A)  :-  deathPlace(E ,B)   ,  placeOfBurial(A ,B).
+spouse(F ,A)  :-  relative(B ,F)   ,  child(A ,B).
+spouse(E ,A)  :-  child(E ,B)   ,  child(A ,B).
+spouse(A ,F)  :-  relative(B ,F)   ,  child(A ,B).
+spouse(F ,A)  :-  relation(B ,F)   ,  child(A ,B).
+spouse(F ,A)  :-  parent(B ,F)   ,  child(A ,B).
+spouse(A ,F)  :-  relation(B ,F)   ,  child(A ,B).
+spouse(E ,A)  :-  restingPlace(E ,B)   ,  placeOfBurial(A ,B).
+spouse(A ,F)  :-  child(F ,B)   ,  child(A ,B).
+spouse(E ,A)  :-  lastAppearance(E ,B)   ,  lastAppearance(A ,B).
+spouse(A ,F)  :-  parent(B ,F)   ,  child(A ,B).
+spouse(A ,F)  :-  lastAppearance(F ,B)   ,  lastAppearance(A ,B).
+spouse(B ,A)  :-  spouse(A ,B).

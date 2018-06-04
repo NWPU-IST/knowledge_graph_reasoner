@@ -1,0 +1,52 @@
+0.011  spouse(A,B) :- starring(C,B), location(C,D), birthPlace(A,D).
+0.061  spouse(A,B) :- child(A,C), child(B,C).
+0.56  spouse(A,B) :- spouse(B,A).
+0.144  spouse(A,B) :- parent(C,B), parent(C,A).
+0.045  spouse(A,B) :- parent(C,B), child(A,C).
+0.026  negspouse(A,B) :- successor(C,A), primeMinister(C,D), successor(B,D).
+0.038  negspouse(A,B) :- successor(A,C), primeMinister(C,D), successor(D,B).
+0.014  negspouse(A,B) :- president(C,B), region(C,D), birthPlace(A,D).
+0.017  negspouse(A,B) :- successor(B,C), successor(A,C).
+0.008  negspouse(A,B) :- office(B,C), orderInOffice(A,C).
+0.03  negspouse(A,B) :- relative(A,B).
+0.021  negspouse(A,B) :- office(A,C), office(B,C), predecessor(A,B).
+0.026  negspouse(A,B) :- spouse(A,C), child(C,B).
+0.011  negspouse(A,B) :- successor(B,C), president(A,C).
+0.013  negspouse(A,B) :- successor(C,B), otherParty(C,D), party(A,D).
+0.01  negspouse(A,B) :- spouse(C,B), spouse(C,A).
+0.02  negspouse(A,B) :- predecessor(C,B), country(C,D), birthPlace(A,D).
+0.089  negspouse(A,B) :- spouse(C,B), parent(A,C).
+0.011  negspouse(A,B) :- termPeriod(A,C), office(C,D), orderInOffice(B,D).
+0.143  negspouse(A,B) :- parent(A,B).
+0.009  negspouse(A,B) :- spouse(A,C), spouse(B,C).
+0.026  negspouse(A,B) :- successor(A,B), office(B,C), office(A,C).
+0.074  negspouse(A,B) :- spouse(A,C), parent(B,C).
+
+0.0164  spouse(A,B) :- parent(C,A), successor(B,C), parent(C,B).
+0.0154  spouse(A,B) :- parent(C,B), parent(C,A), successor(A,C).
+0.5668  spouse(A,B) :- spouse(B,A).
+0.0166  spouse(A,B) :- parent(C,B), parent(C,A), predecessor(C,A).
+0.0166  spouse(A,B) :- parent(C,A), predecessor(C,B), parent(C,B).
+0.0114  negspouse(A,B) :- birthPlace(B,C), deathPlace(A,C), predecessor(B,A).
+0.019  negspouse(A,B) :- child(B,A), spouse(B,C), child(C,A).
+0.0198  negspouse(A,B) :- spouse(C,B), child(C,A), child(B,A).
+0.0114  negspouse(A,B) :- successor(C,B), orderInOffice(C,D), office(A,D).
+0.0122  negspouse(A,B) :- birthPlace(B,C), deathPlace(A,C), predecessor(A,B).
+0.022  negspouse(A,B) :- child(A,B), child(C,B), spouse(A,C).
+0.0148  negspouse(A,B) :- predecessor(B,C), president(D,C), successor(A,D).
+0.0112  negspouse(A,B) :- relative(A,B), relative(C,B), relative(A,C).
+0.0152  negspouse(A,B) :- spouse(A,C), spouse(C,A), relative(A,B).
+0.1424  negspouse(A,B) :- parent(A,B).
+0.0148  negspouse(A,B) :- successor(B,A), deathPlace(B,C), birthPlace(A,C).
+0.079  negspouse(A,B) :- spouse(A,C), parent(B,C).
+0.0142  negspouse(A,B) :- spouse(C,B), spouse(B,C), relative(A,B).
+
+0.015  spouse(A,B) :- parent(C,B), parent(C,A), successor(A,C).
+0.570  spouse(A,B) :- spouse(B,A).
+0.016  spouse(A,B) :- parent(C,B), parent(C,A), predecessor(C,A).
+0.016  negspouse(A,B) :- spouse(C,B), child(C,A), child(B,A).
+0.020  negspouse(A,B) :- child(A,B), child(C,B), spouse(A,C).
+0.018  negspouse(A,B) :- predecessor(A,B), spouse(C,B), parent(A,C).
+0.145  negspouse(A,B) :- parent(A,B).
+0.015  negspouse(A,B) :- successor(B,C), primeMinister(D,C), predecessor(A,D).
+0.075  negspouse(A,B) :- spouse(A,C), parent(B,C).

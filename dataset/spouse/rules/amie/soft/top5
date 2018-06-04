@@ -1,0 +1,5 @@
+0.9 spouse(A,B) :- spouse(B,A).
+0.6 spouse(A,C) :- child(A,B) , parent(B,C) .
+0.5 spouse(A,C) :- child(A,B) , child(C,B).
+0.5 spouse(C,A) :- placeOfBurial(A,B) , restingPlace(C,B) .
+0.4 spouse(A,C) :- child(A,B), relation(B,C) .

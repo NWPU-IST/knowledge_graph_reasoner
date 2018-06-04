@@ -1,0 +1,37 @@
+author(A ,B)  :-  coverArtist(A ,B)   ,  illustrator(A ,B).
+author(A ,B)  :-  notableWork(B ,A).
+author(F ,A)  :-  previousWork(B ,F)   ,  notableWork(A ,B).
+author(B ,A)  :-  notableWork(A ,B).
+author(E ,A)  :-  subsequentWork(E ,B)   ,  notableWork(A ,B).
+author(E ,A)  :-  previousWork(E ,B)   ,  notableWork(A ,B).
+author(F ,A)  :-  subsequentWork(B ,F)   ,  notableWork(A ,B).
+author(A ,F)  :-  language(F ,B)   ,  originalLanguage(A ,B).
+author(A ,B)  :-  musicBy(A ,B)   ,  lyrics(A ,B).
+author(A ,B)  :-  producer(A ,B)   ,  creativeDirector(A ,B).
+author(A ,B)  :-  creator(A ,B)   ,  executiveProducer(A ,B).
+author(A ,B)  :-  creator(A ,B).
+author(E ,A)  :-  series(E ,B)   ,  notableWork(A ,B).
+author(A ,B)  :-  creator(A ,B)   ,  creativeDirector(A ,B).
+author(A ,B)  :-  lyrics(A ,B).
+author(A ,B)  :-  lyrics(A ,B).
+author(A ,B)  :-  creator(A ,B).
+author(A ,B)  :-  notableWork(B ,A)   ,  illustrator(A ,B).
+author(A ,B)  :-  executiveProducer(A ,B).
+author(A ,B)  :-  illustrator(A ,B).
+author(A ,B)  :-  illustrator(A ,B).
+author(F ,B)  :-  subsequentWork(A ,F)   ,  illustrator(A ,B).
+author(F ,B)  :-  previousWork(A ,F)   ,  illustrator(A ,B).
+author(A ,B)  :-  executiveProducer(A ,B).
+author(E ,B)  :-  previousWork(E ,A)   ,  illustrator(A ,B).
+author(E ,B)  :-  subsequentWork(E ,A)   ,  illustrator(A ,B).
+author(A ,B)  :-  presenter(A ,B).
+author(A ,B)  :-  musicBy(A ,B).
+author(A ,F)  :-  deathPlace(F ,B)   ,  premierePlace(A ,B).
+author(A ,B)  :-  coverArtist(A ,B).
+author(A ,F)  :-  birthPlace(F ,B)   ,  premierePlace(A ,B).
+author(A ,F)  :-  knownFor(F ,B)   ,  nonFictionSubject(A ,B).
+author(A ,B)  :-  creativeDirector(A ,B).
+author(A ,B)  :-  translator(A ,B).
+author(B ,F)  :-  creator(A ,F)   ,  lastAppearance(A ,B).
+author(A ,B)  :-  basedOn(A ,B).
+author(E ,B)  :-  nonFictionSubject(E ,A)   ,  crewMember(A ,B).

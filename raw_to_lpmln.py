@@ -50,6 +50,26 @@ def get_confidence_rudik(numerator_query, denominator_query, pos_neg, examples):
     return confidence
 
 
+def get_confidence_amie(denominator_query, examples):
+    body_true = 0
+    for i,example in enumerate(examples):
+        denominator_query_new = denominator_query.replace('?a','<http://dbpedia.org/resource/'+example[0].decode('utf-8')+'>')
+        denominator_query_new = denominator_query_new.replace('?b','<http://dbpedia.org/resource/'+example[1].decode('utf-8')+'>')
+        try:
+            result = sparql.query(sparql_endpoint, denominator_query_new)
+            denominator_value = [sparql.unpack_row(row_result) for row_result in result][0][0]
+        except:
+            print denominator_query_new,i
+            denominator_value = 0
+        if denominator_value > 0:
+            body_true += 1
+    # print denominator_query_new
+    print "-----------------"
+    print float(body_true),float(len(examples))
+    confidence = float(body_true)/float(len(examples))
+    return confidence
+
+
 def get_rudik_query(relations, predicate):
     head_query = "?subject " + ontology + predicate + "> ?object . \n"
     query = ''
@@ -64,6 +84,14 @@ def get_rudik_query(relations, predicate):
     numerator_query = prefix + head_query + query + suffix
     denominator_query = prefix + query + suffix
     return numerator_query, denominator_query
+
+
+def get_amie_query(relations, vars):
+    query = ''
+    for i,rel in enumerate(relations):
+        query += " ?" + vars[2*i] + ontology + rel + "> ?" + vars[2*i+1] + ". \n"
+    denominator_query = prefix + query + suffix
+    return denominator_query
 
 
 def rule_parser_rudik(fname, predicate, pos_neg, examples):
@@ -119,17 +147,20 @@ def rule_parser_rudik(fname, predicate, pos_neg, examples):
     return soft_rule_list, hard_rule_list
 
 
-def rule_parser_amie(fname, predicate):
+def rule_parser_amie(fname, examples, predicate):
+    soft_rule_list = []
+    hard_rule_list = []
     with open(fname) as f:
         content = f.readlines()
-    rule_list = []
     for it, con in enumerate(content):
         print it, con
         vars = re.findall(r"\?(.)", con)
         score = re.findall(r"\d.\d+", con)
-        vars = [var.upper() for var in vars]
         relation = re.findall(r":(.*?)\>", con)
-        print relation
+        # denominator_query = get_amie_query(relation, vars)
+        # score = get_confidence_amie(denominator_query, examples)
+        print score
+        vars = [var.upper() for var in vars]
         if relation.index(predicate) != 0:
             new_index = relation.index(predicate)
             temp = relation[0]
@@ -138,7 +169,8 @@ def rule_parser_amie(fname, predicate):
             vars[new_index*2],vars[0] = vars[0], vars[new_index*2]
             vars[new_index*2+1], vars[1] = vars[1], vars[new_index*2+1]
         i = 0
-        rule = str(score[0]+' ')
+        # rule = str(score[0]+' ')
+        rule = ''
         for rel in relation:
             rule += rel + '('+vars[i] + ',' + vars[i+1]+')'
             # print i, rule
@@ -150,9 +182,9 @@ def rule_parser_amie(fname, predicate):
                 rule += ' , '
             i += 2
         # print rule
-        rule_list.append(rule)
-        # sys.exit(0)
-    return rule_list
+        hard_rule_list.append(rule)
+        soft_rule_list.append(str(score[0])+' '+rule)
+    return hard_rule_list, soft_rule_list
 
 
 def soft_rule_writer(rule_list, predicate, rule_type, folder_path, pos_neg, k):
@@ -188,17 +220,18 @@ def hard_rule_writer_constraint(rule_list, predicate, rule_type, folder_path, po
 
 
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser()
     # parser.add_argument("-t", "--test_predicate", default='sample_case')
     # parser.add_argument("-i", "--filename", default='')
-    # parser.add_argument("-r", "--rule_type", default='amie')
+    parser.add_argument("-r", "--rule_type", default='amie')
     # parser.add_argument("-p", "--pos_neg", default='')
-    # args = parser.parse_args()
-    data_size = {'1k': 1000, '5k': 5000,'0k': 5000}
-    # data_size = {'0k':10000}
-    rule_set = ['pos', 'neg']
+    args = parser.parse_args()
+    # data_size = {'1k': 1000, '5k': 5000,'0k': 5000}
+    data_size = {'0k':10000}
+    # rule_set = ['pos', 'neg']
+    rule_set = ['pos']
     # positive_query, negative_query = get_query(args.subject, args.object,args.test_predicate)
-    rule_type = 'rudik'
+    rule_type = args.rule_type
     with open('dataset/dataset_lpmln.csv','rb') as datainput:
         reader = csv.DictReader(datainput)
         for row in reader:
@@ -223,11 +256,13 @@ if __name__ == "__main__":
                         example_reader = csv.reader(csvfile)
                         examples = list(example_reader)
                     if rule_type == 'amie':
-                        rule_list = rule_parser_amie(path, test_predicate)
+                        hard_rule_list, soft_rule_list = rule_parser_amie(path, examples, test_predicate)
+                        hard_rule_writer(hard_rule_list, test_predicate, rule_type, folder_path, pos_neg, k)
+                        soft_rule_writer(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k)
                     else:
                         soft_rule_list, hard_rule_list = rule_parser_rudik(path, test_predicate, pos_neg,examples)
-                    constraint_rule = ':- '+test_predicate+'(A,B), neg'+test_predicate+'(A,B).'
-                    soft_rule_writer(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k)
-                    soft_rule_writer_constraint(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k, constraint_rule)
-                    hard_rule_writer(hard_rule_list, test_predicate,rule_type, folder_path, pos_neg, k)
-                    hard_rule_writer_constraint(hard_rule_list, test_predicate,rule_type, folder_path, pos_neg, k, constraint_rule)
+                        constraint_rule = ':- '+test_predicate+'(A,B), neg'+test_predicate+'(A,B).'
+                        soft_rule_writer(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k)
+                        soft_rule_writer_constraint(soft_rule_list, test_predicate, rule_type, folder_path, pos_neg, k, constraint_rule)
+                        hard_rule_writer(hard_rule_list, test_predicate,rule_type, folder_path, pos_neg, k)
+                        hard_rule_writer_constraint(hard_rule_list, test_predicate,rule_type, folder_path, pos_neg, k, constraint_rule)

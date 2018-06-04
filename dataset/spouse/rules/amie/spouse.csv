@@ -1,0 +1,17 @@
+0.91,?b  <dbo:spouse>  ?a   => ?a  <dbo:spouse>  ?b
+0.67,?f  <dbo:lastAppearance>  ?b  ?a  <dbo:spouse>  ?f   => ?a  <dbo:lastAppearance>  ?b
+0.66,?b  <dbo:parent>  ?f  ?a  <dbo:spouse>  ?f   => ?a  <dbo:child>  ?b
+0.64,?e  <dbo:lastAppearance>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:lastAppearance>  ?b
+0.57,?f  <dbo:child>  ?b  ?a  <dbo:spouse>  ?f   => ?a  <dbo:child>  ?b
+0.53,?e  <dbo:restingPlace>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:placeOfBurial>  ?b
+0.47,?b  <dbo:relation>  ?f  ?a  <dbo:spouse>  ?f   => ?a  <dbo:child>  ?b
+0.45,?b  <dbo:parent>  ?f  ?f  <dbo:spouse>  ?a   => ?a  <dbo:child>  ?b
+0.36,?b  <dbo:relation>  ?f  ?f  <dbo:spouse>  ?a   => ?a  <dbo:child>  ?b
+0.33,?b  <dbo:relative>  ?f  ?a  <dbo:spouse>  ?f   => ?a  <dbo:child>  ?b
+0.31,?e  <dbo:child>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:child>  ?b
+0.30,?b  <dbo:relative>  ?f  ?f  <dbo:spouse>  ?a   => ?a  <dbo:child>  ?b
+0.19,?e  <dbo:deathPlace>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:placeOfBurial>  ?b
+0.18,?b  <dbo:spouse>  ?a   => ?a  <dbo:partner>  ?b
+0.15,?e  <dbo:birthPlace>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:placeOfBurial>  ?b
+0.13,?a  <dbo:spouse>  ?b   => ?a  <dbo:child>  ?b
+0.08,?a  <dbo:spouse>  ?b   => ?a  <dbo:relative>  ?b

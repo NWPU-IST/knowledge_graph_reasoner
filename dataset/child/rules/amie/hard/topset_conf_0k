@@ -1,0 +1,65 @@
+child(A ,B)  :-  nationality(B ,F)   ,  birthPlace(A ,F).
+child(A ,B)  :-  nationality(A ,F)   ,  birthPlace(B ,F).
+child(A ,B)  :-  deathPlace(B ,F)   ,  birthPlace(A ,F).
+child(A ,B)  :-  nationality(B ,F)   ,  deathPlace(A ,F).
+child(A ,B)  :-  stateOfOrigin(A ,F)   ,  birthPlace(B ,F).
+child(A ,B)  :-  birthPlace(B ,F)   ,  birthPlace(A ,F).
+child(A ,B)  :-  occupation(B ,F)   ,  occupation(A ,F).
+child(A ,B)  :-  stateOfOrigin(B ,F)   ,  nationality(A ,F).
+child(A ,B)  :-  residence(B ,F)   ,  birthPlace(A ,F).
+child(A ,B)  :-  nationality(B ,F)   ,  nationality(A ,F).
+child(A ,B)  :-  deathPlace(A ,F)   ,  birthPlace(B ,F).
+child(A ,B)  :-  residence(A ,F)   ,  birthPlace(B ,F).
+child(A ,B)  :-  deathPlace(B ,F)   ,  deathPlace(A ,F).
+child(A ,B)  :-  stateOfOrigin(A ,F)   ,  nationality(B ,F).
+child(A ,B)  :-  party(B ,F)   ,  party(A ,F).
+child(A ,B)  :-  residence(B ,F)   ,  deathPlace(A ,F).
+child(A ,B)  :-  stateOfOrigin(B ,F)   ,  stateOfOrigin(A ,F).
+child(A ,B)  :-  religion(B ,F)   ,  religion(A ,F).
+child(A ,B)  :-  almaMater(B ,F)   ,  almaMater(A ,F).
+child(A ,B)  :-  residence(B ,F)   ,  residence(A ,F).
+child(A ,B)  :-  starring(E ,B)   ,  starring(E ,A).
+child(E ,A)  :-  child(E ,B)   ,  child(A ,B).
+child(A ,B)  :-  series(B ,F)   ,  series(A ,F).
+child(A ,B)  :-  creator(B ,F)   ,  creator(A ,F).
+child(A ,B)  :-  relative(A ,B).
+child(B ,A)  :-  child(A ,B).
+child(E ,B)  :-  child(A ,E)   ,  child(A ,B).
+child(A ,F)  :-  child(B ,F)   ,  child(A ,B).
+child(A ,B)  :-  relative(B ,F)   ,  relative(A ,F).
+child(A ,B)  :-  relation(E ,B)   ,  relation(E ,A).
+child(A ,B)  :-  firstAppearance(B ,F)   ,  firstAppearance(A ,F).
+child(A ,B)  :-  lastAppearance(B ,F)   ,  lastAppearance(A ,F).
+child(A ,B)  :-  spouse(A ,B).
+child(E ,A)  :-  relative(E ,B)   ,  child(A ,B).
+child(A ,B)  :-  relative(E ,B)   ,  relative(E ,A).
+child(A ,B)  :-  relative(A ,F)   ,  relative(F ,B).
+child(A ,B)  :-  relative(B ,F)   ,  relative(F ,A).
+child(A ,B)  :-  relative(B ,A).
+child(A ,B)  :-  successor(A ,B).
+child(A ,B)  :-  spouse(F ,A)   ,  relative(B ,F).
+child(E ,B)  :-  spouse(E ,A)   ,  child(A ,B).
+child(A ,B)  :-  spouse(A ,F)   ,  relative(B ,F).
+child(B ,A)  :-  relative(A ,B).
+child(A ,B)  :-  spouse(F ,A)   ,  relation(B ,F).
+child(B ,A)  :-  relation(A ,B).
+child(A ,B)  :-  relative(B ,F)   ,  parent(F ,A).
+child(A ,B)  :-  relation(B ,A).
+child(A ,B)  :-  spouse(F ,A)   ,  parent(B ,F).
+child(A ,B)  :-  spouse(A ,F)   ,  relation(B ,F).
+child(A ,B)  :-  relative(E ,B)   ,  parent(E ,A).
+child(A ,B)  :-  relation(E ,B)   ,  parent(E ,A).
+child(A ,F)  :-  relation(B ,F)   ,  child(A ,B).
+child(E ,A)  :-  lastAppearance(E ,B)   ,  lastAppearance(A ,B).
+child(A ,F)  :-  lastAppearance(F ,B)   ,  lastAppearance(A ,B).
+child(A ,F)  :-  relative(B ,F)   ,  child(A ,B).
+child(F ,B)  :-  spouse(A ,F)   ,  child(A ,B).
+child(A ,E)  :-  relation(E ,B)   ,  child(A ,B).
+child(A ,B)  :-  predecessor(B ,A).
+child(A ,E)  :-  relative(E ,B)   ,  child(A ,B).
+child(A ,B)  :-  successor(A ,B)   ,  predecessor(B ,A).
+child(A ,B)  :-  spouse(A ,F)   ,  parent(B ,F).
+child(A ,B)  :-  parent(B ,A).
+child(A ,B)  :-  predecessor(B ,A)   ,  parent(B ,A).
+child(B ,A)  :-  parent(A ,B).
+child(A ,B)  :-  successor(A ,B)   ,  parent(B ,A).
