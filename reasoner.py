@@ -9,13 +9,13 @@ import subprocess
 from itertools import product
 
 
-def get_rule_predicates(data_source, data_size, const):
+def get_rule_predicates(data_source, data_size, const, rule_type):
     global evidence_path
-    evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/rudik/topset_conf_' + const + data_size + '/'
-    text = open('dataset/' + data_source + '/rules/' + rule_mining + '/soft/' + "topset_conf_" + data_size, 'r')
+    evidence_path = 'dataset/' + data_source + '/evidence/' + dbpedia + '/'+rule_type+'/topset_conf_' + const + data_size + '/'
+    text = open('dataset/' + data_source + '/rules/' + rule_type + '/soft/' + "topset_conf_" + data_size, 'r')
     f = text.read()
     text.close()
-    text_const = open('dataset/' + data_source + '/rules/' + rule_mining + '/soft/' + "topset_conf_const_" + data_size, 'r')
+    text_const = open('dataset/' + data_source + '/rules/' + rule_type + '/soft/' + "topset_conf_const_" + data_size, 'r')
     f_const = text_const.read()
     text_const.close()
     probs = re.findall("(\w+\()", f)
@@ -24,7 +24,7 @@ def get_rule_predicates(data_source, data_size, const):
     return predicates, f, f_const
 
 
-def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates):
+def evidence_writer(evidences, sentence_id, data_source, resource_v, rule_predicates, rule_type):
     item_set = OrderedSet()
     entity_set = []
     # print rule_predicates
@@ -170,15 +170,15 @@ def get_label(f, data_source, resource_v):
     return map_output, label
 
 
-def inference_map(sentence_id, data_source, resource_v, data_size, const):
+def inference_map(sentence_id, data_source, resource_v, data_size, const, rule_type):
     # print resource_v
     start_time = datetime.datetime.now()
     resource_v = ['"' + res + '"' for res in resource_v]
-    # cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-    #                                     data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
-    cmd = "clingo {0}rules/rudik/hard/topset_conf_{1}{2} {5}{4}_unique.txt -t 4 > {0}map_result.txt".format(
-        'dataset/' + \
-        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
+    cmd = "lpmln2asp -i {0}rules/rudik/hard/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+                                        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
+    # cmd = "clingo {0}rules/{6}/hard/topset_conf_{1}{2} {5}{4}_unique.txt -t 4 > {0}map_result.txt".format(
+    #     'dataset/' + \
+    #     data_source + '/', const, data_size, data_source, sentence_id, evidence_path,rule_type)
     # print cmd
     logger.info(cmd)
     FNULL = open(os.devnull, 'w')
@@ -191,18 +191,18 @@ def inference_map(sentence_id, data_source, resource_v, data_size, const):
     return map_output, label, (end_time-start_time).total_seconds()
 
 
-def inference_map_weight(sentence_id, data_source, resource_v, data_size, const):
+def inference_map_weight(sentence_id, data_source, resource_v, data_size, const, rule_type):
     start_time = datetime.datetime.now()
     resource_v = ['"' + res + '"' for res in resource_v]
     FNULL = open(os.devnull, 'w')
-    cmd1 = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2}".format('dataset/'+data_source + '/', const, data_size)
-    subprocess.call(cmd1, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
-    logger.info(cmd1)
-    # cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
-    #                                     data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
-    cmd = "clingo out.txt {5}{4}_unique.txt -t 4 > {0}map_result.txt".format(
-        'dataset/' + \
-        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
+    # cmd1 = "lpmln2asp -i {0}rules/{3}/soft/topset_conf_{1}{2}".format('dataset/'+data_source + '/', const, data_size, rule_type)
+    # subprocess.call(cmd1, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+    # logger.info(cmd1)
+    cmd = "lpmln2asp -i {0}rules/rudik/soft/topset_conf_{1}{2} -e {5}{4}_unique.txt -r {0}map_result.txt".format('dataset/' +\
+                                        data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
+    # cmd = "clingo out.txt {5}{4}_unique.txt -t 4 > {0}map_result.txt".format(
+    #     'dataset/' + \
+    #     data_source + '/', const, data_size, data_source, sentence_id, evidence_path)
     # print cmd
     logger.info(cmd)
 

@@ -6,9 +6,10 @@ from reasoner import get_rule_predicates
 import sys
 import datetime
 
-file_name = 'neg_b100_sum_'
+# file_name = 'neg_b100_sum_'
 
-def query_test(triples_list, id_list, true_labels, data_source, data_size, init_time, const):
+
+def query_test(triples_list, id_list, true_labels, data_source, data_size, init_time, const, rule_type):
     results_hard = {}
     results_soft = {}
     results_mcsat = {}
@@ -30,20 +31,21 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
     true_unsat_wt, false_unsat_wt = 0, 0
     true_no_evd_wt, false_no_evd_wt = 0, 0
     total_asp, total_map, total_mc = 0.0, 0.0, 0.0
-    rule_predicates, rules, rules_const = get_rule_predicates(data_source, data_size, const)
+    rule_predicates, rules, rules_const = get_rule_predicates(data_source, data_size, const, rule_type)
     lpmln_evaluation_map = [['sentence_id', 'true_label', 'sentence', 'map_hard_label',\
                          'map_soft_label', 'map_hard_as','map_soft_as']]
     lpmln_evaluation_mcsat = [['sentence_id', 'true_label', 'sentence', 'mc_label', \
                              'mc_prob']]
     # error_list = ['19','34']
-    print triples_list
+    query_map, query_prob = False, False
     for t, triple in enumerate(triples_list):
         print t
         sentence_id = id_list[t]
         # if sentence_id in error_list and const:
         #     continue
         true_label = int(float(true_labels[t]))
-
+        if rule_type=='amie' and true_label==0:
+            break
         if true_label == 1:
             true_count += 1
         else:
@@ -53,10 +55,8 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
         # print sentence_id, triple_check, true_label, '\n'
         map_wt, label_map_wt, map, prob, label_prob, label_map, query_prob, query_map, total_asp, total_map, total_mc = \
             lpmln_reasoning(triple_check, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, \
-                            const, total_asp, total_map, total_mc)
+                            const, total_asp, total_map, total_mc, rule_type)
 
-        print query_map
-        print "jere"
         if query_map:
             if true_label == 1 and label_map == '1':
                 true_pos += 1
@@ -169,10 +169,10 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
 
 
 def write_stats(data_source, data_size, const, results_hard, results_soft, result_mcsat, start_time, lpmln_type,\
-                total_asp, total_map,total_mc):
+                total_asp, total_map,total_mc, rule_type):
     end_time = datetime.datetime.now()
     if result_mcsat:
-        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
+        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+rule_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
             file.write('True Examples , Weighted Rules , False Examples , Weighted Rules' +'\n')
             file.write('True Positives ,' + str(result_mcsat.get('true_pos',0))\
                        + '/200 ,True Negatives,' + \
@@ -193,7 +193,7 @@ def write_stats(data_source, data_size, const, results_hard, results_soft, resul
             file.write("MC Time, " + str(total_mc))
 
     else:
-        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
+        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+rule_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
             file.write('True Examples , Hard Rules , Weighted Rules , False Examples , Hard Rules , Weighted Rules' +'\n')
             file.write('True Positives ,'+ str(results_hard.get('true_pos',0))+ '/200 ,'+ str(results_soft.get('true_pos',0))\
                        + '/200 ,True Negatives,'+str(results_hard.get('true_neg',0))+'/200, '+ \
@@ -226,21 +226,22 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", default='test_sample.csv')
     parser.add_argument("-t", "--test_predicate", default='sample_case')
+    parser.add_argument("-r", "--rule_type", default='amie')
     parser.add_argument("-s", "--sampling", default=True)
     args = parser.parse_args()
     # data_sizes = ['1k', '5k', '10k','0k']
     start_time = datetime.datetime.now()
 
     data_sizes = ['0k']
-    # constraint = ['const_','']
-    constraint = ['const_']
+    constraint = ['']
+    # constraint = ['const_']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const
             print"++++++++++++++++"
             init_time = datetime.datetime.now()
-            input_file = 'dataset/' + args.test_predicate + '/input/'+file_name + data_size + '.csv'
-            # input_file = 'dataset/' + args.test_predicate + '/input/test_sample' + '.csv'
+            # input_file = 'dataset/' + args.test_predicate + '/input/test'+ data_size + '.csv'
+            input_file = 'dataset/' + args.test_predicate + '/input/test' + '.csv'
             with open(input_file) as f:
                 reader = csv.DictReader(f)
                 triples_list = []
@@ -254,8 +255,8 @@ if __name__ == "__main__":
                     true_labels.append(row.get('class'))
                     id_list.append(row.get('sid'))
                 results_hard, results_soft, results_mcsat,lpmln_type, total_asp, total_map, total_mc = \
-                    query_test(triples_list, id_list, true_labels, args.test_predicate, data_size, init_time, const)
+                    query_test(triples_list, id_list, true_labels, args.test_predicate, data_size, init_time, const, args.rule_type)
 
-            const += file_name
+            # const += file_name
             write_stats(args.test_predicate,data_size,const,results_hard,results_soft,results_mcsat, init_time, \
-                        lpmln_type, total_asp, total_map,total_mc)
+                        lpmln_type, total_asp, total_map,total_mc, args.rule_type)

@@ -95,7 +95,8 @@ def fact_checker(sentence_lis, id_list, true_labels, data_source, input, pos_neg
     update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resources, lpmln_evaluation, data_source, input)
 
 
-def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const, total_asp, total_map, total_mc):
+def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules, rules_const, data_size, const, \
+                    total_asp, total_map, total_mc, rule_type):
     query_evidence = True
     query_prob = False
     query_map = True
@@ -114,12 +115,14 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
         # print evidence
         if query_map:
             if query_evidence:
-                evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, rule_predicates)
+                evidence_set, entity_set = evidence_writer(evidence, sentence_id, data_source, resource_v, \
+                                                           rule_predicates, rule_type)
             else:
                 evidence_set = True
             if evidence_set:
-                map, label_map, asp_time = inference_map(sentence_id, data_source, resource_v, data_size, const)
-                map_wt, label_map_wt, map_time = inference_map_weight(sentence_id, data_source, resource_v, data_size, const)
+                map, label_map, asp_time = inference_map(sentence_id, data_source, resource_v, data_size, const, rule_type)
+                map_wt, label_map_wt, map_time = inference_map_weight(sentence_id, data_source, resource_v, data_size,\
+                                                                      const, rule_type)
                 total_asp += asp_time
                 total_map += map_time
             else:
