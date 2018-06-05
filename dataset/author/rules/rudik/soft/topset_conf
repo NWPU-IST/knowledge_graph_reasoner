@@ -1,0 +1,62 @@
+0.03  author(A ,B)  :-  author(C ,B) ,  type(C ,D) ,  type(A ,D).
+0.0441  author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.0505  author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.461  author(A ,B)  :-  author(C ,B) ,  publisher(C ,D) ,  publisher(A ,D).
+0.0237  author(A ,B)  :-  subsequentWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+0.135  author(A ,B)  :-  author(C ,B) ,  series(C ,D) ,  series(A ,D).
+0.127  author(A ,B)  :-  author(C ,B) ,  previousWork(C ,A).
+0.0178  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.135  author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
+0.0007  author(A ,B)  :-  basedOn(A ,B).
+0.0064  author(B ,F)  :-  creator(A ,F)   ,  lastAppearance(A ,B).
+0.0008  author(A ,B)  :-  translator(A ,B).
+0.0002  author(A ,B)  :-  creativeDirector(A ,B).
+0.0159  author(A ,F)  :-  knownFor(F ,B)   ,  nonFictionSubject(A ,B).
+0.0012  author(A ,F)  :-  birthPlace(F ,B)   ,  premierePlace(A ,B).
+0.0063  author(A ,B)  :-  coverArtist(A ,B).
+0.0034  author(A ,F)  :-  deathPlace(F ,B)   ,  premierePlace(A ,B).
+0.005  author(A ,B)  :-  musicBy(A ,B).
+0.0021  author(A ,B)  :-  presenter(A ,B).
+0.0106  author(E ,B)  :-  subsequentWork(E ,A)   ,  illustrator(A ,B).
+0.0118  author(E ,B)  :-  previousWork(E ,A)   ,  illustrator(A ,B).
+0.0118  author(A ,B)  :-  executiveProducer(A ,B).
+0.0174  author(F ,B)  :-  previousWork(A ,F)   ,  illustrator(A ,B).
+0.0173  author(F ,B)  :-  subsequentWork(A ,F)   ,  illustrator(A ,B).
+0.2366  author(A ,B)  :-  illustrator(A ,B).
+0.0568  author(A ,B)  :-  executiveProducer(A ,B).
+0.0239  author(A ,B)  :-  notableWork(B ,A)   ,  illustrator(A ,B).
+0.022  author(A ,B)  :-  creator(A ,B).
+0.0009  author(E ,B)  :-  nonFictionSubject(E ,A)   ,  crewMember(A ,B).
+0.3591  author(A ,B)  :-  lyrics(A ,B).
+0.0038  author(A ,B)  :-  creator(A ,B)   ,  creativeDirector(A ,B).
+0.0864  author(E ,A)  :-  series(E ,B)   ,  notableWork(A ,B).
+0.3591  author(A ,B)  :-  creator(A ,B)   ,  executiveProducer(A ,B).
+0.0094  author(A ,B)  :-  producer(A ,B)   ,  creativeDirector(A ,B).
+0.8068  author(A ,B)  :-  musicBy(A ,B)   ,  lyrics(A ,B).
+0.0129  author(A ,F)  :-  language(F ,B)   ,  originalLanguage(A ,B).
+0.0326  author(F ,A)  :-  subsequentWork(B ,F)   ,  notableWork(A ,B).
+0.0327  author(E ,A)  :-  previousWork(E ,B)   ,  notableWork(A ,B).
+0.0225  author(E ,A)  :-  subsequentWork(E ,B)   ,  notableWork(A ,B).
+0.0452  author(B ,A)  :-  notableWork(A ,B).
+0.0215  author(F ,A)  :-  previousWork(B ,F)   ,  notableWork(A ,B).
+0.450  author(A ,B)  :-  coverArtist(A ,B)   ,  illustrator(A ,B).
+
+0.3798  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+0.3117  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+0.0205  negauthor(A ,B)  :-  director(A ,B) ,  producer(C ,B) ,  creator(C ,B).
+0.0168  negauthor(A ,B)  :-  author(C ,B) ,  basedOn(A ,C).
+0.0193  negauthor(A ,B)  :-  producer(C ,B) ,  previousWork(C ,D) ,  previousWork(D ,A).
+0.0777  negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+0.1233  negauthor(A ,B)  :-  releaseDate(A ,C) ,  releaseDate(D ,C) ,  writer(D ,B).
+0.0121  negauthor(A ,B)  :-  producer(C ,B) ,  series(C ,D) ,  series(A ,D).
+0.0386  negauthor(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  writer(D ,B).
+0.0280  negauthor(A ,B)  :-  creator(C ,B) ,  producer(C ,D) ,  director(A ,D).
+0.0180  negauthor(A ,B)  :-  genre(B ,C) ,  genre(D ,C) ,  subsequentWork(D ,A).
+0.0275  negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+0.0162  negauthor(A ,B)  :-  genre(A ,C) ,  stylisticOrigin(D ,C) ,  genre(B ,D).
+0.0167  negauthor(A ,B)  :-  previousWork(C ,A) ,  genre(C ,D) ,  genre(B ,D).
+0.0267  negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+0.0104  negauthor(A ,B)  :-  genre(A ,C) ,  musicSubgenre(D ,C) ,  genre(B ,D).
+0.0219  negauthor(A ,B)  :-  subsequentWork(C ,A) ,  previousWork(C ,D) ,  writer(D ,B).
+0.0214  negauthor(A ,B)  :-  previousWork(C ,A) ,  subsequentWork(C ,D) ,  writer(D ,B).
+0.0107  negauthor(A ,B)  :-  subsequentWork(C ,A) ,  album(C ,D) ,  producer(D ,B).

@@ -234,7 +234,7 @@ if __name__ == "__main__":
 
     data_sizes = ['k']
     # constraint = ['']
-    constraint = ['const_','']
+    constraint = ['const_']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const

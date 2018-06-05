@@ -10,13 +10,9 @@
 0.0017  author(F ,B)  :-  previousWork(A ,F)   ,  illustrator(A ,B).
 0.0017  author(F ,B)  :-  subsequentWork(A ,F)   ,  illustrator(A ,B).
 0.0096  author(A ,B)  :-  illustrator(A ,B).
-0.0096  author(A ,B)  :-  illustrator(A ,B).
-0.0109  author(A ,B)  :-  executiveProducer(A ,B).
 0.0009  author(A ,B)  :-  notableWork(B ,A)   ,  illustrator(A ,B).
 0.0241  author(A ,B)  :-  creator(A ,B).
 0.0092  author(A ,B)  :-  lyrics(A ,B).
-0.0092  author(A ,B)  :-  lyrics(A ,B).
-0.0241  author(A ,B)  :-  creator(A ,B).
 0.0065  author(A ,B)  :-  creator(A ,B)   ,  executiveProducer(A ,B).
 0.0001  author(A ,B)  :-  producer(A ,B)   ,  creativeDirector(A ,B).
 0.0033  author(A ,B)  :-  musicBy(A ,B)   ,  lyrics(A ,B).

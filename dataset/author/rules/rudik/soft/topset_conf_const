@@ -7,28 +7,42 @@
 0.1275  author(A ,B)  :-  author(C ,B) ,  previousWork(C ,A).
 0.0178  author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
 0.1354  author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
-0.0009  author(A ,B)  :-  basedOn(A ,B).
+0.0007  author(A ,B)  :-  basedOn(A ,B).
+0.0064  author(B ,F)  :-  creator(A ,F)   ,  lastAppearance(A ,B).
 0.0008  author(A ,B)  :-  translator(A ,B).
-0.0001  author(A ,B)  :-  creativeDirector(A ,B).
-0.0045  author(A ,B)  :-  coverArtist(A ,B).
-0.0037  author(A ,B)  :-  musicBy(A ,B).
-0.0026  author(A ,B)  :-  presenter(A ,B).
-0.0017  author(E ,B)  :-  subsequentWork(E ,A)   ,  illustrator(A ,B).
-0.0020  author(E ,B)  :-  previousWork(E ,A)   ,  illustrator(A ,B).
-0.0109  author(A ,B)  :-  executiveProducer(A ,B).
-0.0017  author(F ,B)  :-  previousWork(A ,F)   ,  illustrator(A ,B).
-0.0017  author(F ,B)  :-  subsequentWork(A ,F)   ,  illustrator(A ,B).
-0.0096  author(A ,B)  :-  illustrator(A ,B).
-0.0009  author(A ,B)  :-  notableWork(B ,A)   ,  illustrator(A ,B).
-0.0241  author(A ,B)  :-  creator(A ,B).
-0.0092  author(A ,B)  :-  lyrics(A ,B).
-0.0065  author(A ,B)  :-  creator(A ,B)   ,  executiveProducer(A ,B).
-0.0001  author(A ,B)  :-  producer(A ,B)   ,  creativeDirector(A ,B).
-0.0033  author(A ,B)  :-  musicBy(A ,B)   ,  lyrics(A ,B).
-0.0531  author(A ,B)  :-  notableWork(B ,A).
-0.0024  author(A ,B)  :-  coverArtist(A ,B)   ,  illustrator(A ,B).
+0.0002  author(A ,B)  :-  creativeDirector(A ,B).
+0.0159  author(A ,F)  :-  knownFor(F ,B)   ,  nonFictionSubject(A ,B).
+0.0012  author(A ,F)  :-  birthPlace(F ,B)   ,  premierePlace(A ,B).
+0.0063  author(A ,B)  :-  coverArtist(A ,B).
+0.0034  author(A ,F)  :-  deathPlace(F ,B)   ,  premierePlace(A ,B).
+0.005  author(A ,B)  :-  musicBy(A ,B).
+0.0021  author(A ,B)  :-  presenter(A ,B).
+0.0106  author(E ,B)  :-  subsequentWork(E ,A)   ,  illustrator(A ,B).
+0.0118  author(E ,B)  :-  previousWork(E ,A)   ,  illustrator(A ,B).
+0.0118  author(A ,B)  :-  executiveProducer(A ,B).
+0.0174  author(F ,B)  :-  previousWork(A ,F)   ,  illustrator(A ,B).
+0.0173  author(F ,B)  :-  subsequentWork(A ,F)   ,  illustrator(A ,B).
+0.2366  author(A ,B)  :-  illustrator(A ,B).
+0.0568  author(A ,B)  :-  executiveProducer(A ,B).
+0.0239  author(A ,B)  :-  notableWork(B ,A)   ,  illustrator(A ,B).
+0.0009  author(E ,B)  :-  nonFictionSubject(E ,A)   ,  crewMember(A ,B).
+0.3591  author(A ,B)  :-  lyrics(A ,B).
+0.0038  author(A ,B)  :-  creator(A ,B)   ,  creativeDirector(A ,B).
+0.0864  author(E ,A)  :-  series(E ,B)   ,  notableWork(A ,B).
+0.0354  author(A ,B)  :-  creator(A ,B).
+0.3591  author(A ,B)  :-  creator(A ,B)   ,  executiveProducer(A ,B).
+0.0094  author(A ,B)  :-  producer(A ,B)   ,  creativeDirector(A ,B).
+0.8068  author(A ,B)  :-  musicBy(A ,B)   ,  lyrics(A ,B).
+0.0129  author(A ,F)  :-  language(F ,B)   ,  originalLanguage(A ,B).
+0.0326  author(F ,A)  :-  subsequentWork(B ,F)   ,  notableWork(A ,B).
+0.0327  author(E ,A)  :-  previousWork(E ,B)   ,  notableWork(A ,B).
+0.0225  author(E ,A)  :-  subsequentWork(E ,B)   ,  notableWork(A ,B).
+0.0215  author(F ,A)  :-  previousWork(B ,F)   ,  notableWork(A ,B).
+0.3873  author(A ,B)  :-  notableWork(B ,A).
+0.450  author(A ,B)  :-  coverArtist(A ,B)   ,  illustrator(A ,B).
 
 :-  author(A ,B) ,  negauthor(A ,B).
+
 0.3798  negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
 0.3117  negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
 0.0205  negauthor(A ,B)  :-  director(A ,B) ,  producer(C ,B) ,  creator(C ,B).
