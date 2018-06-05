@@ -1,0 +1,10 @@
+0.000101265,?b  <dbo:team>  ?a   => ?a  <dbo:chairman>  ?b
+0.000002954,?a  <dbo:team>  ?f  ?b  <dbo:team>  ?f   => ?a  <dbo:followingEvent>  ?b
+0.001812509,?b  <dbo:team>  ?a   => ?a  <dbo:manager>  ?b
+0.010443107,?a  <dbo:league>  ?f  ?f  <dbo:team>  ?b   => ?a  <dbo:draftTeam>  ?b
+0.063252241,?e  <dbo:league>  ?b  ?e  <dbo:team>  ?a   => ?a  <dbo:season>  ?b
+0.014556474,?a  <dbo:team>  ?b   => ?a  <dbo:managerClub>  ?b
+0.000967782,?a  <dbo:team>  ?b   => ?a  <dbo:draftTeam>  ?b
+0.002004784,?a  <dbo:team>  ?b   => ?a  <dbo:debutTeam>  ?b
+0.038227566,?a  <dbo:formerTeam>  ?b  ?a  <dbo:team>  ?b   => ?a  <dbo:debutTeam>  ?b
+0.035610549,?a  <dbo:team>  ?b   => ?a  <dbo:formerTeam>  ?b

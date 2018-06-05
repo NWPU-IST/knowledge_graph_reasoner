@@ -39,7 +39,7 @@ def query_test(triples_list, id_list, true_labels, data_source, data_size, init_
     # error_list = ['19','34']
     query_map, query_prob = False, False
     for t, triple in enumerate(triples_list):
-        print t
+        # print t
         sentence_id = id_list[t]
         # if sentence_id in error_list and const:
         #     continue
@@ -226,22 +226,22 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", default='test_sample.csv')
     parser.add_argument("-t", "--test_predicate", default='sample_case')
-    parser.add_argument("-r", "--rule_type", default='amie')
+    parser.add_argument("-r", "--rule_type", default='rudik')
     parser.add_argument("-s", "--sampling", default=True)
     args = parser.parse_args()
     # data_sizes = ['1k', '5k', '10k','0k']
     start_time = datetime.datetime.now()
 
-    data_sizes = ['0k']
-    constraint = ['']
-    # constraint = ['const_']
+    data_sizes = ['k']
+    # constraint = ['']
+    constraint = ['const_','']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const
             print"++++++++++++++++"
             init_time = datetime.datetime.now()
             # input_file = 'dataset/' + args.test_predicate + '/input/test'+ data_size + '.csv'
-            input_file = 'dataset/' + args.test_predicate + '/input/test' + '.csv'
+            input_file = 'dataset/' + args.test_predicate + '/input/test_0k' + '.csv'
             with open(input_file) as f:
                 reader = csv.DictReader(f)
                 triples_list = []

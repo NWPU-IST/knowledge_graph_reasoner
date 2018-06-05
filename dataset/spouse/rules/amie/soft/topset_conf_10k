@@ -1,0 +1,3 @@
+0.0006  spouse(A ,B)  :-  relative(A ,B).
+0.0037  spouse(A ,B)  :-  child(A ,B).
+0.0001  spouse(B ,A)  :-  partner(A ,B).

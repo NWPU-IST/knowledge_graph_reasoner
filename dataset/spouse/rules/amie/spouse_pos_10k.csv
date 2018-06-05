@@ -1,0 +1,17 @@
+0.002882131,?a  <dbo:spouse>  ?b   => ?a  <dbo:relative>  ?b
+0.006161797,?a  <dbo:spouse>  ?b   => ?a  <dbo:child>  ?b
+0.00016302,?e  <dbo:birthPlace>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:placeOfBurial>  ?b
+0.001093222,?b  <dbo:spouse>  ?a   => ?a  <dbo:partner>  ?b
+0.000516762,?e  <dbo:deathPlace>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:placeOfBurial>  ?b
+0.145640074,?b  <dbo:relative>  ?f  ?f  <dbo:spouse>  ?a   => ?a  <dbo:child>  ?b
+0.310208127,?e  <dbo:child>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:child>  ?b
+0.122093023,?b  <dbo:relative>  ?f  ?a  <dbo:spouse>  ?f   => ?a  <dbo:child>  ?b
+0.152985075,?b  <dbo:relation>  ?f  ?f  <dbo:spouse>  ?a   => ?a  <dbo:child>  ?b
+0.051795174,?b  <dbo:parent>  ?f  ?f  <dbo:spouse>  ?a   => ?a  <dbo:child>  ?b
+0.194726166,?b  <dbo:relation>  ?f  ?a  <dbo:spouse>  ?f   => ?a  <dbo:child>  ?b
+0.00283197,?e  <dbo:restingPlace>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:placeOfBurial>  ?b
+0.5679893,?f  <dbo:child>  ?b  ?a  <dbo:spouse>  ?f   => ?a  <dbo:child>  ?b
+0.336956522,?e  <dbo:lastAppearance>  ?b  ?e  <dbo:spouse>  ?a   => ?a  <dbo:lastAppearance>  ?b
+0.06706668,?b  <dbo:parent>  ?f  ?a  <dbo:spouse>  ?f   => ?a  <dbo:child>  ?b
+0.540540541,?f  <dbo:lastAppearance>  ?b  ?a  <dbo:spouse>  ?f   => ?a  <dbo:lastAppearance>  ?b
+0.522858279,?b  <dbo:spouse>  ?a   => ?a  <dbo:spouse>  ?b

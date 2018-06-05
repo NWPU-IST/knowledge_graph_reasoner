@@ -1,0 +1,3 @@
+spouse(A ,B)  :-  relative(A ,B).
+spouse(A ,B)  :-  child(A ,B).
+spouse(B ,A)  :-  partner(A ,B).

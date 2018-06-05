@@ -155,10 +155,11 @@ def rule_parser_amie(fname, examples, predicate):
     for it, con in enumerate(content):
         print it, con
         vars = re.findall(r"\?(.)", con)
-        score = re.findall(r"\d.\d+", con)
+        # score = re.findall(r"\d.\d+", con)
+        # score = score[0]
         relation = re.findall(r":(.*?)\>", con)
-        # denominator_query = get_amie_query(relation, vars)
-        # score = get_confidence_amie(denominator_query, examples)
+        denominator_query = get_amie_query(relation, vars)
+        score = get_confidence_amie(denominator_query, examples)
         print score
         vars = [var.upper() for var in vars]
         if relation.index(predicate) != 0:
@@ -182,8 +183,9 @@ def rule_parser_amie(fname, examples, predicate):
                 rule += ' , '
             i += 2
         # print rule
-        hard_rule_list.append(rule)
-        soft_rule_list.append(str(score[0])+' '+rule)
+        if score>0:
+            hard_rule_list.append(rule)
+            soft_rule_list.append(str(score)+' '+rule)
     return hard_rule_list, soft_rule_list
 
 
@@ -227,7 +229,7 @@ if __name__ == "__main__":
     # parser.add_argument("-p", "--pos_neg", default='')
     args = parser.parse_args()
     # data_size = {'1k': 1000, '5k': 5000,'0k': 5000}
-    data_size = {'0k':10000}
+    data_size = {'10k':10000}
     # rule_set = ['pos', 'neg']
     rule_set = ['pos']
     # positive_query, negative_query = get_query(args.subject, args.object,args.test_predicate)

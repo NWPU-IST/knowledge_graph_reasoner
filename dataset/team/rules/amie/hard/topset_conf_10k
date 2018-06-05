@@ -1,0 +1,5 @@
+team(A ,B)  :-  managerClub(A ,B).
+team(A ,B)  :-  draftTeam(A ,B).
+team(A ,B)  :-  debutTeam(A ,B).
+team(A ,B)  :-  formerTeam(A ,B)   ,  debutTeam(A ,B).
+team(A ,B)  :-  formerTeam(A ,B).

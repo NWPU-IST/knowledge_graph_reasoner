@@ -1,0 +1,5 @@
+0.0157  team(A ,B)  :-  managerClub(A ,B).
+0.0010  team(A ,B)  :-  draftTeam(A ,B).
+0.0025  team(A ,B)  :-  debutTeam(A ,B).
+0.0003  team(A ,B)  :-  formerTeam(A ,B)   ,  debutTeam(A ,B).
+0.0024  team(A ,B)  :-  formerTeam(A ,B).

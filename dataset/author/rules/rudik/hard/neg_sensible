@@ -6,3 +6,5 @@ negauthor(A,B) :- creator(C,B),producer(C,D),director(A,D).
 negauthor(A,B) :- subsequentWork(C,A),previousWork(C,D),writer(D,B).
 negauthor(A,B) :- previousWork(C,A),subsequentWork(C,D),writer(D,B).
 negauthor(A,B) :- subsequentWork(C,A),album(C,D),producer(D,B).
+
+

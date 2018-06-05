@@ -37,7 +37,7 @@ class gringoFun:
 
 
 numExecutionXorCount = 10
-max_num_iteration = 20
+max_num_iteration = 10
 tmp_sat_const_file = 'sat_const.lp'
 SMSample_script = 'lpmln-learning/code/XOR-countncheck.py'
 # SMSample_script = 'code/clingoXOR-Count.py'
@@ -154,7 +154,7 @@ program_filename = sys.argv[1]
 
 queries, domain_filename, resource = read_input()
 
-# print queries, domain_filename, resource, program_filename
+print queries, domain_filename, resource, program_filename
 
 domain_file = open(domain_filename, 'r')
 
@@ -200,7 +200,7 @@ else:
 
 for _ in range(max_num_iteration):
 	sample_count += 1
-	# print "sample count", sample_count
+	print "sample count", sample_count
 	curr_sample = sample_attempt
 	time.sleep(.0000001)
 	# print 'Sample ', sample_count, curr_sample

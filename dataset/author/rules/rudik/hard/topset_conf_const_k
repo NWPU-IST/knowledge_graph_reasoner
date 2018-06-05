@@ -1,0 +1,52 @@
+author(A ,B)  :-  author(C ,B) ,  type(C ,D) ,  type(A ,D).
+author(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+author(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  author(C ,B) ,  publisher(C ,D) ,  publisher(A ,D).
+author(A ,B)  :-  subsequentWork(A ,C) ,  literaryGenre(C ,D) ,  genre(B ,D).
+author(A ,B)  :-  author(C ,B) ,  series(C ,D) ,  series(A ,D).
+author(A ,B)  :-  author(C ,B) ,  previousWork(C ,A).
+author(A ,B)  :-  deathYear(B ,C) ,  runtime(A ,D) ,  C>D.
+author(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  author(D ,B).
+author(A ,B)  :-  basedOn(A ,B).
+author(A ,B)  :-  translator(A ,B).
+author(A ,B)  :-  creativeDirector(A ,B).
+author(A ,B)  :-  coverArtist(A ,B).
+author(A ,B)  :-  musicBy(A ,B).
+author(A ,B)  :-  presenter(A ,B).
+author(E ,B)  :-  subsequentWork(E ,A)   ,  illustrator(A ,B).
+author(E ,B)  :-  previousWork(E ,A)   ,  illustrator(A ,B).
+author(A ,B)  :-  executiveProducer(A ,B).
+author(F ,B)  :-  previousWork(A ,F)   ,  illustrator(A ,B).
+author(F ,B)  :-  subsequentWork(A ,F)   ,  illustrator(A ,B).
+author(A ,B)  :-  illustrator(A ,B).
+author(A ,B)  :-  notableWork(B ,A)   ,  illustrator(A ,B).
+author(A ,B)  :-  creator(A ,B).
+author(A ,B)  :-  lyrics(A ,B).
+author(A ,B)  :-  creator(A ,B)   ,  executiveProducer(A ,B).
+author(A ,B)  :-  producer(A ,B)   ,  creativeDirector(A ,B).
+author(A ,B)  :-  musicBy(A ,B)   ,  lyrics(A ,B).
+author(A ,B)  :-  notableWork(B ,A).
+author(A ,B)  :-  coverArtist(A ,B)   ,  illustrator(A ,B).
+
+:-  author(A ,B) ,  negauthor(A ,B).
+
+negauthor(A ,B)  :-  runtime(A ,C) ,  activeYearsStartYear(B ,D) ,  C<D.
+negauthor(A ,B)  :-  birthYear(B ,C) ,  runtime(A ,D) ,  C>D.
+negauthor(A ,B)  :-  director(A ,B) ,  producer(C ,B) ,  creator(C ,B).
+negauthor(A ,B)  :-  author(C ,B) ,  basedOn(A ,C).
+negauthor(A ,B)  :-  producer(C ,B) ,  previousWork(C ,D) ,  previousWork(D ,A).
+negauthor(A ,B)  :-  writer(C ,B) ,  genre(C ,D) ,  genre(A ,D).
+negauthor(A ,B)  :-  releaseDate(A ,C) ,  releaseDate(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  producer(C ,B) ,  series(C ,D) ,  series(A ,D).
+negauthor(A ,B)  :-  series(A ,C) ,  series(D ,C) ,  writer(D ,B).
+negauthor(A ,B)  :-  creator(C ,B) ,  producer(C ,D) ,  director(A ,D).
+negauthor(A ,B)  :-  genre(B ,C) ,  genre(D ,C) ,  subsequentWork(D ,A).
+negauthor(A ,B)  :-  writer(C ,B) ,  format(C ,D) ,  format(A ,D).
+negauthor(A ,B)  :-  genre(A ,C) ,  stylisticOrigin(D ,C) ,  genre(B ,D).
+negauthor(A ,B)  :-  runtime(A ,C) ,  deathYear(B ,D) ,  C>D.
+negauthor(A ,B)  :-  previousWork(C ,A) ,  genre(C ,D) ,  genre(B ,D).
+negauthor(A ,B)  :-  writer(C ,B) ,  subsequentWork(C ,A).
+negauthor(A ,B)  :-  genre(A ,C) ,  musicSubgenre(D ,C) ,  genre(B ,D).
+negauthor(A ,B)  :-  subsequentWork(C ,A) ,  previousWork(C ,D) ,  writer(D ,B).
+negauthor(A ,B)  :-  previousWork(C ,A) ,  subsequentWork(C ,D) ,  writer(D ,B).
+negauthor(A ,B)  :-  subsequentWork(C ,A) ,  album(C ,D) ,  producer(D ,B).
