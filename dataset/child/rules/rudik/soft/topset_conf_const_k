@@ -1,10 +1,6 @@
-0.3057  child(A ,B)  :-  parent(B ,A).
 0.2032  child(A ,B)  :-  spouse(A ,C) ,  child(C ,B).
 0.3404  child(A ,B)  :-  parent(B ,C) ,  parent(D ,C) ,  child(A ,D).
 0.0156  child(A ,B)  :-  nationality(B ,F)   ,  birthPlace(A ,F).
-0.0207  child(A ,B)  :-  nationality(A ,F)   ,  birthPlace(B ,F).
-0.0355  child(A ,B)  :-  deathPlace(B ,F)   ,  birthPlace(A ,F).
-0.0111  child(A ,B)  :-  nationality(B ,F)   ,  deathPlace(A ,F).
 0.0124  child(A ,B)  :-  stateOfOrigin(A ,F)   ,  birthPlace(B ,F).
 0.1979  child(A ,B)  :-  birthPlace(B ,F)   ,  birthPlace(A ,F).
 0.0336  child(A ,B)  :-  occupation(B ,F)   ,  occupation(A ,F).
@@ -12,9 +8,7 @@
 0.0158  child(A ,B)  :-  residence(B ,F)   ,  birthPlace(A ,F).
 0.0398  child(A ,B)  :-  nationality(B ,F)   ,  nationality(A ,F).
 0.1652  child(A ,B)  :-  deathPlace(A ,F)   ,  birthPlace(B ,F).
-0.0331  child(A ,B)  :-  residence(A ,F)   ,  birthPlace(B ,F).
 0.0709  child(A ,B)  :-  deathPlace(B ,F)   ,  deathPlace(A ,F).
-0.0183  child(A ,B)  :-  stateOfOrigin(A ,F)   ,  nationality(B ,F).
 0.0677  child(A ,B)  :-  party(B ,F)   ,  party(A ,F).
 0.0187  child(A ,B)  :-  residence(B ,F)   ,  deathPlace(A ,F).
 0.0157  child(A ,B)  :-  stateOfOrigin(B ,F)   ,  stateOfOrigin(A ,F).
@@ -25,25 +19,24 @@
 0.0074  child(E ,A)  :-  child(E ,B)   ,  child(A ,B).
 0.0179  child(A ,B)  :-  series(B ,F)   ,  series(A ,F).
 0.0173  child(A ,B)  :-  creator(B ,F)   ,  creator(A ,F).
-0.0031  child(A ,B)  :-  relative(A ,B).
 0.0083  child(B ,A)  :-  child(A ,B).
 0.0084  child(E ,B)  :-  child(A ,E)   ,  child(A ,B).
 0.0068  child(A ,F)  :-  child(B ,F)   ,  child(A ,B).
-0.0402  child(A ,B)  :-  relative(B ,F)   ,  relative(A ,F).
 0.0238  child(A ,B)  :-  relation(E ,B)   ,  relation(E ,A).
 0.0163  child(A ,B)  :-  firstAppearance(B ,F)   ,  firstAppearance(A ,F).
 0.0090  child(A ,B)  :-  lastAppearance(B ,F)   ,  lastAppearance(A ,F).
 0.0064  child(A ,B)  :-  spouse(A ,B).
-0.0190  child(E ,A)  :-  relative(E ,B)   ,  child(A ,B).
+0.0190  child(A ,B)  :-  relative(A ,C)   ,  child(B ,C).
+0.1095  child(A ,B)  :-  relative(B ,C)   ,  child(A ,C).
+0.0980  child(A ,B)  :-  relative(C ,B)   ,  child(A ,C).
 0.0682  child(A ,B)  :-  relative(E ,B)   ,  relative(E ,A).
-0.0307  child(A ,B)  :-  relative(A ,F)   ,  relative(F ,B).
 0.0381  child(A ,B)  :-  relative(B ,F)   ,  relative(F ,A).
 0.0383  child(A ,B)  :-  relative(B ,A).
 0.0185  child(A ,B)  :-  successor(A ,B).
 0.0155  child(A ,B)  :-  spouse(F ,A)   ,  relative(B ,F).
 0.2125  child(E ,B)  :-  spouse(E ,A)   ,  child(A ,B).
+0.2140  child(F ,B)  :-  spouse(A ,F)   ,  child(A ,B).
 0.0189  child(A ,B)  :-  spouse(A ,F)   ,  relative(B ,F).
-0.0007  child(B ,A)  :-  relative(A ,B).
 0.0057  child(A ,B)  :-  spouse(F ,A)   ,  relation(B ,F).
 0.0002  child(B ,A)  :-  relation(A ,B).
 0.0590  child(A ,B)  :-  relative(B ,F)   ,  parent(F ,A).
@@ -53,16 +46,12 @@
 0.0821  child(A ,B)  :-  relative(E ,B)   ,  parent(E ,A).
 0.0122  child(A ,B)  :-  relation(E ,B)   ,  parent(E ,A).
 0.0245  child(A ,F)  :-  relation(B ,F)   ,  child(A ,B).
-0.0980  child(A ,F)  :-  relative(B ,F)   ,  child(A ,B).
-0.2140  child(F ,B)  :-  spouse(A ,F)   ,  child(A ,B).
 0.0284  child(A ,E)  :-  relation(E ,B)   ,  child(A ,B).
 0.0128  child(A ,B)  :-  predecessor(B ,A).
-0.1095  child(A ,E)  :-  relative(E ,B)   ,  child(A ,B).
 0.01  child(A ,B)  :-  successor(A ,B)   ,  predecessor(B ,A).
 0.1459  child(A ,B)  :-  spouse(A ,F)   ,  parent(B ,F).
 0.3285  child(A ,B)  :-  parent(B ,A).
 0.0027  child(A ,B)  :-  predecessor(B ,A)   ,  parent(B ,A).
-0.0012  child(B ,A)  :-  parent(A ,B).
 0.0029  child(A ,B)  :-  successor(A ,B)   ,  parent(B ,A).
 :-  child(A ,B) ,  negchild(A ,B).
 0.0143  negchild(A ,B)  :-  successor(C ,A) ,  deathPlace(C ,D) ,  country(B ,D).

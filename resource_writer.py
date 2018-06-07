@@ -31,6 +31,7 @@ def update_resources(triple_flag, ambiverse_flag, file_triples, ambiverse_resour
 
     if lpmln_evaluation:
         st = datetime.now()
-        with open('dataset/' + data_source + '/output/top_set_' + const +'_' + rule_mining + '_'+str(st)+'_'+data_size+'_'+lpmln_type, 'wb') as csvfile:
+        with open('dataset/' + data_source + '/output/top_set_' + const +'_' + rule_mining + '_'+str(st)+'_'+data_size+\
+                  '_'+lpmln_type+'.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)

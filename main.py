@@ -6,7 +6,7 @@ import sys
 from resources_loader import load_files
 from resource_writer import update_resources
 import pprint
-from kb_query import distance_one_query, distance_two_query
+from kb_query import distance_one_query, distance_two_query, get_evidence
 from reasoner import evidence_writer, get_rule_predicates, clingo_map, inference_map, inference_prob, domain_generator,\
     rule_evidence_writer, inference_prob_mcsat, inference_map_weight
 from ambiverse_api import ambiverse_entity_parser
@@ -104,10 +104,11 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
     resource_v = [entity.decode('utf-8') for entity in resource_v]
     # print resource_v
     if query_evidence:
-        evidence = []
-        for entity in resource_v:
-            evidence = distance_one_query(entity, evidence)
-            evidence = distance_two_query(entity, evidence)
+        evidence = get_evidence(resource_v, rules)
+        # evidence = []
+        # for entity in resource_v:
+        #     evidence = distance_one_query(entity, evidence)
+        #     evidence = distance_two_query(entity, evidence)
     else:
         evidence = True
 

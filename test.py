@@ -5,6 +5,7 @@ from resource_writer import update_resources
 from reasoner import get_rule_predicates
 import sys
 import datetime
+from config import rule_mining
 
 # file_name = 'neg_b100_sum_'
 
@@ -172,7 +173,7 @@ def write_stats(data_source, data_size, const, results_hard, results_soft, resul
                 total_asp, total_map,total_mc, rule_type):
     end_time = datetime.datetime.now()
     if result_mcsat:
-        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+rule_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
+        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+rule_type+'_'+ rule_mining +'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
             file.write('True Examples , Weighted Rules , False Examples , Weighted Rules' +'\n')
             file.write('True Positives ,' + str(result_mcsat.get('true_pos',0))\
                        + '/200 ,True Negatives,' + \
@@ -193,7 +194,7 @@ def write_stats(data_source, data_size, const, results_hard, results_soft, resul
             file.write("MC Time, " + str(total_mc))
 
     else:
-        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+rule_type+'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
+        with open('dataset/' + data_source + '/output_stats/summary_'+lpmln_type+'_'+rule_type+'_'+ rule_mining +'_'+data_size+'_'+const+str(end_time)+'.csv','a') as file:
             file.write('True Examples , Hard Rules , Weighted Rules , False Examples , Hard Rules , Weighted Rules' +'\n')
             file.write('True Positives ,'+ str(results_hard.get('true_pos',0))+ '/200 ,'+ str(results_soft.get('true_pos',0))\
                        + '/200 ,True Negatives,'+str(results_hard.get('true_neg',0))+'/200, '+ \
@@ -232,7 +233,7 @@ if __name__ == "__main__":
     # data_sizes = ['1k', '5k', '10k','0k']
     start_time = datetime.datetime.now()
 
-    data_sizes = ['k']
+    data_sizes = ['0k']
     # constraint = ['']
     constraint = ['const_']
     for data_size in data_sizes:
@@ -241,7 +242,7 @@ if __name__ == "__main__":
             print"++++++++++++++++"
             init_time = datetime.datetime.now()
             # input_file = 'dataset/' + args.test_predicate + '/input/test'+ data_size + '.csv'
-            input_file = 'dataset/' + args.test_predicate + '/input/test_0k' + '.csv'
+            input_file = 'dataset/' + args.test_predicate + '/input/neg_t100_0k' + '.csv'
             with open(input_file) as f:
                 reader = csv.DictReader(f)
                 triples_list = []

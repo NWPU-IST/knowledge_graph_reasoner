@@ -88,7 +88,7 @@ def get_rudik_query(relations, predicate):
 
 def get_amie_query(relations, vars):
     query = ''
-    for i,rel in enumerate(relations):
+    for i, rel in enumerate(relations):
         query += " ?" + vars[2*i] + ontology + rel + "> ?" + vars[2*i+1] + ". \n"
     denominator_query = prefix + query + suffix
     return denominator_query

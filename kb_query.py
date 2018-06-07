@@ -1,11 +1,49 @@
 # -*- coding: utf-8 -*-
 
-import sparql
+import sparql, sys
+import re
 from config import sparql_dbpedia, unwanted_predicates
 
 suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) .'
 
+prefix = 'PREFIX dbo:  <http://dbpedia.org/ontology/> select '
+
 sparql_endpoint = sparql_dbpedia
+
+
+def get_evidence_query(relations, vars, resource):
+    where = ' where  { '
+    select = ''
+    triple = ''
+    for r, rel in enumerate(relations):
+        select += '  ?' + vars[r].split(',')[0].lower() + ', dbo:' + rel + ', ?' + vars[r].split(',')[1].lower() + ' ,'
+        triple += '  ?' + vars[r].split(',')[0].lower() + ' dbo:' + rel + ' ?' + vars[r].split(',')[1].lower() + ' .'
+    end = ' }'
+    query = prefix + select[:-1] + where + triple + end
+    query_new = query.replace('?a', '<http://dbpedia.org/resource/' + resource[0] + '>')
+    query_new = query_new.replace('?b', '<http://dbpedia.org/resource/' + resource[1] + '>')
+    return query_new
+
+
+def get_evidence(resource, rules):
+    evidence = []
+    for rule in rules.split('\n'):
+        if rule:
+            body = rule.split(':-')[1]
+            relations = re.findall(r"(\w*?)\(", body)
+            vars = re.findall(r"\((.*?)\)", body)
+            query = get_evidence_query(relations, vars, resource)
+            # print query
+            result = sparql.query(sparql_endpoint, query)
+            q1_values = [sparql.unpack_row(row_result) for row_result in result]
+            # print q1_values
+            if q1_values:
+                for vals in q1_values:
+                    vals = [val.split('/')[-1] if '/' in val else val for val in vals]
+                    evid = [vals[i:i + 3] for i in xrange(0, len(vals), 3)]
+                    evidence.extend(evid)
+    return evidence
+
 
 
 def distance_one_query(id1, distance_one):
