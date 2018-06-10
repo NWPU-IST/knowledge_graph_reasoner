@@ -103,9 +103,9 @@ def lpmln_reasoning(resource_v, rule_predicates, sentence_id, data_source, rules
 
     resource_v = [entity.decode('utf-8') for entity in resource_v]
     # print resource_v
+
     if query_evidence:
         evidence = get_evidence(resource_v, rules)
-        # evidence = []
         # for entity in resource_v:
         #     evidence = distance_one_query(entity, evidence)
         #     evidence = distance_two_query(entity, evidence)
