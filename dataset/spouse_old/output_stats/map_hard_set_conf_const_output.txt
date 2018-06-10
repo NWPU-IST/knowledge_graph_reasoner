@@ -1,0 +1,19 @@
+2018-05-04 12:50:29.753467-------------------------------
+True Neutral: 0
+False Neutral: 0
+True None: 82
+False None: 124
+True UNSAT: 11
+False UNSAT: 26
+True Count:200 True Pos: 106 False Neg: 1
+False Count: 200 True Neg: 50 False Pos: 0
+-------------------------------2018-05-04 15:43:36.116089-------------------------------
+True Neutral: 0
+False Neutral: 0
+True None: 67
+False None: 106
+True UNSAT: 11
+False UNSAT: 26
+True Count:200 True Pos: 121 False Neg: 1
+False Count: 200 True Neg: 68 False Pos: 0
+-------------------------------

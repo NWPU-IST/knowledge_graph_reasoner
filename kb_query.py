@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import datetime
 import sparql, sys
 import re
 from config import sparql_dbpedia, unwanted_predicates
@@ -39,9 +39,12 @@ def get_evidence(resource, rules):
             # print q1_values
             if q1_values:
                 for vals in q1_values:
-                    vals = [val.split('/')[-1] if '/' in val else val for val in vals]
-                    evid = [vals[i:i + 3] for i in xrange(0, len(vals), 3)]
-                    evidence.extend(evid)
+                    try:
+                        vals = [val.split('/')[-1] if '/' in val else val for val in vals]
+                        evid = [vals[i:i + 3] for i in xrange(0, len(vals), 3)]
+                        evidence.extend(evid)
+                    except:
+                        pass
     return evidence
 
 

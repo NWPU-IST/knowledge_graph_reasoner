@@ -2,20 +2,14 @@ clingo version 4.5.4
 Reading from out.txt ...
 Solving...
 Answer: 1
-birthPlace("Mary_Hemingway_Rees","Melton_Mowbray") deathPlace("Mary_Hemingway_Rees","London") birthPlace("John_Rawlings_Rees","Leicester") deathPlace("John_Rawlings_Rees","London") country("Melton_Mowbray","England") country("London","United_Kingdom") country("Melton_Mowbray","Leicestershire") country("Melton_Mowbray","United_Kingdom") spouse("John_Rawlings_Rees","Mary_Hemingway_Rees") location("Leicester","7140.0") location("Fellow_of_the_Royal_College_of_Physicians","London") country("Leicester","United_Kingdom") spouse("Mary_Hemingway_Rees","John_Rawlings_Rees") unsat(37,"0.007449","Mary_Hemingway_Rees","Mary_Hemingway_Rees","Mary_Hemingway_Rees","John_Rawlings_Rees") unsat(37,"0.007449","John_Rawlings_Rees","John_Rawlings_Rees","John_Rawlings_Rees","Mary_Hemingway_Rees") unsat(41,"0.007959","John_Rawlings_Rees","John_Rawlings_Rees","John_Rawlings_Rees","Mary_Hemingway_Rees") unsat(41,"0.007959","Mary_Hemingway_Rees","Mary_Hemingway_Rees","Mary_Hemingway_Rees","John_Rawlings_Rees")
-Optimization: 28
-Answer: 2
-birthPlace("Mary_Hemingway_Rees","Melton_Mowbray") deathPlace("Mary_Hemingway_Rees","London") birthPlace("John_Rawlings_Rees","Leicester") deathPlace("John_Rawlings_Rees","London") country("Melton_Mowbray","England") country("London","United_Kingdom") country("Melton_Mowbray","Leicestershire") country("Melton_Mowbray","United_Kingdom") spouse("John_Rawlings_Rees","Mary_Hemingway_Rees") location("Leicester","7140.0") location("Fellow_of_the_Royal_College_of_Physicians","London") country("Leicester","United_Kingdom") spouse("Mary_Hemingway_Rees","John_Rawlings_Rees") unsat(37,"0.007449","Mary_Hemingway_Rees","Mary_Hemingway_Rees","Mary_Hemingway_Rees","John_Rawlings_Rees") negspouse("John_Rawlings_Rees","John_Rawlings_Rees") unsat(41,"0.007959","Mary_Hemingway_Rees","Mary_Hemingway_Rees","Mary_Hemingway_Rees","John_Rawlings_Rees")
-Optimization: 14
-Answer: 3
-birthPlace("Mary_Hemingway_Rees","Melton_Mowbray") deathPlace("Mary_Hemingway_Rees","London") birthPlace("John_Rawlings_Rees","Leicester") deathPlace("John_Rawlings_Rees","London") country("Melton_Mowbray","England") country("London","United_Kingdom") country("Melton_Mowbray","Leicestershire") country("Melton_Mowbray","United_Kingdom") spouse("John_Rawlings_Rees","Mary_Hemingway_Rees") location("Leicester","7140.0") location("Fellow_of_the_Royal_College_of_Physicians","London") country("Leicester","United_Kingdom") spouse("Mary_Hemingway_Rees","John_Rawlings_Rees") negspouse("Mary_Hemingway_Rees","Mary_Hemingway_Rees") negspouse("John_Rawlings_Rees","John_Rawlings_Rees")
+successor("Nelson_Mandela","Thabo_Mbeki") president("Arthur_Chaskalson","Thabo_Mbeki") negspouse("Nelson_Mandela","Nelson_Mandela") negspouse("Arthur_Chaskalson","Nelson_Mandela")
 Optimization: 0
 OPTIMUM FOUND
 
-Models       : 3     
+Models       : 1     
   Optimum    : yes
 Optimization : 0
 Calls        : 1
-Time         : 0.016s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.010s
-Threads      : 4        (Winner: 3)
+Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s
+Threads      : 4        (Winner: 2)

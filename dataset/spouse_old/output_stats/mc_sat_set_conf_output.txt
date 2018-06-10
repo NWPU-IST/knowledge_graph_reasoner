@@ -1,0 +1,9 @@
+-------------------------------2018-05-07 01:01:12.580196-------------------------------
+True Neutral: 61
+False Neutral: 136
+True None: 23
+False None: 9
+True UNSAT: 0
+False UNSAT: 0
+True Count:200 True Pos: 115 False Neg: 1
+False Count: 200 True Neg: 55 False Pos: 0

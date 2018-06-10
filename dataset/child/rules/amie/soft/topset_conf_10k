@@ -50,4 +50,4 @@
 0.1459  child(A ,B)  :-  spouse(A ,F)   ,  parent(B ,F).
 0.3285  child(A ,B)  :-  parent(B ,A).
 0.0027  child(A ,B)  :-  predecessor(B ,A)   ,  parent(B ,A).
-0.0029  child(A ,B)  :-  successor(A ,B)   ,  parent(B ,A).
+0.0029  child(A ,B)  :-  successor(A ,B)   ,  parent(B ,A).0.00836734693878  child(B ,A)  :-  child(A ,B).

@@ -1,0 +1,73 @@
+2018-06-07 17:41:11.364515-------------------------------
+True Neutral: 4
+False Neutral: 86
+True None: 37
+False None: 2
+True UNSAT: 0
+False UNSAT: 0
+True NO EVD: 17
+False NO EVD: 0
+True Count:200 True Pos: 142 False Neg: 0
+False Count: 200 True Neg: 25 False Pos: 38
+Execution Time: 166.592762
+-------------------------------2018-06-07 17:41:11.364515-------------------------------
+True Neutral_wt: 4
+False Neutral_wt: 86
+True None_wt: 37
+False None_wt: 2
+True UNSAT_wt: 0
+False UNSAT_wt: 0
+True NO EVD_wt: 17
+False NO EVD+wt: 0
+True Count:200 True Pos_wt: 142 False Neg_wt: 0
+False Count: 200 True Neg_wt: 25 False_Pos: 38
+Execution Time: 166.592762
+-------------------------------2018-06-08 22:24:01.856952-------------------------------
+True Neutral: 4
+False Neutral: 86
+True None: 37
+False None: 2
+True UNSAT: 0
+False UNSAT: 0
+True NO EVD: 17
+False NO EVD: 0
+True Count:200 True Pos: 142 False Neg: 0
+False Count: 200 True Neg: 25 False Pos: 38
+Execution Time: 138.803046
+-------------------------------2018-06-08 22:24:01.856952-------------------------------
+True Neutral_wt: 4
+False Neutral_wt: 86
+True None_wt: 37
+False None_wt: 2
+True UNSAT_wt: 0
+False UNSAT_wt: 0
+True NO EVD_wt: 17
+False NO EVD+wt: 0
+True Count:200 True Pos_wt: 142 False Neg_wt: 0
+False Count: 200 True Neg_wt: 25 False_Pos: 38
+Execution Time: 138.803046
+-------------------------------2018-06-09 19:56:34.354047-------------------------------
+True Neutral: 4
+False Neutral: 86
+True None: 37
+False None: 2
+True UNSAT: 0
+False UNSAT: 0
+True NO EVD: 17
+False NO EVD: 0
+True Count:200 True Pos: 142 False Neg: 0
+False Count: 200 True Neg: 25 False Pos: 38
+Execution Time: 140.349157
+-------------------------------2018-06-09 19:56:34.354047-------------------------------
+True Neutral_wt: 4
+False Neutral_wt: 86
+True None_wt: 37
+False None_wt: 2
+True UNSAT_wt: 0
+False UNSAT_wt: 0
+True NO EVD_wt: 17
+False NO EVD+wt: 0
+True Count:200 True Pos_wt: 142 False Neg_wt: 0
+False Count: 200 True Neg_wt: 25 False_Pos: 38
+Execution Time: 140.349157
+-------------------------------

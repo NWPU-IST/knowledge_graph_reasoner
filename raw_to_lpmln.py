@@ -43,9 +43,9 @@ def get_confidence_rudik(numerator_query, denominator_query, pos_neg, examples):
         if denominator_value > 0:
             body_true += 1
     # print numerator_query_new
-    print denominator_query_new
-    print "-----------------"
-    print float(body_true),float(len(examples))
+    # print denominator_query_new
+    # print "-----------------"
+    # print float(body_true),float(len(examples))
     confidence = float(body_true)/float(len(examples))
     return confidence
 
@@ -59,11 +59,12 @@ def get_confidence_amie(denominator_query, examples):
             result = sparql.query(sparql_endpoint, denominator_query_new)
             denominator_value = [sparql.unpack_row(row_result) for row_result in result][0][0]
         except:
-            print denominator_query_new,i
+            # print denominator_query_new,i
             denominator_value = 0
         if denominator_value > 0:
             body_true += 1
-    # print denominator_query_new
+            # print denominator_query_new
+    print body_true
     print "-----------------"
     print float(body_true),float(len(examples))
     confidence = float(body_true)/float(len(examples))
@@ -186,6 +187,9 @@ def rule_parser_amie(fname, examples, predicate):
         if score>0:
             hard_rule_list.append(rule)
             soft_rule_list.append(str(score)+' '+rule)
+        else:
+            print rule, it
+            sys.exit()
     return hard_rule_list, soft_rule_list
 
 

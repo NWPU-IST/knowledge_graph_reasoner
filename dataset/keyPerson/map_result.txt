@@ -1,0 +1,18 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_check_kb/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=negkeyPerson dataset/keyPerson/evidence/local/rudik/top40neg/5607755_unique.txt 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_check_kb/out.txt ...
+Solving...
+
+
+
+
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.175s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.170s

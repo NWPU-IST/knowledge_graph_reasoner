@@ -233,16 +233,16 @@ if __name__ == "__main__":
     # data_sizes = ['1k', '5k', '10k','0k']
     start_time = datetime.datetime.now()
 
-    data_sizes = ['0k']
-    # constraint = ['']
-    constraint = ['const_']
+    data_sizes = ['k']
+    constraint = ['const_','']
+    # constraint = ['const_']
     for data_size in data_sizes:
         for const in constraint:
             print "query for",data_size, const
             print"++++++++++++++++"
             init_time = datetime.datetime.now()
             # input_file = 'dataset/' + args.test_predicate + '/input/test'+ data_size + '.csv'
-            input_file = 'dataset/' + args.test_predicate + '/input/neg_t100_0k' + '.csv'
+            input_file = 'dataset/' + args.test_predicate + '/input/test_0k' + '.csv'
             with open(input_file) as f:
                 reader = csv.DictReader(f)
                 triples_list = []

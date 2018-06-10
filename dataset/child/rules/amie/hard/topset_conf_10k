@@ -50,4 +50,4 @@ child(A ,B)  :-  successor(A ,B)   ,  predecessor(B ,A).
 child(A ,B)  :-  spouse(A ,F)   ,  parent(B ,F).
 child(A ,B)  :-  parent(B ,A).
 child(A ,B)  :-  predecessor(B ,A)   ,  parent(B ,A).
-child(A ,B)  :-  successor(A ,B)   ,  parent(B ,A).
+child(A ,B)  :-  successor(A ,B)   ,  parent(B ,A).child(B ,A)  :-  child(A ,B).

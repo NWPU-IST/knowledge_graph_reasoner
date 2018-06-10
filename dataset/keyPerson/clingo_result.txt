@@ -1,0 +1,11 @@
+clingo version 4.5.4
+Reading from dataset/keyPerson/rules/amie/hard/top37 ...
+Solving...
+Answer: 1
+occupation("Diane_Greene","Google") occupation("Diane_Greene","Intuit") occupation("Diane_Greene","Diane_Greene__1") foundedBy("Intuit","Tom_Proulx") foundedBy("Intuit","Scott_Cook") keyPerson("Intuit","Brad_D._Smith") keyPerson("Google","Sundar_Pichai") occupation("Mendel_Rosenblum","Mendel_Rosenblum__1") parentCompany("Google","Alphabet_Inc.") product("Intuit","Personal_finance") product("Intuit","Accounting_software") product("Intuit","Tax_return_(United_States)") product("Google","List_of_Google_products") subsidiary("Google","List_of_mergers_and_acquisitions_by_Alphabet") keyPerson("Uber_(company)","Travis_Kalanick") keyPerson("Uber_(company)","Ryan_Graves") keyPerson("Google","Diane_Greene") keyPerson("Intuit","Diane_Greene") keyPerson("Diane_Greene__1","Diane_Greene") keyPerson("Mendel_Rosenblum__1","Mendel_Rosenblum") keyPerson("Intuit","Tom_Proulx") keyPerson("Intuit","Scott_Cook") keyPerson("List_of_mergers_and_acquisitions_by_Alphabet","Diane_Greene")
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s
