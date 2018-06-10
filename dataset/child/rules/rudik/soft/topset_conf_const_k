@@ -16,12 +16,12 @@
 0.0187  child(A ,B)  :-  almaMater(B ,F)   ,  almaMater(A ,F).
 0.0191  child(A ,B)  :-  residence(B ,F)   ,  residence(A ,F).
 0.0208  child(A ,B)  :-  starring(E ,B)   ,  starring(E ,A).
-0.0074  child(E ,A)  :-  child(E ,B)   ,  child(A ,B).
+0.0074  child(A ,B)  :-  child(A ,C)   ,  child(B ,C).
 0.0179  child(A ,B)  :-  series(B ,F)   ,  series(A ,F).
 0.0173  child(A ,B)  :-  creator(B ,F)   ,  creator(A ,F).
-0.0083  child(B ,A)  :-  child(A ,B).
-0.0084  child(E ,B)  :-  child(A ,E)   ,  child(A ,B).
-0.0068  child(A ,F)  :-  child(B ,F)   ,  child(A ,B).
+0.0083  child(A ,B)  :-  child(B ,A).
+0.0084  child(A ,B)  :-  child(C ,A)   ,  child(C ,B).
+0.0068  child(A ,B)  :-  child(C ,B)   ,  child(A ,C).
 0.0238  child(A ,B)  :-  relation(E ,B)   ,  relation(E ,A).
 0.0163  child(A ,B)  :-  firstAppearance(B ,F)   ,  firstAppearance(A ,F).
 0.0090  child(A ,B)  :-  lastAppearance(B ,F)   ,  lastAppearance(A ,F).
@@ -34,19 +34,18 @@
 0.0383  child(A ,B)  :-  relative(B ,A).
 0.0185  child(A ,B)  :-  successor(A ,B).
 0.0155  child(A ,B)  :-  spouse(F ,A)   ,  relative(B ,F).
-0.2125  child(E ,B)  :-  spouse(E ,A)   ,  child(A ,B).
-0.2140  child(F ,B)  :-  spouse(A ,F)   ,  child(A ,B).
+0.2125  child(A ,B)  :-  spouse(A ,C)   ,  child(C ,B).
+0.2140  child(A ,B)  :-  spouse(C ,A)   ,  child(C ,B).
 0.0189  child(A ,B)  :-  spouse(A ,F)   ,  relative(B ,F).
 0.0057  child(A ,B)  :-  spouse(F ,A)   ,  relation(B ,F).
-0.0002  child(B ,A)  :-  relation(A ,B).
 0.0590  child(A ,B)  :-  relative(B ,F)   ,  parent(F ,A).
 0.0306  child(A ,B)  :-  relation(B ,A).
 0.1176  child(A ,B)  :-  spouse(F ,A)   ,  parent(B ,F).
 0.0068  child(A ,B)  :-  spouse(A ,F)   ,  relation(B ,F).
 0.0821  child(A ,B)  :-  relative(E ,B)   ,  parent(E ,A).
 0.0122  child(A ,B)  :-  relation(E ,B)   ,  parent(E ,A).
-0.0245  child(A ,F)  :-  relation(B ,F)   ,  child(A ,B).
-0.0284  child(A ,E)  :-  relation(E ,B)   ,  child(A ,B).
+0.0245  child(A ,B)  :-  relation(C ,B)   ,  child(A ,C).
+0.0284  child(A ,B)  :-  relation(B ,C)   ,  child(A ,C).
 0.0128  child(A ,B)  :-  predecessor(B ,A).
 0.01  child(A ,B)  :-  successor(A ,B)   ,  predecessor(B ,A).
 0.1459  child(A ,B)  :-  spouse(A ,F)   ,  parent(B ,F).
